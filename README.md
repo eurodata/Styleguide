@@ -1,6 +1,6 @@
 # Styleguide
 Beta Version des Styleguide
 
-[Specification](Specification/index.html)
+[Specification](https://eurodata.github.io/Styleguide/Styleguide/index.html)
 
 [Control Overview](https://eurodata.github.io/Styleguide/Control%20Overview/index.html)
