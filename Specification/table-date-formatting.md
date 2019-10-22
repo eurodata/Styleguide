@@ -16,7 +16,7 @@ liegt.
 
 ### Datum (ohne Urzeit, Spalte rechtsbündig)
 | Eingestellungsdatum | Eingestellungsdatum (Kurzschreibweise) | Tooltipp |
-|:-:|:-:|:-:|
+|-:|-:|:-|
 | 24. Apr	| 24. Apr	| 24. April 2017 |
 | 17.11.2016| 17.11.16	| 17. November 2016 |
 
