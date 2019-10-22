@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+    <title>Antetype Web Viewer</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Antetype"> 
+    <link rel="stylesheet" href="static/viewer.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/default.css">
+
+
+    <script src="static/webviewer.js"></script>
+  </head>
+  <body>
+    <div id="ViewerToolbar">
+        <div id="ViewerPrevButton" class="ViewerButton">        
+            <div class="ViewerButtonIcon" ></div>               
+        </div>                                                  
+        <div id="ViewerNextButton" class="ViewerButton">        
+            <div class="ViewerButtonIcon"></div>                
+        </div>                                                  
+                     
+            <select id="ViewerScreenSelect" class="ViewerScreenSelectStyle">                    
+            </select>                                           
+                                                   
+        <div class="spacer">                                    
+        </div>                                                  
+        <div id="ViewerDocTitle">                               
+            DocTitle                                            
+        </div>                                                  
+        <div id="ViewerInspectorButton" class="ViewerButton" title="Toggle the Inspector">
+            <div class="ViewerButtonIcon"></div>
+        </div>
+        <div id="ViewerInteractionButton" class="ViewerButton" title="Press and hold to see the clickable areas">  
+            <div class="ViewerButtonIcon"></div>                
+        </div>                                                  
+        <div id="ViewerFullScreenButton" class="ViewerButton" title="Toggle Fullscreen">  
+            <div class="ViewerButtonIcon"></div>                
+        </div>                                                  
+        <div id="ViewerHideButton" class="ViewerButton" title="Hide toolbar (use 't' to show again)">        
+            <div class="ViewerButtonIcon"></div>                
+        </div>                                                  
+    </div>
+    <div id="MainWrapper">
+      <iframe id="ViewerFrame" src="viewer.html" sandbox="allow-same-origin allow-scripts allow-popups">Browser does not support frames</iframe>
+      <div id="ViewerInspector">
+
+        <div class="button-container" >
+          <button class="button" type="button" name="up-button" title="Select the parent-cell and display its properties" id="up">Select Parent</button>
+        </div>
+        <div id="GDViewerPropertyTable" class="itable"> </div>
+
+        <code id ="css"></code>
+        <div  class="button-container css-button-container">
+            <button class="button css-button" type="button" name="css- button" id="copytext">Copy CSS Code</button>
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+
+  <script src="static/viewer_index_spec.js"></script>
+</html>

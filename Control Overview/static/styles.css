@@ -1,0 +1,314 @@
+#debug {
+    height: 95vh;
+    width: 40%;
+    border: 1px dotted gray;
+    overflow: auto;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    visibility: collapse;
+}
+
+* {
+    box-sizing: border-box;
+    tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*:read-write:focus {
+     outline: none;
+}
+
+*:focus {
+    outline:none;
+}
+
+html {
+    height: 100%;
+    background-color: white;  /* to fix mix-blend-mode on chrome toplevel */
+}
+
+
+body {
+    margin: 0px; 
+    height: 100%; 
+    display: flex;
+    cursor:default;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    flex-direction: column;
+}
+
+
+.highlightrect {
+    position: absolute;
+    opacity: 0.8;
+    border: 2px solid Highlight;
+    pointer-events: none;
+    z-index:134217727;
+}
+
+.droptargetrect {
+    position: absolute;
+    border: 2px solid rgba(178, 215, 255, 1.00);
+    background: rgba(255,0,0,0.2);
+    pointer-events: none;
+}
+.handle {
+    border: 1px solid black;
+    background: white; 
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    z-index:134217727;
+}
+
+.selectionRect {
+    border: 1px solid rgba(128, 128, 128, 1.00);
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    z-index:134217727;
+}
+
+
+/* spinner */
+.loader-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    z-index: 134217727;
+}
+.loader {
+    height: 100px;
+    width: 100px;
+}
+
+
+/* live-preview-spinner */
+.loader-container-live-preview {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background: #00000000;
+    z-index: 134217727;
+}
+
+
+svg path,
+svg rect {
+          fill: #000000;
+}
+
+/* text */
+.text{
+    display: flex !important;
+    flex: 1 1 auto;
+    align-self: stretch;
+}
+
+.aatl{
+    align-items:flex-start;
+    justify-content: flex-start;
+}
+.aatc{
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+.aatr{
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: right;
+}
+.aacl{
+    align-items: center;
+    justify-content: flex-start;
+}
+.aacc{
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+}
+.aacr{
+    align-items:center;
+    justify-content: flex-end;
+    text-align: right;    
+}
+.aabl{
+    align-items:flex-end;
+    justify-content: flex-start;
+}
+.aabc{
+    align-items:flex-end;
+    justify-content: center;
+    text-align: center;
+}
+.aabr{
+    align-items:flex-end;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+
+
+/* highlight cells with click-events (option/alt if runtool is active) */
+.GDClickable {
+    background: rgba(178, 215, 255, 0.70) !important;
+    z-index: 134217727;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+svg path, svg rect {
+    fill: unset;
+}
+
+
+
+
+
+
+.NewScreenContainer {
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* 
+    for screen transitions. Safari (12) can't animate with the normal animate.css slideXXXX-animations, 
+    but works with margin. 
+
+    see Antetype#gotoScreenWithTransition
+
+*/
+
+
+@-webkit-keyframes marginInRight {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+
+}
+
+@keyframes marginInRight {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+.marginInRight {
+  -webkit-animation-name: marginInRight;
+  animation-name: marginInRight;
+}
+
+@-webkit-keyframes marginInLeft {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+
+}
+
+@keyframes marginInLeft {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+.marginInLeft {
+  -webkit-animation-name: marginInLeft;
+  animation-name: marginInLeft;
+}
+
+@-webkit-keyframes marginInUp {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+
+}
+
+@keyframes marginInUp {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+.marginInUp {
+  -webkit-animation-name: marginInUp;
+  animation-name: marginInUp;
+}
+
+@-webkit-keyframes marginInDown {
+  from {
+    margin-top: -100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+
+}
+
+@keyframes marginInDown {
+  from {
+    margin-top: -100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+.marginInDown {
+  -webkit-animation-name: marginInDown;
+  animation-name: marginInDown;
+}
+

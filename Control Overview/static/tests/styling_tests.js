@@ -1,0 +1,201 @@
+"use strict";
+
+QUnit.module("styling", {
+    beforeEach: function() {
+    }
+});
+
+function createTestCell(props, container) {
+    function valueForKey(k,s) {
+        if (props[k])
+            return props[k];
+
+        return GDLookAndFeel.defaultValueForKey(k);
+    }
+    const cell = {
+        valueForKeyInStateWithIdentifier: (k, s) => {
+            return valueForKey(k,s);
+        },
+
+        ownValueForKeyInStateWithIdentifier: (k, s) => {
+            return valueForKey(k,s);
+        },
+
+        container: container, 
+    }; 
+
+    if (container) {
+        container.orderedComponents = [cell];
+    }
+
+    return cell;
+}
+
+QUnit.test("issue 433, cell-alignment", function(assert) {
+    const container = createTestCell({"layoutPolicyCode": GDAlignmentLayoutPolicyCode, 
+            "horizontalAlignment": GDCenterAlignment, 
+            "verticalAlignment": GDCenterAlignment});
+        
+
+    const cell = createTestCell({} ,container);
+
+    const style = {};
+    layoutPolicyCodeAndActiveLayoutCSS(style, cell, null);
+
+    assert.equal(style.placeSelf, "center center");
+});
+
+QUnit.test("issue 675, grid-template-rows/columns", function(assert) {
+    const container = createTestCell({"layoutPolicyCode": GDAlignmentLayoutPolicyCode });
+
+    const style = {};
+    layoutCSS(style, container, null);
+
+    assert.equal(style.gridTemplateRows, "100%");       // using 1fr breaks stretch in the child-cell
+    assert.equal(style.gridTemplateColumns, "100%");
+});
+
+
+QUnit.test("customCSS single property", function(assert) {
+    let cell = { valueForKeyInStateWithIdentifier: (key, state) => "caret-color: red" };
+    let e = document.createElement("div");
+
+    customCSS(e.style, cell, null);
+
+    assert.equal(e.style.caretColor, "red");
+});
+
+
+QUnit.test("customCSS multiple properties", function(assert) {
+    let cell = { valueForKeyInStateWithIdentifier: (key, state) => "caret-color: red;\n text-transform  : capitalize" };
+    let e = document.createElement("div");
+
+    customCSS(e.style, cell, null);
+
+    assert.equal(e.style.caretColor, "red");
+    assert.equal(e.style.textTransform, "capitalize");
+});
+
+QUnit.test("rotatation issue #517", function(assert) {
+    let container = createTestCell({"layoutPolicyCode": GDHorizontalBoxLayoutPolicyCode});
+    let cell = createTestCell({"rotationAngle": 33}, container);
+    let e = document.createElement("div");
+    e.style.transform="rotate(12deg)";
+    layoutPolicyCodeAndActiveLayoutCSS(e.style, cell, null);
+
+    assert.equal(e.style.transform, "rotate(12deg)", "do nothing if we have a rotation angle");
+
+    layoutPolicyCodeAndActiveLayoutCSS(e.style, createTestCell({"rotationAngle": 0},container), null);
+
+    assert.equal(e.style.transform, "unset", "remove for zero rotation");
+});
+
+
+QUnit.test("unset for 0px corner radius (#528)", function (assert) {
+    let cell = createTestCell({}, null);
+    let e = document.createElement("div");
+    borderRadiusCSS(e.style, cell, null);
+    assert.equal(e.style.borderRadius, "unset");
+});
+
+
+
+
+QUnit.test("issue683 triangle", function(assert) {
+    let cell = createTestCell({cellType: GDTriangleCellType, rotationAngle: 0}, null);
+    let e = document.createElement("div");
+    displayCSS(e.style, cell, cell.activeStateIdentifier);
+    let clipPath = e.style.clipPath;
+    if (clipPath == "")
+        clipPath = e.style.webkitClipPath;
+    assert.notEqual( clipPath, "");
+});
+
+QUnit.test("issue683 displayCSS is called", function(assert) {
+    let cell = createTestCell({cellType: GDTriangleCellType, rotationAngle: 0}, null);
+    let displayIsCalledForCellType = displayProperties.shouldUse("cellType", cell, cell.activeStateIdentifier);
+    assert.ok(displayIsCalledForCellType);
+});
+
+// don't know how to test this particular bug, it was basically an error while moving the 
+// stuff from viewer into the own class. The real problem is: where do we need the 
+// updateLayoutCells anyway ... 
+QUnit.test("issue 701", function(assert) {
+    let container = createTestCell({"layoutPolicyCode": GDVerticalBoxLayoutPolicyCode});
+    let child = createTestCell({"horizontalResizing": GDFlexResizing, "verticalResizing": GDIntrinsicResizing}, container);
+    let e = document.createElement("div");
+
+    let cssGenerator = new GDCSSGenerator();
+
+    cssGenerator.updateStyleProperty(e.style, container, "layoutPolicyCode", container.activeStateIdentifier);
+    assert.ok( true, "the call above should not throw ");
+});
+
+
+// since we currenly cannot use real objects we mock it :/ 
+// We create two cells, container and cell an make sure the inner-cells position
+// is overwritten according to the containers-layout. #694 had basically this problem
+QUnit.test("issue 694", function(assert) {
+
+    let container = createTestCell({"layoutPolicyCode": GDVerticalBoxLayoutPolicyCode});
+
+    let cell =  createTestCell({}, container);
+    let div = document.createElement("div");
+    div.style.position = "absolute";
+    cell.cssStyleForStateIdentifier = () => div.style;
+    cell.activeState = {identifier: "foo"};
+    cell.objectID = "blar";
+
+    let cssGenerator = new GDCSSGenerator();
+
+    let containerDiv = document.createElement("div");
+    document.body.appendChild(containerDiv);
+    let containerStyle = containerDiv.style;
+
+
+    cssGenerator.updateStyleProperty(containerStyle, container, "layoutPolicyCode", null);
+    assert.equal(div.style.position, "relative");
+});
+
+
+// make sure alignSelf = "stretch" is removed if resizing is changed from flex to fix. 
+QUnit.test("issue 733 horizontal ", function(assert) {
+    let container = createTestCell({"layoutPolicyCode": GDHorizontalBoxLayoutPolicyCode, "verticalAlignment": GDCenterAlignment, "horizontalAlignment": GDCenterAlignment});
+    let cell = createTestCell({"verticalResizing": GDFlexResizing, "horizontalResizing": GDFixResizing}, container);
+
+    let cellStyle = document.createElement("div").style;
+    let containerStyle = document.createElement("div").style;
+    
+    let cssGenerator = new GDCSSGenerator();
+    cssGenerator.updateStyles(containerStyle, container, null);
+    cssGenerator.updateStyles(cellStyle, cell, null);
+
+    assert.equal(cellStyle.alignSelf, "stretch");
+
+    let cell2 = createTestCell({"verticalResizing": GDFixResizing, "horizontalResizing": GDFixResizing}, container);
+    cssGenerator.updateStyleProperty(cellStyle, cell2, "verticalResizing", null);
+
+
+    assert.equal(cellStyle.alignSelf, "auto");
+});
+
+// make sure alignSelf = "stretch" is removed if resizing is changed from flex to fix. 
+QUnit.test("issue 733 vertical", function(assert) {
+    let container = createTestCell({"layoutPolicyCode": GDVerticalBoxLayoutPolicyCode, "verticalAlignment": GDCenterAlignment, "horizontalAlignment": GDCenterAlignment});
+    let cell = createTestCell({"verticalResizing": GDFixResizing, "horizontalResizing": GDFlexResizing}, container);
+
+    let cellStyle = document.createElement("div").style;
+    let containerStyle = document.createElement("div").style;
+    
+    let cssGenerator = new GDCSSGenerator();
+    cssGenerator.updateStyles(containerStyle, container, null);
+    cssGenerator.updateStyles(cellStyle, cell, null);
+
+    assert.equal(cellStyle.alignSelf, "stretch");
+
+    let cell2 = createTestCell({"verticalResizing": GDFixResizing, "horizontalResizing": GDFixResizing}, container);
+    cssGenerator.updateStyleProperty(cellStyle, cell2, "horizontalResizing", null);
+
+
+    assert.equal(cellStyle.alignSelf, "auto");
+});
