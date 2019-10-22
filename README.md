@@ -4,7 +4,7 @@ Der Styleguide befindet sich im **Beta**-Stadium. Der Styleguide berücksicht ak
 ## Control Overview
 Die Auflistung aller derzeit bekannten Controls. [Weiter zum Control Overview](https://eurodata.github.io/Styleguide/Control%20Overview/index.html)
 Weitere Spezifikationen:
- 1. [Datumsformatierung in Tabellen](Specificaton/.md)
+ 1. [Datumsformatierung in Tabellen](Specificaton/table-date-formatting.md)
 
 ## Spezifikation
 Alle Controls werden hinsichtlich Größe, Farbe, usw. detailliert erläutert. 
