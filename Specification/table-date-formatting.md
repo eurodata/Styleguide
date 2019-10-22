@@ -1,5 +1,8 @@
 ## Datumsformatierung in Tabellen
 
+**Note:** In Review
+{: .note}
+
 <div>
 In Review
 {: .alert .alert-gitlab-orange}
