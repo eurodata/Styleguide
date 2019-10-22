@@ -46,4 +46,23 @@ liegt.
 | 2017	| 2017	| | 
 | 09/2016 - 12/2016	| 09/16 - 12/16	| September - Dezember 2016 | 
 
+### Quartale
+| Quartalsbilanz | Quartalsbilanz (Kurzschreibweise) | Tooltipp | 
+|:-:|:-:|:-:|
+| Q1/2016	| Q1/16	| 1. Quartal 2016 | 
+| Q4/2016	| Q4/16	| 4. Quartal 2016 | 
+
+### Intervalle mit Quartalen
+| Quartalsbilanz | Quartalsbilanz (Kurzschreibweise) | Tooltipp | 
+|:-:|:-:|:-:|
+| Q1/2016 - Q4/2017	| Q1/16 - Q4/17	| 1. Quartal 2016 - 4. Quartal 2017 | 
+| Q1/2016 - Q4/2016	| Q1/16 - Q4/16	| 1. - 4. Quartal 2016 | 
+
+### Jahr
+|  Kalenderjahr | 
+|:-:|
+| 2016 | 
+| 2017 | 
+
+
 
