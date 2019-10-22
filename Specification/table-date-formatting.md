@@ -31,4 +31,12 @@ liegt.
 | Mrz 2016	| Mrz 16 | 
 | Apr 2016	| Apr 16 | 
 
+### Intevall mit Monaten
+| Zeitraum | Zeitraum (Kurzschreibweise) | Tooltipp (optional) |
+|:-:|:-:|:-:|
+| 02/2016 - 08/2016	| 02/16 - 08/16	| Februar - August 2016 | 
+| 01/2015 - 12/2016	| 01/15 - 12/16	| Januar 2015 - Dezember 2016 | 
+| 03/2014 - 12/2016	| 03/14 - 12/16	| März 2014 - Dezember 2016 | 
+
+
 
