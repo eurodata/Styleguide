@@ -1,7 +1,9 @@
 # Styleguide
 Styleguide befindet sich im Beta-Statium.
 
-## Spezifikation h2
-[Specification](https://eurodata.github.io/Styleguide/Specification/index.html)
+## Spezifikation
+In der Spezifikation werden alle Controls hinsichtlich Größen, Farben, usw. detailiert erläutert
+[Weiter Specification](https://eurodata.github.io/Styleguide/Specification/index.html)
 
-[Control Overview](https://eurodata.github.io/Styleguide/Control%20Overview/index.html)
+## Contol Overview
+[Weiter zum Control Overview](https://eurodata.github.io/Styleguide/Control%20Overview/index.html)
