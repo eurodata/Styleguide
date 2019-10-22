@@ -1,13 +1,13 @@
 # Styleguide
 Der Styleguide befindet sich im **Beta**-Stadium. Der Styleguide berücksicht aktuell noch kein responsives Verhalten.
 
-## Conrtol Overview
+## Control Overview
 Die Auflistung aller derzeit bekannten Controls. [Weiter zum Control Overview](https://eurodata.github.io/Styleguide/Control%20Overview/index.html)
 
 ## Spezifikation
-Alle Controls werden hinsichtlich Größe, Farbe, usw. detailiert erläutert. 
+Alle Controls werden hinsichtlich Größe, Farbe, usw. detailliert erläutert. 
 [Weiter zur Spezifikation](https://eurodata.github.io/Styleguide/Specification/index.html)
 
 ## Custom Controls
-Allegmeingültige Custom Controls werden auf Anforderung mit den Styleguide aufgenommen
+Allegmeingültige Custom Controls werden auf Anforderung in den Styleguide aufgenommen.
 
