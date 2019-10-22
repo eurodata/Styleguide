@@ -4,6 +4,7 @@ Spalten wie "erstellt am", "geändert am" oder ähnlichen zeigen Datum an. Hierb
  - am aktuellen Tag
  - im gleichen Jahr
  - in vergangenen Jahren
+
 liegt.
 
 ### Zeitpunkt (Spalte rechtsbündig)
@@ -31,12 +32,18 @@ liegt.
 | Mrz 2016	| Mrz 16 | 
 | Apr 2016	| Apr 16 | 
 
-### Intevall mit Monaten
+### Intervall mit Monaten
 | Zeitraum | Zeitraum (Kurzschreibweise) | Tooltipp (optional) |
 |:-:|:-:|:-:|
 | 02/2016 - 08/2016	| 02/16 - 08/16	| Februar - August 2016 | 
 | 01/2015 - 12/2016	| 01/15 - 12/16	| Januar 2015 - Dezember 2016 | 
 | 03/2014 - 12/2016	| 03/14 - 12/16	| März 2014 - Dezember 2016 | 
 
+### Intervall mit Monaten (Option Berücksichtigung von Jahren)
+| Geschäftsjahr | Geschäftsjahr (Kurzschreibweise) | Tooltipp (optional) |
+|:-:|:-:|:-:|
+| 2018	| 2018	| | 
+| 2017	| 2017	| | 
+| 09/2016 - 12/2016	| 09/16 - 12/16	| September - Dezember 2016 | 
 
 
