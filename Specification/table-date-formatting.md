@@ -13,3 +13,9 @@ liegt.
 | 24. Apr | 24. Apr | 24. April 2017 um 11:23 |
 | 17.11.2016 | 17.11.16 | 17. November 2016 um 20:59 |
 
+### Datum (ohne Urzeit, Spalte rechtsbündig)
+| Eingestellungsdatum | Eingestellungsdatum (Kurzschreibweise) | Tooltipp
+| 24. Apr	| 24. Apr	| 24. April 2017 |
+| 17.11.2016| 17.11.16	1| 7. November 2016 |
+
+
