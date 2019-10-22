@@ -9,7 +9,7 @@ Alle Controls werden hinsichtlich Größe, Farbe, usw. detailliert erläutert.
 [Weiter zur Spezifikation](https://eurodata.github.io/Styleguide/Specification/index.html)
 
 Weitere Spezifikationen:
- 1. [Datumsformatierung in Tabellen](Specification/table-date-formatting.md)
+ 1. [Datumsformatierung in Tabellen](docs/table-date-formatting.md)
 
 ## Custom Controls
 Allegmeingültige Custom Controls werden auf Anforderung in den Styleguide aufgenommen.
