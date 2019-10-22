@@ -2,10 +2,10 @@
 
 > In Review
 
-<div>
+
 In Review
 {: .alert .alert-gitlab-orange}
-</div>
+
 
 Spalten wie "erstellt am", "geändert am" oder ähnlichen zeigen Datum an. Hierbei sollte man bei der Anzeige unterscheiden, ob das Datum
  - am aktuellen Tag
