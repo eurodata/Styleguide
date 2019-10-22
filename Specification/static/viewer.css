@@ -1,0 +1,338 @@
+/*
+ * css for the exported web viewer. Highly designed toolbar.
+ */
+#ViewerToolbar {
+    display: none;
+}
+
+#ViewerToolbar {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 8px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(254, 252, 255);
+    font-size: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    border-bottom: 1px solid #444;
+}
+
+.ViewerButton {
+    background-position: center center;
+    background-repeat: no-repeat no-repeat;
+    margin: 0 8px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.ViewerButton:hover { background: #444; }
+.ViewerButton:active { background: #333; }
+
+.ViewerButtonIcon {
+    width: 20px;
+    height: 20px;
+}
+
+#ViewerNextButton .ViewerButtonIcon { background-image: url(images/12584363l.svg); }
+#ViewerPrevButton .ViewerButtonIcon { background-image: url(images/4195755l.svg); }
+#ViewerFullScreenButton .ViewerButtonIcon { background-image: url(images/20972971l.svg); }
+#ViewerHideButton .ViewerButtonIcon { background-image: url(images/16778667l.svg); }
+#ViewerInteractionButton .ViewerButtonIcon { background-image: url(images/interaction.svg); }
+#ViewerInspectorButton .ViewerButtonIcon { background-image: url(images/code.svg); }
+
+
+.spacer {
+    flex: 1 1 auto;
+    align-self: stretch;
+}
+
+#ViewerDocTitle {
+    white-space: nowrap;
+    color: rgb(254, 252, 255);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow:hidden; 
+    text-overflow: ellipsis;
+    font-weight: bold;
+    flex: 1 1 auto;
+    max-width: 40%;
+    min-width: 50px;
+}
+
+.ViewerScreenSelectStyle {
+    background: black url("images/8390059l.svg") no-repeat 90% 50%;
+    background-size: 18px;
+    padding: 5px 50px 5px 10px;
+    border-radius: 16px;
+    flex: 0 1 auto;
+    color: rgb(254, 252, 255);
+    margin: 0 8px;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    font-size: 13px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    max-width:300px;
+}
+
+.ViewerScreenSelectStyle:hover {
+    background: #444 url("images/8390059l.svg") no-repeat 90% 50%;
+    background-size: 18px;
+}
+
+.ViewerScreenSelectStyle:active {
+    background: #333 url("images/8390059l.svg") no-repeat 90% 50%;
+    background-size: 18px;
+}
+
+
+
+.ViewerScreenSelectStyle select:focus { outline: none; }
+
+
+
+
+
+#ViewerFrame {
+    flex: 1 1 auto;
+    height: 100%;
+    border: 0px;
+}
+
+#MainWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#ViewerInspector{
+    width: 380px;
+    height: 100%;
+    background-color: white;
+    border: 0px;
+    font-family: Helvetica;
+    background-color: black;
+    border-left: 1px solid #444;
+    overflow: scroll;
+    display: none;
+    flex-direction: column;
+}
+
+#ViewerInspector div {
+    -webkit-user-select: text;
+    font-size: 13px;
+}
+
+#ViewerInspector code {
+    -webkit-user-select: text;
+    font-size: 13px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.itable {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+}
+
+.irow {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.irow div{
+
+}
+
+.ispace-bottom {
+    margin-bottom: 10px;
+
+}
+.irow div.label {
+    flex: 1 1 50%;
+    max-width: 50%;
+    color: #999;
+    text-align: right;
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.irow div.value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    padding:5px;
+    color: white;
+}
+
+.irow div.value:hover {
+    background: #333;
+    border-radius: 5px;
+}
+
+.irow div.value:active {
+    background: #444;
+    border-radius: 5px;
+}
+
+
+
+.colorswatch {
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    margin-right: 5px;
+    border-radius: 3px;
+    float: left;
+}
+
+#css {
+    padding: 10px;
+    color: white;
+    font-family: Menlo, Monaco, Consolas, monospace;
+    flex: 1 1 auto;
+    margin: 10px 0px 0px 0px;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    overflow: scroll;
+    min-height: 100px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.button{
+    font-size: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    border: 0px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: 1px solid #444;
+    color: white;
+    height: 40px;
+}
+
+
+.css-button-container {
+    margin: 0px ;
+}
+
+.css-button {
+    border-radius: 0px ;
+    border: 0px;
+    flex: 1 1 auto;
+}
+
+.button:hover { background-color: #444; }
+.button:active { background-color: #333; }
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: block;
+    width: 50%;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 298px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    word-wrap: break-word;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -220px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition-delay: 0.5s;
+}
+
+/* Tooltip arrow */
+/* .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+} */
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.clicktocopy{
+    font-size: 11px;
+    color: #999;
+}
+
+
+
+#high {
+    width: 100px;
+    height: 100px;
+    background: #0000ff50;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 666777888999;
+    display: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
+#high2 {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #0000ff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 566777888999;
+    display: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
+
+
