@@ -6,7 +6,7 @@ Auflistung aller derzeit bekannten Controls. [Weiter zum Control Overview](https
 
 ## Spezifikation
 Alle Controls werden hinsichtlich Größe, Farbe, usw. detailiert erläutert. 
-[Weiter Specification](https://eurodata.github.io/Styleguide/Specification/index.html)
+[Weiter zur Specifikation](https://eurodata.github.io/Styleguide/Specification/index.html)
 
 ## Custom Controls
 Allegmeingültige Custom Controls werden auf Anforderung mit den Styleguide aufgenommen
