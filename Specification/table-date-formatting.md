@@ -1,7 +1,6 @@
 ## Datumsformatierung in Tabellen
 
-**Note:** In Review
-{: .note}
+**Note:** In Review{: .note}
 
 <div>
 In Review
