@@ -9,6 +9,8 @@ docs:
         url: /docs/installation/
       - title: "Upgrading"
         url: /docs/upgrading/
+      - title: "Datumsformatierung"
+        url: /docs/table-date-formatting.md/
 
   - title: Customization
     children:
