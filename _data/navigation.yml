@@ -1,3 +1,19 @@
+main:
+  - title: Getting Started
+    children:
+      - title: "Quick-Start Guide"
+        url: /docs/quick-start-guide/
+      - title: "Structure"
+        url: /docs/structure/
+      - title: "Installation"
+        url: /docs/installation/
+      - title: "Upgrading"
+        url: /docs/upgrading/
+      - title: "Datumsformatierung"
+        url: /docs/table-date-formatting.md/
+
+
+
 docs:
   - title: Getting Started
     children:
@@ -9,6 +25,8 @@ docs:
         url: /docs/installation/
       - title: "Upgrading"
         url: /docs/upgrading/
+      - title: "Datumsformatierung"
+        url: /docs/table-date-formatting.md/
 
   - title: Customization
     children:
