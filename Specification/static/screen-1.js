@@ -157,13 +157,13 @@ let screenJSON_1 = {
               "className" : "GDProperties",
               "objectId" : "id3346049616861061421"
             },
-            "03F6D3A3-6F1A-4E80-8C34-EC3E4DB26DA3" : {
-              "className" : "GDProperties",
-              "objectId" : "id3346049615489524013"
-            },
             "582116AF-34E7-4406-8A8D-E72867AECF5E" : {
               "className" : "GDProperties",
               "objectId" : "id3346049615678267693"
+            },
+            "03F6D3A3-6F1A-4E80-8C34-EC3E4DB26DA3" : {
+              "className" : "GDProperties",
+              "objectId" : "id3346049615489524013"
             }
           },
           "definition" : "66BEA77D-946B-49AE-89FA-6A0C8A47FEF0",
@@ -423,18 +423,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
-                          "y" : -14.5,
-                          "className" : "GDProperties",
-                          "textString" : "Colors",
-                          "objectId" : "id3346049615040733485",
-                          "x" : 99.5
-                        },
                         "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
                           "y" : -14.5,
                           "className" : "GDProperties",
                           "textString" : "Colors",
                           "objectId" : "id3346049614860378413",
+                          "x" : 99.5
+                        },
+                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
+                          "y" : -14.5,
+                          "className" : "GDProperties",
+                          "textString" : "Colors",
+                          "objectId" : "id3346049615040733485",
                           "x" : 99.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -567,18 +567,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
-                          "y" : 5.5,
-                          "className" : "GDProperties",
-                          "textString" : "Shadows",
-                          "objectId" : "id3346049615279808813",
-                          "x" : 119.5
-                        },
                         "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
                           "y" : 5.5,
                           "className" : "GDProperties",
                           "textString" : "Shadows",
                           "objectId" : "id3346049615665684781",
+                          "x" : 119.5
+                        },
+                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
+                          "y" : 5.5,
+                          "className" : "GDProperties",
+                          "textString" : "Shadows",
+                          "objectId" : "id3346049615279808813",
                           "x" : 119.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -888,18 +888,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
-                          "y" : 5.5,
-                          "className" : "GDProperties",
-                          "textString" : "Datepicker",
-                          "objectId" : "id3346049616651346221",
-                          "x" : 119.5
-                        },
                         "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
                           "y" : 5.5,
                           "className" : "GDProperties",
                           "textString" : "Datepicker",
                           "objectId" : "id3346049615602770221",
+                          "x" : 119.5
+                        },
+                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
+                          "y" : 5.5,
+                          "className" : "GDProperties",
+                          "textString" : "Datepicker",
+                          "objectId" : "id3346049616651346221",
                           "x" : 119.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1032,18 +1032,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
-                          "y" : 25.5,
-                          "className" : "GDProperties",
-                          "textString" : "Header",
-                          "objectId" : "id3346050045699285293",
-                          "x" : 139.5
-                        },
                         "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
                           "y" : 25.5,
                           "className" : "GDProperties",
                           "textString" : "Header",
                           "objectId" : "id3346050045787365677",
+                          "x" : 139.5
+                        },
+                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
+                          "y" : 25.5,
+                          "className" : "GDProperties",
+                          "textString" : "Header",
+                          "objectId" : "id3346050045699285293",
                           "x" : 139.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1315,18 +1315,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
-                          "y" : 45.5,
-                          "className" : "GDProperties",
-                          "textString" : "List",
-                          "objectId" : "id3346049615682461997",
-                          "x" : 159.5
-                        },
                         "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
                           "y" : 45.5,
                           "className" : "GDProperties",
                           "textString" : "List",
                           "objectId" : "id3346049616630374701",
+                          "x" : 159.5
+                        },
+                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
+                          "y" : 45.5,
+                          "className" : "GDProperties",
+                          "textString" : "List",
+                          "objectId" : "id3346049615682461997",
                           "x" : 159.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1387,18 +1387,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
-                          "y" : 55.5,
-                          "className" : "GDProperties",
-                          "textString" : "Menu List",
-                          "objectId" : "id3346049615518884141",
-                          "x" : 169.5
-                        },
                         "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
                           "y" : 55.5,
                           "className" : "GDProperties",
                           "textString" : "Menu List",
                           "objectId" : "id3346049616894615853",
+                          "x" : 169.5
+                        },
+                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
+                          "y" : 55.5,
+                          "className" : "GDProperties",
+                          "textString" : "Menu List",
+                          "objectId" : "id3346049615518884141",
                           "x" : 169.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1471,18 +1471,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
-                          "y" : 45.5,
-                          "className" : "GDProperties",
-                          "textString" : "Navigation",
-                          "objectId" : "id3346049615015567661",
-                          "x" : 159.5
-                        },
                         "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
                           "y" : 45.5,
                           "className" : "GDProperties",
                           "textString" : "Navigation",
                           "objectId" : "id3346049616693289261",
+                          "x" : 159.5
+                        },
+                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
+                          "y" : 45.5,
+                          "className" : "GDProperties",
+                          "textString" : "Navigation",
+                          "objectId" : "id3346049615015567661",
                           "x" : 159.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1543,18 +1543,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
-                          "y" : 45.5,
-                          "className" : "GDProperties",
-                          "textString" : "Radio Button",
-                          "objectId" : "id3346049616512934189",
-                          "x" : 159.5
-                        },
                         "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
                           "y" : 45.5,
                           "className" : "GDProperties",
                           "textString" : "Radio Button",
                           "objectId" : "id3346049615669879085",
+                          "x" : 159.5
+                        },
+                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
+                          "y" : 45.5,
+                          "className" : "GDProperties",
+                          "textString" : "Radio Button",
+                          "objectId" : "id3346049616512934189",
                           "x" : 159.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1615,18 +1615,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
-                          "y" : 55.5,
-                          "className" : "GDProperties",
-                          "textString" : "Scrollbar",
-                          "objectId" : "id3346049615430803757",
-                          "x" : 169.5
-                        },
                         "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
                           "y" : 55.5,
                           "className" : "GDProperties",
                           "textString" : "Scrollbar",
                           "objectId" : "id3346049615716016429",
+                          "x" : 169.5
+                        },
+                        "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
+                          "y" : 55.5,
+                          "className" : "GDProperties",
+                          "textString" : "Scrollbar",
+                          "objectId" : "id3346049615430803757",
                           "x" : 169.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1759,18 +1759,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
-                          "y" : 65.5,
-                          "className" : "GDProperties",
-                          "textString" : "Switch",
-                          "objectId" : "id3346049614868767021",
-                          "x" : 179.5
-                        },
                         "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
                           "y" : 65.5,
                           "className" : "GDProperties",
                           "textString" : "Switch",
                           "objectId" : "id3346049614910710061",
+                          "x" : 179.5
+                        },
+                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
+                          "y" : 65.5,
+                          "className" : "GDProperties",
+                          "textString" : "Switch",
+                          "objectId" : "id3346049614868767021",
                           "x" : 179.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1831,18 +1831,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
-                          "y" : 75.5,
-                          "className" : "GDProperties",
-                          "textString" : "Table",
-                          "objectId" : "id3346049746200813869",
-                          "x" : 189.5
-                        },
                         "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
                           "y" : 75.5,
                           "className" : "GDProperties",
                           "textString" : "Table",
                           "objectId" : "id3346049746242756909",
+                          "x" : 189.5
+                        },
+                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
+                          "y" : 75.5,
+                          "className" : "GDProperties",
+                          "textString" : "Table",
+                          "objectId" : "id3346049746200813869",
                           "x" : 189.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -1903,18 +1903,18 @@ let screenJSON_1 = {
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
-                          "y" : 75.5,
-                          "className" : "GDProperties",
-                          "textString" : "Tabs",
-                          "objectId" : "id3346049747526213933",
-                          "x" : 189.5
-                        },
                         "7CBD519E-B5A1-4898-9572-F436D69F420A" : {
                           "y" : 75.5,
                           "className" : "GDProperties",
                           "textString" : "Tabs",
                           "objectId" : "id3346049747463299373",
+                          "x" : 189.5
+                        },
+                        "FC23DC82-E03C-4EB8-91F0-6CD3E315482D" : {
+                          "y" : 75.5,
+                          "className" : "GDProperties",
+                          "textString" : "Tabs",
+                          "objectId" : "id3346049747526213933",
                           "x" : 189.5
                         },
                         "CD9026CE-6A11-4CAF-B031-D790FE6647DF" : {
@@ -2294,16 +2294,17 @@ let screenJSON_1 = {
                           "objectId" : "id3346049616663929133",
                           "x" : 130
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049613484646701",
-                          "x" : 130
-                        },
                         "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049615032344877",
+                          "x" : 130
+                        },
+                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                          "textRichText" : 0,
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049615611158829",
                           "x" : 130
                         },
                         "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
@@ -2312,16 +2313,15 @@ let screenJSON_1 = {
                           "objectId" : "id3346049615191728429",
                           "x" : 130
                         },
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049613484646701",
+                          "x" : 130
+                        },
                         "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                           "className" : "GDProperties",
                           "objectId" : "id3346049616890421549"
-                        },
-                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                          "textRichText" : 0,
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049615611158829",
-                          "x" : 130
                         }
                       },
                       "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
@@ -2344,23 +2344,23 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049613115547949"
                             },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049615544049965"
-                            },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346049616697483565"
                             },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049615409832237"
+                            },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049615292391725"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049615409832237"
+                              "textRichText" : 0,
+                              "objectId" : "id3346049615544049965"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -2390,6 +2390,21 @@ let screenJSON_1 = {
                               "objectId" : "id3346049613316874541",
                               "textString" : "17.01.2020"
                             },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "17.01.2020",
+                              "objectId" : "id3346049614763909421"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textString" : "17.01.2020",
+                              "objectId" : "id3346049615581798701"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "17.01.2020",
+                              "objectId" : "id3346049615556632877"
+                            },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "textColor" : {
                                 "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
@@ -2397,21 +2412,6 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049615116230957",
                               "textString" : "17.01.2020"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textString" : "17.01.2020",
-                              "objectId" : "id3346049615581798701"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textString" : "17.01.2020",
-                              "objectId" : "id3346049614763909421"
-                            },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "textString" : "17.01.2020",
-                              "objectId" : "id3346049615556632877"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -2442,10 +2442,6 @@ let screenJSON_1 = {
                           "objectId" : "id3346049614982013229",
                           "x" : 130
                         },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049615367889197"
-                        },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                           "textRichText" : 0,
                           "y" : 5,
@@ -2464,6 +2460,10 @@ let screenJSON_1 = {
                           "className" : "GDProperties",
                           "objectId" : "id3346049613199434029",
                           "x" : 130
+                        },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049615367889197"
                         }
                       },
                       "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
@@ -2510,20 +2510,6 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049615653101869"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049616546488621"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049615254642989"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049615338529069"
-                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049613472063789"
@@ -2531,6 +2517,20 @@ let screenJSON_1 = {
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049615598575917"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049615254642989"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049616546488621"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049615338529069"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -2552,30 +2552,30 @@ let screenJSON_1 = {
                               "textString" : "Toggle State of Buttons added.",
                               "objectId" : "id3346049614801658157"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "textString" : "Toggle State of Buttons added.",
-                              "objectId" : "id3346049615648907565"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "textString" : "Toggle State of Buttons added.",
-                              "objectId" : "id3346049616588431661"
+                              "objectId" : "id3346049613077799213"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textString" : "Toggle State of Buttons added.",
                               "objectId" : "id3346049614906515757"
                             },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Toggle State of Buttons added.",
+                              "objectId" : "id3346049615648907565"
+                            },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "Toggle State of Buttons added.",
                               "objectId" : "id3346049616504545581"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "textString" : "Toggle State of Buttons added.",
-                              "objectId" : "id3346049613077799213"
+                              "objectId" : "id3346049616588431661"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -2661,21 +2661,21 @@ let screenJSON_1 = {
                           "objectId" : "id1873215488",
                           "x" : 130
                         },
-                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                          "textRichText" : 0,
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id531038208",
+                          "objectId" : "id2946957312",
                           "x" : 130
                         },
                         "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                           "className" : "GDProperties",
                           "objectId" : "id4020699136"
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                          "textRichText" : 0,
                           "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id2946957312",
+                          "objectId" : "id531038208",
                           "x" : 130
                         }
                       },
@@ -2699,19 +2699,19 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id2154233856"
                             },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id6750208"
+                              "objectId" : "id2141650944"
                             },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id1067909120"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
-                              "objectId" : "id2141650944"
+                              "textRichText" : 0,
+                              "objectId" : "id6750208"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
@@ -2737,11 +2737,6 @@ let screenJSON_1 = {
                               "textString" : "13.01.2020",
                               "objectId" : "id3764846592"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textString" : "13.01.2020",
-                              "objectId" : "id2691104768"
-                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "textColor" : {
                                 "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
@@ -2759,6 +2754,11 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textString" : "13.01.2020",
                               "objectId" : "id3227975680"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textString" : "13.01.2020",
+                              "objectId" : "id2691104768"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "textColor" : {
@@ -2791,25 +2791,6 @@ let screenJSON_1 = {
                           "objectId" : "id1885798400",
                           "x" : 130
                         },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id2959540224",
-                          "x" : 130
-                        },
-                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                          "textRichText" : 0,
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id1348927488",
-                          "x" : 130
-                        },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id812056576",
-                          "x" : 130
-                        },
                         "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 5,
                           "className" : "GDProperties",
@@ -2819,6 +2800,25 @@ let screenJSON_1 = {
                         "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                           "className" : "GDProperties",
                           "objectId" : "id3496411136"
+                        },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id812056576",
+                          "x" : 130
+                        },
+                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                          "textRichText" : 0,
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id1348927488",
+                          "x" : 130
+                        },
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id2959540224",
+                          "x" : 130
                         }
                       },
                       "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
@@ -2873,14 +2873,14 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3362193408"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id677838848"
-                            },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id2288451584"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id677838848"
                             },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
@@ -2907,30 +2907,30 @@ let screenJSON_1 = {
                               "textString" : "Color Sister Act added.",
                               "objectId" : "id3630628864"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "Color Sister Act added.",
-                              "objectId" : "id1483145216"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "textString" : "Color Sister Act added.",
-                              "objectId" : "id946274304"
+                              "objectId" : "id3093757952"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textString" : "Color Sister Act added.",
                               "objectId" : "id409403392"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "textString" : "Color Sister Act added.",
-                              "objectId" : "id3093757952"
-                            },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "Color Sister Act added.",
                               "objectId" : "id2556887040"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "textString" : "Color Sister Act added.",
+                              "objectId" : "id946274304"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "className" : "GDProperties",
+                              "textString" : "Color Sister Act added.",
+                              "objectId" : "id1483145216"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -3010,11 +3010,9 @@ let screenJSON_1 = {
                           "objectId" : "id3346050099659006253",
                           "x" : 130
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                          "y" : 5,
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                           "className" : "GDProperties",
-                          "objectId" : "id3346050099566731565",
-                          "x" : 130
+                          "objectId" : "id3346050099549954349"
                         },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                           "textRichText" : 0,
@@ -3029,9 +3027,11 @@ let screenJSON_1 = {
                           "objectId" : "id3346050099738698029",
                           "x" : 130
                         },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id3346050099549954349"
+                          "objectId" : "id3346050099566731565",
+                          "x" : 130
                         }
                       },
                       "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
@@ -3050,27 +3050,27 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346050099734503725"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346050099700949293"
+                              "textRichText" : 0,
+                              "objectId" : "id3346050099642229037"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346050099633840429"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346050099642229037"
+                              "objectId" : "id3346050099554148653"
                             },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346050099671589165"
                             },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346050099554148653"
+                              "objectId" : "id3346050099700949293"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -3092,28 +3092,20 @@ let screenJSON_1 = {
                               "textString" : "17.12.2019",
                               "objectId" : "id3346050099638034733"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id3346050099604480301",
-                              "textString" : "17.12.2019"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "17.12.2019",
-                              "objectId" : "id3346050099621257517"
+                              "objectId" : "id3346050099579314477"
                             },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "17.12.2019",
                               "objectId" : "id3346050099570925869"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textString" : "17.12.2019",
-                              "objectId" : "id3346050099579314477"
+                              "objectId" : "id3346050099621257517"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "textColor" : {
@@ -3121,6 +3113,14 @@ let screenJSON_1 = {
                               },
                               "className" : "GDProperties",
                               "objectId" : "id3346050099600285997",
+                              "textString" : "17.12.2019"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id3346050099604480301",
                               "textString" : "17.12.2019"
                             }
                           },
@@ -3146,16 +3146,10 @@ let screenJSON_1 = {
                           "objectId" : "id3346050099541565741",
                           "x" : 130
                         },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id3346050099562537261",
-                          "x" : 130
-                        },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346050099575120173",
+                          "objectId" : "id3346050099679977773",
                           "x" : 130
                         },
                         "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
@@ -3169,10 +3163,16 @@ let screenJSON_1 = {
                           "objectId" : "id3346050099730309421",
                           "x" : 130
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                           "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id3346050099679977773",
+                          "objectId" : "id3346050099575120173",
+                          "x" : 130
+                        },
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346050099562537261",
                           "x" : 130
                         }
                       },
@@ -3220,27 +3220,27 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346050099528982829"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346050099713532205"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346050099608674605"
-                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346050099629646125"
                             },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346050099583508781"
+                              "objectId" : "id3346050099713532205"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346050099705143597"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346050099583508781"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346050099608674605"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -3262,30 +3262,30 @@ let screenJSON_1 = {
                               "textString" : "Control label added.",
                               "objectId" : "id3346050099612868909"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "Control label added.",
-                              "objectId" : "id3346050099516399917"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "textString" : "Control label added.",
-                              "objectId" : "id3346050099650617645"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textString" : "Control label added.",
-                              "objectId" : "id3346050099709337901"
+                              "objectId" : "id3346050099520594221"
                             },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "Control label added.",
                               "objectId" : "id3346050099663200557"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textString" : "Control label added.",
-                              "objectId" : "id3346050099520594221"
+                              "objectId" : "id3346050099709337901"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "textString" : "Control label added.",
+                              "objectId" : "id3346050099650617645"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "className" : "GDProperties",
+                              "textString" : "Control label added.",
+                              "objectId" : "id3346050099516399917"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -3310,16 +3310,16 @@ let screenJSON_1 = {
                           "objectId" : "id3346050099625451821",
                           "x" : 140
                         },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 15,
                           "className" : "GDProperties",
-                          "objectId" : "id3346050099537371437",
+                          "objectId" : "id3346050099654811949",
                           "x" : 140
                         },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                           "y" : 15,
                           "className" : "GDProperties",
-                          "objectId" : "id3346050099596091693",
+                          "objectId" : "id3346050099524788525",
                           "x" : 140
                         },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
@@ -3329,16 +3329,16 @@ let screenJSON_1 = {
                           "objectId" : "id3346050099617063213",
                           "x" : 140
                         },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                           "y" : 15,
                           "className" : "GDProperties",
-                          "objectId" : "id3346050099524788525",
+                          "objectId" : "id3346050099596091693",
                           "x" : 140
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                           "y" : 15,
                           "className" : "GDProperties",
-                          "objectId" : "id3346050099654811949",
+                          "objectId" : "id3346050099537371437",
                           "x" : 140
                         }
                       },
@@ -3390,23 +3390,23 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346050099487039789"
                             },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346050099491234093"
+                              "textRichText" : 0,
+                              "objectId" : "id3346050099587703085"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346050099688366381"
                             },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346050099491234093"
+                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346050099667394861"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346050099587703085"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -3428,15 +3428,15 @@ let screenJSON_1 = {
                               "textString" : "Control header added.",
                               "objectId" : "id3346050099545760045"
                             },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Control header added.",
+                              "objectId" : "id3346050099675783469"
+                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "textString" : "Control header added.",
                               "objectId" : "id3346050099533177133"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "textString" : "Control header added.",
-                              "objectId" : "id3346050099646423341"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
@@ -3448,10 +3448,10 @@ let screenJSON_1 = {
                               "textString" : "Control header added.",
                               "objectId" : "id3346050099742892333"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "textString" : "Control header added.",
-                              "objectId" : "id3346050099675783469"
+                              "objectId" : "id3346050099646423341"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -3535,17 +3535,17 @@ let screenJSON_1 = {
                           "className" : "GDProperties",
                           "objectId" : "id3346049736386142509"
                         },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049736377753901",
-                          "x" : 130
-                        },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                           "textRichText" : 0,
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049736293867821",
+                          "x" : 130
+                        },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049736377753901",
                           "x" : 130
                         },
                         "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
@@ -3575,10 +3575,6 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049736281284909"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049736302256429"
-                            },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
@@ -3588,6 +3584,10 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346049736340005165"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049736302256429"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
@@ -3618,16 +3618,6 @@ let screenJSON_1 = {
                               "textString" : "10.12.2019",
                               "objectId" : "id3346049736218370349"
                             },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textString" : "10.12.2019",
-                              "objectId" : "id3346049736436474157"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textString" : "10.12.2019",
-                              "objectId" : "id3346049736285479213"
-                            },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "textColor" : {
                                 "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
@@ -3635,6 +3625,16 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049736319033645",
                               "textString" : "10.12.2019"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textString" : "10.12.2019",
+                              "objectId" : "id3346049736285479213"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "10.12.2019",
+                              "objectId" : "id3346049736436474157"
                             },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "textColor" : {
@@ -3741,18 +3741,9 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049736323227949"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049736381948205"
-                            },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049736209981741"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049736260313389"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
@@ -3762,6 +3753,15 @@ let screenJSON_1 = {
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049736230953261"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049736260313389"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049736381948205"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -3788,20 +3788,20 @@ let screenJSON_1 = {
                               "textString" : "Broken navigation fixed.",
                               "objectId" : "id3346049736193204525"
                             },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "textString" : "Broken navigation fixed.",
-                              "objectId" : "id3346049736365170989"
+                              "objectId" : "id3346049736398725421"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textString" : "Broken navigation fixed.",
                               "objectId" : "id3346049736373559597"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "textString" : "Broken navigation fixed.",
-                              "objectId" : "id3346049736398725421"
+                              "objectId" : "id3346049736365170989"
                             },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
@@ -3837,10 +3837,10 @@ let screenJSON_1 = {
                           "objectId" : "id3346049736256119085",
                           "x" : 140
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                           "y" : 15,
                           "className" : "GDProperties",
-                          "objectId" : "id3346049736306450733",
+                          "objectId" : "id3346049736264507693",
                           "x" : 140
                         },
                         "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
@@ -3849,10 +3849,10 @@ let screenJSON_1 = {
                           "objectId" : "id3346049736352588077",
                           "x" : 140
                         },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 15,
                           "className" : "GDProperties",
-                          "objectId" : "id3346049736264507693",
+                          "objectId" : "id3346049736306450733",
                           "x" : 140
                         },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
@@ -3907,9 +3907,9 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049736348393773"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049736390336813"
+                              "objectId" : "id3346049736331616557"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
@@ -3925,9 +3925,9 @@ let screenJSON_1 = {
                               "textRichText" : 0,
                               "objectId" : "id3346049736268701997"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049736331616557"
+                              "objectId" : "id3346049736390336813"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -3949,6 +3949,11 @@ let screenJSON_1 = {
                               "textString" : "States of the control table updated.",
                               "objectId" : "id3346049736222564653"
                             },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "States of the control table updated.",
+                              "objectId" : "id3346049736407114029"
+                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "textString" : "States of the control table updated.",
@@ -3963,11 +3968,6 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textString" : "States of the control table updated.",
                               "objectId" : "id3346049736239341869"
-                            },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "textString" : "States of the control table updated.",
-                              "objectId" : "id3346049736407114029"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
@@ -4046,15 +4046,17 @@ let screenJSON_1 = {
                           "objectId" : "id3346049747446522157",
                           "x" : 130
                         },
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049747257778477",
+                          "x" : 130
+                        },
                         "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049747354247469",
                           "x" : 130
-                        },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049747408773421"
                         },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                           "textRichText" : 0,
@@ -4063,16 +4065,14 @@ let screenJSON_1 = {
                           "objectId" : "id3346049747341664557",
                           "x" : 130
                         },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049747408773421"
+                        },
                         "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049747337470253",
-                          "x" : 130
-                        },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049747257778477",
                           "x" : 130
                         }
                       },
@@ -4092,13 +4092,9 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049747236806957"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049747190669613"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049747261972781"
+                              "objectId" : "id3346049747333275949"
                             },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
@@ -4110,9 +4106,13 @@ let screenJSON_1 = {
                               "textRichText" : 0,
                               "objectId" : "id3346049747287138605"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049747333275949"
+                              "objectId" : "id3346049747261972781"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049747190669613"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -4134,10 +4134,13 @@ let screenJSON_1 = {
                               "textString" : "05.12.2019",
                               "objectId" : "id3346049747278749997"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                              },
                               "className" : "GDProperties",
-                              "textString" : "05.12.2019",
-                              "objectId" : "id3346049747194863917"
+                              "objectId" : "id3346049747442327853",
+                              "textString" : "05.12.2019"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "textColor" : {
@@ -4146,6 +4149,11 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049747295527213",
                               "textString" : "05.12.2019"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "05.12.2019",
+                              "objectId" : "id3346049747194863917"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
@@ -4156,14 +4164,6 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textString" : "05.12.2019",
                               "objectId" : "id3346049747241001261"
-                            },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049747442327853",
-                              "textString" : "05.12.2019"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -4188,10 +4188,10 @@ let screenJSON_1 = {
                           "objectId" : "id3346049747299721517",
                           "x" : 130
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                           "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id3346049747329081645",
+                          "objectId" : "id3346049747220029741",
                           "x" : 130
                         },
                         "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
@@ -4205,16 +4205,16 @@ let screenJSON_1 = {
                           "objectId" : "id3346049747224224045",
                           "x" : 130
                         },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049747220029741",
-                          "x" : 130
-                        },
                         "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049747320693037",
+                          "x" : 130
+                        },
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049747329081645",
                           "x" : 130
                         }
                       },
@@ -4262,6 +4262,15 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049747358441773"
                             },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049747266167085"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049747421356333"
+                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049747404579117"
@@ -4271,18 +4280,9 @@ let screenJSON_1 = {
                               "textRichText" : 0,
                               "objectId" : "id3346049747366830381"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049747266167085"
-                            },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049747282944301"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049747421356333"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -4309,25 +4309,25 @@ let screenJSON_1 = {
                               "textString" : "Specification of the control table added.",
                               "objectId" : "id3346049747324887341"
                             },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "Specification of the control table added.",
-                              "objectId" : "id3346049747199058221"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textString" : "Specification of the control table added.",
-                              "objectId" : "id3346049747228418349"
+                              "objectId" : "id3346049747417162029"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textString" : "Specification of the control table added.",
                               "objectId" : "id3346049747350053165"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "Specification of the control table added.",
-                              "objectId" : "id3346049747417162029"
+                              "objectId" : "id3346049747228418349"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "textString" : "Specification of the control table added.",
+                              "objectId" : "id3346049747199058221"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -4407,16 +4407,16 @@ let screenJSON_1 = {
                           "objectId" : "id3346049746037236013",
                           "x" : 130
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049745940767021",
-                          "x" : 130
-                        },
                         "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049746003681581",
+                          "x" : 130
+                        },
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049745940767021",
                           "x" : 130
                         },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
@@ -4451,6 +4451,15 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049746020458797"
                             },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049746045624621"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049745907212589"
+                            },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
@@ -4459,15 +4468,6 @@ let screenJSON_1 = {
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049746033041709"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049745907212589"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049746045624621"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -4494,19 +4494,6 @@ let screenJSON_1 = {
                               "textString" : "28.11.2019",
                               "objectId" : "id3346049745886241069"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049746041430317",
-                              "textString" : "28.11.2019"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textString" : "28.11.2019",
-                              "objectId" : "id3346049745949155629"
-                            },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "textColor" : {
                                 "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
@@ -4519,6 +4506,19 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textString" : "28.11.2019",
                               "objectId" : "id3346049746007875885"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "28.11.2019",
+                              "objectId" : "id3346049745949155629"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049746041430317",
+                              "textString" : "28.11.2019"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -4543,23 +4543,15 @@ let screenJSON_1 = {
                           "objectId" : "id3346049745944961325",
                           "x" : 130
                         },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049745928184109",
-                          "x" : 130
-                        },
                         "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049745978515757",
                           "x" : 130
                         },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                          "y" : 5,
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                           "className" : "GDProperties",
-                          "objectId" : "id3346049745936572717",
-                          "x" : 130
+                          "objectId" : "id3346049745986904365"
                         },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                           "textRichText" : 0,
@@ -4568,9 +4560,17 @@ let screenJSON_1 = {
                           "objectId" : "id3346049745965932845",
                           "x" : 130
                         },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id3346049745986904365"
+                          "objectId" : "id3346049745928184109",
+                          "x" : 130
+                        },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049745936572717",
+                          "x" : 130
                         }
                       },
                       "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
@@ -4617,20 +4617,6 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049745991098669"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049746012070189"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049745961738541"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049745995292973"
-                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049745970127149"
@@ -4638,6 +4624,20 @@ let screenJSON_1 = {
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049745890435373"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049745995292973"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049745961738541"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049746012070189"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -4669,11 +4669,6 @@ let screenJSON_1 = {
                               "textString" : "Colors updated.",
                               "objectId" : "id3346049745894629677"
                             },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textString" : "Colors updated.",
-                              "objectId" : "id3346049745919795501"
-                            },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "Colors updated.",
@@ -4683,6 +4678,11 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textString" : "Colors updated.",
                               "objectId" : "id3346049746024653101"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Colors updated.",
+                              "objectId" : "id3346049745919795501"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -4756,18 +4756,6 @@ let screenJSON_1 = {
                           "objectId" : "id3346049605087650093",
                           "x" : 130
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049591632322861",
-                          "x" : 130
-                        },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049591133200685",
-                          "x" : 130
-                        },
                         "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                           "y" : 5,
                           "className" : "GDProperties",
@@ -4783,6 +4771,18 @@ let screenJSON_1 = {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049592576041261",
+                          "x" : 130
+                        },
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049591632322861",
+                          "x" : 130
+                        },
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049591133200685",
                           "x" : 130
                         }
                       },
@@ -4802,27 +4802,27 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049597751812397"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049593368764717"
+                              "textRichText" : 0,
+                              "objectId" : "id3346049594778050861"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346049594769662253"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049605502886189"
-                            },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049591724597549"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049594778050861"
+                              "objectId" : "id3346049605502886189"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049593368764717"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -4852,21 +4852,6 @@ let screenJSON_1 = {
                               "objectId" : "id3346049598129299757",
                               "textString" : "21.11.2019"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "textString" : "21.11.2019",
-                              "objectId" : "id3346049594077602093"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textString" : "21.11.2019",
-                              "objectId" : "id3346049594216014125"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textString" : "21.11.2019",
-                              "objectId" : "id3346049593502982445"
-                            },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "textColor" : {
                                 "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
@@ -4874,6 +4859,21 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049593729474861",
                               "textString" : "21.11.2019"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textString" : "21.11.2019",
+                              "objectId" : "id3346049594216014125"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "21.11.2019",
+                              "objectId" : "id3346049594077602093"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "21.11.2019",
+                              "objectId" : "id3346049593502982445"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -4898,6 +4898,16 @@ let screenJSON_1 = {
                           "objectId" : "id3346049605255422253",
                           "x" : 130
                         },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049592009810221",
+                          "x" : 130
+                        },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049594702553389"
+                        },
                         "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                           "y" : 5,
                           "className" : "GDProperties",
@@ -4915,16 +4925,6 @@ let screenJSON_1 = {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049598490009901",
-                          "x" : 130
-                        },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049594702553389"
-                        },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049592009810221",
                           "x" : 130
                         }
                       },
@@ -4976,9 +4976,10 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049592609595693"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049591821066541"
+                              "textRichText" : 0,
+                              "objectId" : "id3346049592924168493"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
@@ -4989,10 +4990,9 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049594295705901"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049592924168493"
+                              "objectId" : "id3346049591821066541"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -5019,25 +5019,25 @@ let screenJSON_1 = {
                               "textString" : "Dropdown Read-only state updated.",
                               "objectId" : "id3346049593385541933"
                             },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "textString" : "Dropdown Read-only state updated.",
-                              "objectId" : "id3346049593779806509"
+                              "objectId" : "id3346049594794828077"
                             },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "Dropdown Read-only state updated.",
                               "objectId" : "id3346049605549023533"
                             },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Dropdown Read-only state updated.",
+                              "objectId" : "id3346049593779806509"
+                            },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "Dropdown Read-only state updated.",
                               "objectId" : "id3346049598020247853"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "textString" : "Dropdown Read-only state updated.",
-                              "objectId" : "id3346049594794828077"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -5111,10 +5111,10 @@ let screenJSON_1 = {
                           "objectId" : "id3346049613014884653",
                           "x" : 130
                         },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                           "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id3346049612914221357",
+                          "objectId" : "id3346049612679340333",
                           "x" : 130
                         },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
@@ -5124,21 +5124,21 @@ let screenJSON_1 = {
                           "objectId" : "id3346049612733866285",
                           "x" : 130
                         },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612608037165"
+                        },
                         "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049612654174509",
                           "x" : 130
                         },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id3346049612679340333",
+                          "objectId" : "id3346049612914221357",
                           "x" : 130
-                        },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612608037165"
                         }
                       },
                       "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
@@ -5161,14 +5161,14 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612847112493"
                             },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049612876472621"
-                            },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346049612901638445"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049612876472621"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
@@ -5199,10 +5199,18 @@ let screenJSON_1 = {
                               "textString" : "14.11.2019",
                               "objectId" : "id3346049612977135917"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049612813558061",
+                              "textString" : "14.11.2019"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "14.11.2019",
-                              "objectId" : "id3346049612754837805"
+                              "objectId" : "id3346049612956164397"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
@@ -5216,18 +5224,10 @@ let screenJSON_1 = {
                               "textString" : "14.11.2019",
                               "objectId" : "id3346049612872278317"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049612813558061",
-                              "textString" : "14.11.2019"
-                            },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "14.11.2019",
-                              "objectId" : "id3346049612956164397"
+                              "objectId" : "id3346049612754837805"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -5252,22 +5252,6 @@ let screenJSON_1 = {
                           "objectId" : "id3346049612687728941",
                           "x" : 130
                         },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612658368813",
-                          "x" : 130
-                        },
-                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                          "y" : 5,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612780003629",
-                          "x" : 130
-                        },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612645785901"
-                        },
                         "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                           "y" : 5,
                           "className" : "GDProperties",
@@ -5279,6 +5263,22 @@ let screenJSON_1 = {
                           "y" : 5,
                           "className" : "GDProperties",
                           "objectId" : "id3346049613010690349",
+                          "x" : 130
+                        },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612645785901"
+                        },
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612658368813",
+                          "x" : 130
+                        },
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612780003629",
                           "x" : 130
                         }
                       },
@@ -5326,16 +5326,6 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612670951725"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049612889055533"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049612930998573"
-                            },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612880666925"
@@ -5347,6 +5337,16 @@ let screenJSON_1 = {
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612905832749"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049612930998573"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049612889055533"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -5368,21 +5368,6 @@ let screenJSON_1 = {
                               "textString" : "Contact details added.",
                               "objectId" : "id3346049612708700461"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                              "className" : "GDProperties",
-                              "textString" : "Contact details added.",
-                              "objectId" : "id3346049612717089069"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "textString" : "Contact details added.",
-                              "objectId" : "id3346049612771615021"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textString" : "Contact details added.",
-                              "objectId" : "id3346049612763226413"
-                            },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "textString" : "Contact details added.",
@@ -5392,6 +5377,21 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textString" : "Contact details added.",
                               "objectId" : "id3346049612729671981"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Contact details added.",
+                              "objectId" : "id3346049612763226413"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Contact details added.",
+                              "objectId" : "id3346049612717089069"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "textString" : "Contact details added.",
+                              "objectId" : "id3346049612771615021"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -5422,17 +5422,17 @@ let screenJSON_1 = {
                           "objectId" : "id3346049613069410605",
                           "x" : 140
                         },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "y" : 15,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612616425773",
+                          "x" : 140
+                        },
                         "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                           "textRichText" : 0,
                           "y" : 15,
                           "className" : "GDProperties",
                           "objectId" : "id3346049613040050477",
-                          "x" : 140
-                        },
-                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                          "y" : 15,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612616425773",
                           "x" : 140
                         },
                         "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
@@ -5492,6 +5492,10 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612800975149"
                             },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id3346049612893249837"
+                            },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612989718829"
@@ -5509,10 +5513,6 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346049612805169453"
-                            },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id3346049612893249837"
                             }
                           },
                           "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
@@ -5534,10 +5534,15 @@ let screenJSON_1 = {
                               "textString" : "History added.",
                               "objectId" : "id3346049612964553005"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "textString" : "History added.",
-                              "objectId" : "id3346049613002301741"
+                              "objectId" : "id3346049612951970093"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textString" : "History added.",
+                              "objectId" : "id3346049613061021997"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
@@ -5549,15 +5554,10 @@ let screenJSON_1 = {
                               "textString" : "History added.",
                               "objectId" : "id3346049612784197933"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "History added.",
-                              "objectId" : "id3346049613061021997"
-                            },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
-                              "className" : "GDProperties",
-                              "textString" : "History added.",
-                              "objectId" : "id3346049612951970093"
+                              "objectId" : "id3346049613002301741"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -5582,6 +5582,25 @@ let screenJSON_1 = {
                           "objectId" : "id3346049613031661869",
                           "x" : 140
                         },
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : 15,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612834529581",
+                          "x" : 140
+                        },
+                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                          "textRichText" : 0,
+                          "y" : 15,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612738060589",
+                          "x" : 140
+                        },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 15,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612968747309",
+                          "x" : 140
+                        },
                         "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 15,
                           "className" : "GDProperties",
@@ -5592,25 +5611,6 @@ let screenJSON_1 = {
                           "y" : 15,
                           "className" : "GDProperties",
                           "objectId" : "id3346049613044244781",
-                          "x" : 140
-                        },
-                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                          "textRichText" : 0,
-                          "y" : 15,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612738060589",
-                          "x" : 140
-                        },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                          "y" : 15,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612834529581",
-                          "x" : 140
-                        },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                          "y" : 15,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612968747309",
                           "x" : 140
                         }
                       },
@@ -5666,15 +5666,15 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612796780845"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049612704506157"
-                            },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textRichText" : 0,
                               "objectId" : "id3346049613006496045"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id3346049612704506157"
                             },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
@@ -5700,30 +5700,30 @@ let screenJSON_1 = {
                               "textString" : "Specification of the control scrollbar added.",
                               "objectId" : "id3346049612775809325"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
                               "textString" : "Specification of the control scrollbar added.",
-                              "objectId" : "id3346049613052633389"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "textString" : "Specification of the control scrollbar added.",
-                              "objectId" : "id3346049612788392237"
-                            },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textString" : "Specification of the control scrollbar added.",
-                              "objectId" : "id3346049612851306797"
+                              "objectId" : "id3346049612910027053"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
                               "textString" : "Specification of the control scrollbar added.",
                               "objectId" : "id3346049612683534637"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "textString" : "Specification of the control scrollbar added.",
-                              "objectId" : "id3346049612910027053"
+                              "objectId" : "id3346049612788392237"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Specification of the control scrollbar added.",
+                              "objectId" : "id3346049613052633389"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textString" : "Specification of the control scrollbar added.",
+                              "objectId" : "id3346049612851306797"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -5748,10 +5748,10 @@ let screenJSON_1 = {
                           "objectId" : "id3346049612637397293",
                           "x" : 140
                         },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                           "y" : 15,
                           "className" : "GDProperties",
-                          "objectId" : "id3346049612612231469",
+                          "objectId" : "id3346049612826140973",
                           "x" : 140
                         },
                         "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
@@ -5767,16 +5767,16 @@ let screenJSON_1 = {
                           "objectId" : "id3346049612721283373",
                           "x" : 140
                         },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 15,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612612231469",
+                          "x" : 140
+                        },
                         "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 15,
                           "className" : "GDProperties",
                           "objectId" : "id3346049612830335277",
-                          "x" : 140
-                        },
-                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
-                          "y" : 15,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612826140973",
                           "x" : 140
                         }
                       },
@@ -5824,18 +5824,18 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612700311853"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049612838723885"
+                              "textRichText" : 0,
+                              "objectId" : "id3346049612943581485"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612742254893"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
-                              "textRichText" : 0,
-                              "objectId" : "id3346049612943581485"
+                              "objectId" : "id3346049612838723885"
                             },
                             "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
                               "className" : "GDProperties",
@@ -5866,10 +5866,10 @@ let screenJSON_1 = {
                               "textString" : "Specification of the control supertab added.",
                               "objectId" : "id3346049613056827693"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "Specification of the control supertab added.",
-                              "objectId" : "id3346049612641591597"
+                              "objectId" : "id3346049612725477677"
                             },
                             "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
@@ -5886,10 +5886,10 @@ let screenJSON_1 = {
                               "textString" : "Specification of the control supertab added.",
                               "objectId" : "id3346049612960358701"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
                               "textString" : "Specification of the control supertab added.",
-                              "objectId" : "id3346049612725477677"
+                              "objectId" : "id3346049612641591597"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
@@ -5914,6 +5914,19 @@ let screenJSON_1 = {
                           "objectId" : "id3346049612998107437",
                           "x" : 140
                         },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 15,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049612842918189",
+                          "x" : 140
+                        },
+                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                          "textRichText" : 0,
+                          "y" : 15,
+                          "className" : "GDProperties",
+                          "objectId" : "id3346049613023273261",
+                          "x" : 140
+                        },
                         "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                           "y" : 15,
                           "className" : "GDProperties",
@@ -5926,23 +5939,10 @@ let screenJSON_1 = {
                           "objectId" : "id3346049612767420717",
                           "x" : 140
                         },
-                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                          "y" : 15,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049612842918189",
-                          "x" : 140
-                        },
                         "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                           "y" : 15,
                           "className" : "GDProperties",
                           "objectId" : "id3346049612859695405",
-                          "x" : 140
-                        },
-                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                          "textRichText" : 0,
-                          "y" : 15,
-                          "className" : "GDProperties",
-                          "objectId" : "id3346049613023273261",
                           "x" : 140
                         }
                       },
@@ -5990,9 +5990,9 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "objectId" : "id3346049612855501101"
                             },
-                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049613048439085"
+                              "objectId" : "id3346049612947775789"
                             },
                             "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
                               "className" : "GDProperties",
@@ -6003,9 +6003,9 @@ let screenJSON_1 = {
                               "textRichText" : 0,
                               "objectId" : "id3346049612662563117"
                             },
-                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
-                              "objectId" : "id3346049612947775789"
+                              "objectId" : "id3346049613048439085"
                             },
                             "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
@@ -6032,21 +6032,6 @@ let screenJSON_1 = {
                               "textString" : "Read-only state for editable controls added.",
                               "objectId" : "id3346049612746449197"
                             },
-                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
-                              "className" : "GDProperties",
-                              "textString" : "Read-only state for editable controls added.",
-                              "objectId" : "id3346049612675146029"
-                            },
-                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
-                              "className" : "GDProperties",
-                              "textString" : "Read-only state for editable controls added.",
-                              "objectId" : "id3346049612809363757"
-                            },
-                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
-                              "className" : "GDProperties",
-                              "textString" : "Read-only state for editable controls added.",
-                              "objectId" : "id3346049612633202989"
-                            },
                             "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
                               "className" : "GDProperties",
                               "textString" : "Read-only state for editable controls added.",
@@ -6056,6 +6041,21 @@ let screenJSON_1 = {
                               "className" : "GDProperties",
                               "textString" : "Read-only state for editable controls added.",
                               "objectId" : "id3346049612817752365"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Read-only state for editable controls added.",
+                              "objectId" : "id3346049612633202989"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "textString" : "Read-only state for editable controls added.",
+                              "objectId" : "id3346049612809363757"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textString" : "Read-only state for editable controls added.",
+                              "objectId" : "id3346049612675146029"
                             }
                           },
                           "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
