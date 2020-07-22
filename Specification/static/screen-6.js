@@ -10,7 +10,7 @@ let screenJSON_6 = {
       "className" : "GDProperties",
       "borderBottomWidth" : 0,
       "width" : 1680,
-      "y" : 3360,
+      "y" : 2760,
       "backgroundPainterType" : 1,
       "textFont" : {
         "GDFont" : {
@@ -26,7 +26,7 @@ let screenJSON_6 = {
       },
       "horizontalAlignment" : 1,
       "height" : 2000,
-      "objectId" : "id6711736146699200023",
+      "objectId" : "id6711737557939889687",
       "layoutPolicyCode" : 3,
       "borderLeftWidth" : 0,
       "borderTopWidth" : 0
@@ -38,23 +38,23 @@ let screenJSON_6 = {
 
   ],
   "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p1",
-  "objectId" : "id1757442342l",
-  "name" : "Fonts",
+  "objectId" : "id1762636432l",
+  "name" : "Sizes",
   "orderedComponents" : [
     {
       "specificationCell" : 0,
       "styleProperties" : {
-        "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
-          "className" : "GDProperties",
-          "objectId" : "id6711738281843205655"
-        },
         "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
           "className" : "GDProperties",
-          "objectId" : "id6711738282816284183"
+          "objectId" : "id6711738282052920855"
+        },
+        "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
+          "className" : "GDProperties",
+          "objectId" : "id6711738314244204055"
         },
         "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
           "className" : "GDProperties",
-          "objectId" : "id6711736148838295063"
+          "objectId" : "id6711737558027970071"
         }
       },
       "definition" : "055738AB-BB2F-4F13-BDD4-BC2F818D72C4",
@@ -63,23 +63,23 @@ let screenJSON_6 = {
 
       ],
       "activeState" : "6680F0CC-4148-47EF-A66E-F3A54B534795",
-      "objectId" : "id1749697988l",
+      "objectId" : "id1892480986l",
       "name" : "ES SPEC - Header",
       "orderedComponents" : [
         {
           "specificationCell" : 0,
           "styleProperties" : {
-            "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
+            "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
               "className" : "GDProperties",
-              "objectId" : "id6711738281507661335"
+              "objectId" : "id6711737558078301719"
             },
             "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
               "className" : "GDProperties",
-              "objectId" : "id6711738281285363223"
+              "objectId" : "id6711738283126662679"
             },
-            "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
+            "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
               "className" : "GDProperties",
-              "objectId" : "id6711736147185739287"
+              "objectId" : "id6711738282384270871"
             }
           },
           "definition" : "785DF797-D0E0-493F-A98D-1CD127BEEC05",
@@ -87,23 +87,23 @@ let screenJSON_6 = {
           "eventHandlers" : [
 
           ],
-          "objectId" : "id965456684l",
+          "objectId" : "id374054565l",
           "name" : "Title",
           "orderedComponents" : [
             {
               "specificationCell" : 0,
               "styleProperties" : {
-                "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
-                  "className" : "GDProperties",
-                  "objectId" : "id6711738281688016407"
-                },
                 "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711738282271024663"
+                  "objectId" : "id6711738282778535447"
+                },
+                "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
+                  "className" : "GDProperties",
+                  "objectId" : "id6711738281247614487"
                 },
                 "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711736148544693783"
+                  "objectId" : "id6711737557679842839"
                 }
               },
               "definition" : "A42EE348-33BF-4468-A725-3E428BBDB08B",
@@ -111,7 +111,7 @@ let screenJSON_6 = {
               "eventHandlers" : [
 
               ],
-              "objectId" : "id425767255l",
+              "objectId" : "id1314348430l",
               "name" : "Design Spec",
               "orderedComponents" : [
 
@@ -120,17 +120,17 @@ let screenJSON_6 = {
             {
               "specificationCell" : 0,
               "styleProperties" : {
-                "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
-                  "className" : "GDProperties",
-                  "objectId" : "id6711736117557175831"
-                },
                 "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711738281193088535"
+                  "objectId" : "id6711738281260197399"
                 },
                 "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711738281784485399"
+                  "objectId" : "id6711738283122468375"
+                },
+                "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
+                  "className" : "GDProperties",
+                  "objectId" : "id6711737557587568151"
                 }
               },
               "definition" : "F2E7290C-4310-4F69-87D0-2C66E3E66E8A",
@@ -138,7 +138,7 @@ let screenJSON_6 = {
               "eventHandlers" : [
 
               ],
-              "objectId" : "id487195363l",
+              "objectId" : "id1887017525l",
               "name" : "Project",
               "orderedComponents" : [
 
@@ -147,17 +147,17 @@ let screenJSON_6 = {
             {
               "specificationCell" : 0,
               "styleProperties" : {
-                "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
+                "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711738317335406103"
+                  "objectId" : "id6711738317364766231"
                 },
                 "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711738341251327511"
+                  "objectId" : "id6711738341142275607"
                 },
-                "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
+                "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711738315804485143"
+                  "objectId" : "id6711738317448652311"
                 }
               },
               "definition" : "92BF176E-358B-42C4-8557-6834292D7E01",
@@ -165,7 +165,7 @@ let screenJSON_6 = {
               "eventHandlers" : [
 
               ],
-              "objectId" : "id42442190l",
+              "objectId" : "id1467545315l",
               "name" : "Update Info",
               "orderedComponents" : [
 
@@ -176,17 +176,17 @@ let screenJSON_6 = {
         {
           "specificationCell" : 0,
           "styleProperties" : {
+            "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
+              "className" : "GDProperties",
+              "objectId" : "id6711737558275434007"
+            },
             "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
               "className" : "GDProperties",
-              "objectId" : "id6711738281075648023"
+              "objectId" : "id6711738314034488855"
             },
             "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
               "className" : "GDProperties",
-              "objectId" : "id6711738281990006295"
-            },
-            "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
-              "className" : "GDProperties",
-              "objectId" : "id6711736149240948247"
+              "objectId" : "id6711738282715620887"
             }
           },
           "definition" : "B2F150A0-11D0-4FF8-BB03-A3F8DFF6AA34",
@@ -194,7 +194,7 @@ let screenJSON_6 = {
           "eventHandlers" : [
 
           ],
-          "objectId" : "id1031662158l",
+          "objectId" : "id679602675l",
           "name" : "Logo",
           "orderedComponents" : [
 
@@ -203,17 +203,17 @@ let screenJSON_6 = {
         {
           "specificationCell" : 0,
           "styleProperties" : {
-            "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
+            "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
               "className" : "GDProperties",
-              "objectId" : "id6711738282325550615"
+              "objectId" : "id6711738317247325719"
             },
             "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
               "className" : "GDProperties",
-              "objectId" : "id6711738282581403159"
+              "objectId" : "id6711738282891781655"
             },
-            "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
+            "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
               "className" : "GDProperties",
-              "objectId" : "id6711738317360571927"
+              "objectId" : "id6711738281105008151"
             }
           },
           "definition" : "B3FF1556-D47D-4736-8F98-59FF4CDF8BC8",
@@ -221,25 +221,25 @@ let screenJSON_6 = {
           "eventHandlers" : [
 
           ],
-          "objectId" : "id794597691l",
+          "objectId" : "id708877600l",
           "name" : "Logo",
           "orderedComponents" : [
             {
               "specificationCell" : 0,
               "styleProperties" : {
-                "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
-                  "className" : "GDProperties",
-                  "objectId" : "id6711738316941141527"
-                },
                 "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
                   "className" : "GDProperties",
                   "y" : 100,
-                  "objectId" : "id6711738281214060055"
+                  "objectId" : "id6711738281818039831"
                 },
                 "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
                   "className" : "GDProperties",
                   "y" : 100,
-                  "objectId" : "id6711738314269369879"
+                  "objectId" : "id6711738282120029719"
+                },
+                "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
+                  "className" : "GDProperties",
+                  "objectId" : "id6711738315498300951"
                 }
               },
               "definition" : "7AC6ADF7-7E44-455B-86A2-0AE63FF4D012",
@@ -247,7 +247,7 @@ let screenJSON_6 = {
               "eventHandlers" : [
 
               ],
-              "objectId" : "id1344621759l",
+              "objectId" : "id587096449l",
               "name" : "Dreieckspfeil",
               "orderedComponents" : [
 
@@ -258,17 +258,17 @@ let screenJSON_6 = {
               "styleProperties" : {
                 "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711738303393539607"
+                  "objectId" : "id6711738302533707287"
                 },
                 "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
                   "className" : "GDProperties",
                   "y" : 57.5,
-                  "objectId" : "id6711738281620907543"
+                  "objectId" : "id6711738283080525335"
                 },
                 "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
                   "className" : "GDProperties",
                   "y" : 57.5,
-                  "objectId" : "id6711738281641879063"
+                  "objectId" : "id6711738282606568983"
                 }
               },
               "definition" : "A751442C-D8D2-4E5C-B7AB-73E66EF605E4",
@@ -276,7 +276,7 @@ let screenJSON_6 = {
               "eventHandlers" : [
 
               ],
-              "objectId" : "id1303245291l",
+              "objectId" : "id102672028l",
               "name" : "Rectangle",
               "orderedComponents" : [
 
@@ -285,19 +285,19 @@ let screenJSON_6 = {
             {
               "specificationCell" : 0,
               "styleProperties" : {
-                "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
+                "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
                   "className" : "GDProperties",
-                  "y" : 67.5,
-                  "objectId" : "id6711738282375882263"
+                  "objectId" : "id6711738315670267415"
                 },
                 "C743F4A2-ECB4-415E-8506-310C297FCC75" : {
                   "className" : "GDProperties",
                   "y" : 67.5,
-                  "objectId" : "id6711738281738348055"
+                  "objectId" : "id6711738281960646167"
                 },
-                "6680F0CC-4148-47EF-A66E-F3A54B534795" : {
+                "C44B246B-16F8-40B1-B33B-22BCDBBDA38F" : {
                   "className" : "GDProperties",
-                  "objectId" : "id6711738315456357911"
+                  "y" : 67.5,
+                  "objectId" : "id6711738282573014551"
                 }
               },
               "definition" : "181E45DB-5745-4289-AC30-A0D5E2068E2B",
@@ -305,7 +305,7 @@ let screenJSON_6 = {
               "eventHandlers" : [
 
               ],
-              "objectId" : "id667048304l",
+              "objectId" : "id591504342l",
               "name" : "Rectangle",
               "orderedComponents" : [
 
@@ -320,7 +320,7 @@ let screenJSON_6 = {
       "styleProperties" : {
         "9419F845-3EB3-46AE-8602-806A22B6ECE2" : {
           "className" : "GDProperties",
-          "objectId" : "id6711736146812446231"
+          "objectId" : "id6711737557730174487"
         }
       },
       "definition" : "A256B9BA-6D49-4761-891F-67BDCB4042B8",
@@ -329,7 +329,7 @@ let screenJSON_6 = {
 
       ],
       "activeState" : "9419F845-3EB3-46AE-8602-806A22B6ECE2",
-      "objectId" : "id1368566946l",
+      "objectId" : "id2142567097l",
       "name" : "ES SPEC - Content",
       "orderedComponents" : [
         {
@@ -354,7 +354,7 @@ let screenJSON_6 = {
               "minimumWidth" : 3,
               "x" : 670.5,
               "paddingBottom" : 40,
-              "objectId" : "id6711736467202745879",
+              "objectId" : "id6711737558137021975",
               "y" : 370,
               "minimumHeight" : 3,
               "textFont" : {
@@ -382,7 +382,7 @@ let screenJSON_6 = {
 
           ],
           "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
-          "objectId" : "id146172925l",
+          "objectId" : "id848152667l",
           "name" : "ES SPEC - Page Content",
           "orderedComponents" : [
             {
@@ -391,19 +391,19 @@ let screenJSON_6 = {
                 "0F07A0B3-01D1-440E-96F2-29A1AA859679" : {
                   "y" : 468,
                   "className" : "GDProperties",
-                  "objectId" : "id4195352576",
-                  "x" : 620
-                },
-                "0916CDED-116D-451A-A797-0C414C2D729D" : {
-                  "y" : 468,
-                  "className" : "GDProperties",
-                  "objectId" : "id1510998016",
+                  "objectId" : "id1141899264",
                   "x" : 620
                 },
                 "C4112ABB-006C-478E-8D41-A1079FBCCC74" : {
                   "y" : 468,
                   "className" : "GDProperties",
-                  "objectId" : "id2249195520",
+                  "objectId" : "id2752512000",
+                  "x" : 620
+                },
+                "0916CDED-116D-451A-A797-0C414C2D729D" : {
+                  "y" : 468,
+                  "className" : "GDProperties",
+                  "objectId" : "id68157440",
                   "x" : 620
                 }
               },
@@ -412,7 +412,7 @@ let screenJSON_6 = {
               "eventHandlers" : [
                 {
                   "className" : "GDEventHandler",
-                  "objectId" : "id235929600",
+                  "objectId" : "id1812987904",
                   "eventType" : "GDMouseClickEventType",
                   "orderedActionSets" : [
                     {
@@ -425,15 +425,15 @@ let screenJSON_6 = {
                           "animationDuration" : 0,
                           "delay" : 0,
                           "animate" : 0,
-                          "objectId" : "id1309671424",
+                          "objectId" : "id470810624",
                           "afterPrevious" : false,
                           "screenID" : "id640780319l",
                           "specifier" : 0
                         }
                       ],
-                      "objectId" : "id2383413248",
+                      "objectId" : "id3960471552",
                       "orderedElements" : [
-                        "id723991211l"
+                        "id943636202l"
                       ],
                       "afterPrevious" : false
                     }
@@ -441,7 +441,7 @@ let screenJSON_6 = {
                 }
               ],
               "activeState" : "0916CDED-116D-451A-A797-0C414C2D729D",
-              "objectId" : "id723991211l",
+              "objectId" : "id943636202l",
               "name" : "Back Button",
               "orderedComponents" : [
                 {
@@ -454,7 +454,7 @@ let screenJSON_6 = {
                   "eventHandlers" : [
 
                   ],
-                  "objectId" : "id173126902l",
+                  "objectId" : "id901346402l",
                   "name" : "Icon",
                   "orderedComponents" : [
 
@@ -466,17 +466,17 @@ let screenJSON_6 = {
                     "0916CDED-116D-451A-A797-0C414C2D729D" : {
                       "className" : "GDProperties",
                       "textString" : "Back to Overview",
-                      "objectId" : "id1980760064"
+                      "objectId" : "id739246080"
                     },
                     "0F07A0B3-01D1-440E-96F2-29A1AA859679" : {
                       "className" : "GDProperties",
                       "textString" : "Back to Overview",
-                      "objectId" : "id1443889152"
+                      "objectId" : "id4094689280"
                     },
                     "C4112ABB-006C-478E-8D41-A1079FBCCC74" : {
                       "className" : "GDProperties",
                       "textString" : "Back to Overview",
-                      "objectId" : "id907018240"
+                      "objectId" : "id873463808"
                     }
                   },
                   "definition" : "B42D6781-010C-40D2-9097-5C3A9C742E2C",
@@ -484,7 +484,7 @@ let screenJSON_6 = {
                   "eventHandlers" : [
 
                   ],
-                  "objectId" : "id540366917l",
+                  "objectId" : "id1559115180l",
                   "name" : "Rectangle",
                   "orderedComponents" : [
 
@@ -500,7 +500,7 @@ let screenJSON_6 = {
                   "eventHandlers" : [
 
                   ],
-                  "objectId" : "id223556162l",
+                  "objectId" : "id1452954145l",
                   "name" : "Dropdown Indikator",
                   "orderedComponents" : [
 
@@ -514,7 +514,7 @@ let screenJSON_6 = {
                 "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75" : {
                   "y" : 310,
                   "className" : "GDProperties",
-                  "objectId" : "id6711736732114986519",
+                  "objectId" : "id6711737557612733975",
                   "x" : 660
                 }
               },
@@ -524,7 +524,7 @@ let screenJSON_6 = {
 
               ],
               "activeState" : "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75",
-              "objectId" : "id431684334l",
+              "objectId" : "id313768322l",
               "name" : "ES SPEC - Content Header",
               "orderedComponents" : [
                 {
@@ -532,8 +532,8 @@ let screenJSON_6 = {
                   "styleProperties" : {
                     "87F9CF44-6FB2-4E15-9122-C4C2A0C3EF5D" : {
                       "className" : "GDProperties",
-                      "textString" : "Fonts",
-                      "objectId" : "id6711736561708803607"
+                      "textString" : "Sizes",
+                      "objectId" : "id6711737557839226391"
                     }
                   },
                   "definition" : "70A9BB26-9579-4659-8D1C-99C4AC4C631A",
@@ -542,7 +542,7 @@ let screenJSON_6 = {
 
                   ],
                   "activeState" : "87F9CF44-6FB2-4E15-9122-C4C2A0C3EF5D",
-                  "objectId" : "id1751543546l",
+                  "objectId" : "id622842976l",
                   "name" : "ES SPEC - H1",
                   "orderedComponents" : [
 
@@ -553,61 +553,12 @@ let screenJSON_6 = {
             {
               "specificationCell" : 0,
               "styleProperties" : {
-                "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75" : {
-                  "y" : 340,
-                  "className" : "GDProperties",
-                  "objectId" : "id6711735716191643159",
-                  "x" : 690
-                }
-              },
-              "definition" : "72A7FE86-7B9E-48C4-9FDA-29008F811B2B",
-              "className" : "GDWidgetInstanceRootCell",
-              "eventHandlers" : [
-
-              ],
-              "activeState" : "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75",
-              "objectId" : "id1984377926l",
-              "name" : "ES SPEC - Content Header",
-              "orderedComponents" : [
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "FC383DF4-7BB2-46B6-9029-6ADFF59D56D1" : {
-                      "className" : "GDProperties",
-                      "textString" : "Headline",
-                      "objectId" : "id6711736646584739351"
-                    },
-                    "F21B2B3C-940B-419A-9F04-2C6043A8BB6B" : {
-                      "y" : 320,
-                      "className" : "GDProperties",
-                      "textString" : "Headline",
-                      "objectId" : "id6711736547645302295",
-                      "x" : 540
-                    }
-                  },
-                  "definition" : "50912E2E-D40A-4A5D-B2CE-01F2E787DC49",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "F21B2B3C-940B-419A-9F04-2C6043A8BB6B",
-                  "objectId" : "id1948581450l",
-                  "name" : "ES SPEC - H2",
-                  "orderedComponents" : [
-
-                  ]
-                }
-              ]
-            },
-            {
-              "specificationCell" : 0,
-              "styleProperties" : {
                 "7F76B86E-AA6F-4E4D-B62E-867623143055" : {
-                  "layoutWrap" : 1,
                   "y" : 330,
                   "className" : "GDProperties",
+                  "objectId" : "id6711737557654677015",
+                  "height" : 696,
                   "layoutPolicyCode" : 2,
-                  "objectId" : "id6711736659918431767",
                   "x" : 680
                 }
               },
@@ -617,2490 +568,324 @@ let screenJSON_6 = {
 
               ],
               "activeState" : "7F76B86E-AA6F-4E4D-B62E-867623143055",
-              "objectId" : "id1979766759l",
+              "objectId" : "id633962087l",
               "name" : "ES SPEC - Content Wrapper",
               "orderedComponents" : [
                 {
                   "specificationCell" : 0,
                   "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "y" : 30,
+                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                      "borderRightWidth" : 0,
+                      "verticalResizing" : 2,
+                      "marginRight" : 80,
+                      "x" : 120,
+                      "textWordWrap" : 0,
                       "className" : "GDProperties",
-                      "objectId" : "id6711736633347515927",
-                      "x" : 450
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "y" : 30,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736673516365335",
-                      "x" : 450
+                      "isContentClipped" : 0,
+                      "borderBottomWidth" : 0,
+                      "horizontalResizing" : 2,
+                      "textColor" : {
+                        "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                      },
+                      "textFont" : {
+                        "GDFont" : {
+                          "displayName" : "Roboto",
+                          "isItalic" : false,
+                          "isBold" : false,
+                          "fontName" : "Roboto-Regular",
+                          "familyName" : "Roboto",
+                          "fallback" : "",
+                          "size" : 13,
+                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                        }
+                      },
+                      "minimumHeight" : 3,
+                      "y" : -5,
+                      "borderTopWidth" : 0,
+                      "objectId" : "id6711737558288016919",
+                      "layoutPolicyCode" : 3,
+                      "borderLeftWidth" : 0,
+                      "minimumWidth" : 3,
+                      "backgroundImageProportionalScale" : 1
                     }
                   },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
+                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                   "className" : "GDWidgetInstanceRootCell",
                   "eventHandlers" : [
 
                   ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id1418227929l",
-                  "name" : "ES SPEC - Font Swatch",
+                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                  "objectId" : "id1476073739l",
+                  "name" : "Vertical Flow Group",
                   "orderedComponents" : [
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
+                        "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
                           "className" : "GDProperties",
-                          "objectId" : "id6711736480683238935"
+                          "objectId" : "id6711737557755340311"
                         },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : -5,
                           "className" : "GDProperties",
-                          "objectId" : "id6711736488316872215"
+                          "objectId" : "id6711737557562402327",
+                          "x" : 120
+                        },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : -5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737557629511191",
+                          "x" : 120
+                        },
+                        "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
+                          "y" : -5,
+                          "className" : "GDProperties",
+                          "objectId" : "id3515351040",
+                          "x" : 120
+                        },
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : -5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558015387159",
+                          "x" : 120
+                        },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "y" : -5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737557952472599",
+                          "x" : 120
+                        },
+                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                          "textRichText" : 0,
+                          "y" : -5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558124439063",
+                          "x" : 120
                         }
                       },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id557065843l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736460043068951",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto",
-                                  "isItalic" : false,
-                                  "isBold" : false,
-                                  "fontName" : "Roboto-Regular",
-                                  "familyName" : "Roboto",
-                                  "fallback" : "",
-                                  "size" : 24,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id861764809l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736638837859863"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736639521531415"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1915573750l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "H1",
-                              "objectId" : "id6711736561729775127"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "H1",
-                              "objectId" : "id6711736734539294231"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1188038084l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 24 px",
-                              "objectId" : "id6711736586568443415"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 24 px",
-                              "objectId" : "id6711736656722372119"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id882841388l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "1.000 (rem)",
-                              "objectId" : "id6711736573595461143"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736473536144919",
-                              "textString" : "1.000 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id82875204l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736612820592151"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736627232220695"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id220501851l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736718252811799"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736552489723415",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1346866838l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "y" : 20,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736489591940631",
-                      "x" : 440
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "y" : 20,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736586119652887",
-                      "x" : 440
-                    }
-                  },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id1451854258l",
-                  "name" : "ES SPEC - Font Swatch",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736575424177687"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736478963574295"
-                        }
-                      },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id469679879l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736668156044823",
-                              "textString" : "Lorem Ipsum<br>",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto",
-                                  "isItalic" : false,
-                                  "isBold" : false,
-                                  "fontName" : "Roboto-Regular",
-                                  "familyName" : "Roboto",
-                                  "fallback" : "",
-                                  "size" : 19,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id1265946216l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736703849571863"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736484869154327"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id998948251l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "H2",
-                              "objectId" : "id6711736598371214871"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "H2",
-                              "objectId" : "id6711736546072438295"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id857114624l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 19 px",
-                              "objectId" : "id6711736584064443927"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 19 px",
-                              "objectId" : "id6711736495870813719"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id2004760173l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "1.000 (rem)",
-                              "objectId" : "id6711736668541920791"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736521678366231",
-                              "textString" : "1.000 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1537022641l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736628654089751"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736711088940567"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id830903375l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736576787326487"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736511029028375",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1565569747l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736687596643863"
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "y" : 10,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736680621516311",
-                      "x" : 430
-                    }
-                  },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id1284268254l",
-                  "name" : "ES SPEC - Font Swatch",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736496617399831"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736527479088663"
-                        }
-                      },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1717575080l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736622505240087",
-                              "textString" : "<font color=\"#3d494d\">Lorem Ipsum<\/font>",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto",
-                                  "isItalic" : false,
-                                  "isBold" : false,
-                                  "fontName" : "Roboto-Regular",
-                                  "familyName" : "Roboto",
-                                  "fallback" : "",
-                                  "size" : 15,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id333492104l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736635830543895"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736706395514391"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id938196991l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "H3",
-                              "objectId" : "id6711736659280897559"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "H3",
-                              "objectId" : "id6711736632055670295"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1369833454l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 15 px",
-                              "objectId" : "id6711735714371315223"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 15 px",
-                              "objectId" : "id6711736567014598167"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id865653822l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "1.000 (rem)",
-                              "objectId" : "id6711736567304005143"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736554226165271",
-                              "textString" : "1.000 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id2074122458l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736467722839575"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736580545422871"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1516006379l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736478732887575"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736500828481047",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1297338157l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "specificationCell" : 0,
-              "styleProperties" : {
-                "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75" : {
-                  "y" : 350,
-                  "className" : "GDProperties",
-                  "objectId" : "id6711735711678572055",
-                  "x" : 700
-                }
-              },
-              "definition" : "72A7FE86-7B9E-48C4-9FDA-29008F811B2B",
-              "className" : "GDWidgetInstanceRootCell",
-              "eventHandlers" : [
-
-              ],
-              "activeState" : "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75",
-              "objectId" : "id1678182356l",
-              "name" : "ES SPEC - Content Header",
-              "orderedComponents" : [
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "FC383DF4-7BB2-46B6-9029-6ADFF59D56D1" : {
-                      "className" : "GDProperties",
-                      "textString" : "Standard",
-                      "objectId" : "id6711736557749380631"
-                    },
-                    "F21B2B3C-940B-419A-9F04-2C6043A8BB6B" : {
-                      "y" : 320,
-                      "className" : "GDProperties",
-                      "textString" : "Standard",
-                      "objectId" : "id6711736529261667863",
-                      "x" : 540
-                    }
-                  },
-                  "definition" : "50912E2E-D40A-4A5D-B2CE-01F2E787DC49",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "F21B2B3C-940B-419A-9F04-2C6043A8BB6B",
-                  "objectId" : "id1352900657l",
-                  "name" : "ES SPEC - H2",
-                  "orderedComponents" : [
-
-                  ]
-                }
-              ]
-            },
-            {
-              "specificationCell" : 0,
-              "styleProperties" : {
-                "7F76B86E-AA6F-4E4D-B62E-867623143055" : {
-                  "layoutWrap" : 1,
-                  "y" : 340,
-                  "className" : "GDProperties",
-                  "layoutPolicyCode" : 2,
-                  "objectId" : "id6711736629388092951",
-                  "x" : 690
-                }
-              },
-              "definition" : "09B163A9-5ADF-441C-B740-873EBB82194B",
-              "className" : "GDWidgetInstanceRootCell",
-              "eventHandlers" : [
-
-              ],
-              "activeState" : "7F76B86E-AA6F-4E4D-B62E-867623143055",
-              "objectId" : "id1098435959l",
-              "name" : "ES SPEC - Content Wrapper",
-              "orderedComponents" : [
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736620382922263"
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "y" : 10,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736646052062743",
-                      "x" : 430
-                    }
-                  },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id1510465468l",
-                  "name" : "ES SPEC - Font Swatch",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736634467395095"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736732140152343"
-                        }
-                      },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id623644938l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736721478231575",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto",
-                                  "isItalic" : false,
-                                  "isBold" : false,
-                                  "fontName" : "Roboto-Regular",
-                                  "familyName" : "Roboto",
-                                  "fallback" : "",
-                                  "size" : 13,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id1655501803l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736706965939735"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736716914828823"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id224746629l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Standard",
-                              "objectId" : "id6711736526447289879"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Standard",
-                              "objectId" : "id6711736514300585495"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id391735040l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 13 px",
-                              "objectId" : "id6711736488102962711"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 13 px",
-                              "objectId" : "id6711736481241081367"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id696056239l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "1.000 (rem)",
-                              "objectId" : "id6711736475733960215"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736590620141079",
-                              "textString" : "1.000 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1107588018l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736549419492887"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736574937638423"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id474610244l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736484416169495"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736677723252247",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id916558091l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "y" : 20,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736697096742423",
-                      "x" : 440
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "y" : 20,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736718122788375",
-                      "x" : 440
-                    }
-                  },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id306971208l",
-                  "name" : "ES SPEC - Font Swatch",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736583468852759"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736592046204439"
-                        }
-                      },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1926464503l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736468419094039",
-                              "textString" : "<font color=\"#3d494d\">Lorem Ipsum<\/font>",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto Italic",
-                                  "isItalic" : true,
-                                  "isBold" : false,
-                                  "fontName" : "Roboto-Italic",
-                                  "familyName" : "Roboto",
-                                  "fallback" : "",
-                                  "size" : 13,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Italic\";src:url(\"\/images\/Roboto-Italic.woff\") format(\"woff\"),local(\"Roboto Italic\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id1386237970l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711735720264312343"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736552749770263"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1572917424l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Standard Italic",
-                              "objectId" : "id6711736656302941719"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Standard Italic",
-                              "objectId" : "id6711735714190960151"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id777929106l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400 Italic, 13 px",
-                              "objectId" : "id6711736643137021463"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400 Italic, 13 px",
-                              "objectId" : "id6711736634257679895"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id95868946l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "1.000 (rem)",
-                              "objectId" : "id6711736577475192343"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736638858831383",
-                              "textString" : "1.000 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1430193950l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736643560646167"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736504636909079"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id167468099l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736472764392983"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736547443975703",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id926772322l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "y" : 20,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736602146088471",
-                      "x" : 440
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "y" : 20,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736608517236247",
-                      "x" : 440
-                    }
-                  },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id848280049l",
-                  "name" : "ES SPEC - Font Swatch",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736550950413847"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736629878826519"
-                        }
-                      },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1451736354l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736606503970327",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto Medium",
-                                  "isItalic" : false,
-                                  "isBold" : false,
-                                  "fontName" : "Roboto-Medium",
-                                  "familyName" : "Roboto Medium",
-                                  "fallback" : "",
-                                  "size" : 13,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Medium\";src:url(\"\/images\/Roboto-Medium.woff\") format(\"woff\"),local(\"Roboto Medium\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id496863754l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736586664912407"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736630201787927"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1181772153l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Standard Medium",
-                              "objectId" : "id6711736715270661655"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Standard Medium",
-                              "objectId" : "id6711736603773478423"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id242449697l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Medium 500, 13 px",
-                              "objectId" : "id6711736725018224151"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Medium 500, 13 px",
-                              "objectId" : "id6711736679627466263"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1866697208l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "1.000 (rem)",
-                              "objectId" : "id6711736507719722519"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736691618981399",
-                              "textString" : "1.000 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id2047425975l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736518473917975"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736580604143127"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id169088507l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736591127651863"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736486882420247",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1235219939l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "y" : 30,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736481656317463",
-                      "x" : 450
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "y" : 30,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736492083357207",
-                      "x" : 450
-                    }
-                  },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id1197280484l",
-                  "name" : "ES SPEC - Font Swatch",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736508864767511"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736496550290967"
-                        }
-                      },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1847270864l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736589462513175",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto Bold",
-                                  "isItalic" : false,
-                                  "isBold" : true,
-                                  "fontName" : "Roboto-Bold",
-                                  "familyName" : "Roboto",
-                                  "fallback" : "",
-                                  "size" : 13,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id440636949l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736552078681623"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736577072539159"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id148232796l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Standard Bold",
-                              "objectId" : "id6711736565986993687"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Standard Bold",
-                              "objectId" : "id6711736663265486359"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1210252684l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Bold 700, 13 px",
-                              "objectId" : "id6711736624455591447"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Bold 700, 13 px",
-                              "objectId" : "id6711736562883208727"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1064281887l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "1.000 (rem)",
-                              "objectId" : "id6711736720479987223"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736729011201559",
-                              "textString" : "1.000 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1803734599l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736685910533655"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736697654584855"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1434999313l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736517651834391"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736678637610519",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1456016928l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "specificationCell" : 0,
-              "styleProperties" : {
-                "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75" : {
-                  "y" : 350,
-                  "className" : "GDProperties",
-                  "objectId" : "id6711736701232326167",
-                  "x" : 700
-                }
-              },
-              "definition" : "72A7FE86-7B9E-48C4-9FDA-29008F811B2B",
-              "className" : "GDWidgetInstanceRootCell",
-              "eventHandlers" : [
-
-              ],
-              "activeState" : "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75",
-              "objectId" : "id352307190l",
-              "name" : "ES SPEC - Content Header",
-              "orderedComponents" : [
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "FC383DF4-7BB2-46B6-9029-6ADFF59D56D1" : {
-                      "className" : "GDProperties",
-                      "textString" : "Small",
-                      "objectId" : "id6711736700108252695"
-                    },
-                    "F21B2B3C-940B-419A-9F04-2C6043A8BB6B" : {
-                      "y" : 320,
-                      "className" : "GDProperties",
-                      "textString" : "Small",
-                      "objectId" : "id6711736682886440471",
-                      "x" : 540
-                    }
-                  },
-                  "definition" : "50912E2E-D40A-4A5D-B2CE-01F2E787DC49",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "F21B2B3C-940B-419A-9F04-2C6043A8BB6B",
-                  "objectId" : "id395103683l",
-                  "name" : "ES SPEC - H2",
-                  "orderedComponents" : [
-
-                  ]
-                }
-              ]
-            },
-            {
-              "specificationCell" : 0,
-              "styleProperties" : {
-                "7F76B86E-AA6F-4E4D-B62E-867623143055" : {
-                  "y" : 340,
-                  "className" : "GDProperties",
-                  "layoutPolicyCode" : 2,
-                  "objectId" : "id6711736626288502295",
-                  "x" : 690
-                }
-              },
-              "definition" : "09B163A9-5ADF-441C-B740-873EBB82194B",
-              "className" : "GDWidgetInstanceRootCell",
-              "eventHandlers" : [
-
-              ],
-              "activeState" : "7F76B86E-AA6F-4E4D-B62E-867623143055",
-              "objectId" : "id1930627172l",
-              "name" : "ES SPEC - Content Wrapper",
-              "orderedComponents" : [
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736974776444439"
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "y" : 10,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736974935827991",
-                      "x" : 430
-                    }
-                  },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id422028869l",
-                  "name" : "ES SPEC - Font Swatch",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736974260545047"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736974784833047"
-                        }
-                      },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1812353573l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974956799511",
-                              "textString" : "<font color=\"#3d494d\">Lorem Ipsum<\/font>",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto",
-                                  "isItalic" : false,
-                                  "isBold" : false,
-                                  "fontName" : "Roboto-Regular",
-                                  "familyName" : "Roboto",
-                                  "fallback" : "",
-                                  "size" : 12,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id1884442975l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736974944216599"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736974675781143"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id143937502l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Small",
-                              "objectId" : "id6711736974579312151"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Small",
-                              "objectId" : "id6711736974692558359"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id887437163l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 12 px",
-                              "objectId" : "id6711736974323459607"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 12 px",
-                              "objectId" : "id6711736974679975447"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1931068160l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "0.857 (rem)",
-                              "objectId" : "id6711736974361208343"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974453483031",
-                              "textString" : "0.857 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1379073378l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736975007131159"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974688364055"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id75350327l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736974541563415"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974755472919",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1549617129l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "specificationCell" : 0,
-              "styleProperties" : {
-                "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75" : {
-                  "y" : 360,
-                  "className" : "GDProperties",
-                  "objectId" : "id6711736974591895063",
-                  "x" : 710
-                }
-              },
-              "definition" : "72A7FE86-7B9E-48C4-9FDA-29008F811B2B",
-              "className" : "GDWidgetInstanceRootCell",
-              "eventHandlers" : [
-
-              ],
-              "activeState" : "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75",
-              "objectId" : "id1157520922l",
-              "name" : "ES SPEC - Content Header",
-              "orderedComponents" : [
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "FC383DF4-7BB2-46B6-9029-6ADFF59D56D1" : {
-                      "className" : "GDProperties",
-                      "textString" : "Special",
-                      "objectId" : "id6711736974294099479"
-                    },
-                    "F21B2B3C-940B-419A-9F04-2C6043A8BB6B" : {
-                      "y" : 320,
-                      "className" : "GDProperties",
-                      "textString" : "Special",
-                      "objectId" : "id6711736974336042519",
-                      "x" : 540
-                    }
-                  },
-                  "definition" : "50912E2E-D40A-4A5D-B2CE-01F2E787DC49",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "F21B2B3C-940B-419A-9F04-2C6043A8BB6B",
-                  "objectId" : "id1862327652l",
-                  "name" : "ES SPEC - H2",
-                  "orderedComponents" : [
-
-                  ]
-                }
-              ]
-            },
-            {
-              "specificationCell" : 0,
-              "styleProperties" : {
-                "7F76B86E-AA6F-4E4D-B62E-867623143055" : {
-                  "y" : 350,
-                  "className" : "GDProperties",
-                  "layoutPolicyCode" : 2,
-                  "objectId" : "id6711736974357014039",
-                  "x" : 700
-                }
-              },
-              "definition" : "09B163A9-5ADF-441C-B740-873EBB82194B",
-              "className" : "GDWidgetInstanceRootCell",
-              "eventHandlers" : [
-
-              ],
-              "activeState" : "7F76B86E-AA6F-4E4D-B62E-867623143055",
-              "objectId" : "id4400901l",
-              "name" : "ES SPEC - Content Wrapper",
-              "orderedComponents" : [
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                      "y" : 0,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736974495426071",
-                      "x" : 420
-                    },
-                    "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736974768055831"
-                    }
-                  },
-                  "definition" : "43452A95-5EA5-44C6-873B-F85FF5D2ADC7",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC",
-                  "objectId" : "id1814683479l",
-                  "name" : "ES SPEC - Font Swatch",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736975011325463"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736974508008983"
-                        }
-                      },
-                      "definition" : "E2B0D5DE-C6A9-4030-9A0D-5977E63D4D5D",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1933578294l",
-                      "name" : "Font Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "51F21850-5129-4BFF-9E16-432EBFBCB88F" : {
-                              "textColor" : {
-                                "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                              },
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974621255191",
-                              "textHorizontalAlignment" : 1,
-                              "textString" : "Lorem Ipsum<br>",
-                              "textFont" : {
-                                "GDFont" : {
-                                  "displayName" : "Roboto",
-                                  "isItalic" : false,
-                                  "isBold" : false,
-                                  "fontName" : "Roboto-Regular",
-                                  "familyName" : "Roboto",
-                                  "fallback" : "",
-                                  "size" : 11,
-                                  "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
-                                }
-                              }
-                            }
-                          },
-                          "definition" : "7714E5EC-3DD7-48E8-A801-A2C3298579C5",
-                          "className" : "GDWidgetInstanceRootCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "activeState" : "51F21850-5129-4BFF-9E16-432EBFBCB88F",
-                          "objectId" : "id1730023303l",
-                          "name" : "ES SPEC - Font Swatch - Font",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736974713529879"
-                        },
-                        "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                          "className" : "GDProperties",
-                          "objectId" : "id6711736975019714071"
-                        }
-                      },
-                      "definition" : "F077514B-401A-432B-9DFF-8F4C20B0DE55",
-                      "className" : "GDWidgetInstanceCell",
-                      "eventHandlers" : [
-
-                      ],
-                      "objectId" : "id1202980813l",
-                      "name" : "Info Container",
-                      "orderedComponents" : [
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "XS",
-                              "objectId" : "id6711736974721918487"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "XS",
-                              "objectId" : "id6711736974751278615"
-                            }
-                          },
-                          "definition" : "979DAC0D-3E42-4AD9-937F-DD000180C60C",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id309955204l",
-                          "name" : "Name",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 11 px",
-                              "objectId" : "id6711736974298293783"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "textString" : "Roboto, Regular 400, 11 px",
-                              "objectId" : "id6711736974344431127"
-                            }
-                          },
-                          "definition" : "317D8C45-8468-4A6B-AE16-FABEBC9D16B0",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1812851722l",
-                          "name" : "Font",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "0.857 (rem)",
-                              "objectId" : "id6711736974503814679"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974709335575",
-                              "textString" : "0.857 (rem)",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "72C7BF2E-BC65-4690-9DA5-20F9FF5B0669",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id659018691l",
-                          "name" : "REM-Size",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974268933655"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974638032407"
-                            }
-                          },
-                          "definition" : "A7B19CA9-BEBC-4A77-94FD-6FB14A3D23DC",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id1667616885l",
-                          "name" : "Colors",
-                          "orderedComponents" : [
-
-                          ]
-                        },
-                        {
-                          "specificationCell" : 0,
-                          "styleProperties" : {
-                            "734F3227-291A-4CB0-B7A0-9ED46F443BF6" : {
-                              "className" : "GDProperties",
-                              "textString" : "Title Bar Text",
-                              "objectId" : "id6711736974596089367"
-                            },
-                            "ABC06CC3-A049-423A-A0B1-EDEE70BA75FC" : {
-                              "className" : "GDProperties",
-                              "objectId" : "id6711736974705141271",
-                              "textString" : "Title Bar Text",
-                              "isDisplay" : 0
-                            }
-                          },
-                          "definition" : "6B27E138-FA5F-42E3-9235-A96752A02422",
-                          "className" : "GDWidgetInstanceCell",
-                          "eventHandlers" : [
-
-                          ],
-                          "objectId" : "id425351356l",
-                          "name" : "Usage",
-                          "orderedComponents" : [
-
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "specificationCell" : 0,
-              "styleProperties" : {
-                "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
-                  "borderRightWidth" : 0,
-                  "verticalResizing" : 2,
-                  "x" : 680,
-                  "className" : "GDProperties",
-                  "isContentClipped" : 0,
-                  "borderBottomWidth" : 0,
-                  "horizontalResizing" : 1,
-                  "textColor" : {
-                    "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
-                  },
-                  "textFont" : {
-                    "GDFont" : {
-                      "displayName" : "Roboto Bold",
-                      "isItalic" : false,
-                      "isBold" : true,
-                      "fontName" : "Roboto-Bold",
-                      "familyName" : "Roboto",
-                      "fallback" : "",
-                      "size" : 13,
-                      "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
-                    }
-                  },
-                  "minimumHeight" : 3,
-                  "y" : 330,
-                  "borderTopWidth" : 0,
-                  "objectId" : "id6711738318446896663",
-                  "layoutPolicyCode" : 3,
-                  "borderLeftWidth" : 0,
-                  "isDisplay" : 0,
-                  "minimumWidth" : 3,
-                  "backgroundImageProportionalScale" : 1
-                }
-              },
-              "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
-              "className" : "GDWidgetInstanceRootCell",
-              "eventHandlers" : [
-
-              ],
-              "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
-              "objectId" : "id1266600866l",
-              "name" : "Vertical Flow Group",
-              "orderedComponents" : [
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75" : {
-                      "y" : 360,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736729036367383",
-                      "x" : 710
-                    }
-                  },
-                  "definition" : "72A7FE86-7B9E-48C4-9FDA-29008F811B2B",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "24EF7BF8-2207-40A1-9E9D-AF35A17A1F75",
-                  "objectId" : "id1530260872l",
-                  "name" : "ES SPEC - Content Header",
-                  "orderedComponents" : [
-                    {
-                      "specificationCell" : 0,
-                      "styleProperties" : {
-                        "FC383DF4-7BB2-46B6-9029-6ADFF59D56D1" : {
-                          "className" : "GDProperties",
-                          "textString" : "Widget",
-                          "objectId" : "id6711736714763150871"
-                        },
-                        "F21B2B3C-940B-419A-9F04-2C6043A8BB6B" : {
-                          "y" : 320,
-                          "className" : "GDProperties",
-                          "textString" : "Widget",
-                          "objectId" : "id6711736618428376599",
-                          "x" : 540
-                        }
-                      },
-                      "definition" : "50912E2E-D40A-4A5D-B2CE-01F2E787DC49",
+                      "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
                       "className" : "GDWidgetInstanceRootCell",
                       "eventHandlers" : [
 
                       ],
-                      "activeState" : "FC383DF4-7BB2-46B6-9029-6ADFF59D56D1",
-                      "objectId" : "id258499019l",
-                      "name" : "ES SPEC - H2",
+                      "activeState" : "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7",
+                      "objectId" : "id370827417l",
+                      "name" : "ES SPEC - Bullet",
                       "orderedComponents" : [
+                        {
+                          "specificationCell" : 0,
+                          "styleProperties" : {
+                            "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id6711737557860197911"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id6711737557856003607"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id6711737558120244759"
+                            },
+                            "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id830996480"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id6711737558040552983"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737557684037143"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id6711737557717591575"
+                            }
+                          },
+                          "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
+                          "className" : "GDWidgetInstanceCell",
+                          "eventHandlers" : [
 
+                          ],
+                          "objectId" : "id409244939l",
+                          "name" : "Arrow",
+                          "orderedComponents" : [
+
+                          ]
+                        },
+                        {
+                          "specificationCell" : 0,
+                          "styleProperties" : {
+                            "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737557931501079",
+                              "textString" : "All sizes are specified related to the baseline 16 px = 1.",
+                              "x" : 10
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.858824,0.101961,0.215686,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737557570790935",
+                              "x" : 10
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textString" : "All sizes are specified related to the baseline 16 px = 1.",
+                              "objectId" : "id6711737558292211223"
+                            },
+                            "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id2978480128",
+                              "textString" : "All sizes are specified related to the baseline 16 px = 1.",
+                              "x" : 10
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.858824,0.101961,0.215686,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737558002804247",
+                              "textString" : "All sizes are specified related to the baseline 16 px = 1.",
+                              "x" : 10
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "All sizes are specified related to the baseline 16 px = 1.",
+                              "objectId" : "id6711737558036358679"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "All sizes are specified related to the baseline 16 px = 1.",
+                              "objectId" : "id6711737558019581463"
+                            }
+                          },
+                          "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
+                          "className" : "GDWidgetInstanceCell",
+                          "eventHandlers" : [
+
+                          ],
+                          "objectId" : "id2118133l",
+                          "name" : "Text",
+                          "orderedComponents" : [
+
+                          ]
+                        }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "specificationCell" : 0,
-                  "styleProperties" : {
-                    "7F76B86E-AA6F-4E4D-B62E-867623143055" : {
-                      "y" : 330,
-                      "className" : "GDProperties",
-                      "objectId" : "id6711736723676046871",
-                      "height" : 320,
-                      "x" : 680
-                    }
-                  },
-                  "definition" : "09B163A9-5ADF-441C-B740-873EBB82194B",
-                  "className" : "GDWidgetInstanceRootCell",
-                  "eventHandlers" : [
-
-                  ],
-                  "activeState" : "7F76B86E-AA6F-4E4D-B62E-867623143055",
-                  "objectId" : "id1959257939l",
-                  "name" : "ES SPEC - Content Wrapper",
-                  "orderedComponents" : [
+                    },
                     {
                       "specificationCell" : 0,
                       "styleProperties" : {
-                        "BC74393C-1EEA-4553-B8BB-105CD15EE936" : {
-                          "y" : -134.5,
+                        "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
+                          "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id6711737203277932055",
-                          "x" : -258.5
+                          "objectId" : "id6711737558116050455",
+                          "x" : 130
                         },
-                        "44CC6A96-1EAF-4CDA-89FA-A2F0580196B4" : {
-                          "y" : -134.5,
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id6711736666205693463",
-                          "height" : 250,
-                          "width" : 617,
-                          "x" : -258.5
+                          "objectId" : "id6711737557642094103",
+                          "x" : 130
                         },
-                        "381A1C29-811C-4047-822E-0E2D1EEA3371" : {
-                          "y" : -134.5,
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id6711736684702574103",
-                          "x" : -258.5
+                          "objectId" : "id6711737558325765655",
+                          "x" : 130
                         },
-                        "3A8F0C3F-EA54-4B93-ACF3-680F595A01A9" : {
-                          "y" : -134.5,
+                        "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
+                          "y" : 5,
                           "className" : "GDProperties",
-                          "objectId" : "id6711736693640635927",
-                          "height" : 250,
-                          "width" : 617,
-                          "x" : -258.5
+                          "objectId" : "id1124597760",
+                          "x" : 130
+                        },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558166382103"
+                        },
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558350931479",
+                          "x" : 130
+                        },
+                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                          "textRichText" : 0,
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558338348567",
+                          "x" : 130
                         }
                       },
-                      "definition" : "C0C52021-5003-433B-97E6-4557F396EB08",
+                      "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
                       "className" : "GDWidgetInstanceRootCell",
                       "eventHandlers" : [
 
                       ],
-                      "activeState" : "3A8F0C3F-EA54-4B93-ACF3-680F595A01A9",
-                      "objectId" : "id2027124626l",
-                      "name" : "ES SPEC - Control State",
+                      "activeState" : "99E829D4-7E5C-4DF5-82D1-AD76B256C934",
+                      "objectId" : "id933707035l",
+                      "name" : "ES SPEC - Bullet",
                       "orderedComponents" : [
                         {
                           "specificationCell" : 0,
                           "styleProperties" : {
-                            "BC74393C-1EEA-4553-B8BB-105CD15EE936" : {
+                            "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
                               "className" : "GDProperties",
-                              "objectId" : "id6711737209011545623",
-                              "textString" : "General",
-                              "isDisplay" : 0
+                              "x" : 0,
+                              "objectId" : "id6711737557910529559"
                             },
-                            "44CC6A96-1EAF-4CDA-89FA-A2F0580196B4" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
-                              "objectId" : "id6711736473984935447"
+                              "textRichText" : 0,
+                              "objectId" : "id6711737557579179543"
                             },
-                            "381A1C29-811C-4047-822E-0E2D1EEA3371" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
                               "className" : "GDProperties",
-                              "objectId" : "id6711736525960750615",
-                              "textString" : "General",
-                              "isDisplay" : 0
+                              "x" : 0,
+                              "objectId" : "id6711737557851809303"
                             },
-                            "3A8F0C3F-EA54-4B93-ACF3-680F595A01A9" : {
+                            "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
                               "className" : "GDProperties",
-                              "isDisplay" : 0,
-                              "objectId" : "id6711736499477915159"
+                              "objectId" : "id3272081408"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id6711737557818254871"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737557885363735"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id6711737557738563095"
                             }
                           },
-                          "definition" : "C34A2FA4-7730-40A2-B105-9EF57A8E7795",
+                          "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
                           "className" : "GDWidgetInstanceCell",
                           "eventHandlers" : [
 
                           ],
-                          "objectId" : "id1440271172l",
-                          "name" : "State Header",
+                          "objectId" : "id1519975957l",
+                          "name" : "Arrow",
                           "orderedComponents" : [
 
                           ]
@@ -3108,450 +893,584 @@ let screenJSON_6 = {
                         {
                           "specificationCell" : 0,
                           "styleProperties" : {
-                            "BC74393C-1EEA-4553-B8BB-105CD15EE936" : {
+                            "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                              },
                               "className" : "GDProperties",
-                              "objectId" : "id6711737206159418903"
+                              "objectId" : "id6711737557608539671",
+                              "textString" : "The idea is that if all sizes are implemented relatively to one baseline value and you want to enlarge all the elements, you just have to adjust the baseline.",
+                              "x" : 10
                             },
-                            "44CC6A96-1EAF-4CDA-89FA-A2F0580196B4" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.858824,0.101961,0.215686,1.000000"
+                              },
                               "className" : "GDProperties",
-                              "objectId" : "id6711736570302932503"
+                              "objectId" : "id6711737557998609943",
+                              "textString" : "The idea is that if all sizes are implemented relatively to one baseline value and you want to enlarge all the elements, you just have to adjust the baseline.",
+                              "x" : 10
                             },
-                            "381A1C29-811C-4047-822E-0E2D1EEA3371" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
-                              "objectId" : "id6711736596194371095"
+                              "textString" : "The idea is that if all sizes are implemented relatively to one baseline value and you want to enlarge all the elements, you just have to adjust the baseline.",
+                              "objectId" : "id6711737558065718807"
                             },
-                            "3A8F0C3F-EA54-4B93-ACF3-680F595A01A9" : {
+                            "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
                               "className" : "GDProperties",
-                              "objectId" : "id6711736481052337687"
+                              "textString" : "The idea is that if all sizes are implemented relatively to one baseline value and you want to enlarge all the elements, you just have to adjust the baseline.",
+                              "objectId" : "id587726848"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "The idea is that if all sizes are implemented relatively to one baseline value and you want to enlarge all the elements, you just have to adjust the baseline.",
+                              "objectId" : "id6711737557746951703"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.858824,0.101961,0.215686,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737557981832727",
+                              "textString" : "The idea is that if all sizes are implemented relatively to one baseline value and you want to enlarge all the elements, you just have to adjust the baseline.",
+                              "x" : 10
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "The idea is that if all sizes are implemented relatively to one baseline value and you want to enlarge all the elements, you just have to adjust the baseline.",
+                              "objectId" : "id6711737558174770711"
                             }
                           },
-                          "definition" : "79761FC8-49DD-4F67-A999-6B5C44A393BC",
+                          "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
                           "className" : "GDWidgetInstanceCell",
                           "eventHandlers" : [
 
                           ],
-                          "objectId" : "id54223989l",
-                          "name" : "ES SPEC - Control Container",
+                          "objectId" : "id1569687015l",
+                          "name" : "Text",
                           "orderedComponents" : [
-                            {
-                              "specificationCell" : 0,
-                              "styleProperties" : {
-                                "BC74393C-1EEA-4553-B8BB-105CD15EE936" : {
-                                  "className" : "GDProperties",
-                                  "objectId" : "id6711737205433804311"
-                                },
-                                "44CC6A96-1EAF-4CDA-89FA-A2F0580196B4" : {
-                                  "className" : "GDProperties",
-                                  "objectId" : "id6711736590330734103"
-                                },
-                                "381A1C29-811C-4047-822E-0E2D1EEA3371" : {
-                                  "className" : "GDProperties",
-                                  "objectId" : "id6711735720616633879"
-                                },
-                                "3A8F0C3F-EA54-4B93-ACF3-680F595A01A9" : {
-                                  "className" : "GDProperties",
-                                  "objectId" : "id6711736555220215319"
-                                }
-                              },
-                              "definition" : "8934C2E2-BE8E-4488-B1FD-03E95396BDB3",
-                              "className" : "GDWidgetInstanceCell",
-                              "eventHandlers" : [
 
-                              ],
-                              "objectId" : "id1746338186l",
-                              "name" : "Place Specification Cells inside",
-                              "orderedComponents" : [
-
-                              ]
-                            },
-                            {
-                              "specificationCell" : 0,
-                              "styleProperties" : {
-                                "BC74393C-1EEA-4553-B8BB-105CD15EE936" : {
-                                  "paddingRight" : 0,
-                                  "className" : "GDProperties",
-                                  "layoutPolicyCode" : 2,
-                                  "objectId" : "id6711737204821435927",
-                                  "paddingBottom" : 0,
-                                  "paddingTop" : 0
-                                },
-                                "44CC6A96-1EAF-4CDA-89FA-A2F0580196B4" : {
-                                  "className" : "GDProperties",
-                                  "objectId" : "id6711736651861173783"
-                                },
-                                "381A1C29-811C-4047-822E-0E2D1EEA3371" : {
-                                  "paddingRight" : 0,
-                                  "className" : "GDProperties",
-                                  "objectId" : "id6711736611813959191",
-                                  "paddingTop" : 0,
-                                  "paddingBottom" : 0
-                                },
-                                "3A8F0C3F-EA54-4B93-ACF3-680F595A01A9" : {
-                                  "paddingRight" : 0,
-                                  "className" : "GDProperties",
-                                  "objectId" : "id6711736663592642071",
-                                  "paddingTop" : 0,
-                                  "paddingBottom" : 0
-                                }
-                              },
-                              "definition" : "1AD825F1-67D3-4759-BB98-11B9EB16C422",
-                              "className" : "GDWidgetInstanceCell",
-                              "eventHandlers" : [
-
-                              ],
-                              "objectId" : "id1340213500l",
-                              "name" : "Control Content",
-                              "orderedComponents" : [
-
-                              ]
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "specificationCell" : 0,
+                      "styleProperties" : {
+                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                          "borderRightWidth" : 0,
+                          "x" : 445,
+                          "className" : "GDProperties",
+                          "borderBottomWidth" : 0,
+                          "y" : -14,
+                          "textColor" : {
+                            "NSColorValue" : "1.000000,1.000000,1.000000,1.000000"
+                          },
+                          "textFont" : {
+                            "GDFont" : {
+                              "displayName" : "Roboto Medium",
+                              "isItalic" : false,
+                              "isBold" : false,
+                              "fontName" : "Roboto-Medium",
+                              "familyName" : "Roboto Medium",
+                              "fallback" : "",
+                              "size" : 13,
+                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Medium\";src:url(\"\/images\/Roboto-Medium.woff\") format(\"woff\"),local(\"Roboto Medium\")}"
                             }
+                          },
+                          "minimumHeight" : 3,
+                          "height" : 32,
+                          "objectId" : "id6711737526260311575",
+                          "layoutPolicyCode" : 2,
+                          "borderLeftWidth" : 0,
+                          "borderTopWidth" : 0,
+                          "minimumWidth" : 3,
+                          "backgroundImageProportionalScale" : 1
+                        }
+                      },
+                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                      "className" : "GDWidgetInstanceRootCell",
+                      "eventHandlers" : [
+
+                      ],
+                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                      "objectId" : "id535613868l",
+                      "name" : "Rectangle",
+                      "orderedComponents" : [
+
+                      ]
+                    },
+                    {
+                      "specificationCell" : 0,
+                      "styleProperties" : {
+                        "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737557566596631",
+                          "x" : 130
+                        },
+                        "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558300599831",
+                          "x" : 130
+                        },
+                        "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558069913111",
+                          "x" : 130
+                        },
+                        "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id2106064896",
+                          "x" : 130
+                        },
+                        "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558317377047",
+                          "x" : 130
+                        },
+                        "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737558212519447"
+                        },
+                        "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                          "textRichText" : 0,
+                          "y" : 5,
+                          "className" : "GDProperties",
+                          "objectId" : "id6711737557583373847",
+                          "x" : 130
+                        }
+                      },
+                      "definition" : "8259DA76-3A9A-42AE-B69A-53BFD76C064C",
+                      "className" : "GDWidgetInstanceRootCell",
+                      "eventHandlers" : [
+
+                      ],
+                      "activeState" : "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7",
+                      "objectId" : "id715262070l",
+                      "name" : "ES SPEC - Bullet",
+                      "orderedComponents" : [
+                        {
+                          "specificationCell" : 0,
+                          "styleProperties" : {
+                            "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id6711737558313182743"
+                            },
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id6711737558048941591"
+                            },
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id6711737526289671703"
+                            },
+                            "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id4253548544"
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737557902140951"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "className" : "GDProperties",
+                              "x" : 0,
+                              "objectId" : "id6711737558334154263"
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textRichText" : 0,
+                              "objectId" : "id6711737557793089047"
+                            }
+                          },
+                          "definition" : "81D3793D-E97C-42E2-B411-8BBD1983E7DB",
+                          "className" : "GDWidgetInstanceCell",
+                          "eventHandlers" : [
+
+                          ],
+                          "objectId" : "id403092697l",
+                          "name" : "Arrow",
+                          "orderedComponents" : [
+
                           ]
                         },
                         {
                           "specificationCell" : 0,
                           "styleProperties" : {
-                            "BC74393C-1EEA-4553-B8BB-105CD15EE936" : {
+                            "CD4A10CF-6637-43FE-B1E6-C0E62F0756A7" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                              },
                               "className" : "GDProperties",
-                              "objectId" : "id6711737206109087255"
+                              "objectId" : "id6711737557965055511",
+                              "textString" : "Conversion sample:",
+                              "x" : 10
                             },
-                            "44CC6A96-1EAF-4CDA-89FA-A2F0580196B4" : {
+                            "EEA56884-0573-4575-B135-B9E7D0885B7F" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.858824,0.101961,0.215686,1.000000"
+                              },
                               "className" : "GDProperties",
-                              "objectId" : "id6711736720744228375",
-                              "height" : 250,
-                              "width" : 226
+                              "objectId" : "id6711737557574985239",
+                              "textString" : "Conversion sample:",
+                              "x" : 10
                             },
-                            "381A1C29-811C-4047-822E-0E2D1EEA3371" : {
+                            "99E829D4-7E5C-4DF5-82D1-AD76B256C934" : {
                               "className" : "GDProperties",
-                              "objectId" : "id6711736674845959703"
+                              "textString" : "Conversion sample:",
+                              "objectId" : "id6711737557801477655"
                             },
-                            "3A8F0C3F-EA54-4B93-ACF3-680F595A01A9" : {
+                            "D600D0FB-0092-40DE-B043-EFFF477B8AE1" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                              },
                               "className" : "GDProperties",
-                              "objectId" : "id6711736732421170711",
-                              "height" : 250,
-                              "width" : 226
+                              "objectId" : "id59244544",
+                              "textString" : "Conversion sample:",
+                              "x" : 10
+                            },
+                            "EB7099DA-06A9-46F9-91A7-3A2C3F4BA98C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Conversion sample:",
+                              "objectId" : "id6711737558329959959"
+                            },
+                            "CAFA426D-2C9A-4CF5-A3BE-798416C72998" : {
+                              "textColor" : {
+                                "NSColorValue" : "0.858824,0.101961,0.215686,1.000000"
+                              },
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737557864392215",
+                              "textString" : "Conversion sample:",
+                              "x" : 10
+                            },
+                            "49BE8855-FC37-4983-A075-2C6F695ACB4C" : {
+                              "className" : "GDProperties",
+                              "textString" : "Conversion sample:",
+                              "objectId" : "id6711737558199936535"
                             }
                           },
-                          "definition" : "B13B711E-0228-4B52-AE19-B73EB1D6A18C",
+                          "definition" : "21782BB1-9C6C-4669-83B0-A0ADDA383C99",
                           "className" : "GDWidgetInstanceCell",
                           "eventHandlers" : [
 
                           ],
-                          "objectId" : "id223312496l",
-                          "name" : "Spec Container",
+                          "objectId" : "id1639550525l",
+                          "name" : "Text",
+                          "orderedComponents" : [
+
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "specificationCell" : 0,
+                      "styleProperties" : {
+                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                          "borderRightWidth" : 0,
+                          "verticalResizing" : 2,
+                          "x" : 10,
+                          "className" : "GDProperties",
+                          "isContentClipped" : 0,
+                          "borderBottomWidth" : 0,
+                          "horizontalResizing" : 1,
+                          "textColor" : {
+                            "NSColorValue" : "1.000000,1.000000,1.000000,1.000000"
+                          },
+                          "textFont" : {
+                            "GDFont" : {
+                              "displayName" : "Roboto Medium",
+                              "isItalic" : false,
+                              "isBold" : false,
+                              "fontName" : "Roboto-Medium",
+                              "familyName" : "Roboto Medium",
+                              "fallback" : "",
+                              "size" : 13,
+                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Medium\";src:url(\"\/images\/Roboto-Medium.woff\") format(\"woff\"),local(\"Roboto Medium\")}"
+                            }
+                          },
+                          "minimumHeight" : 3,
+                          "y" : 20,
+                          "borderTopWidth" : 0,
+                          "objectId" : "id6711737526239340055",
+                          "layoutPolicyCode" : 2,
+                          "borderLeftWidth" : 0,
+                          "marginLeft" : 32,
+                          "minimumWidth" : 3,
+                          "backgroundImageProportionalScale" : 1
+                        }
+                      },
+                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                      "className" : "GDWidgetInstanceRootCell",
+                      "eventHandlers" : [
+
+                      ],
+                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                      "objectId" : "id311379356l",
+                      "name" : "Vertical Flow Group",
+                      "orderedComponents" : [
+                        {
+                          "specificationCell" : 0,
+                          "styleProperties" : {
+                            "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737338980443671"
+                            },
+                            "752EFD92-30C4-4DA1-B750-00E6C779A549" : {
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737340771411479"
+                            }
+                          },
+                          "definition" : "DCC4DC00-7C1E-463E-A61F-ADF38A73D3D5",
+                          "className" : "GDWidgetInstanceRootCell",
+                          "eventHandlers" : [
+
+                          ],
+                          "activeState" : "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99",
+                          "objectId" : "id507673345l",
+                          "name" : "Column",
                           "orderedComponents" : [
                             {
                               "specificationCell" : 0,
                               "styleProperties" : {
-                                "900B0DCE-F598-4185-9AFE-6379468A12A6" : {
-                                  "y" : 34,
+                                "371714E4-C37A-4FED-A2E7-4DBE10E1AC2D" : {
                                   "className" : "GDProperties",
-                                  "objectId" : "id6711736626535966231",
-                                  "height" : 234,
-                                  "width" : 210,
-                                  "x" : 114
-                                },
-                                "009DED3B-CD13-4403-8781-E175C614072B" : {
-                                  "className" : "GDProperties",
-                                  "objectId" : "id6711736689903511063",
-                                  "height" : 234,
-                                  "width" : 210
+                                  "objectId" : "id6711737526209979927"
                                 }
                               },
-                              "definition" : "4FA6F533-8CEF-4A08-A944-55D77B0F59F1",
+                              "definition" : "7DA5A8E6-C4DA-4E58-95C4-5E45F03903D7",
                               "className" : "GDWidgetInstanceRootCell",
                               "eventHandlers" : [
 
                               ],
-                              "activeState" : "900B0DCE-F598-4185-9AFE-6379468A12A6",
-                              "objectId" : "id834074477l",
-                              "name" : "ES SPEC - Spec Section",
+                              "activeState" : "371714E4-C37A-4FED-A2E7-4DBE10E1AC2D",
+                              "objectId" : "id171390588l",
+                              "name" : "Header Cell",
                               "orderedComponents" : [
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "14631F3C-BBE9-4808-B2DF-162BE1F1A396" : {
-                                      "textRichText" : 0,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "textShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textHorizontalAlignment" : 0,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textString" : "Generic (current specification)",
+                                      "horizontalResizing" : 1,
+                                      "backgroundImageProportionalScale" : 1,
+                                      "textColor" : {
+                                        "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                      },
+                                      "layoutPolicyCode" : 2,
+                                      "verticalResizing" : 2,
+                                      "borderTopColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "borderLeftWidth" : 0,
+                                      "borderRightWidth" : 0,
+                                      "paddingLeft" : 8,
+                                      "borderBottomWidth" : 0,
+                                      "borderTopWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingTop" : 8,
+                                      "dropShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "x" : 10,
+                                      "paddingBottom" : 8,
+                                      "objectId" : "id6711737339110467095",
+                                      "y" : 20,
+                                      "innerShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "borderLeftColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736565571757591",
-                                      "textString" : "Font Spec Widget"
-                                    },
-                                    "4448B55E-DA99-4163-961A-E75C792E945E" : {
-                                      "className" : "GDProperties",
-                                      "textString" : "Font Spec Widget",
-                                      "objectId" : "id6711736609544840727"
+                                      "borderRightColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "paddingRight" : 12
                                     }
                                   },
-                                  "definition" : "D1D9C8B8-FCFE-46AE-A3CE-9FADEFB2772C",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "14631F3C-BBE9-4808-B2DF-162BE1F1A396",
-                                  "objectId" : "id390010336l",
-                                  "name" : "ES SPEC - Spec Section Header",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1645310592l",
+                                  "name" : "Header Cell Text",
                                   "orderedComponents" : [
 
                                   ]
+                                }
+                              ]
+                            },
+                            {
+                              "specificationCell" : 0,
+                              "styleProperties" : {
+                                "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99" : {
+                                  "className" : "GDProperties",
+                                  "objectId" : "id6711737338791699991"
                                 },
+                                "752EFD92-30C4-4DA1-B750-00E6C779A549" : {
+                                  "className" : "GDProperties",
+                                  "isDisplay" : 1,
+                                  "objectId" : "id6711737340985320983"
+                                }
+                              },
+                              "definition" : "8CBEAE68-2000-447F-B13D-0D045F9C2C2F",
+                              "className" : "GDWidgetInstanceCell",
+                              "eventHandlers" : [
+
+                              ],
+                              "objectId" : "id1285265081l",
+                              "name" : "Content Cells",
+                              "orderedComponents" : [
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "6784D1A9-C6BB-443F-A803-24C544F35FF6" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 20,
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736596496360983",
-                                      "height" : 200,
-                                      "textString" : "Define a widget state for each font swatch to use it in specification boxes.&nbsp;",
-                                      "width" : 200
-                                    },
-                                    "721D267D-4AFC-403E-BAFE-3DF3594260FD" : {
-                                      "className" : "GDProperties",
-                                      "textString" : "Define a widget state for each font swatch to use it in specification boxes.&nbsp;",
-                                      "objectId" : "id6711736651513046551"
-                                    },
-                                    "93705DD7-16D6-4DAA-911E-FC47EAE91305" : {
-                                      "className" : "GDProperties",
-                                      "textString" : "Define a widget state for each font swatch to use it in specification boxes.&nbsp;",
-                                      "objectId" : "id6711736653941548567"
+                                      "isContentClipped" : 0,
+                                      "y" : 30,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526302254615",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
                                     }
                                   },
-                                  "definition" : "F98069F9-CF12-4732-9556-CD2A4F941B10",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "6784D1A9-C6BB-443F-A803-24C544F35FF6",
-                                  "objectId" : "id2070583360l",
-                                  "name" : "ES SPEC - Optional Comment",
-                                  "orderedComponents" : [
-
-                                  ]
-                                },
-                                {
-                                  "specificationCell" : 0,
-                                  "styleProperties" : {
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 104,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736608739534359",
-                                      "x" : 184
-                                    },
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 104,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736698430531095",
-                                      "x" : 184
-                                    },
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 104,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736553475384855",
-                                      "x" : 184
-                                    }
-                                  },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
-                                  "className" : "GDWidgetInstanceRootCell",
-                                  "eventHandlers" : [
-
-                                  ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id1274711426l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id539665533l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "0,0625",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 20,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526163842583",
+                                          "y" : 30,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "objectId" : "id6711736640482027031"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736620571665943"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711736727643858455"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id538243132l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736619158185495"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736704076064279"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736480100230679"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1133352396l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736664892876311"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736642457544215"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736657062110743"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id191509666l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711735718913746455",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736464845547031"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736519165978135"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736619770553879"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736680390829591"
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736570164520471"
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736703887320599"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736662091081239",
-                                              "x" : -17.5
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711735708532844055"
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974310876695"
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736103917298967",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736103556588983",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736104651302199",
-                                                  "orderedElements" : [
-                                                    "id194494083l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "B88758FE-2A48-4C02-BF4A-39292AE122BE",
-                                          "objectId" : "id194494083l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736600334149143"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736723579577879"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736597821761047"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id420868062l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id822572116l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -3561,229 +1480,121 @@ let screenJSON_6 = {
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 114,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736975036491287",
-                                      "x" : 194
-                                    },
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 114,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736975040685591",
-                                      "x" : 194
-                                    },
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 114,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736974566729239",
-                                      "x" : 194
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339185964567",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
                                     }
                                   },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id633119776l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1353657674l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "0,125",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 20,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737341606077975",
+                                          "y" : 30,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711736974377985559"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736974990353943"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736974365402647"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id448122385l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736974315070999"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736974382179863"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736974998742551"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1892389917l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736974252156439"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736974977771031"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736975053268503"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id370079103l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974671586839",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974457677335"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974533174807"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736975023908375"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974520591895"
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974738695703"
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974952605207"
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974306682391"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974470260247",
-                                              "x" : -17.5
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974482843159"
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736109256647959",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736109181150647",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736109227287863",
-                                                  "orderedElements" : [
-                                                    "id592059888l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2",
-                                          "objectId" : "id592059888l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736974965188119"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736974461871639"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736974927439383"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id632343433l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id259990850l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -3793,229 +1604,121 @@ let screenJSON_6 = {
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 114,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736731380983319",
-                                      "x" : 194
-                                    },
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 114,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736587872871959",
-                                      "x" : 194
-                                    },
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 114,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736560454706711",
-                                      "x" : 194
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526365169175",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
                                     }
                                   },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id1647526594l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id763457921l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "0,25",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 20,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526310643223",
+                                          "y" : 30,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711736715451016727"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736504959870487"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736460655437335"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id546801274l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736677215741463"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736479026488855"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736467878028823"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id815971745l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736727882933783"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736704210282007"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736679690380823"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1430670118l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736525704898071",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736645263533591"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736646567962135"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736582965536279"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736650380584471"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736492913829399",
-                                              "x" : -17.5
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736630801573399"
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736627970418199"
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736502082577943"
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974373791255"
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736104475141399",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736105444025783",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736105255281975",
-                                                  "orderedElements" : [
-                                                    "id1815666555l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75",
-                                          "objectId" : "id1815666555l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736640574301719"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736654826546711"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736665685599767"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id1518046637l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id305570511l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -4025,229 +1728,121 @@ let screenJSON_6 = {
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 124,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736578934810135",
-                                      "x" : 204
-                                    },
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 124,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736593791034903",
-                                      "x" : 204
-                                    },
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 124,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736571250845207",
-                                      "x" : 204
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339097884183",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
                                     }
                                   },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id992794498l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id196739101l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "0,375",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 20,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339089495575",
+                                          "y" : 30,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "objectId" : "id6711736467328574999"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711736586467780119"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736490560824855"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id175802511l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736679367419415"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736518088042007"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736494314726935"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1645555306l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736668718081559"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736612615071255"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736695133808151"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1332847984l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736647545234967",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736524798928407"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736683750467095"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736593598096919"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736678801188375"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736545833362967",
-                                              "x" : -17.5
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736528661882391"
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736604033525271"
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974545757719"
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736630348588567"
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736104500307223",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736103804052919",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736105406276919",
-                                                  "orderedElements" : [
-                                                    "id779291061l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "0B6560D3-D324-4977-A827-DCD62CB3B3A6",
-                                          "objectId" : "id779291061l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736651877950999"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736663395509783"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711735718087468567"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id1055774276l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1198490806l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -4257,229 +1852,121 @@ let screenJSON_6 = {
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 134,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736481903781399",
-                                      "x" : 214
-                                    },
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 134,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736563705292311",
-                                      "x" : 214
-                                    },
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 134,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736645297088023",
-                                      "x" : 214
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526298060311",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
                                     }
                                   },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id1840369569l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id838213998l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "0,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 20,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526419695127",
+                                          "y" : 30,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "objectId" : "id6711736503240205847"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711736480473523735"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736647218079255"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id162068285l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736572605605399"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736675517048343"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736480616130071"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1314273296l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736652792309271"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736639823521303"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711735711309473303"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1652143861l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736733759153687",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736561360676375"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736467064333847"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736706663949847"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736647121610263"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736510857061911",
-                                              "x" : -17.5
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974696752663"
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736511926609431"
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736557812295191"
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736554737870359"
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736104282203415",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736103774692791",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736104324146487",
-                                                  "orderedElements" : [
-                                                    "id41709263l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "59F56863-A855-4BFB-8237-3C3BBE96F2CD",
-                                          "objectId" : "id41709263l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736678981543447"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736518255814167"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736471422215703"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id607060820l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1247321275l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -4489,229 +1976,121 @@ let screenJSON_6 = {
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 144,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736732245009943",
-                                      "x" : 224
-                                    },
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 144,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736706907219479",
-                                      "x" : 224
-                                    },
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 144,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736721889273367",
-                                      "x" : 224
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526381946391",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
                                     }
                                   },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id1706367850l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id174286145l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "0,75",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 30,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526193202711",
+                                          "y" : 40,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "objectId" : "id6711736597586880023"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736606797571607"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711736620684912151"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1788047449l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711735719219930647"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736655749293591"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711735712592930327"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1947274320l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736588694955543"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736564091168279"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736572618188311"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1929680346l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736635922818583",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736702318650903"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736686917166615"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736480314140183"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736577064150551"
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736506062972439"
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974969382423"
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736670882342423"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736682534118935",
-                                              "x" : -17.5
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736600321566231"
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736104370283799",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736103531423159",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736103476897079",
-                                                  "orderedElements" : [
-                                                    "id474638278l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "44CF2EED-A712-4609-B341-B9B699173747",
-                                          "objectId" : "id474638278l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736708647855639"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736718919706135"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736728503690775"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id189801009l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id214965559l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -4721,229 +2100,125 @@ let screenJSON_6 = {
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 144,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "horizontalResizing" : 1,
+                                      "backgroundImageProportionalScale" : 1,
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "verticalResizing" : 2,
+                                      "backgroundColor" : {
+                                        "NSColorValue" : "0.870588,0.933333,0.949020,1.000000"
+                                      },
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "borderRightWidth" : 0,
+                                      "backgroundPainterType" : 1,
+                                      "paddingLeft" : 8,
+                                      "isContentClipped" : 0,
+                                      "borderTopWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "x" : 40,
+                                      "objectId" : "id6711737526616827415",
+                                      "y" : 50,
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736663466812951",
-                                      "x" : 224
-                                    },
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 144,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736641316693527",
-                                      "x" : 224
-                                    },
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 144,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736652490319383",
-                                      "x" : 224
+                                      "filters" : 0
                                     }
                                   },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id1852780059l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id332675517l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "1",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 40,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526247728663",
+                                          "y" : 50,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711736550367405591"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736560421152279"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711735713050109463"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1749349705l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736581229094423"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736589353461271"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736469199234583"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id728044141l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736524450801175"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736504452359703"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736478196016663"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id838648807l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736581250065943",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736552149984791"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736688406144535"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736656118392343"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736734707066391"
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736614057911831"
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974256350743"
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736646169503255"
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736519061120535"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736670718764567",
-                                              "x" : -17.5
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto Black",
+                                              "isItalic" : false,
+                                              "isBold" : true,
+                                              "fontName" : "Roboto-Black",
+                                              "familyName" : "Roboto Black",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Black\";src:url(\"\/images\/Roboto-Black.woff\") format(\"woff\"),local(\"Roboto Black\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736104051516695",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736105318196663",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736103518840119",
-                                                  "orderedElements" : [
-                                                    "id1940859371l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "91C89D95-3C35-47B1-9D9A-9D35CB861E1C",
-                                          "objectId" : "id1940859371l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736732161123863"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736704860399127"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736713710380567"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id922538225l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id213330967l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -4953,229 +2228,121 @@ let screenJSON_6 = {
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 154,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736639542502935",
-                                      "x" : 234
-                                    },
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 154,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736647415211543",
-                                      "x" : 234
-                                    },
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 154,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736624535283223",
-                                      "x" : 234
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526327420439",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
                                     }
                                   },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id1259516869l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1685086953l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "1,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526222562839",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "objectId" : "id6711736657955497495"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711735712295134743"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711735719412868631"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1440902317l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736585477924375"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736597075174935"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736569988359703"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1469339499l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736499117205015"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736509586187799"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736487243130391"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id2075488615l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736686254466583",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736729892005399"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736594868971031"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736588686566935"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736520352966167"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711735711657600535",
-                                              "x" : -17.5
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736557841655319"
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974642226711"
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736659314451991"
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736646916089367"
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736104290592023",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736104907154871",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736104462558519",
-                                                  "orderedElements" : [
-                                                    "id724088787l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "123CB631-A804-4998-8AC3-7045115EEAAD",
-                                          "objectId" : "id724088787l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736483698943511"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736501977720343"
-                                        },
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736511293269527"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id1137522406l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id393017054l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -5185,229 +2352,8229 @@ let screenJSON_6 = {
                                 {
                                   "specificationCell" : 0,
                                   "styleProperties" : {
-                                    "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                      "textRichText" : 0,
-                                      "y" : 164,
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
                                       "className" : "GDProperties",
-                                      "objectId" : "id6711736698975790615",
-                                      "x" : 244
-                                    },
-                                    "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                      "y" : 164,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736716705113623",
-                                      "x" : 244
-                                    },
-                                    "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                      "y" : 164,
-                                      "className" : "GDProperties",
-                                      "objectId" : "id6711736691522512407",
-                                      "x" : 244
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338867197463",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
                                     }
                                   },
-                                  "definition" : "190CB80D-7651-4CB1-8578-9CD84CAD4B4E",
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
                                   "className" : "GDWidgetInstanceRootCell",
                                   "eventHandlers" : [
 
                                   ],
-                                  "activeState" : "EB659105-B98B-4577-A00F-D3AACF64FDDF",
-                                  "objectId" : "id1446051604l",
-                                  "name" : "ES SPEC - Styling Row",
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id869916520l",
+                                  "name" : "Cell",
                                   "orderedComponents" : [
                                     {
                                       "specificationCell" : 0,
                                       "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "1,625",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338812671511",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
                                           "className" : "GDProperties",
-                                          "objectId" : "id6711736731909465623"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textRichText" : 0,
-                                          "objectId" : "id6711736705535682071"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736719779538455"
-                                        }
-                                      },
-                                      "definition" : "34E15A88-1C5A-4BFE-8476-E7F57FFA6085",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1716883285l",
-                                      "name" : "Device",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736617690179095"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736627353855511"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "textString" : "font",
-                                          "objectId" : "id6711736642516264471"
-                                        }
-                                      },
-                                      "definition" : "95B76137-A39B-46FD-B74E-2AF71F5EE0CE",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id1313324917l",
-                                      "name" : "Styling Category",
-                                      "orderedComponents" : [
-
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736529593017879"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711735718582396439"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736555115357719"
-                                        }
-                                      },
-                                      "definition" : "5917F055-CE2B-4817-BFB2-34794010F7A4",
-                                      "className" : "GDWidgetInstanceCell",
-                                      "eventHandlers" : [
-
-                                      ],
-                                      "objectId" : "id944123262l",
-                                      "name" : "Place Color\/Font\/Shadow Spec inside",
-                                      "orderedComponents" : [
-                                        {
-                                          "specificationCell" : 0,
-                                          "styleProperties" : {
-                                            "59F56863-A855-4BFB-8237-3C3BBE96F2CD" : {
-                                              "y" : -16,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736581900183063",
-                                              "x" : 64
-                                            },
-                                            "0B6560D3-D324-4977-A827-DCD62CB3B3A6" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736547938903575"
-                                            },
-                                            "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736524085896727"
-                                            },
-                                            "123CB631-A804-4998-8AC3-7045115EEAAD" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711735719677109783"
-                                            },
-                                            "91C89D95-3C35-47B1-9D9A-9D35CB861E1C" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736608647259671"
-                                            },
-                                            "1ABAB8B4-C230-4842-BEBF-91E48BFA8EB9" : {
-                                              "y" : -38.5,
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736671435990551",
-                                              "x" : -17.5
-                                            },
-                                            "2AA76B34-0847-49DD-A87A-D9AC9DBC05C2" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736729409660439"
-                                            },
-                                            "44CF2EED-A712-4609-B341-B9B699173747" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736564649010711"
-                                            },
-                                            "F5FE8D68-6D53-4D46-BDFA-20C7F34A1D75" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736628536649239"
-                                            },
-                                            "B88758FE-2A48-4C02-BF4A-39292AE122BE" : {
-                                              "className" : "GDProperties",
-                                              "objectId" : "id6711736974281516567"
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
                                             }
                                           },
-                                          "definition" : "BF9AEB11-EA74-4F2A-BE2B-335EDDA52D3A",
-                                          "className" : "GDWidgetInstanceRootCell",
-                                          "eventHandlers" : [
-                                            {
-                                              "className" : "GDEventHandler",
-                                              "objectId" : "id6711736104982652183",
-                                              "eventType" : "GDMouseClickEventType",
-                                              "orderedActionSets" : [
-                                                {
-                                                  "className" : "GDActionSet",
-                                                  "orderedActions" : [
-                                                    {
-                                                      "transition" : 1,
-                                                      "className" : "GDGotoScreenAction",
-                                                      "animationCurve" : 0,
-                                                      "animationDuration" : 0,
-                                                      "delay" : 0,
-                                                      "animate" : 0,
-                                                      "objectId" : "id6711736103762109879",
-                                                      "afterPrevious" : false,
-                                                      "specifier" : 0
-                                                    }
-                                                  ],
-                                                  "objectId" : "id6711736106840728887",
-                                                  "orderedElements" : [
-                                                    "id902247621l"
-                                                  ],
-                                                  "afterPrevious" : false
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "activeState" : "8EFEE69F-0810-44ED-85BC-73E4E8F8AB78",
-                                          "objectId" : "id902247621l",
-                                          "name" : "ES SPEC - Font Spec",
-                                          "orderedComponents" : [
-
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "specificationCell" : 0,
-                                      "styleProperties" : {
-                                        "2D7F139B-93DC-43AC-88F7-FAD61584E7CA" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736462563845655"
-                                        },
-                                        "108D5E29-7F09-4E5C-B3BE-98F8D8A162E1" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736472944748055"
-                                        },
-                                        "EB659105-B98B-4577-A00F-D3AACF64FDDF" : {
-                                          "className" : "GDProperties",
-                                          "objectId" : "id6711736489638077975"
+                                          "filters" : 0
                                         }
                                       },
-                                      "definition" : "08B9DF2D-3A22-4DCC-9A21-CABC915FC25D",
-                                      "className" : "GDWidgetInstanceCell",
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
                                       "eventHandlers" : [
 
                                       ],
-                                      "objectId" : "id2092615978l",
-                                      "name" : "Individual Text (for sizes, Opacity etc.)",
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id786024794l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339299210775",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id893589021l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "1,75",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338892363287",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id850441793l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339248879127",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1431289374l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "1,875",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339257267735",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1861470057l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338909140503",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id2122200539l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "2",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339068524055",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1568093465l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526411306519",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id511192760l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "3",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526583272983",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id350962927l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339269850647",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id834065585l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "3,25",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338858808855",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id822954242l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526352586263",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id882587550l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "4",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526293866007",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id2014521130l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 60,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 70,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338917529111",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id738575834l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "4,875",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339223713303",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id29198583l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 60,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 70,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526159648279",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1392294637l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526189008407",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id2015607804l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 70,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 80,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339198547479",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1106803648l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "7",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339202741783",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1793564548l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 80,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 90,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339303405079",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1769319123l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "7,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338833643031",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1492833920l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 70,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 80,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339060135447",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id518994307l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "9,3125",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339219518999",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id2043371682l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 80,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 90,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338875586071",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id767670704l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "15",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338879780375",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1628104736l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 80,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 90,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339261462039",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id663975277l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "16,875",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339240490519",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id2018301687l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 90,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 100,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339118855703",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id792419249l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "17,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339139827223",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1934679163l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 100,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 110,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339156604439",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1541945l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "19,75",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339164993047",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id2036676909l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "specificationCell" : 0,
+                          "styleProperties" : {
+                            "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99" : {
+                              "y" : 30,
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737526600050199",
+                              "x" : 20
+                            },
+                            "752EFD92-30C4-4DA1-B750-00E6C779A549" : {
+                              "y" : 30,
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737340490393111",
+                              "x" : 20
+                            }
+                          },
+                          "definition" : "DCC4DC00-7C1E-463E-A61F-ADF38A73D3D5",
+                          "className" : "GDWidgetInstanceRootCell",
+                          "eventHandlers" : [
+
+                          ],
+                          "activeState" : "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99",
+                          "objectId" : "id578512228l",
+                          "name" : "Column",
+                          "orderedComponents" : [
+                            {
+                              "specificationCell" : 0,
+                              "styleProperties" : {
+                                "371714E4-C37A-4FED-A2E7-4DBE10E1AC2D" : {
+                                  "className" : "GDProperties",
+                                  "objectId" : "id6711737526180619799"
+                                }
+                              },
+                              "definition" : "7DA5A8E6-C4DA-4E58-95C4-5E45F03903D7",
+                              "className" : "GDWidgetInstanceRootCell",
+                              "eventHandlers" : [
+
+                              ],
+                              "activeState" : "371714E4-C37A-4FED-A2E7-4DBE10E1AC2D",
+                              "objectId" : "id805808331l",
+                              "name" : "Header Cell",
+                              "orderedComponents" : [
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "textShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textHorizontalAlignment" : 0,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textString" : "Baseline 16px (current implementation)",
+                                      "horizontalResizing" : 1,
+                                      "backgroundImageProportionalScale" : 1,
+                                      "textColor" : {
+                                        "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                      },
+                                      "layoutPolicyCode" : 2,
+                                      "verticalResizing" : 2,
+                                      "borderTopColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "borderLeftWidth" : 0,
+                                      "borderRightWidth" : 0,
+                                      "paddingLeft" : 8,
+                                      "borderBottomWidth" : 0,
+                                      "borderTopWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingTop" : 8,
+                                      "dropShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "x" : 10,
+                                      "paddingBottom" : 8,
+                                      "objectId" : "id6711737339114661399",
+                                      "y" : 20,
+                                      "innerShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "borderLeftColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "className" : "GDProperties",
+                                      "borderRightColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "paddingRight" : 12
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1449005514l",
+                                  "name" : "Header Cell Text",
+                                  "orderedComponents" : [
+
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "specificationCell" : 0,
+                              "styleProperties" : {
+                                "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99" : {
+                                  "className" : "GDProperties",
+                                  "objectId" : "id6711737339013998103"
+                                },
+                                "752EFD92-30C4-4DA1-B750-00E6C779A549" : {
+                                  "className" : "GDProperties",
+                                  "isDisplay" : 1,
+                                  "objectId" : "id6711737341182453271"
+                                }
+                              },
+                              "definition" : "8CBEAE68-2000-447F-B13D-0D045F9C2C2F",
+                              "className" : "GDWidgetInstanceCell",
+                              "eventHandlers" : [
+
+                              ],
+                              "objectId" : "id727394850l",
+                              "name" : "Content Cells",
+                              "orderedComponents" : [
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 20,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 30,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526621021719",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id805929169l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "1",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526608438807",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1867774604l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339169187351",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id626502032l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "2",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339181770263",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1355199619l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526340003351",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id367323416l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "4",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526390334999",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1749748626l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526319031831",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id119314848l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "6",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526579078679",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id936749667l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338821060119",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id729547441l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "8",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339265656343",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1652796555l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526277088791",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id685190195l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "12",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526373557783",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1414834938l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "horizontalResizing" : 1,
+                                      "backgroundImageProportionalScale" : 1,
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "verticalResizing" : 2,
+                                      "backgroundColor" : {
+                                        "NSColorValue" : "0.870588,0.933333,0.949020,1.000000"
+                                      },
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "borderRightWidth" : 0,
+                                      "backgroundPainterType" : 1,
+                                      "paddingLeft" : 8,
+                                      "isContentClipped" : 0,
+                                      "borderTopWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "x" : 60,
+                                      "objectId" : "id6711737526331614743",
+                                      "y" : 70,
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "className" : "GDProperties",
+                                      "filters" : 0
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id643957351l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "16",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526348391959",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto Black",
+                                              "isItalic" : false,
+                                              "isBold" : true,
+                                              "fontName" : "Roboto-Black",
+                                              "familyName" : "Roboto Black",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Black\";src:url(\"\/images\/Roboto-Black.woff\") format(\"woff\"),local(\"Roboto Black\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id160297297l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339290822167",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id264646316l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "24",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339206936087",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id210829703l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 60,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 70,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339311793687",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1601510432l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "26",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339320182295",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id675979100l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 70,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 80,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339190158871",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id101875351l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "28",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339081106967",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id2120504739l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 80,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 90,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339093689879",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id571867134l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "30",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338846225943",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id76592242l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 70,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 80,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526226757143",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1726214295l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "32",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526394529303",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id2036251989l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526587467287",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1578478170l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "48",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526285477399",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1274939910l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 90,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 100,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339194353175",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1541114556l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "52",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339232101911",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id768606235l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526172231191",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id853745747l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "64",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526197397015",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id651156331l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 100,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 110,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339244684823",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1275083049l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "78",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339227907607",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id287219929l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526281283095",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id2019128505l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "80",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526356780567",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1559868643l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 110,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 120,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338904946199",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1619048028l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "112",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339102078487",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id558888775l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 120,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 130,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338829448727",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1206339l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "120",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339055941143",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id305629965l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 130,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 140,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339282433559",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1381843017l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "149",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338850420247",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id665181616l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 140,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 150,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339072718359",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id176448005l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "240",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339211130391",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id2120418851l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 150,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 160,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338804282903",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id694380199l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "270",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339076912663",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1046364525l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 160,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 170,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339127244311",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1367574917l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "280",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339135632919",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id704667421l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 170,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 180,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339123050007",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1272363789l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "316",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339148215831",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id555342776l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "specificationCell" : 0,
+                          "styleProperties" : {
+                            "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99" : {
+                              "y" : 40,
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737526243534359",
+                              "x" : 30
+                            },
+                            "752EFD92-30C4-4DA1-B750-00E6C779A549" : {
+                              "y" : 40,
+                              "className" : "GDProperties",
+                              "objectId" : "id6711737341329253911",
+                              "x" : 30
+                            }
+                          },
+                          "definition" : "DCC4DC00-7C1E-463E-A61F-ADF38A73D3D5",
+                          "className" : "GDWidgetInstanceRootCell",
+                          "eventHandlers" : [
+
+                          ],
+                          "activeState" : "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99",
+                          "objectId" : "id1927109721l",
+                          "name" : "Column",
+                          "orderedComponents" : [
+                            {
+                              "specificationCell" : 0,
+                              "styleProperties" : {
+                                "371714E4-C37A-4FED-A2E7-4DBE10E1AC2D" : {
+                                  "className" : "GDProperties",
+                                  "objectId" : "id6711737526407112215"
+                                }
+                              },
+                              "definition" : "7DA5A8E6-C4DA-4E58-95C4-5E45F03903D7",
+                              "className" : "GDWidgetInstanceRootCell",
+                              "eventHandlers" : [
+
+                              ],
+                              "activeState" : "371714E4-C37A-4FED-A2E7-4DBE10E1AC2D",
+                              "objectId" : "id1091503832l",
+                              "name" : "Header Cell",
+                              "orderedComponents" : [
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "textShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textHorizontalAlignment" : 0,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textString" : "Baseline 20px (e.g. if the elements are to small)",
+                                      "horizontalResizing" : 1,
+                                      "backgroundImageProportionalScale" : 1,
+                                      "textColor" : {
+                                        "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                      },
+                                      "layoutPolicyCode" : 2,
+                                      "verticalResizing" : 2,
+                                      "borderTopColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "borderLeftWidth" : 0,
+                                      "borderRightWidth" : 0,
+                                      "paddingLeft" : 8,
+                                      "borderBottomWidth" : 0,
+                                      "borderTopWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingTop" : 8,
+                                      "dropShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "x" : 10,
+                                      "paddingBottom" : 8,
+                                      "objectId" : "id6711737339131438615",
+                                      "y" : 20,
+                                      "innerShadowColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "borderLeftColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "className" : "GDProperties",
+                                      "borderRightColor" : {
+                                        "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                      },
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "paddingRight" : 12
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1686769353l",
+                                  "name" : "Header Cell Text",
+                                  "orderedComponents" : [
+
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "specificationCell" : 0,
+                              "styleProperties" : {
+                                "E2E4ED87-DB2D-4F9B-808D-313E9CA9BB99" : {
+                                  "className" : "GDProperties",
+                                  "objectId" : "id6711737338934306327"
+                                },
+                                "752EFD92-30C4-4DA1-B750-00E6C779A549" : {
+                                  "className" : "GDProperties",
+                                  "isDisplay" : 1,
+                                  "objectId" : "id6711737340666553879"
+                                }
+                              },
+                              "definition" : "8CBEAE68-2000-447F-B13D-0D045F9C2C2F",
+                              "className" : "GDWidgetInstanceCell",
+                              "eventHandlers" : [
+
+                              ],
+                              "objectId" : "id483863353l",
+                              "name" : "Content Cells",
+                              "orderedComponents" : [
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 20,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 30,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526230951447",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id61752905l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "1,25",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526306448919",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id911534628l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339177575959",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id149184112l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "2,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339173381655",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1994076949l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526574884375",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1806312051l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526398723607",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id188169549l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 160,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 170,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338871391767",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id758959997l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "7,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339253073431",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1801183847l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526562301463",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1317821630l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "10",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526377752087",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id560509399l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526323226135",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id403135108l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "15",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526155453975",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1265021855l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "horizontalResizing" : 1,
+                                      "backgroundImageProportionalScale" : 1,
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "verticalResizing" : 2,
+                                      "backgroundColor" : {
+                                        "NSColorValue" : "0.870588,0.933333,0.949020,1.000000"
+                                      },
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "borderRightWidth" : 0,
+                                      "backgroundPainterType" : 1,
+                                      "paddingLeft" : 8,
+                                      "isContentClipped" : 0,
+                                      "borderTopWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "x" : 60,
+                                      "objectId" : "id6711737526256117271",
+                                      "y" : 70,
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "className" : "GDProperties",
+                                      "filters" : 0
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id893184916l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "20",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526591661591",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto Black",
+                                              "isItalic" : false,
+                                              "isBold" : true,
+                                              "fontName" : "Roboto-Black",
+                                              "familyName" : "Roboto Black",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Black\";src:url(\"\/images\/Roboto-Black.woff\") format(\"woff\"),local(\"Roboto Black\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1893040577l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 170,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 180,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339236296215",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id692445426l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "30",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339286627863",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id380795473l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 180,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 190,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339274044951",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1146534119l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "32,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339215324695",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1460116130l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 190,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 200,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338888168983",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id2008900209l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "35",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338808477207",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1876081560l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 200,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 210,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338900751895",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id965429037l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "37,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338913334807",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id126062877l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 70,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 80,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526360974871",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id2065967828l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "40",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526268700183",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1877016765l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 30,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 40,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526235145751",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1019477221l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "60",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526214174231",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id569426251l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 210,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 220,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339064329751",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id2086911263l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "65",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338837837335",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id419455821l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 40,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 50,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526558107159",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1082925216l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "80",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526218368535",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1295520090l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 220,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 230,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338896557591",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id802041978l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "97,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338842031639",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id41302966l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 50,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 60,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737526264505879",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1854691332l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "100",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737526386140695",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1622590750l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 230,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 240,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339307599383",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id392476912l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "140",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339278239255",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1373909112l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 240,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 250,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338825254423",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id117895209l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "150",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338854614551",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1933591469l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 250,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 260,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339295016471",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id2142515348l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "186,25",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339085301271",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1392978258l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 260,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 270,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339315987991",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id73327750l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "300",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338863003159",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1614079728l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 270,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 280,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737338816865815",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1951867033l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "337,5",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737338883974679",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id74534089l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 280,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 290,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339152410135",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id1068464722l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "350",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339106272791",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id1793027549l",
+                                      "name" : "Text",
+                                      "orderedComponents" : [
+
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "specificationCell" : 0,
+                                  "styleProperties" : {
+                                    "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                      "borderRightWidth" : 0,
+                                      "verticalResizing" : 2,
+                                      "x" : 290,
+                                      "className" : "GDProperties",
+                                      "isContentClipped" : 0,
+                                      "y" : 300,
+                                      "horizontalResizing" : 1,
+                                      "borderBottomColor" : {
+                                        "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
+                                      },
+                                      "textColor" : {
+                                        "NSColorValue" : "0.000000,0.498039,0.611765,1.000000"
+                                      },
+                                      "minimumHeight" : 3,
+                                      "textFont" : {
+                                        "GDFont" : {
+                                          "displayName" : "Roboto Bold",
+                                          "isItalic" : false,
+                                          "isBold" : true,
+                                          "fontName" : "Roboto-Bold",
+                                          "familyName" : "Roboto",
+                                          "fallback" : "",
+                                          "size" : 13,
+                                          "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Bold\";src:url(\"\/images\/Roboto-Bold.woff\") format(\"woff\"),local(\"Roboto Bold\")}"
+                                        }
+                                      },
+                                      "filters" : 0,
+                                      "borderTopWidth" : 0,
+                                      "objectId" : "id6711737339144021527",
+                                      "layoutPolicyCode" : 3,
+                                      "borderLeftWidth" : 0,
+                                      "minimumWidth" : 3,
+                                      "paddingLeft" : 8,
+                                      "backgroundImageProportionalScale" : 1
+                                    }
+                                  },
+                                  "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                  "className" : "GDWidgetInstanceRootCell",
+                                  "eventHandlers" : [
+
+                                  ],
+                                  "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                  "objectId" : "id584782563l",
+                                  "name" : "Cell",
+                                  "orderedComponents" : [
+                                    {
+                                      "specificationCell" : 0,
+                                      "styleProperties" : {
+                                        "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2" : {
+                                          "textShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textHorizontalAlignment" : 0,
+                                          "borderBottomColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textString" : "395",
+                                          "horizontalResizing" : 1,
+                                          "backgroundImageProportionalScale" : 1,
+                                          "textColor" : {
+                                            "NSColorValue" : "0.239350,0.287146,0.302835,1.000000"
+                                          },
+                                          "layoutPolicyCode" : 2,
+                                          "verticalResizing" : 2,
+                                          "borderTopColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "borderLeftWidth" : 0,
+                                          "borderRightWidth" : 0,
+                                          "borderBottomWidth" : 0,
+                                          "borderTopWidth" : 0,
+                                          "minimumWidth" : 3,
+                                          "paddingTop" : 8,
+                                          "dropShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "x" : 10,
+                                          "paddingBottom" : 8,
+                                          "objectId" : "id6711737339160798743",
+                                          "y" : 20,
+                                          "innerShadowColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "minimumHeight" : 3,
+                                          "borderLeftColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "className" : "GDProperties",
+                                          "borderRightColor" : {
+                                            "NSColorValue" : "0.239216,0.286275,0.301961,1.000000"
+                                          },
+                                          "textFont" : {
+                                            "GDFont" : {
+                                              "displayName" : "Roboto",
+                                              "isItalic" : false,
+                                              "isBold" : false,
+                                              "fontName" : "Roboto-Regular",
+                                              "familyName" : "Roboto",
+                                              "fallback" : "",
+                                              "size" : 13,
+                                              "fontCSS" : "\n@font-face {\nfont-family: \"Roboto-Regular\";src:url(\"\/images\/Roboto-Regular.woff\") format(\"woff\"),local(\"Roboto\")}"
+                                            }
+                                          },
+                                          "filters" : 0
+                                        }
+                                      },
+                                      "definition" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDWidgetRootCellDefinition\/p1",
+                                      "className" : "GDWidgetInstanceRootCell",
+                                      "eventHandlers" : [
+
+                                      ],
+                                      "activeState" : "x-coredata:\/\/143D15C6-A0DB-4381-AA9A-37984AAF84FA\/GDState\/p2",
+                                      "objectId" : "id907721280l",
+                                      "name" : "Text",
                                       "orderedComponents" : [
 
                                       ]
@@ -5436,7 +10603,7 @@ let screenJSON_6 = {
           "borderTopColor" : {
             "NSColorValue" : "0.815686,0.850980,0.870588,1.000000"
           },
-          "objectId" : "id6711736800071099927"
+          "objectId" : "id6711737557721785879"
         }
       },
       "definition" : "D6BCAD97-6974-4BEF-9D4C-20FA76E8DD4B",
@@ -5445,7 +10612,7 @@ let screenJSON_6 = {
 
       ],
       "activeState" : "56D18722-5295-4EA8-81EB-320913C16630",
-      "objectId" : "id855359421l",
+      "objectId" : "id391989844l",
       "name" : "Footer",
       "orderedComponents" : [
         {
@@ -5454,7 +10621,7 @@ let screenJSON_6 = {
             "56D18722-5295-4EA8-81EB-320913C16630" : {
               "className" : "GDProperties",
               "y" : 0,
-              "objectId" : "id6711736800222094871"
+              "objectId" : "id6711737558321571351"
             }
           },
           "definition" : "3CC24CBB-9E14-4429-B055-C830D9253E4C",
@@ -5462,7 +10629,7 @@ let screenJSON_6 = {
           "eventHandlers" : [
 
           ],
-          "objectId" : "id1633359121l",
+          "objectId" : "id437734406l",
           "name" : "Rectangle",
           "orderedComponents" : [
 
@@ -5474,7 +10641,7 @@ let screenJSON_6 = {
             "56D18722-5295-4EA8-81EB-320913C16630" : {
               "className" : "GDProperties",
               "y" : 10,
-              "objectId" : "id6711736800100460055"
+              "objectId" : "id6711737558342542871"
             }
           },
           "definition" : "F55D89D3-DDBD-4F2C-B24F-7BFB323F0694",
@@ -5482,7 +10649,7 @@ let screenJSON_6 = {
           "eventHandlers" : [
 
           ],
-          "objectId" : "id1881678613l",
+          "objectId" : "id1814361438l",
           "name" : "Rectangle",
           "orderedComponents" : [
 
@@ -5494,7 +10661,7 @@ let screenJSON_6 = {
             "56D18722-5295-4EA8-81EB-320913C16630" : {
               "className" : "GDProperties",
               "y" : 10,
-              "objectId" : "id6711736800280815127"
+              "objectId" : "id6711737558032164375"
             }
           },
           "definition" : "0EF24C94-8EB6-423B-BCBC-361B59F9BBAE",
@@ -5502,7 +10669,7 @@ let screenJSON_6 = {
           "eventHandlers" : [
 
           ],
-          "objectId" : "id1652943231l",
+          "objectId" : "id1953771599l",
           "name" : "Rectangle",
           "orderedComponents" : [
 
@@ -5514,7 +10681,7 @@ let screenJSON_6 = {
             "56D18722-5295-4EA8-81EB-320913C16630" : {
               "className" : "GDProperties",
               "y" : 20,
-              "objectId" : "id6711736802671568407"
+              "objectId" : "id6711737557742757399"
             }
           },
           "definition" : "9E7EC3A5-0EC4-4F59-B444-C986C8B91E4A",
@@ -5522,7 +10689,7 @@ let screenJSON_6 = {
           "eventHandlers" : [
 
           ],
-          "objectId" : "id639080219l",
+          "objectId" : "id769688248l",
           "name" : "Rectangle",
           "orderedComponents" : [
 
