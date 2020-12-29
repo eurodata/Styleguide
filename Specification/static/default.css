@@ -3,18 +3,18 @@
  * which depend on the containers layout etc. 
  */
 
-cell { 
-    display: flex; 
-    border: 1px solid rgb(0, 0, 0); 
-    overflow: hidden; 
-    opacity: 1; 
-    visibility: visible; 
-    margin: 0px; 
-    padding: 0px; 
-    color: rgb(0, 0, 0); 
-    font-family: Helvetica, Helvetica, Helvetica; 
-    font-size: 12px; 
-    font-weight: normal; 
+cell {
+    display: flex;
+    border: 1px solid var(--DefaultColorIdentifier);
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    margin: 0px;
+    padding: 0px;
+    color: var(--DefaultColorIdentifier);
+    font-family: Helvetica, Helvetica, Helvetica;
+    font-size: 12px;
+    font-weight: normal;
     font-style: normal;
     position: relative;
     }

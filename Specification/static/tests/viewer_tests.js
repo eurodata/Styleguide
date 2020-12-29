@@ -1,8 +1,24 @@
 "use strict";
 
+import { GDCellDragHandler, GDDragHandler, GDRubberbandDragHandler } from '../modules/drag-handler.js';
+import { GDProject, GDWidget, GDWidgetRootCellDefinition, GDState, GDDesignBreakPoint } from '../modules/model.js';
+import { GDCellIntersectionObserver, GDNativeSelectionTool, GDSelectionTool } from '../modules/tools.js';
+import { stringFromContentEditable, targetIDFromEventTarget } from '../modules/utils.js';
+import { AntetypeWeb } from '../modules/viewer.js';
+import { GDCSSGenerator } from '../modules/styling.js';
+
 QUnit.module("viewer", { 
         beforeEach: function() {
             this.antetype = new AntetypeWeb();
+            this.antetype.project = GDProject.createInstance();
+            this.antetype.buildStyleSheet();
+            this.antetype.currentScreen =  this.antetype.project.library.screenWidget.createInstance();
+            this.antetype.currentScreen.createStyleSheets();
+        }
+
+        ,afterEach: function() {
+            this.antetype.project.currentLookAndFeel.cssStyleSheet.remove();
+            this.antetype.project.currentLookAndFeel.breakPointStyleSheet.remove();
         }
 });
 
@@ -21,7 +37,6 @@ QUnit.test("registerCommand", function(assert) {
 
 QUnit.test("asyncSync_asyncCommandExecuting", function(assert) {
     // Command definition
-    var at = this.antetype;
     this.antetype.registerCommand("async1", function(o,at) {
         at.asyncCommandExecuting = true;
     });
@@ -87,7 +102,6 @@ QUnit.test("asyncSync_asyncCommandExecuting", function(assert) {
 
 QUnit.test("syncAsync_asyncCommandExecuting", function(assert) {
     // Command definition
-    var at = this.antetype;
 
     this.antetype.registerCommand("sync1", function(o,at) {
         
@@ -144,7 +158,6 @@ QUnit.test("syncAsync_asyncCommandExecuting", function(assert) {
 
 QUnit.test("randomOrder_asyncCommandExecuting", function(assert) {
     // Command definition
-    var at = this.antetype;
     this.antetype.registerCommand("async1", function(o,at) {
         at.asyncCommandExecuting = true;
     });
@@ -267,7 +280,7 @@ QUnit.test("recordCommand", function(assert) {
 QUnit.test("loadscreen event", function(assert) {
     let events= [];
     let callback = e => events.push(e) 
-    let unloadListener = this.antetype.addEventListener("foo", callback);
+    this.antetype.addEventListener("foo", callback);
 
     this.antetype.dispatchEvent({type: "foo", preventDefault: false});
     assert.equal(events.length, 1);
@@ -313,9 +326,6 @@ QUnit.test("intersection observer registration single observer", function(assert
 });
 
 
-
-
-
 QUnit.test("stringFromContentEditable", function(assert) {
     let span = document.createElement("span");
 
@@ -329,3 +339,70 @@ QUnit.test("stringFromContentEditable", function(assert) {
     assert.equal(stringFromContentEditable(span), "<br><br>Aber hallo<br><br>foo bar<br><br>baz!" );
 });
 
+QUnit.test("useNativeMouseHandling", function(assert) {
+    assert.notOk (this.antetype.nativeMouseSelection);
+    assert.ok( this.antetype.selectionTool instanceof GDSelectionTool);
+    assert.equal( this.antetype._dragHandlers.length, 2);   // rubberband-drag-handler, draghandler
+    assert.ok( this.antetype._dragHandlers[0] instanceof GDRubberbandDragHandler );
+    assert.ok( this.antetype._dragHandlers[1] instanceof GDDragHandler );
+
+    this.antetype.nativeMouseSelection = true;
+
+    assert.ok( this.antetype.selectionTool instanceof GDNativeSelectionTool);
+    assert.equal( this.antetype._dragHandlers.length, 3);   
+    assert.ok( this.antetype._dragHandlers[0] instanceof GDCellDragHandler );
+    assert.ok( this.antetype._dragHandlers[1] instanceof GDRubberbandDragHandler );
+    assert.ok( this.antetype._dragHandlers[2] instanceof GDDragHandler );
+});
+
+
+// make sure we do not rebuild the properties if we dont have breakpoints
+// see #1024 for an explanation
+QUnit.test("changeStateOfCell without-breakoints (#1024)", function(assert) {
+
+    let widget = GDWidget.createInstance(this.antetype.project);
+    widget._hierarchy = GDWidgetRootCellDefinition.createInstance(this.antetype.project);
+    widget._hierarchy._widget = widget;
+    this.antetype.project.library.addWidget(widget);
+    let state = GDState.createInstance(this.antetype.project);
+    widget.addState(state);
+
+    let cell = widget.createInstance();
+    this.antetype.currentScreen.addComponent(cell);
+    this.antetype.rebuildRenderObjects(this.antetype.currentScreen);
+
+    let called = 0;
+    this.antetype._cssGenerator = new GDCSSGenerator(); 
+    this.antetype._cssGenerator.populateCellPropertiesInState =  () => ++called ;
+
+    this.antetype.changeStateOfCell(cell, state);
+    assert.equal(called,0, "not called if we do not have breakpoints");
+
+});
+
+// make sure we do rebuild the properties if we do have breakpoints
+// see #1024 for an explanation
+QUnit.test("changeStateOfCell with-breakoints (#1024)", function(assert) {
+    let breakpoint = GDDesignBreakPoint.createInstance(this.project);
+    breakpoint._breakPointMaxWidth = 400;
+    breakpoint.breakPointName= "foo";
+    this.antetype.addDesignBreakPoint(breakpoint);
+
+    let widget = GDWidget.createInstance(this.antetype.project);
+    widget._hierarchy = GDWidgetRootCellDefinition.createInstance(this.antetype.project);
+    widget._hierarchy._widget = widget;
+    this.antetype.project.library.addWidget(widget);
+    let state = GDState.createInstance(this.antetype.project);
+    widget.addState(state);
+
+    let cell = widget.createInstance();
+    this.antetype.currentScreen.addComponent(cell);
+    this.antetype.rebuildRenderObjects(this.antetype.currentScreen);
+
+    let called = 0;
+    this.antetype._cssGenerator = new GDCSSGenerator(); 
+    this.antetype._cssGenerator.populateCellPropertiesInState =  () => ++called ;
+    this.antetype.changeStateOfCell(cell, state);
+    assert.equal(called,widget.states.length, "called for every cell in every state");
+
+});

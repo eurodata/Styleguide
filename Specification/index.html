@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <title>Antetype Web Viewer</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Antetype"> 
+    <meta name="apple-mobile-web-app-title" content="Antetype">
     <link rel="stylesheet" href="static/viewer.css">
     <link rel="stylesheet" href="static/styles.css">
     <link rel="stylesheet" href="static/default.css">
+    <link rel="stylesheet" href="webfonts.css">
     <link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico">
+
 
     <script src="static/webviewer.js"></script>
   </head>
   <body>
     <div id="ViewerToolbar">
-        <div id="ViewerPrevButton" class="ViewerButton">        
-            <div class="ViewerButtonIcon" ></div>               
-        </div>                                                  
-        <div id="ViewerNextButton" class="ViewerButton">        
-            <div class="ViewerButtonIcon"></div>                
-        </div>                                                  
-                     
-            <select id="ViewerScreenSelect" class="ViewerScreenSelectStyle">                    
-            </select>                                           
-                                                   
-        <div class="spacer">                                    
-        </div>                                                  
-        <div id="ViewerDocTitle">                               
-            DocTitle                                            
-        </div>                                                  
+        <div id="ViewerPrevButton" class="ViewerButton">
+            <div class="ViewerButtonIcon" ></div>
+        </div>
+        <div id="ViewerNextButton" class="ViewerButton">
+            <div class="ViewerButtonIcon"></div>
+        </div>
+
+            <select id="ViewerScreenSelect" class="ViewerScreenSelectStyle">
+            </select>
+
+        <div class="spacer">
+        </div>
+        <div id="ViewerDocTitle">
+            DocTitle
+        </div>
+        <div id="ViewerResizeModeButton" class="ViewerButton" title="Toggle the resize mode">
+          <div class="ViewerButtonIcon"></div>
+        </div>
         <div id="ViewerInspectorButton" class="ViewerButton" title="Toggle the Inspector">
             <div class="ViewerButtonIcon"></div>
         </div>
-        <div id="ViewerInteractionButton" class="ViewerButton" title="Press and hold to see the clickable areas">  
-            <div class="ViewerButtonIcon"></div>                
-        </div>                                                  
-        <div id="ViewerFullScreenButton" class="ViewerButton" title="Toggle Fullscreen">  
-            <div class="ViewerButtonIcon"></div>                
-        </div>                                                  
-        <div id="ViewerHideButton" class="ViewerButton" title="Hide toolbar (use 't' to show again)">        
-            <div class="ViewerButtonIcon"></div>                
-        </div>                                                  
+        <div id="ViewerInteractionButton" class="ViewerButton" title="Press and hold to see the clickable areas">
+            <div class="ViewerButtonIcon"></div>
+        </div>
+        <div id="ViewerFullScreenButton" class="ViewerButton" title="Toggle Fullscreen">
+            <div class="ViewerButtonIcon"></div>
+        </div>
+        <div id="ViewerHideButton" class="ViewerButton" title="Hide toolbar (use 't' to show again)">
+            <div class="ViewerButtonIcon"></div>
+        </div>
     </div>
     <div id="MainWrapper">
-      <iframe id="ViewerFrame" src="viewer.html" sandbox="allow-same-origin allow-scripts allow-popups">Browser does not support frames</iframe>
+      <div id="ViewerScrollContainer">
+          <iframe id="ViewerFrame" src="viewer.html" class="not-resize-able" sandbox="allow-same-origin allow-scripts allow-popups">Browser does not support frames</iframe>
+          <div id="ViewerScrollContainerHelper"></div>
+      </div>
       <div id="ViewerInspector">
 
         <div class="button-container" >
-          <button class="button" type="button" name="up-button" title="Select the parent-cell and display its properties" id="up">Select Parent</button>
+          <button class="button icon-button" type="button" name="left-button" title="Select previous sibling and display its properties" id="left">
+          </button>
+          <button class="button icon-button" type="button" name="right-button" title="Select next sibling and display its properties" id="right">
+          </button>
+          <button class="button icon-button" type="button" name="up-button" title="Select the parent-cell and display its properties" id="up">
+          </button>
+          <button class="button icon-button" type="button" name="down-button" title="Select the first child cell and display its properties" id="down">
+          </button>
         </div>
         <div id="GDViewerPropertyTable" class="itable"> </div>
 

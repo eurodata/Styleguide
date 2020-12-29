@@ -1,7 +1,7 @@
 "use strict"
 /*
-    This file is used in the index-page of the exported web-viewer. The viewer itself 
-    is shown in an iframe. 
+    This file is used in the index-page of the exported web-viewer. The viewer itself
+    is shown in an iframe.
 */
 
 
@@ -14,13 +14,18 @@ function sendToViewerFrame(command) {
 }
 
 /**
-    toggles the toolbar
+    toggles the toolbar. Also updates the height of viewer-iframe and
+    viewer-inspector.
 */
 function toggleToolbar() {
     if (window.toolbarHidden) {
-        document.getElementById("ViewerToolbar").style.display = "flex"; 
+        document.getElementById("ViewerToolbar").style.display = "flex";
+        document.getElementById("ViewerFrame").style.height = "calc(100vh - 35px)";
+        document.getElementById("ViewerInspector").style.height = "calc(100vh - 35px)";
     } else {
-        document.getElementById("ViewerToolbar").style.display = "none"; 
+        document.getElementById("ViewerToolbar").style.display = "none";
+        document.getElementById("ViewerFrame").style.height = "100vh";
+        document.getElementById("ViewerInspector").style.height = "100vh";
     }
     window.toolbarHidden = !window.toolbarHidden;
 }
@@ -36,18 +41,34 @@ function toggleInspector() {
 
     }
     window.inspectorHidden = !window.inspectorHidden;
+    this.classList.toggle('toggled-on');
+}
+
+/**
+ * Updates the IFrame size based on the given screenSize object.
+ * This should normally be the current screen right after a screen change
+ * @param {Object} screenSize an object containing the (('min'|'max'|'')('width'|'height'))
+ */
+ function updateIFrameProperties(screenSize) {
+  const viewer = document.getElementById('ViewerFrame');
+  viewer.style.width = screenSize.width + 'px';
+  viewer.style.minWidth = screenSize.minHeight + 'px';
+  viewer.style.maxWidth = screenSize.maxHeight + 'px';
+  viewer.style.height = screenSize.height + 'px';
+  viewer.style.minHeight = screenSize.minHeight + 'px';
+  viewer.style.maxHeight = screenSize.maxHeight + 'px';
 }
 
 
 
 // messages from the viewer (in the iframe). We have to use postMessage here
-// to allow communication even if the prototype is opened directly from the 
+// to allow communication even if the prototype is opened directly from the
 // filesystem
 window.addEventListener("message", (e) => {
     let selectElement = document.getElementById("ViewerScreenSelect");
 
     switch (e.data.command) {
-        case "buildScreens": 
+        case "buildScreens":
             let names = e.data.parameters;
             for (let i=0; i<names.length; i++) {
                 let option = document.createElement("option");
@@ -56,35 +77,37 @@ window.addEventListener("message", (e) => {
                 selectElement.add(option);
             }
 
-            selectElement.addEventListener("change", function(e) { 
+            selectElement.addEventListener("change", function(e) {
                 let screenIndex = e.target.value;
                 sendToViewerFrame({command: "gotoScreenWithIndex", parameters: screenIndex});
             });
         break;
 
-        case "toggleToolbar": 
+        case "toggleToolbar":
             toggleToolbar();
         break;
 
-        case "setTitle": 
+        case "setTitle":
             let title = e.data.parameters;
             document.title = title;
             document.getElementById("ViewerDocTitle").innerHTML = title;
         break;
 
-        case "selectScreenWithIndex": 
+        case "selectScreenWithIndex":
             if (selectElement) {
                 let index = e.data.parameters;
                 selectElement.selectedIndex = index;
             }
             break;
 
-        case "updateSpecInspector": 
+        case "updateSpecInspector":
             let transferObject = e.data.parameters;
             updateSpecInspector(transferObject);
+            break;
 
-
-        break;
+        case "updateIFrame":
+            updateIFrameProperties(e.data.parameters);
+            break;
     }
 });
 
@@ -112,7 +135,7 @@ window.addEventListener("load", function(e) {
     document.getElementById("ViewerPrevButton").addEventListener("click", () => sendToViewerFrame({command: "gotoPreviousScreen"}));
     document.getElementById("ViewerNextButton").addEventListener("click", () => sendToViewerFrame({command: "gotoNextScreen"}));
 
-    document.getElementById("ViewerFullScreenButton").addEventListener("click", function() { 
+    document.getElementById("ViewerFullScreenButton").addEventListener("click", function() {
         if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullscreenElement) {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
@@ -132,7 +155,7 @@ window.addEventListener("load", function(e) {
 
 
         if (document.body.requestFullscreen) {
-            document.body.requestFullscreen(); 
+            document.body.requestFullscreen();
         }
         if (document.body.webkitRequestFullscreen) {
             document.body.webkitRequestFullscreen();
@@ -143,10 +166,8 @@ window.addEventListener("load", function(e) {
         }
     });
 
-    document.getElementById("ViewerHideButton").addEventListener("click", function() { 
-        window.toolbarHidden = true;
-        document.getElementById("ViewerToolbar").style.display = "none"; 
-        document.getElementById("ViewerFrame").style.marginTop = "0px";
+    document.getElementById("ViewerHideButton").addEventListener("click", function() {
+        toggleToolbar();
     });
 
     let highlightShown = false;
@@ -163,8 +184,21 @@ window.addEventListener("load", function(e) {
     });
 
 
-    document.getElementById("ViewerInspectorButton").addEventListener("click", toggleInspector); 
+    document.getElementById("ViewerInspectorButton").addEventListener("click", toggleInspector);
     window.inspectorHidden = true;
 
+    document.getElementById("ViewerResizeModeButton").addEventListener("click", function() {
+        this.classList.toggle('toggled-on');
+        document.getElementById('ViewerFrame').classList.toggle('not-resize-able');
+    });
+
+    // Issue #336: open another screen (not the first on)
+    // get screen index from URL and switch to the given screen: 
+    // simply a # followed by the screen-number (starting by 1)
+    const hash = document.location.hash;
+    if (hash) {
+        let screenIndex = Number.parseInt(hash.substr(1));
+        sendToViewerFrame({command: "gotoScreenWithIndex", parameters: screenIndex-1});
+    }
 
 })

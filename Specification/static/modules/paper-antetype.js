@@ -1,6 +1,4 @@
-"use strict"; 
-
-class PaperCanvas {
+export class PaperCanvas {
 
     static hitOptions() {
         return {
@@ -60,6 +58,9 @@ class PaperCanvas {
                 this.convertSegmentToCurve(event);
             }
         };
+
+        this.cssStrokeColorRef = null;
+        this.cssFillColorRef = null;
 
         // Import Project if available
         this.restoreSavedState(this._paperInstance, savedState);
@@ -211,7 +212,8 @@ class PaperCanvas {
             // Set start point
             const start = point;
             // Give the stroke a color
-            this._selectedPath.strokeColor = 'black';
+            this._selectedPath.strokeColor = this.convertCSSColorRefToRGBA("var(--DefaultColorIdentifier)");
+            this.cssStrokeColorRef = "--DefaultColorIdentifier";
             // Move to start and draw a line from there
             this._selectedPath.moveTo(start);
             // Deselect previous segment
@@ -376,12 +378,49 @@ class PaperCanvas {
     restoreSavedState(paperInstance, savedState) {
         if(savedState != "") {
             paperInstance.project.clear();
-            paperInstance.project.importJSON(savedState);
             
+            let vectorJSON = this.updateFillAndStrokeColor(savedState);
+            
+            paperInstance.project.importJSON(vectorJSON);
             if(paperInstance.project.activeLayer.children.length > 0) {
                 this._selectedPath = paperInstance.project.activeLayer.children[0];
             }
         }
+    }
+
+    updateFillAndStrokeColor(savedState) {
+        var vectorJSON = savedState["json"];
+        let vectorSVG = savedState["svg"];
+        
+        // Retrieve SVG stroke-color (CSS color variable) from SVG represenation, get the value and pass it into the json represenation
+        // Paper.js can't handle css color variables out of the box.
+        var strokeColorRef = vectorSVG.match(/stroke=\"var\(--[^\)]+\)/gmi);
+        if(strokeColorRef !== null) {
+            strokeColorRef = strokeColorRef.toString().replace("stroke=\"var(", "");
+            strokeColorRef = strokeColorRef.toString().replace(")", "");
+            // Convert CSS color ref to RGBA color array with float values
+            let strokeColorRGBAArray = this.convertCSSColorRefToRGBA(strokeColorRef);
+            // Override in paper.js project json (it's always the same hierarchy)
+            vectorJSON[0][1]["children"][0][1]["strokeColor"] = strokeColorRGBAArray
+            // Save for later (commit / abort edit)
+            this.cssStrokeColorRef = strokeColorRef;
+        }        
+        
+        // Retrieve SVG fill-color (CSS color variable) from SVG represenation, get the value and pass it into the json represenation
+        // Paper.js can't handle css color variables out of the box.
+        var fillColorRef = vectorSVG.match(/fill=\"var\(--[^\)]+\)/gmi);
+        if(fillColorRef !== null) {
+            fillColorRef = fillColorRef.toString().replace("fill=\"var(", "");
+            fillColorRef = fillColorRef.toString().replace(")", "");
+            // Convert CSS color ref to RGBA color array with float values
+            let fillColorRGBAArray = this.convertCSSColorRefToRGBA(fillColorRef);
+            // Override in paper.js project json (it's always the same hierarchy)
+            vectorJSON[0][1]["children"][0][1]["fillColor"] = fillColorRGBAArray
+            // Save for later (commit / abort edit)
+            this.cssFillColorRef = fillColorRef;
+        }
+
+        return vectorJSON;
     }
 
     saveState() {
@@ -410,6 +449,54 @@ class PaperCanvas {
             path.setAttribute("vector-effect", "non-scaling-stroke");
         }   
 
+        const g = svg.getElementsByTagName("g");
+        for (var i = 0; i < g.length; i++) {   
+            let group = g[i];
+            // Set CSS color refs
+            if(this.cssStrokeColorRef != null) {
+                group.setAttribute("stroke", "var("+this.cssStrokeColorRef+")");
+            }
+
+            if(this.cssFillColorRef != null) {
+                group.setAttribute("fill", "var("+this.cssFillColorRef+")");
+            }
+
+            // We use RGBA 
+            group.removeAttribute("stroke-opacity");
+            group.removeAttribute("fill-opacity");
+        }      
+
         return svg;
+    }
+
+    convertCSSColorRefToRGBA(colorRef) {
+        var computedCSSColor = getComputedStyle(document.documentElement).getPropertyValue(colorRef);
+            // Convert hexValue to RGBA
+            if(computedCSSColor.match(/#/gmi)) {
+                computedCSSColor = this.convertHexValueToRGBA(computedCSSColor);
+            }
+            computedCSSColor = computedCSSColor.replace("rgba(", "");
+            computedCSSColor = computedCSSColor.replace(")", "");
+            var rgbaColorArray = computedCSSColor.split(',').map(function(number) {
+                if(number > 1.0) {
+                    number = number / 255.0;
+                }
+                return parseFloat(number);
+            });
+
+        return rgbaColorArray;
+    }
+
+    convertHexValueToRGBA(hexValue){
+        var rgbaColor;
+        if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hexValue)){
+            rgbaColor= hexValue.substring(1).split('');
+            if(rgbaColor.length== 3){
+                rgbaColor = [rgbaColor[0], rgbaColor[0], rgbaColor[1], rgbaColor[1], rgbaColor[2], rgbaColor[2]];
+            }
+            rgbaColor = '0x' + rgbaColor.join('');
+            return 'rgba('+[(rgbaColor>>16)&255, (rgbaColor>>8)&255, rgbaColor&255].join(',')+',1)';
+        }
+        throw new Error('Bad HexValue');
     }
 }

@@ -1,7 +1,9 @@
 "use strict";
-var Antetype = null;
+
+import { Antetype, initializeAntetype } from './modules/viewer.js';
+
 function init_export() {
-    Antetype = new AntetypeWeb(document.body);
+    initializeAntetype(document.body);
 
     Antetype.registerCommand("finishLoading", function(json, at) {
         window.exporter.message("finishLoading");
@@ -20,6 +22,10 @@ function init_export() {
         at.asyncCommandExecuting = true;
         request.send();
     });
+
+    if (window.exporter && window.exporter.message) {
+        window.exporter.message("AntetypeLoaded");
+    }
 
 }
 

@@ -1,13 +1,21 @@
 "use strict";
+
+import { cssSelector } from '../modules/styling.js';
+import { AntetypeWeb } from '../modules/viewer.js';
+import { addCommands } from '../modules/commands.js';
+
 const projectJSON1  = {"orderedScreenCount":1,"designBreakPoints":[],"className":"GDProject","projectLibrary":{"className":"GDLibrary","objectId":"id4196171","widgets":[{"states":[{"animationCurve":0,"className":"GDState","animationDuration":0.2,"animate":0,"objectId":"id12584875","identifier":"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDState/p1","type":0,"name":"Normal"}],"className":"GDWidget","identifier":"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDWidget/p1","objectId":"id16779243","type":2,"hierarchy":{"orderedComponents":[],"className":"GDScreenDefinition","objectId":"id16779147","name":"Label","individualContent":false,"identifier":"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDScreenDefinition/p2"},"name":"Label"},{"states":[{"animationCurve":0,"className":"GDState","animationDuration":0.2,"animate":0,"objectId":"id16779179","identifier":"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDState/p29","type":0,"name":"Normal"}],"className":"GDWidget","identifier":"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDWidget/p19","objectId":"id4196331","type":1,"hierarchy":{"orderedComponents":[],"className":"GDWidgetRootCellDefinition","objectId":"id8390731","name":"Radio Button Group Dark","individualContent":false,"identifier":"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDWidgetRootCellDefinition/p18"},"name":"Radio Button Group Dark"},{"states":[{"animationCurve":0,"className":"GDState","animationDuration":0.2,"animate":0,"objectId":"id8390571","identifier":"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDState/p72","type":0,"name":"Normal"}],"className":"GDWidget","identifier":"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDWidget/p1","objectId":"id8390635","type":2,"hierarchy":{"orderedComponents":[],"className":"GDScreenDefinition","objectId":"id12584843","name":"Mobile Device Title Bar","individualContent":false,"identifier":"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDScreenDefinition/p23"},"name":"Mobile Device Title Bar"},{"states":[{"animationCurve":0,"className":"GDState","animationDuration":0.2,"animate":0,"objectId":"id4196267","identifier":"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDState/p2","type":0,"name":"Normal"}],"className":"GDWidget","identifier":"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDWidget/p2","objectId":"id12584939","type":1,"hierarchy":{"orderedComponents":[],"className":"GDWidgetRootCellDefinition","objectId":"id4196427","name":"Text Area","individualContent":false,"identifier":"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDWidgetRootCellDefinition/p1"},"name":"Text Area"}],"lookAndFeels":[{"name":"Antetype","identifier":"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDLookAndFeel/p2"}],"resources":[]},"objectId":"id4196107","currentLookAndFeel":{"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDWidgetRootCellDefinition/p1":{"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDState/p2":{"isShowingPlaceholders":0,"minimumHeight":10,"minimumWidth":10,"className":"GDProperties","scrollable":0,"objectId":"id16779275","placeholderStyle":0,"isEditableText":0,"isNestable":1}},"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDWidgetRootCellDefinition/p18":{"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDState/p29":{"isShowingPlaceholders":0,"scrollable":0,"className":"GDProperties","objectId":"id20973579","placeholderStyle":0,"isEditableText":0,"isNestable":1}},"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDScreenDefinition/p2":{"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDState/p1":{"isShowingPlaceholders":0,"minimumHeight":10,"minimumWidth":10,"className":"GDProperties","scrollable":0,"objectId":"id8390667","placeholderStyle":0,"isEditableText":0,"isNestable":1}},"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDScreenDefinition/p23":{"x-coredata://8A119B17-AF00-4D70-8084-3C8BA8F4FC4C/GDState/p72":{"isShowingPlaceholders":0,"scrollable":0,"className":"GDProperties","objectId":"id4196363","placeholderStyle":0,"isEditableText":0,"isNestable":1}}}}; 
 
 const screenJSON = {"eventHandlers":[],"styleProperties":{"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDState/p1":{"placeholderStyle":0,"isDisplay":1,"verticalAlignment":1,"textColor":{"NSColorValue":"0.000000,0.000000,0.000000,1.000000"},"layoutPolicyCode":0,"backgroundColor":{"NSColorValue":"1.000000,0.999990,0.999990,1.000000"},"isShowingPlaceholders":0,"borderLeftWidth":0,"borderRightWidth":0,"backgroundPainterType":1,"borderBottomWidth":0,"isContentClipped":1,"isVisible":1,"borderTopWidth":0,"isEditableText":0,"isNestable":1,"verticalResizing":0,"x":0,"objectId":"id12584971","y":0,"horizontalAlignment":1,"height":600,"textFont":{"GDFont":{"displayName":"Segoe UI Semilight","isItalic":false,"isBold":false,"fontName":"SegoeUI-Semilight","familyName":"Segoe UI","css":"\"SegoeUI-Semilight\", \"Segoe UI\"","size":28}},"className":"GDProperties","isSelectable":1,"width":800,"scrollable":0}},"className":"GDScreen","orderedComponents":[],"dataBindingSourceCellScreenIndex":0,"dataBindings":[],"dataBindingTargetIndexPaths":[],"activeState":"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDState/p1","dataBindingTargetScreenIndexes":[],"objectId":"id4196203","definition":"x-coredata://143D15C6-A0DB-4381-AA9A-37984AAF84FA/GDScreenDefinition/p2","specificationCell":0,"name":"Getting started - Blank","dataBindingSourceCellIndexPath":""};
 
+let Antetype;
 
 QUnit.module("commands", {
     beforeEach: function() {
 //        Antetype._currentLookAndFeel = null;
-        Antetype.loadProjectFromJSON(projectJSON1);
+        Antetype = new AntetypeWeb(document.getElementById("qunit-fixture"));
+        addCommands(Antetype);
+        Antetype.loadProjectFromJSON(projectJSON);
         Antetype.changeScreenFromJSON(screenJSON);
         Antetype.runCommand({"command":"changeTool","parameters":{"className":"GDSelectionTool"}});
     }    
@@ -39,7 +47,8 @@ QUnit.test("addCell and styles", function(assert) {
     let style = newCell.cssStyleForStateIdentifier(newCell.activeStateIdentifier);
     assert.ok( style != undefined, "cell has instance style");
 
-    assert.equal( style.parentRule.parentStyleSheet, Antetype.project.currentLookAndFeel.cssStyleSheet._styleSheet, "the style is in the right stylesheet");
+    // assert.equal( style.parentRule.parentStyleSheet, Antetype.project.currentLookAndFeel.cssStyleSheet._styleSheet, "the style is in the right stylesheet");
+    assert.equal( style.parentRule.parentStyleSheet, Antetype.currentScreen.cssStyleSheet._styleSheet, "the style is in the right stylesheet");
 });
 
 
@@ -60,8 +69,7 @@ QUnit.test("selectFigures", function(assert) {
     Antetype.runCommand({"command": "addCell", "parameters": singleCellJson});
     var f = document.getElementById(singleCellJson.cell.objectId).figure;
     Antetype.selectFigures([f]);
-    assert.equal(Antetype.selection.length, 1);
-    var highlight = Antetype.selection[0];
+    assert.equal(Antetype.selectedObjects.length, 1);
 });
 
 

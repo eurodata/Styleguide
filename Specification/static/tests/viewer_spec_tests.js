@@ -1,40 +1,26 @@
-"use strict";
+import { AntetypeWeb } from '../modules/viewer.js';
+import { GDSpecTool, rgb2hex } from '../modules/spec_tool.js';
+import { GDState, GDWidget, GDProject, GDWidgetRootCellDefinition } from '../modules/model.js';
 
 QUnit.module("viewer spec", { 
         beforeEach: function() {
             this.antetype = new AntetypeWeb();
+            this.antetype.project = GDProject.createInstance();
+            this.antetype.project.at = this.antetype;
+            this.antetype.currentScreen = this.antetype.project.library.screenWidget.createInstance();
+            this.antetype.buildStyleSheet();
+            this.antetype.currentScreen.createStyleSheets();
             this.specTool = new GDSpecTool(this.antetype);
+        },
+        afterEach: function() {
+            this.antetype.project.currentLookAndFeel.cssStyleSheet.remove();
+            this.antetype.project.currentLookAndFeel.breakPointStyleSheet.remove();
+            this.antetype.currentScreen.removeStyleSheets();
+
         }
-});
-
-
-if (window.ResizeObserver) {
-QUnit.test("selection resize", function(assert) {
-    let element = document.createElement("div");
-    element.style.width = "80px";
-    element.style.height = "70px";
-
-    document.body.appendChild(element);
-    assert.equal(this.specTool._selectedElementHighlight, null);
-    this.specTool.selectElement(element);
-
-    assert.ok(this.specTool._selectedElementHighlight != null);
-    this.specTool._selectedElementHighlight.style.position = "absolute";
-    assert.equal( this.specTool._selectedElementHighlight.style.width, element.style.width);
-
-    element.style.width = "345px";
-
-    // even resize-observer is not instantly... 
-    let done = assert.async();
     
-    setTimeout( () => {
-        let elementBounds = globalBoundsOfElement(element);
-        let highlightBounds = globalBoundsOfElement(this.specTool._selectedElementHighlight);
-        assert.propEqual( elementBounds, highlightBounds);
-        done();
-    }, 5);
 });
-}
+
 
 
 QUnit.test("rgb2hex", function(assert) {
@@ -43,4 +29,32 @@ QUnit.test("rgb2hex", function(assert) {
     assert.equal(rgb2hex("rgba(123,100,200,0.2)"), "#7b64c833");
 });
 
+// #1063 activating the spec inspector (spec tool) should show active
+// pseudo states. 
+QUnit.test("pseudo states are active", function(assert) {
+    // create and add a cell with active mouse-over-state:w
+    const project = this.antetype.project;
+    let widget = GDWidget.createInstance(project);
+    widget._hierarchy = GDWidgetRootCellDefinition.createInstance(project);
+    widget._hierarchy._widget = widget;
+    widget.type = GDWidget.GDUserWidgetType;
+    let state = GDState.createInstance(project);
+    state._type = GDState.GDMouseOverStateType;
+    widget.addState(state);
 
+    let cell = widget.createInstance();
+    cell.activeState = state;
+
+    this.antetype.currentScreen.addComponent(cell);
+    this.antetype.rebuildRenderObjects(this.antetype.currentScreen);
+
+    // activate Spec tool
+    this.antetype.setCurrentTool(this.specTool);
+
+    assert.ok(cell.DOMElement.className.indexOf("_hover") != -1, "hover state is active, like in edit mode");
+
+    this.antetype.setCurrentTool(this.antetype.runTool);
+    assert.equal(cell.DOMElement.className.indexOf("_hover"), -1, "like before, the browser handles the pseudo state");
+
+
+});

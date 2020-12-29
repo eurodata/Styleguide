@@ -1,4 +1,7 @@
-"use strict"; 
+import { GDHorizontalBoxLayoutPolicyCode, GDAlignmentLayoutPolicyCode, GDVerticalBoxLayoutPolicyCode, GDIntrinsicResizing, GDFlexResizing, GDMaxSizeValue, GDFixedLayoutPolicyCode, GDLeftAlignment, GDCenterAlignment, GDRightAlignment, GDTopAlignment, GDBottomAlignment, GDNoScrolling, GDVerticalScrolling, GDHorizontalScrolling, GDAutoScrolling, GDBlendModeNormal, GDBlendModeMultiply, GDBlendModeScreen, GDBlendModeOverlay, GDBlendModeDarken, GDBlendModeLighten, GDBlendModeColorDodge, GDBlendModeColorBurn, GDBlendModeHardLight, GDBlendModeSoftLight, GDBlendModeDifference, GDBlendModeExclusion, GDBlendModeHue, GDBlendModeSaturation, GDBlendModeColor, GDBlendModeLuminosity, GDTriangleCellType, GDVectorCellType, GDBorderTypeSolid, GDBorderTypeDashed, GDBorderTypeDotted, GDCircleCellType, GDNoPainterType, GDColorPainterType, GDImagePainterType, GDGradientPainterType, GDTileImageOperation, GDStretchImageOperation, GDBackgroundSizeContain, GDOriginalSizeImageOperation, GDVisibilityVisible, GDVisibilityCollapsed, GDVisibilityHidden, gdStringHash, GDProject } from "./model.js";
+import { currentContainerStateIdentifier } from "./utils.js";
+
+ 
 
 /*
  * CSS generation. 
@@ -64,11 +67,12 @@ function gdCompareStyles(s1, s2) {
     debugging-helper: prints the differences of the instance-styles of the 
     active state to the console
 */
+// eslint-disable-next-line no-unused-vars
 function gdCompareInstanceStyleOf(c1, c2) {
     gdCompareStyles(c1.cssStyleForStateIdentifier(c1.activeStateIdentifier), c2.cssStyleForStateIdentifier(c2.activeStateIdentifier));
 }
 
-function removeTextSpan(cell) {
+export function removeTextSpan(cell) {
     var domElement = cell.DOMElement;
     if (domElement === undefined) {
         return;
@@ -83,36 +87,20 @@ function removeTextSpan(cell) {
 
 
 
-function dimensionStyles(style, cell, state) { 
+
+function dimensionStyles(style, cell, state, containerState) {
     // Set vertical resizing
-    verticalResizingCSS(style, cell, state);
+    verticalResizingCSS(style, cell, state, containerState);
     // Set horizontal resizing
-    horizontalResizingCSS(style, cell, state);
+    horizontalResizingCSS(style, cell, state, containerState);
     // Set layout policy and active layout
-    layoutPolicyCodeAndActiveLayoutCSS(style, cell, state);
+    layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState);
 }
 
 
-/**
-    if cell's container is of the same widget we use the state, otherwise
-    use the activeState
-*/
-function currentContainerState(cell, state) {
-    const container = cell.container;
-    if (container == undefined)  {
-        return undefined;
-    }
-
-    let containerState = undefined; 
-    if (container.widget && container.widget == cell.widget) {
-        return state; 
-    } 
-   
-    return container.activeStateIdentifier;
-}
 
 
-function verticalResizingCSS(style, cell, state) {
+function verticalResizingCSS(style, cell, state, containerState) {
     // Necessary cell properties
     const cellVerticalResizing = cell.valueForKeyInStateWithIdentifier("verticalResizing", state);
     const cellMarginTop  = cell.valueForKeyInStateWithIdentifier("marginTop", state);
@@ -130,7 +118,6 @@ function verticalResizingCSS(style, cell, state) {
     // Necessary container cell properties
     const container = cell.container;
     const hasContainer = container !== undefined ? true : false;
-    const containerState = currentContainerState(cell, state); 
 
     const containerLayoutPolicyCode = hasContainer ? container.valueForKeyInStateWithIdentifier("layoutPolicyCode", containerState) : undefined;
     const containerUsesFlex = containerLayoutPolicyCode == GDHorizontalBoxLayoutPolicyCode || containerLayoutPolicyCode == GDVerticalBoxLayoutPolicyCode;
@@ -191,28 +178,18 @@ function verticalResizingCSS(style, cell, state) {
                 style.flex = "0 0 " + cellHeight+ "px";
             } 
             style.height = cellHeight + "px";
-            if (!containerUsesStacked && cell.valueForKeyInStateWithIdentifier("layoutPolicyCode", state) != GDAlignmentLayoutPolicyCode)  {
-                style.minHeight = cellHeight + "px";
-                style.maxHeight = cellHeight + "px";  
-            } else {
-                style.minHeight = "unset";
-                style.maxHeight = "unset";
-
-            }
             if (containerUsesFlex && containerLayoutPolicyCode == GDHorizontalBoxLayoutPolicyCode) {
                 style.alignSelf = "auto";
             }
         }
     }
 
-    if (cellVerticalResizing != GDFixResizing) {
-        style.minHeight = cellMinimumHeight + "px";
-        style.maxHeight = cellMaximumHeight + "px";  
-    }
+    style.minHeight = cellMinimumHeight + "px";
+    style.maxHeight = cellMaximumHeight + "px";  
 }
 
 
-function horizontalResizingCSS(style, cell, state) {
+function horizontalResizingCSS(style, cell, state, containerState) {
     // Necessary cell properties
     const cellHorizontalResizing = cell.valueForKeyInStateWithIdentifier("horizontalResizing", state);
     const cellMarginLeft  = cell.valueForKeyInStateWithIdentifier("marginLeft", state);
@@ -230,7 +207,6 @@ function horizontalResizingCSS(style, cell, state) {
     // Necessary container cell properties
     const container = cell.container;
     const hasContainer = container !== undefined ? true : false;
-    const containerState = currentContainerState(cell, state); 
 
     const containerLayoutPolicyCode = hasContainer ? container.valueForKeyInStateWithIdentifier("layoutPolicyCode", containerState) : undefined;
     const containerUsesFlex = containerLayoutPolicyCode == GDHorizontalBoxLayoutPolicyCode || containerLayoutPolicyCode == GDVerticalBoxLayoutPolicyCode;
@@ -294,27 +270,18 @@ function horizontalResizingCSS(style, cell, state) {
                 style.flex = "0 0 " + cellWidth + "px";
             }
             style.width = cellWidth + "px"; 
-            if (!containerUsesStacked && cell.valueForKeyInStateWithIdentifier("layoutPolicyCode", state) != GDAlignmentLayoutPolicyCode)  {
-                style.maxWidth = cellWidth + "px"; 
-                style.minWidth = cellWidth + "px"; 
-            } else {
-                style.maxWidth = "unset";
-                style.minWidth = "unset";
-            }
             if (containerUsesFlex && containerLayoutPolicyCode == GDVerticalBoxLayoutPolicyCode) {
                 style.alignSelf = "auto";
             }
         }
     }
 
-    if (cellHorizontalResizing != GDFixResizing) {
-        style.minWidth = cellMinimumWidth + "px";
-        style.maxWidth = cellMaximumWidth + "px"; 
-    }
+    style.minWidth = cellMinimumWidth + "px";
+    style.maxWidth = cellMaximumWidth + "px"; 
 }
 
 
-function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state) {
+function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) {
     // Necessary cell properties
     const cellMarginTop  = cell.valueForKeyInStateWithIdentifier("marginTop", state);
     const cellMarginBottom = cell.valueForKeyInStateWithIdentifier("marginBottom", state);
@@ -326,12 +293,10 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state) {
     const cellActiveVerticalLayout = cell.valueForKeyInStateWithIdentifier("activeVerticalAlignment", state);
     const cellActiveHorizontalLayout = cell.valueForKeyInStateWithIdentifier("activeHorizontalAlignment", state);
     const cellVerticalResizing = cell.valueForKeyInStateWithIdentifier("verticalResizing", state);
-    const cellHorizontalResizing = cell.valueForKeyInStateWithIdentifier("horizontalResizing", state);
 
     // Necessary container cell properties
     const container = cell.container;
     const hasContainer = container !== undefined ? true : false;
-    const containerState = currentContainerState(cell, state);
     const containerLayoutPolicyCode = hasContainer ? container.valueForKeyInStateWithIdentifier("layoutPolicyCode", containerState) : undefined;
     const containerUsesStacked = containerLayoutPolicyCode == GDAlignmentLayoutPolicyCode;
     const containerPaddingTop = hasContainer ? container.valueForKeyInStateWithIdentifier("paddingTop", containerState) : "0";
@@ -468,10 +433,11 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state) {
 }
 
 
-function layoutCSS(style, cell, state) {
-    var container = cell.container;
-    var hasContainer = container !== undefined;
-    var containerLayoutPolicyCode = currentContainerState(cell, state);
+function layoutCSS(style, cell, state, containerState) {
+    var containerLayoutPolicyCode;
+    if (cell.container) {
+        containerLayoutPolicyCode = cell.container.valueForKeyInStateWithIdentifier("layoutPolicyCode", containerState);        
+    } 
     
     var layoutPolicyCode = cell.valueForKeyInStateWithIdentifier("layoutPolicyCode", state);
     if (layoutPolicyCode == GDVerticalBoxLayoutPolicyCode || layoutPolicyCode == GDHorizontalBoxLayoutPolicyCode) {
@@ -577,8 +543,8 @@ function displayCSS(style, cell, state) {
         style.overflow =  nonScrollingOverflow;
     } else { 
         switch (scrollable) {
-            case GDVerticalScrolling: style.overflowY = "visible"; style.overflowX = "hidden"; break;
-            case GDHorizontalScrolling: style.overflowX = "visible"; style.overflowY = "hidden"; break;
+            case GDVerticalScrolling: style.overflowY = "scroll"; style.overflowX = "hidden"; break;
+            case GDHorizontalScrolling: style.overflowX = "scroll"; style.overflowY = "hidden"; break;
             case GDAutoScrolling: style.overflow = "auto"; break;
         }
     }
@@ -701,17 +667,17 @@ function borderCSS(style, cell, state) {
         return;
     }
 
-    var leftColor = cell.valueForKeyInStateWithIdentifier("borderLeftColor", state).toString();
-    var rightColor = cell.valueForKeyInStateWithIdentifier("borderRightColor", state).toString();
-    var bottomColor = cell.valueForKeyInStateWithIdentifier("borderBottomColor", state).toString();
-    var topColor = cell.valueForKeyInStateWithIdentifier("borderTopColor", state).toString();
+    var leftColor = cell.valueForKeyInStateWithIdentifier("borderLeftColor", state).referenceValue;
+    var rightColor = cell.valueForKeyInStateWithIdentifier("borderRightColor", state).referenceValue;
+    var bottomColor = cell.valueForKeyInStateWithIdentifier("borderBottomColor", state).referenceValue;
+    var topColor = cell.valueForKeyInStateWithIdentifier("borderTopColor", state).referenceValue;
 
 
     function borderType(cell,key, state) {
         switch (cell.valueForKeyInStateWithIdentifier(key, state)) {
-            case GDBorderTypeSolid: return  "solid"; break;
-            case GDBorderTypeDashed: return  "dashed"; break;
-            case GDBorderTypeDotted: return  "dotted"; break;
+            case GDBorderTypeSolid: return  "solid"; 
+            case GDBorderTypeDashed: return  "dashed"; 
+            case GDBorderTypeDotted: return  "dotted"; 
         }
     }
 
@@ -790,7 +756,7 @@ function backgroundCSS(style, cell, state) {
     }
 
     if (type == GDColorPainterType) {
-        style.background = cell.valueForKeyInStateWithIdentifier("backgroundColor", state).toString();
+        style.background = cell.valueForKeyInStateWithIdentifier("backgroundColor", state).referenceValue;
         return;
     }
 
@@ -902,7 +868,6 @@ function fontCSS(style, cell, state) {
     var textFont = cell.valueForKeyInStateWithIdentifier("textFont", state);
     var lineHeightMultiply = cell.valueForKeyInStateWithIdentifier("textLineHeightMultiply", state); 
     var textLineHeight = cell.valueForKeyInStateWithIdentifier("textLineHeight", state);
-    var horiztontalAlign = cell.valueForKeyInStateWithIdentifier("textHorizontalAlignment", state); 
     var textWordWrap = cell.valueForKeyInStateWithIdentifier("textWordWrap", state);
 
     if (textWordWrap) {
@@ -912,7 +877,7 @@ function fontCSS(style, cell, state) {
         style.whiteSpace = "nowrap"; 
     }
          
-    style.color = textColor.toString();
+    style.color = textColor.referenceValue;
     style.fontFamily = '"' + textFont.fontName + '", "' + textFont.displayName + '", "' + textFont.familyName + '"';
     if (textFont.fallback && textFont.fallback.length > 1) {
         style.fontFamily += ", " + textFont.fallback;       // add fallback
@@ -944,17 +909,16 @@ function textShadowCSS(style, cell, state) {
 
 
     const textShadowAngle = cell.valueForKeyInStateWithIdentifier("textShadowAngle", state);
-    const textShadowOpacity= cell.valueForKeyInStateWithIdentifier("textShadowOpacity", state);
     const textShadowBlur = cell.valueForKeyInStateWithIdentifier("textShadowBlur", state);
     const textShadowOffset = cell.valueForKeyInStateWithIdentifier("textShadowOffset", state);
     let textShadowColor = cell.valueForKeyInStateWithIdentifier("textShadowColor", state);
     
 
 
-   const horizontalOffset =  (Math.sin(textShadowAngle * Math.PI / 180.0) * textShadowOffset);
-   const verticalOffset = (Math.cos(textShadowAngle * Math.PI / 180.0) * textShadowOffset * (-1.0));
+   const horizontalOffset =  Math.round(Math.sin(textShadowAngle * Math.PI / 180.0) * textShadowOffset);
+   const verticalOffset = Math.round(Math.cos(textShadowAngle * Math.PI / 180.0) * textShadowOffset * (-1.0));
 
-   const textShadowCSS = horizontalOffset + "px " + verticalOffset + "px " + textShadowBlur + "px " +  textShadowColor.rgbStringWithAlpha(textShadowOpacity);
+   const textShadowCSS = horizontalOffset + "px " + verticalOffset + "px " + textShadowBlur + "px " +  textShadowColor.referenceValue;
    style.textShadow = textShadowCSS;
 
 }
@@ -962,7 +926,7 @@ function textShadowCSS(style, cell, state) {
 
 function miscCSS(style, cell, state) {
     var opacity = cell.valueForKeyInStateWithIdentifier("opacity", state);
-    if (opacity === undefined || opacity === null) {
+    if (opacity === undefined || opacity === null) {
         style.opacity = "unset";
     } else { 
         style.opacity = opacity;
@@ -1008,6 +972,9 @@ function miscCSS(style, cell, state) {
 function shadowCSS(style, cell, state) {
     let dropShadow = cell.valueForKeyInStateWithIdentifier("dropShadow", state);
     let innerShadow = cell.valueForKeyInStateWithIdentifier("innerShadow", state);
+
+    let dropShadowColor = cell.valueForKeyInStateWithIdentifier("dropShadowColor", state);
+    let innerShadowColor = cell.valueForKeyInStateWithIdentifier("innerShadowColor", state);
     if (dropShadow == false && innerShadow == false) {
         style.boxShadow = "none";
         return;
@@ -1018,45 +985,40 @@ function shadowCSS(style, cell, state) {
 
     if (dropShadow) {
         const dropShadowAngle = cell.valueForKeyInStateWithIdentifier("dropShadowAngle", state);
-        const dropShadowOpacity= cell.valueForKeyInStateWithIdentifier("dropShadowOpacity", state);
         const dropShadowBlur = cell.valueForKeyInStateWithIdentifier("dropShadowBlur", state);
         const dropShadowSize = cell.valueForKeyInStateWithIdentifier("dropShadowSize", state);
         const dropShadowOffset = cell.valueForKeyInStateWithIdentifier("dropShadowOffset", state);
-        let dropShadowColor = cell.valueForKeyInStateWithIdentifier("dropShadowColor", state);
         
 
 
-       const horizontalOffset =  (Math.sin(dropShadowAngle * Math.PI / 180.0) * dropShadowOffset);
-       const verticalOffset = (Math.cos(dropShadowAngle * Math.PI / 180.0) * dropShadowOffset * (-1.0));
+       const horizontalOffset =  Math.round(Math.sin(dropShadowAngle * Math.PI / 180.0) * dropShadowOffset);
+       const verticalOffset = Math.round(Math.cos(dropShadowAngle * Math.PI / 180.0) * dropShadowOffset * (-1.0));
 
-       const dropShadowCSS = horizontalOffset + "px " + verticalOffset + "px " + dropShadowBlur + "px " + dropShadowSize + "px " + dropShadowColor.rgbStringWithAlpha(dropShadowOpacity);
+       const dropShadowCSS = horizontalOffset + "px " + verticalOffset + "px " + dropShadowBlur + "px " + dropShadowSize + "px " + dropShadowColor.referenceValue;
 
 
         shadowString = dropShadowCSS;
-    }
+    } 
 
     if (innerShadow) {
         const innerShadowAngle = cell.valueForKeyInStateWithIdentifier("innerShadowAngle", state);
-        const innerShadowOpacity= cell.valueForKeyInStateWithIdentifier("innerShadowOpacity", state);
         const innerShadowBlur = cell.valueForKeyInStateWithIdentifier("innerShadowBlur", state);
         const innerShadowSize = 0; // cell.valueForKeyInStateWithIdentifier("innerShadowSize", state);
         const innerShadowOffset = cell.valueForKeyInStateWithIdentifier("innerShadowOffset", state);
-        let innerShadowColor = cell.valueForKeyInStateWithIdentifier("innerShadowColor", state);
         
 
 
-       const horizontalOffset =  (Math.sin(innerShadowAngle * Math.PI / 180.0) * innerShadowOffset);
-       const verticalOffset = (Math.cos(innerShadowAngle * Math.PI / 180.0) * innerShadowOffset * (-1.0));
+       const horizontalOffset =  Math.round(Math.sin(innerShadowAngle * Math.PI / 180.0) * innerShadowOffset);
+       const verticalOffset = Math.round(Math.cos(innerShadowAngle * Math.PI / 180.0) * innerShadowOffset * (-1.0));
 
-       const innerShadowCSS = horizontalOffset + "px " + verticalOffset + "px " + innerShadowBlur + "px " + innerShadowSize + "px " + innerShadowColor.rgbStringWithAlpha(innerShadowOpacity);
+       const innerShadowCSS = horizontalOffset + "px " + verticalOffset + "px " + innerShadowBlur + "px " + innerShadowSize + "px " + innerShadowColor.referenceValue;
 
        if (shadowString.length > 0) {
            shadowString += ", ";
        }
 
        shadowString += "inset " + innerShadowCSS;
-    }
-
+    } 
 
     style.boxShadow = shadowString;
 }
@@ -1145,9 +1107,6 @@ function createSVGTriangle(style, cell, state) {
         }
     }
 
-    if(backgroundPainterType == GDImagePainterType) {
-
-    }
 
     // SVG 1.1 has no option to draw the border stroke inside the fill.
     // It's always centered (half inside, half outside).
@@ -1249,25 +1208,21 @@ function vectorFillCSS(style, cell, state) {
 
     // FIX ME: Implement a better way than regex replace -> very fragile and error prone.
     // Set SVG fill color
-    var svgFillRegex = /fill=\\".{4,7}\\"/gmi;
+    var svgFillRegex = /fill=\\"([^"]+)\\"/gmi;
     var svgFillOpacityRegex = /fill-opacity=\\"[0-9\.]{1,100}\\"/gmi;
     var modifiedSVGVectorContent = vectorContent;
 
     if (type == GDColorPainterType) {
-        // fill color
         if(svgFillRegex.test(modifiedSVGVectorContent)) {
-            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(svgFillRegex, `fill=\\\"${fillColor.hexString()}\\\"`);
+            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(svgFillRegex, `fill=\\\"${fillColor.referenceValue}\\\"`);
         }
         else {
-            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(/<g /, `<g fill=\\\"${fillColor.hexString()}\\\"`);
+            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(/<g /, `<g fill=\\\"${fillColor.referenceValue}\\\"`);
         }
 
-        // fill color opacity
+        // fill-opacity no longer needed: since the use of css color variables, we use RGBA instead
         if(svgFillOpacityRegex.test(modifiedSVGVectorContent)) {
-            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(svgFillOpacityRegex, `fill-opacity=\\\"${fillColor.alpha}\\\"`);
-        }
-        else {
-            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(/<g /, `<g fill-opacity=\\\"${fillColor.alpha}\\\" `);
+            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(svgFillOpacityRegex, ``);
         }
     }
     else { 
@@ -1277,14 +1232,6 @@ function vectorFillCSS(style, cell, state) {
         }
         else {
             modifiedSVGVectorContent = modifiedSVGVectorContent.replace(/<g /, `<g fill=\\\"none\\\" `);
-        }
-
-        // set fill color opacity to 1.0 (default)
-        if(svgFillOpacityRegex.test(modifiedSVGVectorContent)) {
-            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(svgFillOpacityRegex, `fill-opacity=\\\"0.0\\\"`);
-        }
-        else {
-            modifiedSVGVectorContent = modifiedSVGVectorContent.replace(/<g /, `<g fill-opacity=\\\"0.0\\\" `);
         }
     }
     
@@ -1296,13 +1243,13 @@ function vectorFillCSS(style, cell, state) {
 
     if (type == GDColorPainterType) {
         if(extendedJsonRegex.test(modifiedJSONVectorContent)) { // existing rgba
-            modifiedJSONVectorContent = modifiedJSONVectorContent.replace(extendedJsonRegex, `\"fillColor\":[${fillColor.red},${fillColor.green},${fillColor.blue},${fillColor.alpha}]`);
+            modifiedJSONVectorContent = modifiedJSONVectorContent.replace(extendedJsonRegex, `\"fillColor\":[${fillColor.colorValue.red},${fillColor.colorValue.green},${fillColor.colorValue.blue},${fillColor.colorValue.alpha}]`);
         }
         else if(jsonRegex.test(modifiedJSONVectorContent)) { // existing rgb
-            modifiedJSONVectorContent = modifiedJSONVectorContent.replace(jsonRegex, `\"fillColor\":[${fillColor.red},${fillColor.green},${fillColor.blue},${fillColor.alpha}]`);
+            modifiedJSONVectorContent = modifiedJSONVectorContent.replace(jsonRegex, `\"fillColor\":[${fillColor.colorValue.red},${fillColor.colorValue.green},${fillColor.colorValue.blue},${fillColor.colorValue.alpha}]`);
         }
         else { // no existing fill color
-            modifiedJSONVectorContent = modifiedJSONVectorContent.replace(jsonRegexNoColor, `[\"Path\",{\"fillColor\":[${fillColor.red},${fillColor.green},${fillColor.blue},${fillColor.alpha}],`);
+            modifiedJSONVectorContent = modifiedJSONVectorContent.replace(jsonRegexNoColor, `[\"Path\",{\"fillColor\":[${fillColor.colorValue.red},${fillColor.colorValue.green},${fillColor.colorValue.blue},${fillColor.colorValue.alpha}],`);
         }
     }
     else {
@@ -1337,20 +1284,17 @@ function vectorStrokeCSS(style, cell, state) {
 
     // FIX ME: Implement a better way than regex replace -> very fragile and error prone.
     // Set SVG stroke color
-    var modifiedSVGVectorContent = vectorContent.replace(/stroke=\\".{4,7}\\"/gmi, `stroke=\\\"${strokeColor.hexString()}\\\"`);
+    var svgStrokeRegex = /stroke=\\"([^"]+)\\"/gmi;
+    var modifiedSVGVectorContent = vectorContent.replace(svgStrokeRegex, `stroke=\\\"${strokeColor.referenceValue}\\\"`);
 
-    // Set SVG stroke opacity
+    // stroke-opacity no longer needed: since the use of css color variables, we use RGBA instead
     const strokeOpacityRegex = /stroke-opacity=\\"[0-9\.]{1,100}\\"/;
     if(strokeOpacityRegex.test(modifiedSVGVectorContent)) {
-        modifiedSVGVectorContent = modifiedSVGVectorContent.replace(strokeOpacityRegex, `stroke-opacity=\\\"${strokeColor.alpha}\\\"`);   
-    }
-    else {
-        modifiedSVGVectorContent = modifiedSVGVectorContent.replace(/<g /, `<g stroke-opacity=\\\"${strokeColor.alpha}\\\" `);
+        modifiedSVGVectorContent = modifiedSVGVectorContent.replace(strokeOpacityRegex, ``);   
     }
 
     // Set SVG stroke width
     modifiedSVGVectorContent = modifiedSVGVectorContent.replace(/stroke-width=\\"[0-9\.]{1,3}\\"/gmi, `stroke-width=\\\"${strokeWidth}\\\"`);
-
 
     // Set JSON stroke color
     var modifiedJSONVectorContent = modifiedSVGVectorContent;
@@ -1358,17 +1302,17 @@ function vectorStrokeCSS(style, cell, state) {
     const strokeColorWithOpacityRegex = new RegExp(/"strokeColor":\[[0-9\.]{1,100},[0-9\.]{1,100},[0-9\.]{1,100},[0-9\.]{1,100}\]/gmi);
     const noStrokeColorRegex = new RegExp(/\[\"Path\",\{/gmi);
     if(strokeColorWithOpacityRegex.test(modifiedJSONVectorContent)) {
-        modifiedJSONVectorContent = modifiedJSONVectorContent.replace(strokeColorWithOpacityRegex, `\"strokeColor\":[${strokeColor.red},${strokeColor.green},${strokeColor.blue},${strokeColor.alpha}]`);
+        modifiedJSONVectorContent = modifiedJSONVectorContent.replace(strokeColorWithOpacityRegex, `\"strokeColor\":[${strokeColor.colorValue.red},${strokeColor.colorValue.green},${strokeColor.colorValue.blue},${strokeColor.colorValue.alpha}]`);
     }
     else if(strokeColorRegex.test(modifiedJSONVectorContent)) {
-        modifiedJSONVectorContent = modifiedJSONVectorContent.replace(strokeColorRegex, `\"strokeColor\":[${strokeColor.red},${strokeColor.green},${strokeColor.blue},${strokeColor.alpha}]`);
+        modifiedJSONVectorContent = modifiedJSONVectorContent.replace(strokeColorRegex, `\"strokeColor\":[${strokeColor.colorValue.red},${strokeColor.colorValue.green},${strokeColor.colorValue.blue},${strokeColor.colorValue.alpha}]`);
     }
     else {
-        modifiedJSONVectorContent = modifiedJSONVectorContent.replace(noStrokeColorRegex, `[\"Path\",{\"strokeColor\":[${strokeColor.red},${strokeColor.green},${strokeColor.blue},${strokeColor.alpha}],`);
+        modifiedJSONVectorContent = modifiedJSONVectorContent.replace(noStrokeColorRegex, `[\"Path\",{\"strokeColor\":[${strokeColor.colorValue.red},${strokeColor.colorValue.green},${strokeColor.colorValue.blue},${strokeColor.colorValue.alpha}],`);
     }
 
     // Set JSON stroke width
-    var strokeWidthRegex = new RegExp(/"strokeWidth":[0-9\.]{1,3}/gmi); ;
+    var strokeWidthRegex = new RegExp(/"strokeWidth":[0-9\.]{1,3}/gmi); 
     if(strokeWidthRegex.test(modifiedJSONVectorContent)) {
         modifiedJSONVectorContent = modifiedJSONVectorContent.replace(strokeWidthRegex, `\"strokeWidth\":${strokeWidth}`);
     }
@@ -1388,49 +1332,51 @@ function vectorStrokeCSS(style, cell, state) {
 
 function customCSS(style, cell, state) {
     let cssText = cell.valueForKeyInStateWithIdentifier("customCSS", state);
-    if (!cssText || cssText.length == 0)  {
+    if (!cssText || cssText.length == 0)  {
         return;
     }
+
+    
     let properties = cssText.split(";");
     properties.forEach( p => {
-        let parts = p.split(":");
-        if (parts.length == 2) {
-            style.setProperty(parts[0].trim(), parts[1].trim());
+        let colonIndex = p.indexOf(":");
+        if (colonIndex > 0) {
+            style.setProperty(p.slice(0,colonIndex).trim(), p.slice(colonIndex+1).trim());
         }
     });
 }
 
 
 function PropertyGroup(keys, updateFunction) {
-this._keys = keys;
-this.updateFunction = updateFunction;
+    this._keys = keys;
+    this.updateFunction = updateFunction;
 }
 
 PropertyGroup.prototype.hasProperty = function(cell, state) {
-return this._keys.find(function(k) {
-    return cell.ownValueForKeyInStateWithIdentifier(k, state) !== undefined
-});
+    return this._keys.find(function(k) {
+        return cell.ownValueForKeyInStateWithIdentifier(k, state) !== undefined
+    });
 }
 
 PropertyGroup.prototype.shouldUse = function(key, cell, state) {
-if (this._keys.indexOf(key) === -1) {
-    return false;
-}
+    if (this._keys.indexOf(key) === -1) {
+        return false;
+    }
 
-return this.hasProperty(cell, state);
+    return this.hasProperty(cell, state);
 }
 
 function AlwaysPropertyGroup(keys, updateFunction) {
-this._keys = keys;
-this.updateFunction = updateFunction;
+    this._keys = keys;
+    this.updateFunction = updateFunction;
 }
 
 AlwaysPropertyGroup.prototype.hasProperty = function(cell, state) {
-return true; }
+    return true; 
+}
 
 AlwaysPropertyGroup.prototype.shouldUse = function(key, cell, state) {
-
-return this.hasProperty(cell, state);
+    return this.hasProperty(cell, state);
 }
 
 var dimensionKeys = ["x", "y", "layoutPolicyCode", "activeLayout", "fixedLayout", "horizontalResizing", "flexWidthPercentage", "borderLeftWidth", "borderRightWidth", "width", 
@@ -1467,14 +1413,14 @@ var backgroundProperties = new PropertyGroup(backgroundKeys, backgroundCSS);
 var textKeys = ["textFont", "textColor", "textString", "textLineHeight", "textLineHeightMultiply", "isEditableText", "textHorizontalAlignment", "textVerticalAlignment", "textWordWrap"];
 var textProperties = new PropertyGroup(textKeys, fontCSS);
 
-const textShadowKeys = ["textShadow", "textShadowOffset", "textShadowAngle", "textShadowBlur", "textShadowOpacity"];
+const textShadowKeys = ["textShadow", "textShadowOffset", "textShadowAngle", "textShadowBlur", "textShadowColor"];
 const textShadowProperties = new PropertyGroup(textShadowKeys, textShadowCSS);
 
 
 var miscKeys = ["visibility", "opacity", "isDisplay", "isVisible", "rotationAngle", "filters", "isSelectable" ];
 var miscProperties = new AlwaysPropertyGroup(miscKeys, miscCSS);
 
-var shadowKeys = ["dropShadow", "dropShadowColor", "dropShadowAngle", "dropShadowSize", "dropShadowBlur", "dropShadowOffset", "dropShadowBlur", "dropShadowOpacity", "innerShadowOffset", "innerShadowOpacity", "innerShadowBlur", "innerShadowColor", "innerShadow", "innerShadowAngle"];
+var shadowKeys = ["dropShadow", "dropShadowColor", "dropShadowAngle", "dropShadowSize", "dropShadowBlur", "dropShadowOffset", "dropShadowBlur", "innerShadowOffset", "innerShadowBlur", "innerShadowColor", "innerShadow", "innerShadowAngle"];
 var shadowProperties = new PropertyGroup(shadowKeys, shadowCSS);
 
 var customKeys = ["customCSS"];
@@ -1483,18 +1429,18 @@ var customProperties = new AlwaysPropertyGroup(customKeys, customCSS); // Always
 
 
 
-function cssClassNameDefinition(definitionIdentifier) {
+export function cssClassNameDefinition(definitionIdentifier) {
     return "D" + gdStringHash(definitionIdentifier); 
 }
 
-function cssClassName(definitionIdentifier, stateIdentifier, project) {
+export function cssClassName(definitionIdentifier, stateIdentifier, project) {
     var definitionName = cssClassNameDefinition(definitionIdentifier); 
     var state = project.stateWithIdentifier(stateIdentifier);
     var stateName = state.cssSelector();
     return definitionName + stateName;
 }
 
-function cssSelector(definitionIdentifier, stateIdentifier, project) {
+export function cssSelector(definitionIdentifier, stateIdentifier, project) {
     var state = project.stateWithIdentifier(stateIdentifier);
     var definition = project.definitionWithIdentifier(definitionIdentifier);
     var stateName = state.cssSelector();
@@ -1507,8 +1453,14 @@ function cssSelector(definitionIdentifier, stateIdentifier, project) {
     return selector;
 }
 
-
-function cssSelectorInstance(cell, state, project) {
+/**
+ * the css-selector for the given cell in state
+ * @param {GDWidgetInstanceCell} cell 
+ * @param {GDState} state 
+ * @param {GDProject} project 
+ * @returns {string}
+ */
+export function cssSelectorInstance(cell, state, project) {
     var id = cell.objectID;
     if (cell.isBasicCell) {
         return "#" + id;
@@ -1517,7 +1469,6 @@ function cssSelectorInstance(cell, state, project) {
 
     var rootCell = cell.rootInstanceCell;
     var rootDefinitionId = rootCell.definitionIdentifier;
-    var rootDefinition = rootCell.definition;
 
     if (cell != rootCell) { // .widgetRootDef[_:]state #instanceId
         var selector = "";
@@ -1534,7 +1485,7 @@ function cssSelectorInstance(cell, state, project) {
 }
 
 // the class name of the cell 
-function cssClassNameForCell(cell, project) {
+export function cssClassNameForCell(cell, project) {
     let className = "";
     if (cell.isRootInstanceCell) {
         if (!cell.activeState.isPseudoState) {
@@ -1558,7 +1509,7 @@ function cssClassNameForCell(cell, project) {
 }
 
 
-function GDCSSTransition(animationDuration, animationCurve, animationDelay) {
+export function GDCSSTransition(animationDuration, animationCurve, animationDelay) {
     var curves = ["ease-in-out", "ease-in", "ease-out", "linear", "cubic-bezier(0.5, 1.8, 1, 1)"];
     return "all " + animationDuration + "s " + curves[animationCurve] + " " + animationDelay + "s";    
 }
@@ -1574,45 +1525,45 @@ function cssTransformPropertyHandler(style, existingTransformations, newTransfor
     
     // Extract existing and new transformations
     var match;
-    while(match = translateRegex.exec(existingTransformations)) {
+    while((match = translateRegex.exec(existingTransformations))) {
         existingTranslateTransformations.push(match[0]);
     }
     
-    while(match = rotateRegex.exec(existingTransformations)) {
+    while((match = rotateRegex.exec(existingTransformations))) {
         existingRotateTransformations.push(match[0]);
     }
     
-    while(match = translateRegex.exec(newTransformations)) {
+    while((match = translateRegex.exec(newTransformations))) {
         newTranslateTransformations.push(match[0]);
     }
     
-    while(match = rotateRegex.exec(newTransformations)) {
+    while((match = rotateRegex.exec(newTransformations))) {
         newRotateTransformations.push(match[0]);
     }
     
     // Assemble new transform property
     style.transform = "";
     if(newTranslateTransformations.length > 0) {
-        for(var i = 0; i < newTranslateTransformations.length; i++) {
+        for(let i = 0; i < newTranslateTransformations.length; i++) {
             style.transform += newTranslateTransformations[i];
             style.transform += " ";
         }
     }
     else if(isRotation == true) {
-        for(var i = 0; i < existingTranslateTransformations.length; i++) {
+        for(let i = 0; i < existingTranslateTransformations.length; i++) {
             style.transform += existingTranslateTransformations[i];
             style.transform += " ";
         }
     }
     
     if(newRotateTransformations.length > 0) {
-        for(var i = 0; i < newRotateTransformations.length; i++) {
+        for(let i = 0; i < newRotateTransformations.length; i++) {
             style.transform += newRotateTransformations[i];
             style.transform += " ";
         }
     }
     else if(isRotation == false) {
-        for(var i = 0; i < existingRotateTransformations.length; i++) {
+        for(let i = 0; i < existingRotateTransformations.length; i++) {
             style.transform += existingRotateTransformations[i];
             style.transform += " ";
         }
@@ -1627,8 +1578,8 @@ function cssTransformPropertyHandler(style, existingTransformations, newTransfor
  * to the various xxxxProperties-calls from viewer.js to encapsulate 
  * the css generation.
  */
-class GDCSSGenerator {
-    updateStyles(style, figure, stateIdentifier) {
+export class GDCSSGenerator {
+    updateStyles(style, figure, stateIdentifier, containerStateIdentifier) {
         displayProperties.updateFunction(style, figure, stateIdentifier);
         marginProperties.updateFunction(style, figure, stateIdentifier);
         paddingProperties.updateFunction(style, figure, stateIdentifier);
@@ -1639,17 +1590,17 @@ class GDCSSGenerator {
         textShadowProperties.updateFunction(style, figure, stateIdentifier);
         miscProperties.updateFunction(style, figure, stateIdentifier);
         shadowProperties.updateFunction(style, figure, stateIdentifier);
-        layoutProperties.updateFunction(style,figure, stateIdentifier);
-        dimensionProperties.updateFunction(style, figure, stateIdentifier);
+        layoutProperties.updateFunction(style,figure, stateIdentifier, containerStateIdentifier);
+        dimensionProperties.updateFunction(style, figure, stateIdentifier, containerStateIdentifier);
         customProperties.updateFunction(style, figure, stateIdentifier);
     }
 
-    populateCellPropertiesInState(style, cell, stateIdentifier) {
+    populateCellPropertiesInState(style, cell, stateIdentifier, containerStateIdentifier) {
         if (cell.container || dimensionProperties.hasProperty(cell, stateIdentifier)) {
-            dimensionProperties.updateFunction(style, cell, stateIdentifier);
+            dimensionProperties.updateFunction(style, cell, stateIdentifier, containerStateIdentifier);
         }
         if (layoutProperties.hasProperty(cell, stateIdentifier)) {
-            layoutProperties.updateFunction(style, cell, stateIdentifier);
+            layoutProperties.updateFunction(style, cell, stateIdentifier, containerStateIdentifier);
         }
         if (displayProperties.hasProperty(cell,stateIdentifier)) {
             displayProperties.updateFunction(style, cell, stateIdentifier);
@@ -1694,7 +1645,7 @@ class GDCSSGenerator {
         }
     }
 
-    updateStyleProperty(style, figure, key, stateIdentifier) {
+    updateStyleProperty(style, figure, key, stateIdentifier, containerStateIdentifier) {
         if (displayProperties.shouldUse(key, figure, stateIdentifier)) {
             displayProperties.updateFunction(style, figure, stateIdentifier);
         }
@@ -1735,22 +1686,21 @@ class GDCSSGenerator {
             shadowProperties.updateFunction(style, figure, stateIdentifier);
         } 
         if (layoutProperties.shouldUse(key, figure, stateIdentifier)) {
-            layoutProperties.updateFunction(style,figure, stateIdentifier);
+            layoutProperties.updateFunction(style,figure, stateIdentifier, containerStateIdentifier);
         }
         
         if (dimensionProperties.shouldUse(key, figure, stateIdentifier)) {
-            dimensionProperties.updateFunction(style, figure, stateIdentifier);
+            dimensionProperties.updateFunction(style, figure, stateIdentifier, containerStateIdentifier);
         }
         
         // Update direct children of container after layout policy change
         if(key == "layoutPolicyCode") {
             if(figure.orderedComponents) {
-                this.updateLayoutCells(figure.orderedComponents);
+                this.updateLayoutCells(figure.orderedComponents, containerStateIdentifier);
             }
         }
         
-        // Update direct children of stacked layout after horizontal or vertical alignment change
-        this.updateLayoutCells(this.detectAlignmentLayoutCellsThatNeedAnUpdate(key, figure, stateIdentifier));  
+        this.updateLayoutCells(this.detectCellsThatNeedAnUpdate(key, figure, stateIdentifier), containerStateIdentifier);  
 
         if (customProperties.shouldUse(key, figure, stateIdentifier)) {
             customProperties.updateFunction(style, figure, stateIdentifier);
@@ -1758,20 +1708,10 @@ class GDCSSGenerator {
     }
     
     
-    // figure is not always a figure, building the initial stylesheet for the widget-styles
-    // it is simply a closure. 
-    detectAlignmentLayoutCellsThatNeedAnUpdate(key, figure, stateIdentifier) {
+    detectCellsThatNeedAnUpdate(key, figure) {
         let cellsNeedUpdate = []
 
         const isPaddingKey = key == "paddingTop" || key == "paddingLeft" || key == "paddingRight" || key == "paddingBottom";
-
-        if(figure.valueForKeyInStateWithIdentifier("layoutPolicyCode", stateIdentifier) == GDAlignmentLayoutPolicyCode) {
-            if(isPaddingKey || key == "horizontalAlignment" || key == "verticalAlignment") {
-                if (figure.orderedComponents) {
-                    cellsNeedUpdate = figure.orderedComponents;
-                }
-            }
-        }
 
         if (isPaddingKey && figure.orderedComponents) {
             figure.orderedComponents.forEach( (c) => { 
@@ -1781,19 +1721,12 @@ class GDCSSGenerator {
             });
         }
         
-        if(figure.container !== undefined) {
-            if(figure.container.valueForKeyInStateWithIdentifier("layoutPolicyCode", stateIdentifier) == GDAlignmentLayoutPolicyCode) {
-                if(key == "marginTop" || key == "marginLeft" || key == "marginRight" || key == "marginBottom" /*|| key == "horizontalResizing" || key == "verticalResizing"*/) {
-                    cellsNeedUpdate.push(figure);
-                }
-            }
-        }
-        
+    
         return cellsNeedUpdate;
     }
     
 
-    updateLayoutCells(cells) {
+    updateLayoutCells(cells, containerStateIdentifier) {
         cells.forEach( figure => {
             if (!figure.objectID) { // generating widgetstyles
                 return;
@@ -1803,8 +1736,8 @@ class GDCSSGenerator {
             const stateIdentifier = state.identifier;
             const style = figure.cssStyleForStateIdentifier(stateIdentifier);
         
-            layoutProperties.updateFunction(style, figure, stateIdentifier);
-            dimensionProperties.updateFunction(style, figure, stateIdentifier);
+            layoutProperties.updateFunction(style, figure, stateIdentifier, containerStateIdentifier);
+            dimensionProperties.updateFunction(style, figure, stateIdentifier, containerStateIdentifier);
 
         });
     }
@@ -1837,22 +1770,30 @@ class GDCSSGenerator {
         });
 
         let element = null;
-        while (element = iterator.nextNode()) {
+        while ((element = iterator.nextNode())) {
             let figure = element.figure;
-            let style = figure.cssStyleForStateIdentifier(figure.activeStateIdentifier);
+            const containerState = currentContainerStateIdentifier(figure,figure.activeStateIdentifier);
 
-            dimensionProperties.updateFunction(style, figure, figure.activeStateIdentifier);
-            layoutProperties.updateFunction(style, figure, figure.activeStateIdentifier);
+            // #1079 we need to adjust the active and all pseudo-states:
+            figure.widget.states.forEach( state => {
+                if (state.isPseudoState || state == figure.activeState) {
+                    const stateIdentifier = state.identifier;
+                    let style = figure.cssStyleForStateIdentifier(stateIdentifier);
 
-            // #596 it might be that the above calls overwrite the css in the widget-css...
-            if (figure.valueForKeyInStateWithIdentifier("customCSS", figure.activeStateIdentifier)) {
-                customProperties.updateFunction(style, figure, figure.activeStateIdentifier);
-            }
+                    dimensionProperties.updateFunction(style, figure, stateIdentifier, containerState);
+                    layoutProperties.updateFunction(style, figure, stateIdentifier, containerState);
+
+                    // #596 it might be that the above calls overwrite the css in the widget-css...
+                    if (figure.valueForKeyInStateWithIdentifier("customCSS", stateIdentifier)) {
+                        customProperties.updateFunction(style, figure, stateIdentifier);
+                    }
+                }
+            });
         }
     }
 
-    updateDimensionProperties(style, figure, stateIdentifier) {
-        dimensionProperties.updateFunction(style, figure, stateIdentifier);
+    updateDimensionProperties(style, figure, stateIdentifier, containerStateIdentifier) {
+        dimensionProperties.updateFunction(style, figure, stateIdentifier, containerStateIdentifier);
     }
 
     hasTextProperty(cell, stateIdentifier) {
@@ -1881,5 +1822,27 @@ class GDCSSGenerator {
         span.className = "text " + alignment;
     }
 
+    isBackgroundProperty(key) {
+        return backgroundProperties._keys.indexOf(key) != -1;
+    }
 
-};
+    populateScreenBackgroundPropertiesInState(style, cell, stateIdentifier) {
+        if (backgroundProperties.hasProperty(cell,stateIdentifier)) {
+            backgroundProperties.updateFunction(style, cell, stateIdentifier);
+        }
+    }
+
+    updateScreenBackgroundProperty(style, figure, key, stateIdentifier) {
+        if (backgroundProperties.shouldUse(key, figure, stateIdentifier)) {
+            backgroundProperties.updateFunction(style, figure, stateIdentifier);
+        }
+    }
+
+}
+
+
+
+// for testing, but there should be a better way, do not call those 
+// functions from the outside: 
+
+export { layoutPolicyCodeAndActiveLayoutCSS, layoutCSS, customCSS, borderRadiusCSS,displayCSS, displayProperties,  horizontalResizingCSS, verticalResizingCSS };

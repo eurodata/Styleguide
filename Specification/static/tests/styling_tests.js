@@ -1,16 +1,25 @@
 "use strict";
 
+import { GDProject, GDAlignmentLayoutPolicyCode, GDCenterAlignment, GDHorizontalBoxLayoutPolicyCode, GDTriangleCellType,
+    GDVerticalBoxLayoutPolicyCode,  GDFlexResizing, GDIntrinsicResizing, GDFixResizing } from '../modules/model.js';
+import { GDCSSGenerator } from '../modules/styling.js';
+import { layoutPolicyCodeAndActiveLayoutCSS, layoutCSS, customCSS, borderRadiusCSS,displayCSS, displayProperties,  horizontalResizingCSS, verticalResizingCSS } from '../modules/styling.js';
+
+let stylingTestProject;
+
 QUnit.module("styling", {
     beforeEach: function() {
+        stylingTestProject = new GDProject(projectJSON, null);
     }
 });
+
 
 function createTestCell(props, container) {
     function valueForKey(k,s) {
         if (props[k])
             return props[k];
 
-        return GDLookAndFeel.defaultValueForKey(k);
+        return stylingTestProject.currentLookAndFeel.defaultValueForKey(k);
     }
     const cell = {
         valueForKeyInStateWithIdentifier: (k, s) => {
@@ -22,6 +31,7 @@ function createTestCell(props, container) {
         },
 
         container: container, 
+        project: stylingTestProject
     }; 
 
     if (container) {
@@ -74,6 +84,15 @@ QUnit.test("customCSS multiple properties", function(assert) {
 
     assert.equal(e.style.caretColor, "red");
     assert.equal(e.style.textTransform, "capitalize");
+});
+
+QUnit.test("customCSS url", function(assert) {
+    const url = "url(\"https://foo.com/bar.jpg\")";
+    let cell = { valueForKeyInStateWithIdentifier: (key, state) => `background-image: ${url};` };
+    let e = document.createElement("div");
+
+    customCSS(e.style, cell, null);
+    assert.equal(e.style.backgroundImage, url);
 });
 
 QUnit.test("rotatation issue #517", function(assert) {
@@ -136,9 +155,7 @@ QUnit.test("issue 701", function(assert) {
 // We create two cells, container and cell an make sure the inner-cells position
 // is overwritten according to the containers-layout. #694 had basically this problem
 QUnit.test("issue 694", function(assert) {
-
     let container = createTestCell({"layoutPolicyCode": GDVerticalBoxLayoutPolicyCode});
-
     let cell =  createTestCell({}, container);
     let div = document.createElement("div");
     div.style.position = "absolute";
@@ -198,4 +215,26 @@ QUnit.test("issue 733 vertical", function(assert) {
 
 
     assert.equal(cellStyle.alignSelf, "auto");
+});
+
+QUnit.test("issue 825 no min/max for manual width", function(assert) {
+    let cell = createTestCell({"width": 100, "horizontalResizing": GDFixResizing});
+
+    const style = {};
+    horizontalResizingCSS(style, cell, null);
+
+    assert.equal(style.minWidth, `${cell.valueForKeyInStateWithIdentifier("minimumWidth", null)}px`);
+    assert.equal(style.maxWidth, `${cell.valueForKeyInStateWithIdentifier("maximumWidth", null)}px`);
+    assert.equal(style.width, `${cell.valueForKeyInStateWithIdentifier("width", null)}px`);
+});
+
+QUnit.test("issue 825 no min/max for manual height", function(assert) {
+    let cell = createTestCell({"height": 100, "verticalResizing": GDFixResizing});
+
+    const style = {};
+    verticalResizingCSS(style, cell, null);
+
+    assert.equal(style.minHeight, `${cell.valueForKeyInStateWithIdentifier("minimumHeight", null)}px`);
+    assert.equal(style.maxHeight, `${cell.valueForKeyInStateWithIdentifier("maximumHeight", null)}px`);
+    assert.equal(style.height, `${cell.valueForKeyInStateWithIdentifier("height", null)}px`);
 });

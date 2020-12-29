@@ -1,4 +1,11 @@
-"use strict"; 
+/* eslint-disable no-prototype-builtins */
+import { GDStyleSheet } from "./GDStyleSheet.js";
+import { cssSelectorInstance, GDCSSTransition, cssSelector, cssClassNameForCell } from "./styling.js";
+import { Antetype } from './viewer.js';
+import { globalBoundsOfElement } from "./utils.js";
+import { GDLayoutPolicy } from "./layout-policy.js";
+
+ 
 
 
 /*
@@ -6,7 +13,7 @@
 
 */
 
-function gdStringHash(str) {
+export function gdStringHash(str) {
     var hash = 0;
     for (var i = 0; i < str.length; i++) {
         hash  = ((hash << 5) - hash) + str.charCodeAt(i);
@@ -15,27 +22,34 @@ function gdStringHash(str) {
     return hash;
 }
 
-function gdValue(v) {
-    if (v && v.NSColorValue) {
-        return CPColor.fromJSON(v);
-    }
+function gdValue(v, project) {
+    if (typeof v === "number") return v;
+    if (typeof v === "string") return v;
+    if (typeof v === "boolean") return v;
 
-    if (v && v.CTGradient) {
-        return new CTGradient(v);
-    }
-
-    if (v && v.GDFont) {
-        return GDFont.fromJSON(v.GDFont);
-    }
-
-    if (v && v.GDImageResource) {
-        var identifier = v.GDImageResource.identifier;
-        if (window.Antetype) {
-            return window.Antetype.project.resources[identifier];
+    if (typeof v == "object") {
+        if (v && v.NSColorValue) {
+            return CPColor.fromJSON(v);
         }
-        return null;
-    }
 
+        if (v && v.CTGradient) {
+            return new CTGradient(v);
+        }
+
+        if (v && v.GDFont) {
+            return GDFont.fromJSON(v.GDFont);
+        }
+
+        if (v && v.GDImageResource) {
+            const identifier = v.GDImageResource.identifier;
+            return project.resources[identifier];
+        }
+
+        if (v && v.GDUIColor) {
+            const identifier = v.GDUIColor.identifier;
+            return project.colorWithIdentifier(identifier);
+        }
+    }   
     return v;
 }
 
@@ -44,9 +58,15 @@ function gdValue(v) {
  * the browser(s). Must call GDModelObject.register to allow serializiation. In Antetype you can 
  * get the JSONDictionary etc (defined in GDManagedObject).
  */
-class GDModelObject {
+export class GDModelObject {
+    /**
+     * 
+     * @param {Object} dictionary with the values (from Antetype.app)
+     * @param {GDProject} project the project 
+     */
     constructor(dictionary, project) {
-        this._objectID = dictionary["objectId"] || "id000";
+        this._objectID = dictionary["objectId"] || "id" + Math.floor(Math.random() * 1000);
+        this._project = project;
     }
 
     static register(klass) {
@@ -65,9 +85,6 @@ class GDModelObject {
      * @param {GDProject} project - the project for the given object.
      */
     static createInstance(project) {
-        if (project == undefined) {
-
-        }
         const className = this.name;
         const klass = this.klasses[className];
         const dictionary = {};
@@ -85,8 +102,18 @@ class GDModelObject {
         return o;
     }
 
+    /**
+     * @returns {string} the unique object id of this object
+     */
     get objectID() {
         return this._objectID;
+    }
+
+    /**
+     * @returns {GDProject}
+     */
+    get project() {
+        return this._project;
     }
 
     decodeArray(json, project) {
@@ -108,10 +135,11 @@ class GDModelObject {
 /**
     An abstract class which defines a cell with components. This class defines the structure
     (hierarchy), but has no styling, widget. See {@link GDWidgetInstanceCell} for a cell with
-    styling and {@link GDWidgetInstanceRootCell} for the top-level cell of a widget (or a 
+    styling and {@link GDWidgetInstanceRootCell} for the top-level cell of a widget (or a 
     basic cell)
+    @extends GDModelObject
 */
-class GDCompositeFigure extends GDModelObject {
+export class GDCompositeFigure extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
         this._name = dictionary.name;
@@ -131,17 +159,24 @@ class GDCompositeFigure extends GDModelObject {
     /**
         the HTML-Element which is used to display this cell. Use `figure` for the 
         reverse direction. 
+
+        @returns {HTMLElement}
     */
     get DOMElement() {
         return this._DOMElement;
     }
 
+    /**
+     * @private
+     * @param {HTMLElement} s
+     */
     set DOMElement(s) {
         this._DOMElement = s;
     }
 
     /**
-        the container of this cell {@link GDCompositeFigure}
+        the container of this cell
+        @returns {GDCompositeFigure}
     */
     get container() {
         return this._container;
@@ -153,13 +188,23 @@ class GDCompositeFigure extends GDModelObject {
 
     /**
         the Antetype name (visible in the Screen inspector)
+        @returns {string}
     */
     get name() {
         return this._name;
     }
 
     /**
-        children of this cell (Array)
+     * the index in its container
+     * @returns {number}
+     */
+    get index() {
+        return this.container.orderedComponents.indexOf(this);
+    }
+
+    /**
+        children of this cell 
+        @returns {Array<GDCompositeFigure>}
     */
     get orderedComponents() {
         return this._orderedComponents;
@@ -167,7 +212,8 @@ class GDCompositeFigure extends GDModelObject {
 
 
     /**
-        the active state of this cell {@link GDState}
+        the active state of this cell 
+        @returns {GDState}
     */
     get activeState() {
         return this._container.activeState;
@@ -175,25 +221,43 @@ class GDCompositeFigure extends GDModelObject {
 
     /**
         the identifier of the active-state
+        @returns {string}
     */
     get activeStateIdentifier() {
         return this._container.activeStateIdentifier;
     }
 
+    /**
+     * adds a cell
+     * @param {GDCompositeFigure} cell 
+     */
     addComponent(cell) {
         this._orderedComponents.push(cell);
         cell.container = this;
     }
 
+    /**
+     * inserts the component at index
+     * @param {GDCompositeFigure} component 
+     * @param {number} index 
+     */
     insertComponent(component, index) {
         this._orderedComponents.splice(index,0,component);
         component.container = this;
     }
 
+    /**
+     * removes the component at index
+     * @param {number} index 
+     */
     removeComponentAtIndex(index) {
         this.orderedComponents.splice(index,1);
     }
 
+    /**
+     * removes the child c
+     * @param {GDCompositeFigure} c 
+     */
     removeComponent(c) {
         const index = this.orderedComponents.indexOf(c);
         this.removeComponentAtIndex(index);
@@ -202,6 +266,7 @@ class GDCompositeFigure extends GDModelObject {
     /**
         the top-level cell (in this widget) of this cell. If called on a basic-cell
         returns the cell itself. 
+        @returns {GDWidgetInstanceRootCell}
     */
     get rootInstanceCell() {
         return this._container.rootInstanceCell;
@@ -209,6 +274,7 @@ class GDCompositeFigure extends GDModelObject {
 
     /**
         am I a root-instance-cell (top-level cell of widget instance)?
+        @returns {boolean}
     */
     get isRootInstanceCell() {
         return this.rootInstanceCell == this;
@@ -216,6 +282,7 @@ class GDCompositeFigure extends GDModelObject {
 
     /**
         returns true for "basic cells" (not widget-instance-cells)
+        @returns {boolean}
     */
     get isBasicCell() {
         return false;
@@ -223,6 +290,7 @@ class GDCompositeFigure extends GDModelObject {
 
     /**
         returns true if the cell is a screen
+        @returns {boolean}
     */
     get isScreen() {
         return false;
@@ -230,8 +298,13 @@ class GDCompositeFigure extends GDModelObject {
 
     /**
         siblings of this cell
+        @returns {Array<GDCompositeFigure>}
     */
     get siblings() {
+        if (!this._container) {
+            return [];
+        }
+
         var r = [];
         for (var i=0; i < this._container.orderedComponents.length; i++) {
             var s = this._container.orderedComponents[i];
@@ -244,9 +317,40 @@ class GDCompositeFigure extends GDModelObject {
 
     /**
         the screen of this cell
+        @returns {GDScreen}
     */
     get screen() {
         return this.container.screen;
+    }
+
+    /**
+     * true if this is a parent (up to the screen) of cell
+     * @param {GDCompositeFigure} cell 
+     * @returns {boolean}
+     */
+    isDescendentOf(cell) {
+        let container = this.container;
+        while( container ) 
+            if (container == cell)
+                return true;
+            else 
+                container = container.container;
+
+        return false;
+    }
+
+    /**
+     * all parents (up to the sceen)
+     * @returns {Array<GDCompositeFigure>}
+     */
+    get parents() {
+        let parents = [];
+        let c = this.container;
+        while( c ) {
+            parents.push(c);
+            c = c.container;
+        }
+        return parents;
     }
 
 }
@@ -258,15 +362,14 @@ GDModelObject.register(GDCompositeFigure);
     Objects of this class represent an inner cell of an widget. The top-level 
     cell of a widget is of class {@link GDWidgetInstanceRootCell}
 
-    superclass {@link GDCompositeFigure}
+    @extends {GDCompositeFigure}
 */
-class GDWidgetInstanceCell extends GDCompositeFigure {
+export class GDWidgetInstanceCell extends GDCompositeFigure {
     constructor(dictionary, project) {
         super(dictionary, project);
 
         this._definitionIdentifier = dictionary["definition"];
         this._statesPropertiesDictionary = dictionary["styleProperties"] || {};
-        this._project = project;
 
         this._eventHandlers = {};
         if (dictionary.eventHandlers) {
@@ -288,6 +391,10 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
     }
 
 
+    /**
+     * convenience we have some API where we use the identifier
+     * @returns {String} the identifier of the definition
+     */
     get definitionIdentifier() {
         return this._definitionIdentifier; 
     }
@@ -297,21 +404,23 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         is stored in the cell. Return null if the property is not defined in the cell
         (overwritten or individual)
 
-        @param {String} key - name of the property
+        @param {String} key - name of the property
         @param {String} stateIdentifier - identifier of the state
+        @returns {Object}
     */
     ownValueForKeyInStateWithIdentifier(key, stateIdentifier) {
         var propertiesInState = this._statesPropertiesDictionary[stateIdentifier];
         if (propertiesInState !== undefined) {
-            var value = this._statesPropertiesDictionary[stateIdentifier][key];
+            var value = propertiesInState[key];
             if (value !== undefined) 
-                return gdValue(value);
+                return gdValue(value, this._project);
          }
         return undefined;
     }
 
     /**
-        the corresponding {@link GDWidgetCellDefinition} of this cell. 
+        the corresponding definition of this cell.
+        @return {GDWidgetCellDefinition}
     */
     get definition() {
         if (this._definition == undefined) {
@@ -337,11 +446,35 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         if (ownValue !== undefined)
             return ownValue;
 
-         if (this._project.currentLookAndFeel) {
-            return this._project.currentLookAndFeel.valueForKey(key, this._definitionIdentifier, stateIdentifier);
-         }
+        return this._project.currentLookAndFeel.valueForKey(key, this._definitionIdentifier, stateIdentifier);
+    }
 
-         return GDLookAndFeel.defaultValueForKey(key);
+    /**
+     * Get the value of the given property in the state. Experimental: need a better
+     * way instead of the dreaded valueForKeyInStateWithIdentifier
+     * 
+     * @param {String} key the name of the property 
+     * @param {GDState} state the state (optional, if not given use the activeState) 
+     * @returns {Object} the value of the property
+     */
+    getProperty(key, state) {
+        if (!state) state = this.activeState;
+        let stateIdentifier = state.identifier;
+        return this.valueForKeyInStateWithIdentifier(key, stateIdentifier);
+    }
+
+    /**
+     * Set the value of the given property in the state. Experimental: need a better
+     * way instead of the dreaded setValueForKeyInStateWithIdentifier
+     * 
+     * @param {String} key the name of the property
+     * @param {Any} value the value
+     * @param {GDState} state the state (optional, if not given use the activeState) 
+     */
+    setProperty(key, value, state) {
+        if (!state) state = this.activeState;
+        let stateIdentifier = state.identifier;
+        this.setValueForKeyInStateWithIdentifier(value, key, stateIdentifier);
     }
 
     vectorJSONInStateWithIdentifier(stateIdentifier) {
@@ -349,7 +482,7 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         if (vectorContent != null && vectorContent != "") {
             let vectorJSON = JSON.parse(vectorContent);
             if(vectorJSON.hasOwnProperty('json')) {
-                return vectorJSON["json"];
+                return vectorJSON;
             }
             else {
                 return "{}";
@@ -401,7 +534,7 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         sets the value inside this cell. This method does not update the visual representation. 
         Use {@link AntetypeWeb#cellSetProperty} to change the value and update the display
 
-        @param value {Object} the value of the property
+        @param value {Object} the value of the property
         @param key {String} name of the property (see documentation)
         @param stateIdentifier {String} the identifier of the state {@link GDState}.
     */
@@ -418,10 +551,17 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         statesDictionary[key] = value;
     }
 
+    /**
+     * calls f(e) with all eventHandlers
+     * @param {Function} f 
+     */
     eventHandlersDo(f) {
         Object.values(this._eventHandlers).forEach(e => e.forEach(f));
     }
 
+    /**
+     * @returns {Map<string, GDEventHandler>}
+     */
     get eventHandlers() {
         return this._eventHandlers;
     }
@@ -462,6 +602,11 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         this.eventHandlersDo(e => e.updateEventListeners(at, this));
     }
 
+    /**
+     * true if this cell has actions for the given event type
+     * @param {string} eventType 
+     * @returns {boolean}
+     */
     hasActionsOfEventType(eventType) {
         const eventHandlers = this._eventHandlers[eventType];
         if (eventHandlers === undefined)
@@ -482,13 +627,16 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         return false;
     }
 
-
+    /**
+     * inserts a css-rule for the given state in the screens stylesheet
+     * @param {GDState} state 
+     * @returns {CSSRule}
+     */
     insertCSSRuleForState(state) {
         const selector = cssSelectorInstance(this, state, this._project);
 
-        const lookAndFeel = this._project.currentLookAndFeel;
-        const styleSheet = state.cssStyleSheet(lookAndFeel); 
-        const existingRule = styleSheet.existingRuleForSelector(selector);
+        const screen = this.screen;
+        const styleSheet = state.cssStyleSheetOfScreen(screen); 
 
         let index = styleSheet.rulesLength;
         if (state.type != GDState.GDCustomStateType) {
@@ -496,21 +644,18 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
             existingStates.push(state);
             if (existingStates.length > 1) {
                 existingStates.sort(GDState.sortFunction);
-                if (this.name == "Ripple") {
-                    console.log("hohoh");
-                }
                 const stateIndex = existingStates.indexOf(state);
                 if (stateIndex == 0) {
                     const  existingState= existingStates[1];
                     const r = this._cssStyles[existingState.identifier].parentRule;
-                    const existingIndex = existingState.cssStyleSheet(lookAndFeel).indexOfSelector(r.selectorText);
+                    const existingIndex = existingState.cssStyleSheetOfScreen(screen).indexOfSelector(r.selectorText);
                     if (existingIndex != undefined) {
                         index = existingIndex;
                     }
                 } else {
                     const existingState = existingStates[stateIndex-1];
                     const r = this._cssStyles[existingState.identifier].parentRule;
-                    const existingIndex = existingState.cssStyleSheet(lookAndFeel).indexOfSelector(r.selectorText);
+                    const existingIndex = existingState.cssStyleSheetOfScreen(screen).indexOfSelector(r.selectorText);
                     if (existingIndex != undefined) {
                         index = existingIndex+1;
                     }
@@ -531,8 +676,7 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
             const state = this._project.stateWithIdentifier(stateIdentifier);
             const selector = cssSelectorInstance(this, state, this._project);
 
-            const lookAndFeel = this._project.currentLookAndFeel;
-            const styleSheet = state.cssStyleSheet(lookAndFeel); 
+            const styleSheet = state.cssStyleSheetOfScreen(this.screen); 
             const existingRule = styleSheet.existingRuleForSelector(selector);
 
             if (existingRule != undefined) {
@@ -555,7 +699,7 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         this.DOMElement = DOMElement;
 
         // connect span, hacky...
-        for (var i=0; i<DOMElement.childNodes.length; i++) {
+        for (let i=0; i<DOMElement.childNodes.length; i++) {
             var child = DOMElement.childNodes[i];
             if (child.tagName == "SPAN") {
                 var span = child;
@@ -575,10 +719,11 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         }
 
         var states = this.widget.states;
-        for (var i=0; i<states.length; i++) {
+        for (let i=0; i<states.length; i++) {
             var state = states[i];
             var selector = cssSelectorInstance(this, state, this._project);
-            var styleSheet = state.cssStyleSheet(this._project.currentLookAndFeel); 
+            var styleSheet = state.cssStyleSheetOfScreen(this.screen); 
+            //var styleSheet = state.cssStyleSheet(this._project.currentLookAndFeel); 
 
 
             var existingRule = styleSheet.existingRuleForSelector(selector);
@@ -590,17 +735,15 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
     }
 
    deleteCSSForState(state) {
-       var styleSheet = state.cssStyleSheet(this._project.currentLookAndFeel);
+       var styleSheet = state.cssStyleSheetOfScreen(this.screen);
        var selector = cssSelectorInstance(this, state, this._project);
        styleSheet.deleteSelector(selector);
        delete this._cssStyles[state.identifier];
     }
 
     cleanupStyles() {
-        
-       // return;
         this.orderedComponents.forEach(function(c) {c.cleanupStyles()});
-        this.widget.states.forEach((state)  => { this.deleteCSSForState(state); });
+        this.widget.states.forEach((state)  => { this.deleteCSSForState(state); });
     }
 
     /**
@@ -633,6 +776,19 @@ class GDWidgetInstanceCell extends GDCompositeFigure {
         this.addComponentsToArray(result);
         return result;
     }
+
+    activeLayoutPolicy() {
+        const code = this.valueForKeyInStateWithIdentifier("layoutPolicyCode", this.activeStateIdentifier);
+        return GDLayoutPolicy.fromCode(code);
+    }
+
+    dropTargetsExcludingPassengers(passengers) {
+        return this.activeLayoutPolicy().dropTargetsForCellExcludingPassengers(this, passengers, false);
+    }
+
+    continousDropTargetsExcludingPassengers(passengers) {
+        return this.activeLayoutPolicy().dropTargetsForCellExcludingPassengers(this, passengers, true);
+    }
 }
 
 
@@ -642,9 +798,9 @@ GDModelObject.register(GDWidgetInstanceCell);
     Objects of this class define the top-level cell of a widget, 
     or a basic cell. 
 
-    superclass: {@link GDWidgetInstanceCell}
+    @extends {GDWidgetInstanceCell}
 */
-class GDWidgetInstanceRootCell extends GDWidgetInstanceCell {
+export class GDWidgetInstanceRootCell extends GDWidgetInstanceCell {
     constructor(dictionary, project) {
         super(dictionary, project);
         this._activeStateIdentifier = dictionary.activeState;
@@ -654,6 +810,7 @@ class GDWidgetInstanceRootCell extends GDWidgetInstanceCell {
 
     /**
         the active state {@link GDState} of this cell. 
+        @returns {GDState}
     */
     get activeState() {
         if (this._activeState === undefined) 
@@ -662,7 +819,16 @@ class GDWidgetInstanceRootCell extends GDWidgetInstanceCell {
     }
 
     /**
+     * @param {GDState} state
+     */
+    set activeState(state) {
+        this._activeState = state;
+        this._activeStateIdentifier = state.identifier;
+    }
+
+    /**
         the identifier (String} of the active state. 
+        @returns {string}
     */
     get activeStateIdentifier() {
         return this._activeStateIdentifier;
@@ -679,6 +845,7 @@ class GDWidgetInstanceRootCell extends GDWidgetInstanceCell {
 
     /**
         all cells within this cell belonging to the same widget
+        @returns {Array<GDWidgetInstanceCell>}
     */
     get widgetComponents() {
         var widget = this.widget;
@@ -692,9 +859,9 @@ class GDWidgetInstanceRootCell extends GDWidgetInstanceCell {
         super.connectObjects(at);
         this.updateEventListeners(at);
 
-        if (this.widget.states.find( s => s.type == GDState.GDFocusStateType)) {
+/*        if (this.widget.states.find( s => s.type == GDState.GDFocusStateType)) {
             this.DOMElement.tabIndex = 0;
-        }
+        } */
     }
 }
 
@@ -705,9 +872,19 @@ GDModelObject.register(GDWidgetInstanceRootCell);
 /**
     I represent a screen. 
 
-    superclass: {@link GDWidgetInstanceRootCell}
+    The styles for cells on this screen are stored in the _cssStyleSheet (normal) or
+    _breakPointStyleSheet (styles in breakpoint-states). 
+
+    @extends {GDWidgetInstanceRootCell}
 */
-class GDScreen extends GDWidgetInstanceRootCell {
+export class GDScreen extends GDWidgetInstanceRootCell {
+    constructor(dictionary, project) {
+        super(dictionary, project);
+        this._cssStyleSheet = null;
+        this._breakPointStyleSheet = null;
+        this._mediaRules = new Map();
+    }
+
     get isScreen() {
         return true;
     }
@@ -734,6 +911,137 @@ class GDScreen extends GDWidgetInstanceRootCell {
 
         return super.valueForKeyInStateWithIdentifier(key, stateIdentifier);
     }
+
+    /**
+     * inserts the two stylesheets into the head and inserts the 
+     * media-rules into the breakpoint-stylesheet.
+     *
+     * odering is: 
+     * 1. Widget styles
+     * 2. Screen Styles
+     * 3. Widget Breakpoint Styles
+     * 4. Screen Breakpoint Styles
+     */
+    createStyleSheets() {
+        const lookAndFeel = this._project.currentLookAndFeel;
+
+        const styleSheetElement = document.createElement("style");
+        styleSheetElement.id = "CurrentScreenStyles";
+        const breakpointStyleNode = lookAndFeel.breakPointStyleSheet.ownerNode;
+        document.head.insertBefore(styleSheetElement, breakpointStyleNode) ;
+        this._cssStyleSheet = new GDStyleSheet(styleSheetElement.sheet);
+
+        const breakpointStyleElement = document.createElement("style");
+        breakpointStyleElement.id = "CurrentScreenBreakpointStyles";
+        document.head.appendChild(breakpointStyleElement);
+        this._breakPointStyleSheet = new GDStyleSheet(breakpointStyleElement.sheet);
+
+        this._project.designBreakPoints.forEach( b => this.insertBreakPoint(b) );
+    }
+    
+
+    insertBreakPoint(b) {
+        if (this.mediaRuleForBreakpoint(b)) {
+            return;
+        }
+
+        this._mediaRules.set(b,new GDStyleSheet(this._breakPointStyleSheet.appendSelector(b.mediaText)));
+    }
+
+    insertStyleSheets() {
+        this._cssStyleSheet.disabled = false;
+        this._breakPointStyleSheet.disabled = false;
+    }
+
+    connectObjects(at) {
+        const screenCSSLink = document.getElementById("CurrentScreenStyles");
+        if (screenCSSLink) {
+            this._cssStyleSheet = new GDStyleSheet(screenCSSLink.sheet);
+            this._cssStyleSheet.fillSelectorMap();
+        }
+
+        const screenBreakPointCSSLink = document.getElementById("CurrentScreenBreakpointStyles");
+        if (screenBreakPointCSSLink) {
+            this._breakPointStyleSheet = new GDStyleSheet(screenBreakPointCSSLink.sheet);
+            this._breakPointStyleSheet.fillSelectorMap();
+
+            for (let i=0; i<this._breakPointStyleSheet.cssRules.length; i++) {
+                let mediaRule = this._breakPointStyleSheet.cssRules[i];
+                let mediaText = mediaRule.media.mediaText;
+                let breakPoint = this._project.designBreakPoints.find( 
+                    b => mediaText.indexOf(`${b.breakPointMaxWidth}px`) != -1 );
+                this._mediaRules.set(breakPoint, new GDStyleSheet(mediaRule));
+            }
+        }
+
+        if (screenCSSLink == null || screenBreakPointCSSLink == null) {
+            this.createStyleSheets();
+        }
+        super.connectObjects(at);
+    }
+
+    updateDesignBreakPoint(breakPoint) {
+        let breakPointStyleSheet = this.mediaRuleForBreakpoint(breakPoint);
+        breakPointStyleSheet.media.mediaText = `(max-width: ${breakPoint.breakPointMaxWidth}px)`;
+    }
+
+    deleteDesignBreakPoint(breakPoint) {
+        this._breakPointStyleSheet.deleteSelector(breakPoint.mediaText);
+        this._mediaRules.delete(breakPoint);
+    }
+
+    mediaRuleForBreakpoint(breakpoint) {
+        return this._mediaRules.get(breakpoint);
+    }
+
+    cleanupStyles() {
+        if (this._cssStyleSheet) {
+            this._cssStyleSheet.disabled = true;
+        }
+
+        if (this._breakPointStyleSheet) {
+            this._breakPointStyleSheet.disabled = true;
+        }
+    }
+
+    removeStyleSheets() {
+        if (this.cssStyleSheet) {
+            this.cssStyleSheet.remove();
+        }
+        if (this.breakPointStyleSheet) {
+            this._breakPointStyleSheet.remove();
+        }
+    }
+
+    get cssStyleSheet() {
+        return this._cssStyleSheet;
+    }
+
+    get breakPointStyleSheet() {
+        return this._breakPointStyleSheet;
+    }
+
+    enablePseudoStates() {
+        this.cssStyleSheet.enablePseudoStates();
+        for (let mediaRule of this._mediaRules.values()) {
+            mediaRule.enablePseudoStates();
+        }
+    }
+
+    disablePseudoStates() {
+        this.cssStyleSheet.disablePseudoStates();
+        for (let mediaRule of this._mediaRules.values()) {
+            mediaRule.disablePseudoStates();
+        }
+    }
+
+    get htmlCSSStyle() {
+        let rule = this.cssStyleSheet.existingRuleForSelector("html");
+        if (rule == undefined) {
+            rule = this.cssStyleSheet.appendSelector("html");
+        }
+        return rule.style;
+    }
 }
 GDModelObject.register(GDScreen);
 
@@ -742,8 +1050,9 @@ GDModelObject.register(GDScreen);
     a resource in the prototype 
 
     see {@link GDImageResource}
+    @extends {GDModelObject}
 */
-class GDResource extends GDModelObject {
+export class GDResource extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.fileName = dictionary["fileName"];
@@ -754,8 +1063,9 @@ GDModelObject.register(GDResource);
 
 /**
     an image used the prototype. 
+    @extends {GDResource}
 */
-class GDImageResource extends GDResource {
+export class GDImageResource extends GDResource {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.width = dictionary["width"];
@@ -767,8 +1077,9 @@ GDModelObject.register(GDImageResource);
 
 /**
     The library contains the widgets and Resources of a project. 
+    @extends {GDModelObject}
 */
-class GDLibrary extends GDModelObject {
+export class GDLibrary extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project); 
 
@@ -782,13 +1093,53 @@ class GDLibrary extends GDModelObject {
             }
         }
         this.widgets = this.decodeArray(dictionary["widgets"], project);
+        this.colors = this.decodeArray(dictionary["colors"], project);
         Object.seal(this);
     }
 
+    static createInstance(project) {
+        let library = super.createInstance(project);
+        const screenWidget = GDWidget.createInstance(project);
+        screenWidget.type = GDWidget.GDScreenWidgetType;
+        screenWidget._hierarchy = GDScreenDefinition.createInstance(project);
+        screenWidget._hierarchy._widget = screenWidget;
+        library.addWidget(screenWidget);
+
+
+        const basicCellWidget = GDWidget.createInstance(project);
+        basicCellWidget.type = GDWidget.GDNormalCellWidgetType;
+        basicCellWidget._hierarchy = GDWidgetRootCellDefinition.createInstance(project);
+        basicCellWidget._hierarchy._widget = basicCellWidget; 
+        library.addWidget(basicCellWidget);
+
+        return library;
+    }
+
+    /**
+     * adds the widget
+     * @param {GDWidget} widget 
+     */
     addWidget(widget) {
+        const existingWidget = this.widgetWithIdentifier(widget.identifier);
+        if (existingWidget) {
+            this.removeWidget(existingWidget);
+        }
         this.widgets.push(widget);
     }
 
+    /**
+     * removes the widget
+     * @param {GDWidget} widget 
+     */
+    removeWidget(widget) {
+        const index = this.widgets.indexOf(widget);
+        this.widgets.splice(index,1);
+    }
+
+    /**
+     * @returns {GDWidget|undefined} the widget with the identifier, or undefined
+     * @param {string} identifier 
+     */
     widgetWithIdentifier(identifier) {
         for (var i=0; i<this.widgets.length; i++) {
             var widget = this.widgets[i];
@@ -797,6 +1148,37 @@ class GDLibrary extends GDModelObject {
             }
         }
         return undefined;
+    }
+
+    /**
+     * the widget of the screens
+     * @returns {GDWidget}
+     */
+    get screenWidget() {
+        return this.widgets.find( w => w.type == GDWidget.GDScreenWidgetType);
+    }
+
+    /**
+     * @returns {GDWidget} the widget of the basic cell
+     */
+    get basicCellWidget() {
+        return this.widgets.find( w => w.type == GDWidget.GDNormalCellWidgetType);
+    }
+
+    /**
+     * adds the resource
+     * @param {GDResource} r 
+     */
+    addResource(r) {
+        this.resources[r.identifier] = r;
+    }
+
+    /**
+     * removes the resource
+     * @param {GDResource} r 
+     */
+    removeResource(r) {
+        delete this.resources[r.identifier];
     }
 }
 GDModelObject.register(GDLibrary);
@@ -808,8 +1190,8 @@ GDModelObject.register(GDLibrary);
     I represent the definition of a prototype. That is I own all the screens, 
     widgets etc. Counterpart of the same class in Antetype. 
 */
-class GDProject extends GDModelObject {
-    constructor(dictionary, project) {
+export class GDProject extends GDModelObject {
+    constructor(dictionary) {
         super(dictionary, null); 
         this._states = {};
         this._definitions = {};
@@ -832,11 +1214,18 @@ class GDProject extends GDModelObject {
         Object.seal(this);
     }
 
-
+    /**
+     * @returns {Array<GDDesignBreakPoint>} the design breakpoints ordered from smalles to largest
+     */
     sortDesignBreakPoints() {
         this.designBreakPoints.sort(function(a,b) { 
             return b.breakPointMaxWidth - a.breakPointMaxWidth });
     }
+
+    /**
+     * register the given state
+     * @param {GDState} state 
+     */
     registerState(state) {
         this._states[state.identifier] = state;
     }
@@ -844,15 +1233,24 @@ class GDProject extends GDModelObject {
 
     /**
         an Array of the sceens in this project {@link GDScreen}
+        @returns {Array<GDScreen>}
     */
     get orderedScreens() {
         return this._orderedScreens;
     }
 
+    /**
+     * adds the screen
+     * @param {GDScreen} s 
+     */
     addScreen(s) {
         this._orderedScreens.push(s);
     }
 
+    /**
+     * 
+     * @param {Array<GDState>} states 
+     */
     deleteStates(states) {
         for (var i=0; i<states.length; i++) {
             var state = states[i];
@@ -865,9 +1263,19 @@ class GDProject extends GDModelObject {
         }
     }
 
+    /**
+     * registers the definition. 
+     * @param {GDWidgetCellDefinition} definition 
+     */
     registerDefinition(definition) {
         this._definitions[definition.identifier] = definition;
     }
+
+    /**
+     * returns the state with the given identifier. Throws if no state is found!
+     * @param {string} identifier 
+     * @returns {GDState}
+     */
     stateWithIdentifier(identifier) {
         var state = this._states[identifier];
         if (state === undefined) {
@@ -876,6 +1284,11 @@ class GDProject extends GDModelObject {
         return state;
     }
 
+    /**
+     * returns the definioiton with the identifier, throws if none is registered!
+     * @param {string} identifier 
+     * @returns {GDWidgetCellDefinition}
+     */
     definitionWithIdentifier(identifier) {
         var definition = this._definitions[identifier];
         if (definition === undefined) {
@@ -884,27 +1297,74 @@ class GDProject extends GDModelObject {
         return definition;
     }
 
+    /**
+     * @returns {GDUIColor|undefined} the color with the identifier
+     * @param {string} identifier 
+     */
+    colorWithIdentifier(identifier) {
+        return this.currentLookAndFeel.colorWithIdentifier(identifier);
+    }
+
+    /**
+     * updates the value of the color
+     * @param {GDUIColor} color 
+     * @param {CPColor} colorValue 
+     */
+    updateColor(color, colorValue) {
+        this.currentLookAndFeel.updateColor(color, colorValue);
+    }
+
+    /**
+     * adds the widget
+     * @param {GDWidget} widget 
+     */
     addWidget(widget) {
         this.library.addWidget(widget);
     }
 
-    widgetWithIdentifier(i) {
-        return this.library.widgetWithIdentifier(i);
+    /**
+     * removes the widget
+     * @param {GDWidget} widget 
+     */
+    removeWidget(widget) {
+        this.library.removeWidget(widget);
+    }
+
+    /**
+     * @returns {GDWidget|undefined} the widget with this identifier
+     * @param {string} identifier 
+     */
+    widgetWithIdentifier(identifier) {
+        return this.library.widgetWithIdentifier(identifier);
     }
 
 
+    /**
+     * @returns {GDDesignBreakPoint|undefined} the breakpoint with the given name 
+     * @param {string} name 
+     */
     designBreakPointWithName(name) {
         return this.designBreakPoints.find(function(breakPoint) {
             return breakPoint.breakPointName == name;
         });
     }
 
+    /**
+     * @returns {GDDesignBreakPoint|undefined} breakpoint with object-id
+     * @param {string} objectID 
+     */
     designBreakPointWithObjectID(objectID) {
         return this.designBreakPoints.find(function(breakPoint) {
             return breakPoint.objectID== objectID;
         });
     }
 
+    /**
+     * updates the breakpoint 
+     * @param {GDDesignBreakPoint} b the breakpoint
+     * @param {string} name the new name
+     * @param {number} width the new width
+     */
     updateDesignBreakPoint(b, name, width) {
         var oldName = b.breakPointName;
         if (oldName != name) {
@@ -927,7 +1387,10 @@ class GDProject extends GDModelObject {
         
     }
 
-
+    /**
+     * adds the breakpoint
+     * @param {GDDesignBreakPoint} b 
+     */
     addDesignBreakPoint(b) {
         this.designBreakPoints.push(b);
         this.sortDesignBreakPoints();
@@ -935,6 +1398,10 @@ class GDProject extends GDModelObject {
         b.insertIntoStyleSheet(this.currentLookAndFeel.breakPointStyleSheet, i);
     }
 
+    /**
+     * deletes the breakpoint
+     * @param {GDDesignBreakPoint} b 
+     */
     deleteDesignBreakPoint(b) {
         b.deleteFromStyleSheet();
         var i = this.designBreakPoints.indexOf(b);
@@ -943,75 +1410,155 @@ class GDProject extends GDModelObject {
 
     /**
         the resources (images) of this project {@link GDResource}
+        @returns {Array<GDResource>}
     */
     get resources() {
         return this.library.resources;
     }
 
     /**
+     * adds the resource
+     * @param {GDResource} r 
+     */
+    addResource(r) {
+        this.library.addResource(r);
+    }
+
+    /**
+     * 
+     * @param {GDResource} r 
+     */
+    removeResource(r) {
+        this.library.removeResource(r);
+    }
+
+    /**
         all widgets in this prototype {@link GDWidget}
+        @returns {Array<GDWidget>}
     */
     get widgets() {
         return this.library.widgets;
     }
 
+
     /**
-        the look&feel (style-definitions) of this prototype {@link GDLookAndFeel}
+        the look&feel (style-definitions) of this prototype 
+        @returns {GDLookAndFeel}
     */
     get currentLookAndFeel() {
         return this._currentLookAndFeel;
     }
 
     connectObjects() {
-        this.designBreakPoints.forEach(b => b.connectObjects(this.currentLookAndFeel.cssStyleSheet));
-
+        this.designBreakPoints.forEach(b => b.connectObjects(this.currentLookAndFeel.breakPointStyleSheet));
     }
+
+    /**
+     * @returns {GDWidgetInstanceRootCell} a new basic cell
+     */
+    createBasicCell() {
+        return this.library.basicCellWidget.createInstance();
+    }
+
+    /**
+     * a basic cell with the given bounds
+     * 
+     * @param {number} x 
+     * @param {number} y 
+     * @param {number} w 
+     * @param {number} h 
+     * @returns {GDWidgetInstanceRootCell}
+     */
+    createBasicCellWithBounds(x,y,w,h) {
+        const cell = this.createBasicCell();
+        cell.setValueForKeyInStateWithIdentifier(x,"x",cell.activeStateIdentifier);
+        cell.setValueForKeyInStateWithIdentifier(y,"y",cell.activeStateIdentifier);
+        cell.setValueForKeyInStateWithIdentifier(w,"width",cell.activeStateIdentifier);
+        cell.setValueForKeyInStateWithIdentifier(h,"height",cell.activeStateIdentifier);
+        return cell;
+    }
+    
 }
 GDModelObject.register(GDProject);
 
-
-class GDDesignBreakPoint extends GDModelObject {
+/**
+ * I represent an Antetype breakpoint
+ * 
+ * @extends {GDModelObject}
+ */
+export class GDDesignBreakPoint extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project); 
         this.breakPointName = dictionary["breakPointName"];
         this._breakPointMaxWidth = dictionary["breakPointMaxWidth"];
         this.mediaRule = null; // DOM-CSSMediaRule
-        this.project = project;
         this._styleSheet = null;
         Object.seal(this);
     }
 
+    /**
+     * @returns {number} the max-width
+     */
     get breakPointMaxWidth() {
         return this._breakPointMaxWidth;
     }
 
+    /**
+     * sets the breakoints max-width
+     * @param {number} w
+     */
+    set breakPointMaxWidth(w) {
+        this._breakPointMaxWidth = w;
+        this.mediaRule.media.mediaText = `(max-width: ${w}px)`;
+    }
+
+    /**
+     * @returns {string} the selector of the media quuery
+     */
     get mediaText() {
         var max = this.breakPointMaxWidth;
         return "@media (max-width: " + max + "px)";
     }
 
+    /**
+     * @returns {string} the mediaquery 
+     */
     get mediaQuery() {
         return this.mediaText + " {}";
     }
 
-    set breakPointMaxWidth(w) {
-        this.mediaRule.media.deleteMedium(this.mediaText);
-        this._breakPointMaxWidth = w;
-        this.mediaRule.media.appendMedium(this.mediaText);
-    }
 
+    /**
+     * inserts the media rule in the stylesheet at index
+     * @param {GDStyleSheet} styleSheet 
+     * @param {number} index 
+     */
     insertIntoStyleSheet(styleSheet, index) {
         this._styleSheet = styleSheet;
         this.mediaRule = new GDStyleSheet(styleSheet.insertSelector(this.mediaText, index));
     }
 
-
+    /**
+     * removes the media rule from the stylesheet
+     */
     deleteFromStyleSheet() {
         this._styleSheet.deleteSelector(this.mediaText);
+        this.mediaRule = undefined;
     }
 
-   connectObjects(styleSheet) {
-        this.mediaRule =styleSheet.existingRuleForSelector(this.mediaText);
+    connectObjects(styleSheet) {
+        this._styleSheet = styleSheet;
+
+        for (let i=0; i<this._styleSheet.cssRules.length; i++) {
+            let mediaRule = this._styleSheet.cssRules[i];
+            let mediaText = mediaRule.media.mediaText;
+            if (mediaText.indexOf(`${this.breakPointMaxWidth}px`) != -1) {
+                this.mediaRule = new GDStyleSheet(mediaRule);
+                this.mediaRule.fillSelectorMap();
+                break;
+            }
+        } 
+
         if (this.mediaRule == undefined)  {
             this.insertIntoStyleSheet(styleSheet, styleSheet.rulesLength);
         }
@@ -1024,8 +1571,9 @@ GDModelObject.register(GDDesignBreakPoint);
 /**
     An instance cell can have multiple States. This class represents a 
     state and is the counterpart to its Antetype class with the same name. 
+    @extends {GDModelObject}
 */
-class GDState extends GDModelObject {
+export class GDState extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
 
@@ -1037,14 +1585,21 @@ class GDState extends GDModelObject {
         this._animate = dictionary.animate;
         this._animationCurve = dictionary.animationCurve;
         this.widget = null;
-        this._project = project;
         project.registerState(this);
         Object.seal(this);
     }
 
+    static createInstance(project) {
+        let state = super.createInstance(project);
+        state._identifier = Math.floor(Math.random() * 1000);
+        project.registerState(state);
+        return state;
+    }
+
 
     /**
-        the identifier (String) of this state. 
+        @returns {string} the identifier of this state. 
+        
     */
     get identifier() {
          return this._identifier; 
@@ -1066,11 +1621,6 @@ class GDState extends GDModelObject {
         return this._inRunMode() && this.cssSelector().indexOf(":") != -1;
     }
 
-    get xxxisPseudoState() {
-        return this.type == GDState.GDPressedStateType 
-            || this.type == GDState.GDMouseOverStateType 
-            || this.type == GDState.GDFocusStateType;
-    }
     /**
         the type of this state. (GDState.GDNormalStateType, GDState.GDMouseOverStateType, 
         GDState.GDPressedStateType, GDState.GDFocusStateType, GDState.GDCustomStateType)
@@ -1080,20 +1630,22 @@ class GDState extends GDModelObject {
     }
 
     /**
-        the name of this state
+        @returns {string} the name of this state
     */
     get name() {
         return this._name;
     }
 
-
+    /**
+     * @returns {string} the css-selector of this state
+     */
     cssSelector() {
         var separator = this._inRunMode() ? ":" : "_";
         switch(this._type) {
-            case GDState.GDNormalStateType: return ""; break; 
-            case GDState.GDMouseOverStateType: return separator + "hover"; break;
-            case GDState.GDPressedStateType: return separator + "active"; break;
-            case GDState.GDFocusStateType: return separator + "focus"; break;
+            case GDState.GDNormalStateType: return ""; 
+            case GDState.GDMouseOverStateType: return separator + "hover"; 
+            case GDState.GDPressedStateType: return separator + "active"; 
+            case GDState.GDFocusStateType: return separator + "focus-within"; 
         }
 
         // for breakpoint-states use the default state
@@ -1124,14 +1676,23 @@ class GDState extends GDModelObject {
         return 0;
     }
 
+    /**
+     * @returns {string|undefined} the name of its breakpoint (if it has one)
+     */
     get designBreakPointName() {
         return this._designBreakPointName;
     }
 
+    /**
+     * @param {string} n the new breakpoint name
+     */
     set designBreakPointName(n) {
         this._designBreakPointName = n;
     }
 
+    /**
+     * @returns {GDDesignBreakPoint|null} the breakpoint (if any)
+     */
     designBreakPoint() {
         if (this._designBreakPointName == undefined) {
             return null;
@@ -1142,6 +1703,7 @@ class GDState extends GDModelObject {
     /*
      * return this state in all breakpoints (including default one, where 
      * designBreakPointName is null. Ordered ascending (smallest breakpoint > default one).
+     * @returns {Array<GDState>}
      */
     breakPointStates() {
         var name = this._name;
@@ -1164,6 +1726,9 @@ class GDState extends GDModelObject {
         });
     }
 
+    /**
+     * @returns {GDState} this state in the default breakpoint
+     */
     get defaultState() {
         if (this.designBreakPointName == undefined)  {
             return this;
@@ -1174,6 +1739,9 @@ class GDState extends GDModelObject {
         });
     }
 
+    /**
+     * @returns {boolean} if this state is defined in breakpoints
+     */
     hasBreakPoints() {
         return this.breakPointStates().length > 1;
     }
@@ -1182,11 +1750,11 @@ class GDState extends GDModelObject {
      * The CSS stylesheet (can be a CSSMEdiaRule). 
      */
     cssStyleSheet(lookAndFeel) {
-        if (!this.hasBreakPoints() || this._designBreakPointName == null) {
+        if (!this.hasBreakPoints() || this._designBreakPointName == null) {
             return lookAndFeel.cssStyleSheet;
         }
 
-        var myBreakPoint = this.designBreakPoint();
+        const myBreakPoint = this.designBreakPoint();
         
         if (myBreakPoint) {
             return myBreakPoint.mediaRule;
@@ -1195,11 +1763,28 @@ class GDState extends GDModelObject {
         return lookAndFeel.deletedBreakPointStyleSheet;
     }
 
+    /**
+     * a GDStyleSheet for the state in on the screen.
+     * @returns {GDStyleSheet}
+     */
+    cssStyleSheetOfScreen(screen) {
+        if (!this.hasBreakPoints() || this._designBreakPointName == null) {
+            return screen.cssStyleSheet;
+        }
+
+        const myBreakPoint = this.designBreakPoint();
+        if (myBreakPoint) {
+            return screen.mediaRuleForBreakpoint(myBreakPoint); // FIXME breakpoints 
+        }
+
+        return this._project.currentLookAndFeel.deletedBreakPointStyleSheet;
+    }
+
 
 
 
     /**
-        the css-transiton for (automatic state-animation)
+        @return {string} the css-transiton for (automatic state-animation)
     */
     get cssTransition() {
         if (!this._animate)
@@ -1226,15 +1811,15 @@ GDState.GDCustomStateType = 100;
 GDModelObject.register(GDState);
 
 
-var GDNoPainterType = 0;
+export const GDNoPainterType = 0;
 
-var GDRectangleCellType = 0,
+export const GDRectangleCellType = 0,
     GDCircleCellType = 1, 
     GDTriangleCellType = 2,
     GDVectorCellType = 3;
 
 	
-var GDLeftAlignment	= 0,
+export const GDLeftAlignment	= 0,
     GDCenterAlignment = 1,
 	GDRightAlignment = 2,
 	GDJustifiedAlignment = 3,
@@ -1336,19 +1921,38 @@ var GDLeftAlignment	= 0,
 /**
     A look&feel stores the widget properties and manages the stylesheets used in the 
     prototype. 
+    @extends {GDModelObject}
 */
-class GDLookAndFeel extends GDModelObject {
+export class GDLookAndFeel extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
-        this.properties = dictionary;
-        this.project = project;
+        this.properties = dictionary["lookNodes"] || {};
+        this.colors = this.decodeArray(dictionary["colors"], project);
         this._cssStyleSheet = null;
         this._breakPointStyleSheet = null;
         this._styleSheetForDeletedBreakpoints = null;
+        this._rootRule = null;          ///< :root {} for css variables
+
+        // we can't use gdValue here, since we are in the process of building 
+        // the project, therefor do it by hand: 
+        if (dictionary["defaultColor"]) {
+            const defaultColorIdentifier = dictionary["defaultColor"].GDUIColor.identifier;
+            this.defaultColor = this.colorWithIdentifier(defaultColorIdentifier);
+        } else {
+            this.defaultColor = new GDUIColor({name: "Default", 
+                identifier: "DefaultColorIdentifier",
+                colorValue: {"NSColorValue":"1,1,1,1"}});
+            this.colors.push(this.defaultColor);
+        }
+        this._defaultValues = undefined;
         Object.seal(this);
     }
 
-    static defaultValueForKey(key) {
+    /**
+     * @returns {any} the default value for the property named key 
+     * @param {string} key 
+     */
+    defaultValueForKey(key) {
 
             if (this._defaultValues === undefined) {
                 this._defaultValues = {
@@ -1366,6 +1970,7 @@ class GDLookAndFeel extends GDModelObject {
         isDisplay: 							true,
         isContentClipped:					true,
         isDropTarget:						true,
+        isNestable:                         true,
         scrollable:                         0,
         maximumHeight:						GDMaxSizeValue, //Number.MAX_VALUE,
         minimumHeight:						3,
@@ -1399,17 +2004,17 @@ class GDLookAndFeel extends GDModelObject {
         borderRightType:					GDBorderTypeSolid,
         borderTopType:						GDBorderTypeSolid,
 
-        borderBottomColor:					CPColor.blackColor(),
-        borderLeftColor:					CPColor.blackColor(),
-        borderRightColor:					CPColor.blackColor(),
-        borderTopColor:						CPColor.blackColor(),
+        borderBottomColor:					this.defaultColor,
+        borderLeftColor:					this.defaultColor,
+        borderRightColor:					this.defaultColor,
+        borderTopColor:						this.defaultColor,
 
         layoutPolicyCode:					GDAlignmentLayoutPolicyCode,
         layoutWrap:                         false,
 
         backgroundPainterType:				GDNoPainterType,
 
-        backgroundColor:					CPColor.whiteColor(),
+        backgroundColor:					this.defaultColor,
         backgroundGradient:					CTGradient.unifiedDarkGradient(),
         backgroundGradientAngle:			0,
         backgroundGradientIsRadial:			false,
@@ -1426,13 +2031,12 @@ class GDLookAndFeel extends GDModelObject {
         dropShadowSize:						0,
         dropShadowOffset:					2,
         dropShadowBlur:						2,
-        dropShadowOpacity:					0.5,
-        dropShadowColor:					CPColor.blackColor(),
+        dropShadowColor:					this.defaultColor,
 
         textRichText:						false,
         textString:				            null,
         textFont:							new GDFont({familyName:"Helvetica", displayName: "Helvetica", fontName: "Helvetica", size:12}),
-        textColor:							CPColor.blackColor(),
+        textColor:							this.defaultColor,
         textHorizontalAlignment:			GDCenterAlignment,
         textVerticalAlignment:				GDCenterAlignment,
         textAntialias:						true,
@@ -1444,10 +2048,9 @@ class GDLookAndFeel extends GDModelObject {
 
         textShadow:							false,
         textShadowOffset:					2,
-        textShadowOpacity:					0.5,
         textShadowAngle:					180,
         textShadowBlur:						1,
-        textShadowColor:					CPColor.blackColor(),
+        textShadowColor:					this.defaultColor,
         
         
         activeLayout:						false,
@@ -1460,10 +2063,9 @@ class GDLookAndFeel extends GDModelObject {
 
         innerShadow:						false,
         innerShadowOffset:					5,
-        innerShadowOpacity:					0.75,
         innerShadowAngle:					315,
         innerShadowBlur:					5,
-        innerShadowColor:					CPColor.blackColor(),
+        innerShadowColor:					this.defaultColor,
         
         borderGradient:                     false,
         borderGradientFill:                 null, //FIXME [CTGradient unifiedDarkGradient],
@@ -1477,6 +2079,13 @@ class GDLookAndFeel extends GDModelObject {
                 }
            return this._defaultValues[key]; 
         }
+
+    /**
+     * @returns {any|undefined} the value for the definition with definitionIdentifier in the state with identifer (or undefined)
+     * @param {string} key 
+     * @param {string} definitionIdentifier 
+     * @param {string} stateIdentifier 
+     */
     ownValueForKey(key, definitionIdentifier, stateIdentifier) {
         var propertiesForDefinition = this.properties[definitionIdentifier]; 
         if (propertiesForDefinition) {
@@ -1484,7 +2093,7 @@ class GDLookAndFeel extends GDModelObject {
             if (stateProperties) {
                 var value = stateProperties[key];
                 if (value !== undefined)
-                    return gdValue(value);
+                    return gdValue(value, this.project);
             }
         }
         return undefined;
@@ -1503,17 +2112,29 @@ class GDLookAndFeel extends GDModelObject {
         if (ownValue !== undefined) {
             return ownValue;
         }
-        return GDLookAndFeel.defaultValueForKey(key);
+        return this.defaultValueForKey(key);
     }
 
+    /**
+     * @returns {GDStyleSheet} the stylesheet for the non-breakpoint-style-rules
+     */
     get cssStyleSheet() {
         return this._cssStyleSheet;
     }
 
+    /**
+     * @returns {GDStyleSheet} the stylesheet for breakpoint-styles 
+     */
     get breakPointStyleSheet() {
         return this._breakPointStyleSheet;
     }
 
+    /**
+     * inserts a css rule for the definition with definitionIdentifier in state
+     * with stateIdentifier
+     * @param {string} definitionIdentifier 
+     * @param {string} stateIdentifier 
+     */
     insertCSSRule(definitionIdentifier, stateIdentifier) {
         const state = this.project.stateWithIdentifier(stateIdentifier);
 
@@ -1566,6 +2187,19 @@ class GDLookAndFeel extends GDModelObject {
         return cssRule;
     }
 
+    /**
+     * sets the value for the property for definition in state. This also 
+     * updates the CSS. 
+     * 
+     * Maybe we should use the same thing like in {@link GDWidgetInstanceCell#setValueForKeyInStateWithIdentifier}
+     * to only store the value und add a similar method to AntetypeWeb#cellSetProperty which also updates
+     * the CSS.
+     * 
+     * @param {any} value 
+     * @param {string} key 
+     * @param {string} definitionIdentifier 
+     * @param {string} stateIdentifier 
+     */
     setValueForKey(value, key, definitionIdentifier, stateIdentifier) {
         var propertiesForDefinition = this.properties[definitionIdentifier];
         if (propertiesForDefinition == undefined) {
@@ -1594,7 +2228,8 @@ class GDLookAndFeel extends GDModelObject {
                             return lookAndFeel.valueForKey(key, definitionIdentifier, state);
                         }, ownValueForKeyInStateWithIdentifier: function(key, state) {
                             return lookAndFeel.ownValueForKey(key, definitionIdentifier, state);
-                        }, name: name } ;
+                        }, name: name,
+                    project: lookAndFeel.project } ;
 
         Antetype.updateStyleProperty(cssRule.style, adaptor, key, stateIdentifier);
     }
@@ -1626,9 +2261,10 @@ class GDLookAndFeel extends GDModelObject {
         var rule = cssStyleSheet.cssRules[i];
         var defaultValues = this._defaultValues;
         for (var key in this._defaultValues) {
-            //FIXME:
+            // eslint-disable-next-line no-unused-vars
             var adaptor = { valueForKeyInStateWithIdentifier: function(key, state) {
                 return defaultValues[key];
+            // eslint-disable-next-line no-unused-vars
             }, ownValueForKeyInStateWithIdentifier: function( key, state) {
                 return defaultValues[key];
             }};
@@ -1655,7 +2291,6 @@ class GDLookAndFeel extends GDModelObject {
 
         const stateProperties = lookNode[stateIdentifier];
         const state = this.project.stateWithIdentifier(stateIdentifier);
-        const styles = state.cssStyleSheet(this);
 
         let cssRule = this.cssRuleForSelector(state, definition); 
         if (cssRule == undefined) {
@@ -1682,7 +2317,7 @@ class GDLookAndFeel extends GDModelObject {
                             }, ownValueForKeyInStateWithIdentifier: function(key, state) {
                                 return lookAndFeel.ownValueForKey(key, containerDefinition.identifier, state);
                             }, container: undefined,
-                            activeStateIdentifier: stateIdentifier, name: containerDefinition.name
+                            activeStateIdentifier: stateIdentifier, name: containerDefinition.name, project: this.project
                 };
             }
 
@@ -1692,7 +2327,7 @@ class GDLookAndFeel extends GDModelObject {
                                 return lookAndFeel.valueForKey(key, definitionIdentifier, state);
                             }, ownValueForKeyInStateWithIdentifier: function(key, state) {
                                 return lookAndFeel.ownValueForKey(key, definitionIdentifier, state);
-                            }, container: containerAdaptor, name: definition.name } ;
+                            }, container: containerAdaptor, name: definition.name, project: this.project } ;
 
             at.updateStyleProperty(cssRule.style, adaptor, key, stateIdentifier);
         }
@@ -1720,8 +2355,36 @@ class GDLookAndFeel extends GDModelObject {
         breakPoints.forEach(function(breakPoint) {
             breakPoint.insertIntoStyleSheet(styleSheet, styleSheet.rulesLength);
         });
+    }
 
+    addColors() {
+        this._rootRule = this._cssStyleSheet.insertSelector(":root", this._cssStyleSheet.rulesLength);
+        this.colors.forEach( c => c.defineInStyle(this._rootRule.style) );
+    }
 
+    updateColor(color, colorValue) {
+        color.colorValue = colorValue;
+        color.defineInStyle(this._rootRule.style);
+    }
+
+    addColor(c) {
+        this.colors.push(c);
+        c.defineInStyle(this._rootRule.style);
+    }
+
+    deleteColor(c) {
+        const i = this.colors.indexOf(c);
+        if (i == -1)
+            return;
+        
+        this.colors.splice(i,1);
+
+        // do we have to change the object which use this one? 
+        // like in AT? 
+    }
+
+    colorWithIdentifier(identifier) {
+        return this.colors.find( c => c.objectID == identifier);
     }
 
 
@@ -1746,6 +2409,7 @@ class GDLookAndFeel extends GDModelObject {
         this._cssStyleSheet = new GDStyleSheet(cssStyleSheet);
         this._breakPointStyleSheet = new GDStyleSheet(breakPointStyleSheet);
         this.addMediaRules();
+        this.addColors();
 
         for (var definitionIdentifier in this.properties) {
             var lookNode = this.properties[definitionIdentifier];
@@ -1754,7 +2418,7 @@ class GDLookAndFeel extends GDModelObject {
     }
 
     connectObjects() {
-        let link = document.getElementById("GDPrototypeCSS");
+        let link = document.getElementById("LookAndFeelStyles");
 
 
         let styleSheet = link.sheet; 
@@ -1767,23 +2431,35 @@ class GDLookAndFeel extends GDModelObject {
 
         }
 
+        // FIXME: looks like Chrome (tested in 80.0.3987.100) does allow
+        // iterating the CSS-styles. Since we currently transfer all css
+        // in one (l&f, breakpoints, screen, screen breakpoints...) we 
+        // add <style> for the various parts. I guess we should use separate
+        // styles from the beginning? 
         if (!canModifyExistingRules) {
             // chrome, if loaded locally cannot access the stylesheet-rules via JavaScript. In this case add new
             // stylesheets: 
 
             const styleSheetElement = document.createElement("style");
+            styleSheetElement.id = "LookAndFeelStyles";
             document.head.appendChild(styleSheetElement);
             this._cssStyleSheet = new GDStyleSheet(styleSheetElement.sheet);
 
             const breakPointStyleSheetElement = document.createElement("style");
+            breakPointStyleSheetElement.id = "LookAndFeelBreakpointStyles";
             document.head.appendChild(breakPointStyleSheetElement);
             this._breakPointStyleSheet = new GDStyleSheet(breakPointStyleSheetElement.sheet);
+
+            this.addColors();
             return;
         }
         this._cssStyleSheet = new GDStyleSheet(styleSheet);
         this._cssStyleSheet.fillSelectorMap();
 
-        this._breakPointStyleSheet = this._cssStyleSheet;    // same in the viewer
+        let linkBreakPoints = document.getElementById("LookAndFeelBreakpointStyles");
+        this._breakPointStyleSheet = new GDStyleSheet(linkBreakPoints.sheet);
+        this._breakPointStyleSheet.fillSelectorMap();
+        this._rootRule = this._cssStyleSheet.existingRuleForSelector(":root");
     }
 
 
@@ -1796,7 +2472,7 @@ class GDLookAndFeel extends GDModelObject {
 
     enablePseudoStates() {
         this.cssStyleSheet.enablePseudoStates();
-        this.breakPointStyleSheet.enablePseudoStates();
+        this.project.designBreakPoints.forEach( b => b.mediaRule.enablePseudoStates() );
 
         // #267 enable state-animations too:
         this.project.widgets.forEach( w => {
@@ -1806,11 +2482,12 @@ class GDLookAndFeel extends GDModelObject {
                 }
             });
         });
+
     }
 
     disablePseudoStates() {
         this.cssStyleSheet.disablePseudoStates();
-        this.breakPointStyleSheet.disablePseudoStates();
+        this.project.designBreakPoints.forEach( b => b.mediaRule.disablePseudoStates() );
 
         // #267 disable state animations if switched from in-place presentation-mode
         // in edit mode: 
@@ -1834,11 +2511,7 @@ class GDLookAndFeel extends GDModelObject {
             var index = styleSheet.indexOfSelector(cssRule.selectorText);
             if (index != undefined) {
                 styleSheet.deleteSelector(cssRule.selectorText);
-//                this.deleteCSSRuleForSelector(state.identifier + definition.identifier);
             }
-
-            // FIXME breakpoints
-            
         }
     }
 
@@ -1867,20 +2540,34 @@ GDModelObject.register(GDLookAndFeel);
 /**
     I represent an Antetype Widget. 
 */
-class GDWidget extends GDModelObject {
+export class GDWidget extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
 
         this._name = dictionary["name"];
-        this._hierarchy = GDModelObject.fromJSONObjectInProject(dictionary["hierarchy"], project);
-        this.hierarchy.setWidget(this);
+        if (dictionary["hierarchy"]) {
+            this._hierarchy = GDModelObject.fromJSONObjectInProject(dictionary["hierarchy"], project);
+            this.hierarchy.setWidget(this);
+        } else {
+            this._hierarchy = null;
+
+        }
         this._states = this.decodeArray(dictionary["states"], project);
         var self = this;
         this.states.forEach(function(s) {s.widget = self; });
         this.type = dictionary["type"];
-        this.project = project;
         this.identifier = dictionary["identifier"];
         Object.seal(this);
+    }
+
+    static createInstance(project) {
+        let widget = super.createInstance(project);
+        let normalState = GDState.createInstance(project);
+        normalState._type = GDState.GDNormalStateType;
+        widget.addState(normalState);
+        widget.type = GDWidget.GDUserWidgetType;
+        widget.identifier = Math.floor(Math.random() * 1000);
+        return widget;
     }
 
     /**
@@ -1898,7 +2585,7 @@ class GDWidget extends GDModelObject {
     }
 
     /**
-        the states {@link GDState} of this widget. 
+        the states {@link GDState} of this widget. 
     */
     get states() {
         return this._states;
@@ -1943,6 +2630,12 @@ class GDWidget extends GDModelObject {
     get widgetComponents() {
         return this.hierarchy.deepOrderedComponentsSelect( d => !d.isEmbeddedDefinition );
     }
+
+    createInstance() {
+        let instance = this.hierarchy.buildInstance();
+        instance.activeState = this.normalState;
+        return instance;
+    }
 }
 GDWidget.GDUserWidgetType = 0;          // a user defined widget 
 GDWidget.GDNormalCellWidgetType = 1;    // a special widget used internally (basic cell) 
@@ -1957,7 +2650,7 @@ GDModelObject.register(GDWidget);
     Defines a cell inside a widget. Each widget {@link GDWidget} has a hierarchy 
     of its cells. 
 */
-class GDWidgetCellDefinition extends GDModelObject {
+export class GDWidgetCellDefinition extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
         this._identifier = dictionary["identifier"];
@@ -1965,14 +2658,22 @@ class GDWidgetCellDefinition extends GDModelObject {
         this.individualContent = dictionary["individualContent"];
         this.orderedComponents = [];
         this.container = null;
-        for (var i=0; i<dictionary["orderedComponents"].length; i++) {
-            var childJSON = dictionary["orderedComponents"][i];
-            var child = GDModelObject.fromJSONObjectInProject(childJSON, project);
-            child.container = this;
-            this.orderedComponents.push(child);
+        if (dictionary["orderedComponents"]) {
+            for (var i=0; i<dictionary["orderedComponents"].length; i++) {
+                var childJSON = dictionary["orderedComponents"][i];
+                var child = GDModelObject.fromJSONObjectInProject(childJSON, project);
+                child.container = this;
+                this.orderedComponents.push(child);
+            }
         }
         this._instances = [];
         project.registerDefinition(this);
+    }
+
+    static createInstance(project) {
+        let d = super.createInstance(project);
+        d._identifier =  "d" + Math.floor(Math.random() * 1000);
+        return d;
     }
 
     /**
@@ -2011,7 +2712,7 @@ class GDWidgetCellDefinition extends GDModelObject {
 
     get deepOrderedComponents() {
         var result = [];
-        this.addComponentsToArray(result, (a) => true);
+        this.addComponentsToArray(result, () => true);
         return result;
     }
 
@@ -2033,6 +2734,33 @@ class GDWidgetCellDefinition extends GDModelObject {
             this._instances.splice(index,1);
         }
     }
+
+    emptyInstanceCell() {
+        return GDWidgetInstanceCell.createInstance(this._project);
+
+    }
+
+    buildInstanceCell() {
+        const cell = this.emptyInstanceCell();
+        cell._definition = this;
+        cell._name = this.name;
+        cell._definitionIdentifier = this.identifier;
+        return cell;
+    }
+
+    buildInstance() {
+        const cell = this.buildInstanceCell();
+        this.orderedComponents.forEach( c => {
+            const childInstanceCell = c.buildInstance();
+            cell.addComponent(childInstanceCell);
+        });
+
+        return cell;
+    }
+
+    addComponent(d) {
+        this.orderedComponents.push(d);
+    }
 } 
 GDModelObject.register(GDWidgetCellDefinition);
 
@@ -2042,7 +2770,7 @@ GDModelObject.register(GDWidgetCellDefinition);
     See {@link GDWidget} and {@link GDWidgetInstanceRootCell} for the corresponding 
     object on instance side. 
 */
-class GDWidgetRootCellDefinition extends GDWidgetCellDefinition {
+export class GDWidgetRootCellDefinition extends GDWidgetCellDefinition {
     constructor(dictionary, project) {
         super(dictionary, project);
         this._widget = null;
@@ -2060,10 +2788,13 @@ class GDWidgetRootCellDefinition extends GDWidgetCellDefinition {
         return this._widget;
     }
 
+    emptyInstanceCell() {
+        return GDWidgetInstanceRootCell.createInstance(this._project);
+    }
 }
 GDModelObject.register(GDWidgetRootCellDefinition);
 
-class GDEmbeddedWidgetDefinition extends GDWidgetCellDefinition {
+export class GDEmbeddedWidgetDefinition extends GDWidgetCellDefinition {
     get isEmbeddedDefinition() {
         return true;
     }
@@ -2071,13 +2802,16 @@ class GDEmbeddedWidgetDefinition extends GDWidgetCellDefinition {
 GDModelObject.register(GDEmbeddedWidgetDefinition);
 
 
-class GDScreenDefinition extends GDWidgetRootCellDefinition {
+export class GDScreenDefinition extends GDWidgetRootCellDefinition {
+    emptyInstanceCell() {
+        return GDScreen.createInstance(this._project);
+    }
 
 }
 GDModelObject.register(GDScreenDefinition);
 
 
-class GDEventHandler extends GDModelObject {
+export class GDEventHandler extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.eventType = dictionary["eventType"];
@@ -2100,7 +2834,7 @@ class GDEventHandler extends GDModelObject {
         let startImmediately = [];
         for (let i=index; i<this.orderedActionSets.length; i++) {
             const actionSet = this.orderedActionSets[i];
-            if (lastActionSet == null || !actionSet.afterPrevious) {
+            if (lastActionSet == null || !actionSet.afterPrevious) {
                 startImmediately.push(actionSet);
             }
             
@@ -2210,11 +2944,11 @@ class GDEventHandler extends GDModelObject {
         }
 
         if (this.eventType === GDFocusEventType) {
-            this.addEventListener(at, cell.DOMElement, "focus");
+            this.addEventListener(at, cell.DOMElement, "focusin");
         }
 
         if (this.eventType === GDFocusOutEventType) {
-            this.addEventListener(at, cell.DOMElement, "blur");
+            this.addEventListener(at, cell.DOMElement, "focusout");
         }
 
         if (this.eventType === GDScrollEventType) {
@@ -2284,12 +3018,12 @@ GDModelObject.register(GDEventHandler);
 /**
     an ActionSet (currently called Action group in the GUI). 
 */
-class GDActionSet extends GDModelObject {
+export class GDActionSet extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.orderedActions = [];
         var actions = dictionary["orderedActions"] || [];
-        for (var i=0; i<actions.length; i++) {
+        for (let i=0; i<actions.length; i++) {
             var a = actions[i];
             var action = GDModelObject.fromJSONObjectInProject(a, project);
             this.addAction(action);
@@ -2297,7 +3031,7 @@ class GDActionSet extends GDModelObject {
 
         this.orderedElementIDs = [];
         var elementIDsJSON = dictionary["orderedElements"] || [];
-        for (var i=0; i<elementIDsJSON.length; i++) {
+        for (let i=0; i<elementIDsJSON.length; i++) {
             var elementID = elementIDsJSON[i];
             this.orderedElementIDs.push(elementID);
         }
@@ -2356,7 +3090,7 @@ class GDActionSet extends GDModelObject {
         starts the action at index start. Continues executing the actions, until 
         a action with afterPrevious is encountered
 
-        @param {int} start the start-index
+        @param {int} start the start-index
         @param {Event} e the DOM-Event
     */
     startExecutingActionAtIndex(start,e) {
@@ -2418,7 +3152,7 @@ class GDActionSet extends GDModelObject {
 GDModelObject.register(GDActionSet);
 
 
-var GDActionSpecifierThisElement_Code = 0,
+const GDActionSpecifierThisElement_Code = 0,
     GDActionSpecifierAllWidgetsOfSameType_Code = 1,
     GDActionSpecifierChildrenOfThisElement_Code = 2,
     GDActionSpecifierChildrenFromSameWidget_Code = 3,
@@ -2442,15 +3176,14 @@ var GDActionSpecifierThisElement_Code = 0,
 /**
  * a Action, superclass of all actions. 
  */
-class GDAction extends GDModelObject {
+export class GDAction extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
-        this._project = project;
         this.specifier = dictionary["specifier"];
         this.animationDuration = dictionary["animationDuration"] || 0;
         this.animationCurve = dictionary["animationCurve"] || 0 ;
         this.delay = dictionary["delay"] || 0;
-        this.animate = dictionary["animate"] || false;
+        this.animate = dictionary["animate"] || false;
         this.afterPrevious = dictionary["afterPrevious"];
         this.actionSet = null
         this._nextAction = null;
@@ -2486,6 +3219,7 @@ class GDAction extends GDModelObject {
      *
      * @param {Event} e  normally DOM-event or an empty object for our "pseudo"-events
      */
+    // eslint-disable-next-line no-unused-vars
     execute(e) {
         console.log("Missing execute for " + this);
     }
@@ -2509,65 +3243,79 @@ class GDAction extends GDModelObject {
 
 
             switch (code) {
-                case GDActionSpecifierThisElement_Code: return elements; break;
-                case GDActionSpecifierChildrenOfThisElement_Code: 
-                    var r = [];
-                    for (var i=0; i<elements.length; i++) {
-                        var e = elements[i];
+                case GDActionSpecifierThisElement_Code: return elements; 
+                case GDActionSpecifierChildrenOfThisElement_Code: {
+                    let r = [];
+                    for (let i=0; i<elements.length; i++) {
+                        let e = elements[i];
                         r = r.concat(e.orderedComponents);
                     }
-                    return r; break;
-                case GDActionSpecifierSiblingsOfThisElement_Code: 
-                    var r = [];
-                    for (var i=0; i<elements.length; i++) {
-                        var e = elements[i];
+                    return r; 
+                }
+                case GDActionSpecifierSiblingsOfThisElement_Code: {
+                    let r = [];
+                    for (let i=0; i<elements.length; i++) {
+                        let e = elements[i];
                         r = r.concat(e.siblings);
                     }
-                    return r; break;
-                case GDActionSpecifierParent_Code: 
-                    var r = [];
-                    for (var i=0; i<elements.length; i++) {
-                        var e = elements[i];
+                    return r; 
+                }
+                case GDActionSpecifierParent_Code: {
+                    let r = [];
+                    for (let i=0; i<elements.length; i++) {
+                        let e = elements[i];
                         r = r.concat(e.container);
                     }
-                    return r; break;
+                    return r; 
+                }
 
-                case GDActionSpecifierAllWidgetsOfSameType_Code: 
-                    const widgets = widgetForElements(elements);
-                    if (elements.length == 0) {
-                        return [];
+                case GDActionSpecifierAllWidgetsOfSameType_Code: {
+                        const widgets = widgetForElements(elements);
+                        if (elements.length == 0) {
+                            return [];
+                        }
+                        const screen = elements[0].screen;
+                        return screen.deepOrderedComponents.filter( c => c.isRootInstanceCell && widgets.has(c.widget) );
                     }
-                    const screen = elements[0].screen;
-                    return screen.deepOrderedComponents.filter( c => c.isRootInstanceCell && widgets.has(c.widget) );
-                    break;
 
-                case GDActionSpecifierChildrenFromSameWidget_Code:
-                    var r = [];
-                    for (var i=0; i<elements.length; i++) {
-                        var e = elements[i];
-                        var widget = e.widget;
+                case GDActionSpecifierChildrenFromSameWidget_Code: {
+                    let r = [];
+                    for (let i=0; i<elements.length; i++) {
+                        const e = elements[i];
+                        const widget = e.widget;
                         
                         r = r.concat(e.orderedComponents.filter(function(child) { return child.widget == widget; }));
                     }
-                    return r; break;
-
-                case GDActionSpecifierSiblingsWithSameWidgetType_Code:
-                    var r = [];
-                    for (var i=0; i<elements.length; i++) {
-                        var e = elements[i];
-                        var widget = e.widget;
+                    return r; 
+                }
+                case GDActionSpecifierSiblingsWithSameWidgetType_Code: {
+                    let r = [];
+                    for (let i=0; i<elements.length; i++) {
+                        const e = elements[i];
+                        const widget = e.widget;
                         r = r.concat(e.siblings.filter(function(child) { return child.widget == widget; }));
                     }
-                    return r; break;
-                case GDActionSpecifierAllChildren_Code: 
-                    var r = [];
-                    for (var i=0; i<elements.length; i++) {
-                        var e = elements[i];
-
-                        r = r.concat(e.orderedComponents);
+                    return r;
+                }
+                case GDActionSpecifierAllChildren_Code: {
+                    let r = [];
+                    for (let i=0; i<elements.length; i++) {
+                        const e = elements[i];
+                        
+                        const allCells = e.deepOrderedComponents;
+                        if (allCells.length > 0) {
+                            allCells.splice(0,1);  // deepOrderedComponents contains the object itself ...
+                            r = r.concat(allCells);
+                        }
                     }
 
-                    return r; break;
+                    return r; 
+                }
+                case GDActionSpecifierAllParents_Code: {
+                    let r = [];
+                    elements.forEach(e => r = r.concat(e.parents));
+                    return r;
+                }
                 default: 
                     console.log("missing targetForElement, specifier: " + code);
             }
@@ -2652,7 +3400,7 @@ GDModelObject.register(GDAction);
 /**
  * Actiom which toggles between two states
  */
-class GDToggleStateAction extends GDAction {
+export class GDToggleStateAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.firstStateIdentifier = dictionary["firstState"];
@@ -2687,7 +3435,7 @@ GDModelObject.register(GDToggleStateAction);
 /**
  * Changes the proeprty "key" to the value "value" (honors animation, if set)
  */
-class GDPropertyChangeAction extends GDAction {
+export class GDPropertyChangeAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.key = dictionary["key"];
@@ -2715,7 +3463,7 @@ GDModelObject.register(GDPropertyChangeAction);
 
 
 
-class GDChangeStateAction extends GDAction {
+export class GDChangeStateAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project); 
         this.stateIdentifier = dictionary["state"];
@@ -2739,7 +3487,7 @@ class GDChangeStateAction extends GDAction {
 GDModelObject.register(GDChangeStateAction);
 
 
-class GDHideAction extends GDAction {
+export class GDHideAction extends GDAction {
     execute(e) {
         this.targetFigures.forEach( (figure) => {
             figure.DOMElement.style.display = "none";
@@ -2754,7 +3502,7 @@ class GDHideAction extends GDAction {
 GDModelObject.register(GDHideAction);
 
 
-class GDShowAction extends GDAction {
+export class GDShowAction extends GDAction {
     execute(e) {
         this.targetFigures.forEach( (figure) => {
             figure.DOMElement.style.display = "flex";
@@ -2769,7 +3517,7 @@ class GDShowAction extends GDAction {
 GDModelObject.register(GDShowAction);
 
 
-class GDGotoScreenAction extends GDAction {
+export class GDGotoScreenAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.screenID = dictionary["screenID"];
@@ -2821,9 +3569,11 @@ GDGotoScreenAction.GDScreenTransitionMoveToTop = 33;
 
 
 /**
-    a script action. Executes the source. 
+    a script action. Executes the source. We build a function with four
+    parameters: at (Antetype), targetCells, event and the action itself
+    and call it.
 */
-class GDScriptAction extends GDAction {
+export class GDScriptAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.type = dictionary["type"];
@@ -2833,17 +3583,28 @@ class GDScriptAction extends GDAction {
     execute(e) {
         if (this.type != "JavaScript")
             return;
-        let source = this.source;
+
+        const fn = new Function(`let at = arguments[0];let targetCells=arguments[1];let event=arguments[2]; let action=arguments[3];\n${this.source}`); 
+                
         let targetCells = this.targetFigures;
-        let action = this;
-        let at = Antetype;
-        let event = e;
+
+        const globalBoundsMissing = window.globalBoundsOfElement == undefined;
+        // workaround for https://discourse.ergosign.de/t/resize-script-broken-dev-only/232
+        // add globalBoundsOfElement to global object;
+        //
+        // Not sure what to do. Leave it, or use something like import * from 'utils.js' as ATUtil ...
+
+        if (globalBoundsMissing) {
+            window.globalBoundsOfElement = globalBoundsOfElement;
+        }
 
         try {
-            eval(source);
+            fn(Antetype,targetCells,e, this);
         } catch (e) {
             console.log("Exception in script-action: " + e);
         }
+
+        
         this.actionFinished(e);
     }
 }
@@ -2852,7 +3613,7 @@ GDModelObject.register(GDScriptAction);
 /**
     start/stop/repeat idle-actions
 */
-class GDPlayerAction extends GDAction {
+export class GDPlayerAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.action = dictionary["action"];
@@ -2900,7 +3661,7 @@ GDModelObject.register(GDPlayerAction);
 /**
     starts a animate.css-animation. Needs animate.css
 */
-class GDEffectAction extends GDAction {
+export class GDEffectAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.effectName= dictionary["effectName"];
@@ -2920,7 +3681,7 @@ class GDEffectAction extends GDAction {
             domElement.style.animationDuration = this.animationDuration + "s";
             domElement.style.animationIterationCount = this.iterationCount < 0 ? "infinite" : this.iterationCount;
 
-	    domElement.className = originalClass + " "+ this.effectName+ " animated"
+        domElement.className = originalClass + " "+ this.effectName+ " animated"
         });
         this.handleNextActionOnEvent("animationend", e);
     }
@@ -2931,7 +3692,7 @@ class GDEffectAction extends GDAction {
         // to allow the effect more than once. 
         //
         // see animate.css-names
-        if (this.effectName.indexOf("Out") == -1 && this.effectName.indexOf("In") == -1) {
+        if (this.effectName.indexOf("Out") == -1 && this.effectName.indexOf("In") == -1) {
             this.targetFigures.forEach( f=> {
                 let originalClass = cssClassNameForCell(f, this._project); 
                 f.DOMElement.className = originalClass;
@@ -2950,14 +3711,14 @@ GDModelObject.register(GDEffectAction);
 /**
     move in other element
 */
-class GDMoveInOtherElementAction extends GDAction {
+export class GDMoveInOtherElementAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project);
         this.moveTarget = dictionary["moveTarget"];
     }
 
 
-    moveTo(cell, target, duration, animationTiming) {
+    moveTo(cell, target, duration) {
         let cellDOMElement = cell.DOMElement;
         let targetDOMElement = target.DOMElement;
 
@@ -3009,6 +3770,7 @@ class GDMoveInOtherElementAction extends GDAction {
         window.requestAnimationFrame( animate ); 
     }
 
+    // eslint-disable-next-line no-unused-vars
     execute(e) {
         let target = document.getElementById(this.moveTarget).figure;
         if (target == undefined) {
@@ -3020,18 +3782,83 @@ class GDMoveInOtherElementAction extends GDAction {
 }
 GDModelObject.register(GDMoveInOtherElementAction);
 
+/**
+ * a color
+ * @extends {GDModelObject}
+ */
+export class GDUIColor extends GDModelObject {
+    constructor(dictionary, project) {
+        super(dictionary, project);
+        this.name = dictionary["name"];
+        this.identifier = dictionary["identifier"];
+        this.colorValue = CPColor.fromJSON(dictionary["colorValue"]);
+    }
 
-class GDDataBinding extends GDModelObject {
+    /**
+     * @returns {string} the name of the corresponding css-variable
+     */
+    get variableName() {
+        if (this.identifier == "DefaultColorIdentifier") 
+            return this.identifier;
+
+        return this.objectID;
+    }
+
+    /**
+     * defined a css-variable with my value
+     * @param {CSSStyleDeclaration} style 
+     */
+    defineInStyle(style) {
+        style.setProperty(`--${this.variableName}`, this.colorValue.toString());
+    }
+
+    /**
+     * @returns {string} a css-variable reference 
+     */
+    get referenceValue() {
+        return `var(--${this.variableName})`;
+    }
+
+    rgbStringWithAlpha(alpha) {
+        return this.colorValue.rgbStringWithAlpha(alpha);
+    }
+
+    /**
+     * @returns {boolean} true if overwritten
+     */
+    get isOverwritten() {
+        return false;
+    }
+}
+GDModelObject.register(GDUIColor);
+
+/**
+ * a overwritten color
+ * @extends {GDUIColor}
+ */
+export class GDOverwrittenUIColor extends GDUIColor {
+    get isOverwritten() {
+        return true;
+    }
+}
+GDModelObject.register(GDOverwrittenUIColor);
+
+
+
+
+export class GDDataBinding extends GDModelObject {
 
 }
 GDModelObject.register(GDDataBinding);
+
+
 
 
 /* non-antetype objects: */
 
 
 
-function CPColor(d) {
+export function CPColor(d) {
     var rgbaString = d["NSColorValue"];
     var rgba = rgbaString.split(",");
     this.red = rgba[0];
@@ -3132,7 +3959,7 @@ function GDFont(json) {
     this.fontName = json["fontName"]; 
     this.isBold = json["isBold"] || false;
     this.isItalic = json["isItalic"] || false;
-    this.fallback = json["fallback"] || "";
+    this.fallback = json["fallback"] || "";
     this.size = json["size"];
     this.fontCSS = json["fontCSS"];
 }

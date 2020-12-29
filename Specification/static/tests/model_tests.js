@@ -1,5 +1,10 @@
 "use strict";
 
+import { GDProject, GDModelObject, GDCompositeFigure, GDDesignBreakPoint,
+    GDEventHandler, GDMouseEnterEventType, GDMouseLeaveEventType, GDActionSet,
+    GDAction, GDState, GDScrollEventType, GDUIColor, GDWidget, CPColor, GDScriptAction } from '../modules/model.js';
+import { Antetype } from '../modules/viewer.js';
+
 QUnit.module("model", {
     beforeEach: function() {
         this.project = new GDProject(projectJSON, null)
@@ -32,7 +37,7 @@ QUnit.test("valueForKey", function(assert) {
     var x = cell.valueForKeyInStateWithIdentifier("x", stateIdentifier);
     assert.equal(singleCellJson.cell.styleProperties[stateIdentifier].x, x);
 
-    var defaultBorderLeft = GDLookAndFeel.defaultValueForKey("borderLeftColor");
+    var defaultBorderLeft = this.project.currentLookAndFeel.defaultValueForKey("borderLeftColor");
     assert.equal(defaultBorderLeft, cell.valueForKeyInStateWithIdentifier("borderLeftColor", stateIdentifier));
 });
 
@@ -164,25 +169,6 @@ QUnit.test("afterPrevious only after actionFinished", function(assert) {
     assert.equal(calls[2], "3");
 });
 
-/*
-QUnit.test("GDAction handleNextActionOn", function(assert) {
-    let div = document.createElement("div");
-    let calls = [];
-    function addListener(t) {
-        const l = (e) => { calls.push(l); div.removeEventListener(t, l); }
-        div.addEventListener(t, l);
-    }
-
-    addListener("click");
-    addListener("click");
-
-    div.dispatchEvent("
-
-
-
-});
-*/
-
 
 
 QUnit.test("state css sort", function(assert) {
@@ -234,3 +220,99 @@ QUnit.test("issue 707, with parameter", function(assert) {
 
     eventHandler.removeOldListeners();
 });
+
+
+QUnit.test("define ui color", function(assert) {
+    let color = new GDUIColor({colorValue: {NSColorValue: "1.000000,1.000000,1.000000,1.000000"}, objectId: 'id1234'}, this.project);
+
+    let style = document.createElement("div").style;
+    color.defineInStyle(style);
+
+    assert.equal(style.getPropertyValue('--id1234'), color.colorValue.toString());
+});
+
+QUnit.test("reference ui color", function(assert) {
+    let color = new GDUIColor({colorValue: {NSColorValue: "1.000000,1.000000,1.000000,1.000000"}, objectId: 'id1234'}, this.project);
+    let reference = color.referenceValue;
+    assert.equal(reference, 'var(--id1234)');
+});
+
+QUnit.test("define colors in stylesheet", function(assert) {
+    this.updateStyleProperty= function(){};
+    let lookAndFeel = this.project.currentLookAndFeel;
+    let color = new GDUIColor({colorValue: {NSColorValue: "1.000000,1.000000,1.000000,1.000000"}, objectId: 'id1234'}, this.project);
+    lookAndFeel.colors.push(color);
+
+    lookAndFeel.populateCSS(this.testStyleSheet, null, this); 
+
+    assert.ok(lookAndFeel._cssStyleSheet.indexOfSelector(":root") != undefined );
+    assert.equal(lookAndFeel._rootRule, lookAndFeel._cssStyleSheet.existingRuleForSelector(":root"));
+    assert.equal(lookAndFeel._rootRule.style.getPropertyValue("--id1234"), color.colorValue.toString());
+});
+
+QUnit.test("updateColor", function(assert) {
+    this.updateStyleProperty= function(){};
+    let lookAndFeel = this.project.currentLookAndFeel;
+    let color = new GDUIColor({colorValue: {NSColorValue: "1.000000,1.000000,1.000000,1.000000"}, objectId: 'id1234'}, this.project);
+    lookAndFeel.colors.push(color);
+
+    lookAndFeel.populateCSS(this.testStyleSheet, null, this); 
+
+    this.project.updateColor(color, CPColor.fromJSON({NSColorValue: "0,0,0,1"}));
+
+    assert.equal(color.colorValue.hexString(), "#000000");
+    assert.equal(lookAndFeel._rootRule.style.getPropertyValue("--id1234"), color.colorValue.toString());
+});
+
+
+QUnit.test("GDProject.createInstance", function(assert) {
+    const project = GDProject.createInstance();
+    const library = project.library;
+    assert.ok(library != undefined, "project has a library");
+    const screenWidget = library.screenWidget;
+    assert.ok(screenWidget != undefined, "project has a screen widget");
+    const basicCellWidget = library.basicCellWidget;
+    assert.ok(basicCellWidget != undefined, "project has a basic cell widget");
+});
+
+QUnit.test("Widget createInstance", function(assert) {
+    const project = GDProject.createInstance();
+    const library = project.library;
+    const screenWidget = library.screenWidget;
+
+    const screenInstance = screenWidget.createInstance();
+    assert.equal(screenInstance.definition, screenWidget.hierarchy, "check definition");
+});
+
+QUnit.test("create basic cell", function(assert) {
+    const project = GDProject.createInstance();
+    const basicCell = project.createBasicCell();
+    assert.equal(basicCell.widget.type, GDWidget.GDNormalCellWidgetType);
+});
+
+
+QUnit.test("script action test", function(assert) {
+    let eventHandler = GDEventHandler.createInstance();
+    let actionSet = GDActionSet.createInstance();
+    eventHandler.addActionSet(actionSet);
+    let action = GDScriptAction.createInstance();
+
+    var result = {};
+
+    window.GlobalTestHandler = (targetCells, at, event, action) => {
+        result = {targetCells: targetCells, at: at, event: event, action: action};
+    }
+    action.type = "JavaScript";
+    action.source = "window.GlobalTestHandler(targetCells, at, event, action)";
+    actionSet.addAction(action);
+
+    const event = {foo: "bar"};
+    eventHandler.execute(event);
+
+    assert.equal(result.at, Antetype);
+    assert.deepEqual(result.targetCells, action.targetFigures);
+    assert.equal(result.action, action);
+    assert.equal(result.event, event);
+
+    delete window.GlobalTestHandler;
+})

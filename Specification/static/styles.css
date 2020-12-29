@@ -55,6 +55,16 @@ body {
     z-index:134217727;
 }
 
+.rubberbandrect {
+  position: absolute;
+  opacity: 0.8;
+  border: 2px solid rgba(178, 215, 255, 1.00);
+  background: rgba(178, 215, 255, 0.1);
+  pointer-events: none;
+  z-index:134217727;
+}
+
+
 .droptargetrect {
     position: absolute;
     border: 2px solid rgba(178, 215, 255, 1.00);
@@ -167,6 +177,13 @@ svg rect {
     text-align: right;
 }
 
+/* Issue #926 Safari sometimes does not fire the events if clicked on 
+ * a text. As a workaround we disable the pointer-events for spans
+ * and enable it in AntetypeWeb#updateText if the text is editable
+ */
+cell span {
+    pointer-events: none;
+}
 
 
 /* highlight cells with click-events (option/alt if runtool is active) */
@@ -312,3 +329,161 @@ svg path, svg rect {
   animation-name: marginInDown;
 }
 
+
+
+
+#measure-hor {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+#measure-hor2 {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+#measure-hor-line {
+  height: 1px;
+  background: #0069FF;
+  align-self: stretch;
+  pointer-events: none;
+}
+
+#measure-hor-number{
+  background: #0069FF;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  pointer-events: none;
+  font-size: 10px;
+  z-index: 2000;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.numberOffsetLeft {
+margin-right: 15px !important;
+}
+
+.numberOffsetLeftNo {}
+
+.numberOffsetTop {
+margin-bottom: 15px !important;
+}
+
+.numberOffsetTopNo {}
+
+  .numberOffsetRight {
+  margin-left: 15px !important;
+  }
+
+  .numberOffsetRightNo {}
+
+  .numberOffsetBottom {
+  margin-top: 15px !important;
+  }
+
+  .numberOffsetLeftBottomNo {}
+
+#measure-hor2-line {
+  height: 1px;
+  background: #0069FF;
+  align-self: stretch;
+  pointer-events: none;
+}
+
+#measure-hor2-number{
+  background: #0069FF;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  pointer-events: none;
+  font-size: 10px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+#guides-vertical{
+  position: absolute;
+  border-left: 1px dashed #E20053;
+  border-right: 1px dashed #E20053;
+  top: 0px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#guides-horziontal{
+  position: absolute;
+  border-top: 1px dashed #E20053;
+  border-bottom: 1px dashed #E20053;
+  left: 0px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#measure-vert{
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+#measure-vert2 {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+#measure-vert-line {
+   width: 1px;
+   background: #0069FF;
+   align-self: stretch;
+   pointer-events: none;
+}
+
+#measure-vert-number{
+  background: #0069FF;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 2px;
+  pointer-events: none;
+  font-size: 10px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+#measure-vert2-line {
+  width: 1px;
+  background: #0069FF;
+  align-self: stretch;
+  pointer-events: none;
+}
+
+#measure-vert2-number{
+  background: #0069FF;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 2px;
+  pointer-events: none;
+  font-size: 10px;
+  flex: 0 1 auto;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}

@@ -1,7 +1,8 @@
 /*
  * css for the exported web viewer. Highly designed toolbar.
  */
-#ViewerToolbar {
+
+ #ViewerToolbar {
     display: none;
 }
 
@@ -31,11 +32,16 @@
 .ViewerButton:hover { background: #444; }
 .ViewerButton:active { background: #333; }
 
+.ViewerButton.toggled-on {
+  background: #444;
+}
+
 .ViewerButtonIcon {
     width: 20px;
     height: 20px;
 }
 
+#ViewerResizeModeButton .ViewerButtonIcon { background-image: url(images/resize.svg); }
 #ViewerNextButton .ViewerButtonIcon { background-image: url(images/12584363l.svg); }
 #ViewerPrevButton .ViewerButtonIcon { background-image: url(images/4195755l.svg); }
 #ViewerFullScreenButton .ViewerButtonIcon { background-image: url(images/20972971l.svg); }
@@ -57,7 +63,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    overflow:hidden; 
+    overflow:hidden;
     text-overflow: ellipsis;
     font-weight: bold;
     flex: 1 1 auto;
@@ -99,13 +105,51 @@
 .ViewerScreenSelectStyle select:focus { outline: none; }
 
 
-
-
+#ViewerScrollContainer{
+    overflow: auto;
+    flex: 1 1 auto;
+    display: flex;
+    height: calc(100vh - 36px);
+    padding: 0;
+}
 
 #ViewerFrame {
+    flex: 0 0 auto;
+    resize: both;
+}
+
+#ViewerFrame.not-resize-able {
+    border: 0;
+    resize: none;
     flex: 1 1 auto;
-    height: 100%;
-    border: 0px;
+    height: calc(100vh - 32px) !important;       /* #784 Chrome Canary does not work with 100% */
+  }
+
+/* Safari VH Bugfix (auch anwenden, wenn Toolbar ein/ausgeblendet wird) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    #ViewerFrame {
+        flex: 0 0 auto;
+        border: 0px;
+    }
+
+    #ViewerFrame.not-resize-able {
+        border: 0;
+        resize: none;
+        flex: 1 1 auto;
+        height: calc(100vh - 32px) !important;       /* #784 Chrome Canary does not work with 100% */
+      }
+
+}
+
+#ViewerScrollContainerHelper{
+    display: block;
+    flex-shrink: 0;
+    width: 8px;
+    height: 1px;
+}
+#ViewerFrame.not-resize-able + #ViewerScrollContainerHelper {
+    display: none;
 }
 
 #MainWrapper {
@@ -113,17 +157,19 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+    background: #444
 }
 
 #ViewerInspector{
+    flex-shrink: 0;
     width: 380px;
-    height: 100%;
+    height: calc(100vh - 35px);
     background-color: white;
     border: 0px;
-    font-family: Helvetica;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     background-color: black;
     border-left: 1px solid #444;
-    overflow: scroll;
+    overflow: auto;
     display: none;
     flex-direction: column;
 }
@@ -149,10 +195,19 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0px 10px;
+    flex: 1 1 auto;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.itable h3 {
+    color: #999;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
 }
 
 .irow {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
 }
@@ -197,6 +252,8 @@ body {
 
 
 
+
+
 .colorswatch {
     width: 16px;
     height: 16px;
@@ -206,22 +263,32 @@ body {
     float: left;
 }
 
+.colorspacer {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border-radius: 3px;
+    float: left;
+}
+
 #css {
     padding: 10px;
     color: white;
-    font-family: Menlo, Monaco, Consolas, monospace;
-    flex: 1 1 auto;
+    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    flex: 0 0 250px;
     margin: 10px 0px 0px 0px;
     border-top: 1px solid #444;
     border-bottom: 1px solid #444;
     overflow: scroll;
-    min-height: 100px;
+
+
 }
 
 .button-container{
     display: flex;
     justify-content: center;
-    margin: 10px 0px;
+    flex: 0 0 auto;
+    border-bottom: 1px solid #444;
 }
 
 .button{
@@ -236,9 +303,25 @@ body {
     height: 40px;
 }
 
+.icon-button {
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+    margin: 10px;
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+#right { background-image: url(images/12584363l.svg); }
+#left { background-image: url(images/4195755l.svg); }
+#up { background-image: url(images/up.svg); }
+#down { background-image: url(images/down.svg); }
+
 
 .css-button-container {
-    margin: 0px ;
+    margin: 0px 0px -1px 0px;
+    flex: 0 0 auto;
 }
 
 .css-button {
@@ -311,11 +394,11 @@ body {
 #high {
     width: 100px;
     height: 100px;
-    background: #0000ff50;
+    border: 1px solid #0069FF;
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 666777888999;
+    z-index: 1001;
     display: none;
     -webkit-user-select: none;
     pointer-events: none;
@@ -324,15 +407,12 @@ body {
 #high2 {
     width: 100px;
     height: 100px;
-    border: 2px solid #0000ff;
+    border: 1px solid #E20053;
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 566777888999;
+    z-index: 1001;
     display: none;
     -webkit-user-select: none;
     pointer-events: none;
 }
-
-
-
