@@ -1,15 +1,15 @@
 
 @font-face {
-font-family: "Roboto-Light";src:url("static/Roboto-Light.woff") format("woff"),local("Roboto Light")}
-@font-face {
-font-family: "Roboto-Black";src:url("static/Roboto-Black.woff") format("woff"),local("Roboto Black")}
-@font-face {
-font-family: "Roboto-Italic";src:url("static/Roboto-Italic.woff") format("woff"),local("Roboto Italic")}
-@font-face {
-font-family: "Roboto-Regular";src:url("static/Roboto-Regular.woff") format("woff"),local("Roboto")}
+font-family: "Roboto-Bold";src:url("static/Roboto-Bold.woff") format("woff"),local("Roboto Bold")}
 @font-face {
 font-family: "Roboto-Medium";src:url("static/Roboto-Medium.woff") format("woff"),local("Roboto Medium")}
 @font-face {
-font-family: "Roboto-Bold";src:url("static/Roboto-Bold.woff") format("woff"),local("Roboto Bold")}
+font-family: "Roboto-Regular";src:url("static/Roboto-Regular.woff") format("woff"),local("Roboto")}
 @font-face {
 font-family: "Sophis-Icons";src:url("static/Sophis-Icons-Sophis-Icons.woff") format("woff"),local("Sophis-Icons")}
+@font-face {
+font-family: "Roboto-Light";src:url("static/Roboto-Light.woff") format("woff"),local("Roboto Light")}
+@font-face {
+font-family: "Roboto-Italic";src:url("static/Roboto-Italic.woff") format("woff"),local("Roboto Italic")}
+@font-face {
+font-family: "Roboto-Black";src:url("static/Roboto-Black.woff") format("woff"),local("Roboto Black")}
