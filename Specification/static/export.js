@@ -1,6 +1,14 @@
-"use strict";
-
 import { Antetype, initializeAntetype } from './modules/viewer.js';
+
+
+// for WKWebView:
+if (!window.exporter 
+    && window.webkit 
+    && window.webkit.messageHandlers 
+    && window.webkit.messageHandlers.exportController
+    && window.webkit.messageHandlers.exportController.postMessage) {
+    window.exporter = { message: (message) => window.webkit.messageHandlers.exportController.postMessage(message) };
+}
 
 function init_export() {
     initializeAntetype(document.body);

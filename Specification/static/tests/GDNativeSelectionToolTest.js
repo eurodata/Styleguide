@@ -48,7 +48,6 @@ QUnit.test("mouse drag on screen starts selection rect", function(assert) {
 
 
 QUnit.test("test selection", function(assert) {
-
     let command = null;
     this.at.__proto__.send = s => command = s;
 
@@ -105,3 +104,81 @@ QUnit.test("handle drag tool", function(assert) {
     assert.ok( this.at.currentTool instanceof GDNativeHandleDragTool );
 });
 
+
+QUnit.test("testKeyDownDelete", function(assert) {
+    let command = null;
+    this.at.__proto__.send = s => command = s;
+
+    let preventDefaultCalled = false;
+    let preventDefaultFun = () => preventDefaultCalled=true; 
+
+    this.at.selectFigures([this.cell]);
+
+    this.tool.keyDown( {key: "Delete", preventDefault: preventDefaultFun});
+    assert.equal(command, "/deleteSelection");
+    assert.ok(preventDefaultCalled);
+    preventDefaultCalled = false;
+
+    this.tool.keyDown( {key: "Backspace", preventDefault: preventDefaultFun});
+    assert.equal(command, "/deleteSelection");
+    assert.ok(preventDefaultCalled);
+});
+
+QUnit.test("tabKey", function(assert) {
+    let otherCell = this.at.project.createBasicCellWithBounds(10,10,10,10);
+    this.screen.addComponent(otherCell);
+    this.at.rebuildRenderObjects(this.screen);
+
+    this.at.selectFigures([this.cell]);
+
+    let command = null;
+    this.at.__proto__.send = s => command = s;
+
+    let preventDefaultCalled = false;
+    let preventDefaultFun = () => preventDefaultCalled=true; 
+
+    this.tool.keyDown( {key: "Tab", 
+            preventDefault: preventDefaultFun,
+            shiftKey: false});
+    assert.equal( this.at.selectedFigures[0].objectID, otherCell.objectID);
+    assert.equal(command, "select/" + otherCell.objectID);
+    assert.ok(preventDefaultCalled);
+
+    this.tool.keyDown( {key: "Tab", 
+            preventDefault: preventDefaultFun,
+            shiftKey: true});
+    assert.equal( this.at.selectedFigures[0].objectID, this.cell.objectID);
+    assert.equal(command, "select/" + this.cell.objectID);
+    assert.ok(preventDefaultCalled);
+});
+
+QUnit.test("up/down arrow", function(assert) {
+    let otherCell = this.at.project.createBasicCellWithBounds(10,10,10,10);
+    this.cell.addComponent(otherCell);
+    this.at.rebuildRenderObjects(this.screen);
+
+    this.at.selectFigures([this.cell]);
+
+    let command = null;
+    this.at.__proto__.send = s => command = s;
+
+    let preventDefaultCalled = false;
+    let preventDefaultFun = () => preventDefaultCalled=true; 
+
+    this.tool.keyDown( {key: "ArrowDown", 
+            preventDefault: preventDefaultFun,
+            metaKey: true});
+ 
+    assert.equal( this.at.selectedFigures[0].objectID, otherCell.objectID);
+    assert.equal(command, "select/" + otherCell.objectID);
+    assert.ok(preventDefaultCalled);
+
+    preventDefaultCalled = false;
+    this.tool.keyDown( {key: "ArrowUp", 
+            preventDefault: preventDefaultFun,
+            metaKey: true});
+ 
+    assert.equal( this.at.selectedFigures[0].objectID, this.cell.objectID);
+    assert.equal(command, "select/" + this.cell.objectID);
+    assert.ok(preventDefaultCalled);
+});

@@ -1,0 +1,36 @@
+/* currently the :root rule needs to stay on top, see updateScreenBounds in drawing-board.js*/
+:root {
+    --handle-size: 5px;
+    --screenWidth: 1080px;
+    --screenHeight: 720px;
+}
+
+html {
+    height: 100%;
+    background: lightgrey;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    /*
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+    overflow: hidden;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin-left: calc(-1 * var(--screenWidth)/2);
+    margin-top: calc(-1 * var(--screenHeight)/2);
+}
+
+#screenframe{
+    background: white; 
+    width: var(--screenWidth); 
+    height: var(--screenHeight);
+    transform: scale(1, 1);
+}

@@ -84,6 +84,11 @@
       return newText;
   }
 
+  /**
+   * 
+   * @param {HTMLElement} DOMElement the element to measure
+   * @returns {Object} the bounds (top,left,with,height) 
+   */
   function globalBoundsOfElement(DOMElement) {
       var r = DOMElement.getBoundingClientRect();
       var offsetX = window.scrollX;
@@ -665,8 +670,8 @@
       const cellActiveLayout = cell.valueForKeyInStateWithIdentifier("activeLayout", state);
       const cellXPosition = cell.valueForKeyInStateWithIdentifier("x", state);
       const cellYPosition = cell.valueForKeyInStateWithIdentifier("y", state);
-      const cellActiveVerticalLayout = cell.valueForKeyInStateWithIdentifier("activeVerticalAlignment", state);
-      const cellActiveHorizontalLayout = cell.valueForKeyInStateWithIdentifier("activeHorizontalAlignment", state);
+      const cellActiveVerticalAlignment = cell.valueForKeyInStateWithIdentifier("activeVerticalAlignment", state);
+      const cellActiveHorizontalAlignment = cell.valueForKeyInStateWithIdentifier("activeHorizontalAlignment", state);
       const cellVerticalResizing = cell.valueForKeyInStateWithIdentifier("verticalResizing", state);
 
       // Necessary container cell properties
@@ -678,8 +683,8 @@
       const containerPaddingBottom = hasContainer ? container.valueForKeyInStateWithIdentifier("paddingBottom", containerState) : "0";
       const containerPaddingLeft = hasContainer ? container.valueForKeyInStateWithIdentifier("paddingLeft", containerState) : "0";
       const containerPaddingRight = hasContainer ? container.valueForKeyInStateWithIdentifier("paddingRight", containerState) : "0";
-      const containerVerticalLayout = hasContainer ? container.valueForKeyInStateWithIdentifier("verticalAlignment", containerState) : undefined;
-      const containerHorizontalLayout = hasContainer ? container.valueForKeyInStateWithIdentifier("horizontalAlignment", containerState) : undefined;
+      const containerVerticalAlignment = hasContainer ? container.valueForKeyInStateWithIdentifier("verticalAlignment", containerState) : undefined;
+      const containerHorizontalAlignment = hasContainer ? container.valueForKeyInStateWithIdentifier("horizontalAlignment", containerState) : undefined;
 
       // Set layout policy code and active layout properties
       // Free Layout 
@@ -698,11 +703,11 @@
           style.right = "unset";
           style.top = "unset";
           style.bottom = "unset";
-          const horizontalLayoutType = cellActiveLayout ? cellActiveHorizontalLayout : containerHorizontalLayout;
-          const verticalLayoutType = cellActiveLayout ? cellActiveVerticalLayout : containerVerticalLayout;
+          const horizontalAlignment = cellActiveLayout ? cellActiveHorizontalAlignment : containerHorizontalAlignment;
+          const verticalAlignment = cellActiveLayout ? cellActiveVerticalAlignment : containerVerticalAlignment;
 
           let justify = "";
-          switch(horizontalLayoutType) {
+          switch(horizontalAlignment) {
               case GDLeftAlignment: 
                   justify = "start";
                   break;
@@ -715,7 +720,7 @@
           }
           
           let align = "";
-          switch(verticalLayoutType) {
+          switch(verticalAlignment) {
               case GDTopAlignment: 
                   align = "start";
                   break;
@@ -743,7 +748,7 @@
 
           // Check if alignment layout or active layout
 
-          switch(cellActiveHorizontalLayout) {
+          switch(cellActiveHorizontalAlignment) {
               case GDLeftAlignment: 
                   style.left = "calc(0px + "+containerPaddingLeft+"px)";
                   style.right = "unset";
@@ -765,7 +770,7 @@
                   break;
           }
           
-          switch(cellActiveVerticalLayout) {
+          switch(cellActiveVerticalAlignment) {
               case GDTopAlignment: 
                   style.top = "calc(0px + "+containerPaddingTop+"px)";
                   style.bottom = "unset";
@@ -1892,14 +1897,15 @@
               dimensionProperties.updateFunction(style, figure, stateIdentifier, containerStateIdentifier);
           }
           
-          // Update direct children of container after layout policy change
-          if(key == "layoutPolicyCode") {
-              if(figure.orderedComponents) {
-                  this.updateLayoutCells(figure.orderedComponents, containerStateIdentifier);
+          // for some special cases we have to adjust the children too:
+          if (figure.orderedComponents) {
+              const cellUsesStackedAlignment = figure.valueForKeyInStateWithIdentifier("layoutPolicyCode", stateIdentifier) == GDAlignmentLayoutPolicyCode;            const stackedChildrenNeedUpdate = (key == "verticalAlignment" || key == "horizontalAlignment") && cellUsesStackedAlignment;
+              if (key == "layoutPolicyCode" || stackedChildrenNeedUpdate) {
+                  this.updateLayoutCells(figure.orderedComponents, stateIdentifier);
               }
           }
           
-          this.updateLayoutCells(this.detectCellsThatNeedAnUpdate(key, figure, stateIdentifier), containerStateIdentifier);  
+          this.updateLayoutCells(this.detectCellsThatNeedAnUpdate(key, figure), stateIdentifier);  
 
           if (customProperties.shouldUse(key, figure, stateIdentifier)) {
               customProperties.updateFunction(style, figure, stateIdentifier);
@@ -1924,6 +1930,8 @@
           return cellsNeedUpdate;
       }
       
+      // always the same: this and the executeFinalWidgetLayoutPass do more are similar 
+      // and both feel weired, not sure what to do about it. 
 
       updateLayoutCells(cells, containerStateIdentifier) {
           cells.forEach( figure => {
@@ -2875,7 +2883,8 @@
       }
 
       /**
-          the widget of this cell.  {@link GDWidget}
+          the widget of this cell.  
+          @returns {GDWidget}
       */
       get widget() {
           return this.rootInstanceCell.definition.widget;
@@ -3727,7 +3736,6 @@
 
       /**
           @returns {string} the identifier of this state. 
-          
       */
       get identifier() {
            return this._identifier; 
@@ -3831,7 +3839,7 @@
       /*
        * return this state in all breakpoints (including default one, where 
        * designBreakPointName is null. Ordered ascending (smallest breakpoint > default one).
-       * @returns {Array<GDState>}
+       * @returns {Array<GDState>}    this state in all breakpoints
        */
       breakPointStates() {
           var name = this._name;
@@ -4693,14 +4701,14 @@
       }
 
       /**
-          hierarchy {@link GDWidgetCellDefinition} of the widget cells. 
+          @returns {GDWidgetRootCellDefinition} hierarchy  of the widget cells. 
       */
       get hierarchy() {
           return this._hierarchy;
       }
 
-      /**
-          the states {@link GDState} of this widget. 
+      /** 
+          @returns {GDState[]} the states of this widget. 
       */
       get states() {
           return this._states;
@@ -4729,12 +4737,20 @@
       }
 
       /**
-          return all instances {@link GDWidgetInstanceRootCell} of this widget
+          @returns {GDWidgetInstanceRootCell[]} all instances of this widget
       */
       get instances() {
           return this.hierarchy.instances;
       }
 
+      /**
+       * For Actions using states, we often need states similar to a given one. 
+       * For example siblings of a cell might return widget instances of different
+       * widgets, to change all to a state named 'foo' you can ask the widget if 
+       * it contains such a state
+       * @param {GDState} state 
+       * @returns {GDState|undefined} the corresponding state
+       */
       stateMatchingState(state) {
           if (state.widget === this)
               return state;
@@ -4925,7 +4941,9 @@
   }
   GDModelObject.register(GDScreenDefinition);
 
-
+  /**
+   * handles an event of its eventType. Contains ActionSets for the actions. 
+   */
   class GDEventHandler extends GDModelObject {
       constructor(dictionary, project) {
           super(dictionary, project);
@@ -4944,6 +4962,11 @@
           this._runTool = null;
       }
 
+      /**
+       * starts the ActionSet at the given index
+       * @param {int} index 
+       * @param {Event} e 
+       */
       startExecutingActionSetAtIndex(index,e) {
           let lastActionSet = null;
           let startImmediately = [];
@@ -5033,6 +5056,14 @@
           }
       }
 
+      /**
+       * adds an event-listener for the given type. Automatically calls the right
+       * event-handler
+       * 
+       * @param {AntetypeWeb} at antetype
+       * @param {HTMLElement} DOMElement 
+       * @param {String} type the event type
+       */
       addEventListener(at, DOMElement, type) {
           const fn = e => at.currentTool.executeEventHandler(this,e);
           DOMElement.addEventListener(type, fn);
@@ -5042,6 +5073,9 @@
       /**
           events which are not bubbling up are handled here. see {@link AntetypeWeb#addEventListeners}
           for the other events
+
+          @param {AntetypeWeb} at 
+          @param {GDWidgetInstanceCell} cell
       */
       updateEventListeners(at, cell) {
           if (cell.DOMElement === undefined) {
@@ -5131,7 +5165,8 @@
 
 
   /**
-      an ActionSet (currently called Action group in the GUI). 
+      an ActionSet (currently called Action group in the GUI). Knows its targetCells
+      and its Actions
   */
   class GDActionSet extends GDModelObject {
       constructor(dictionary, project) {
@@ -5305,6 +5340,9 @@
           this._nextActionTimeout = null;
       }
 
+      /**
+       * @returns {String} the CSS transition string for its duration, curve and delay
+       */
       cssTransition() {
           if (!this.animate)
               return "";
@@ -5342,7 +5380,7 @@
       /**
        * target-Figures for this action. Uses specifier and its ActionSet to compute. 
        *
-       * @return {Array} the target cells (Antetype-cells)
+       * @return {Array<GDWidgetInstanceCell>} the target cells (Antetype-cells)
        */
       get targetFigures() {
           function targetsForElements(code, elements) {
@@ -5577,7 +5615,9 @@
   GDModelObject.register(GDPropertyChangeAction);
 
 
-
+  /**
+   * Changes to another state
+   */
   class GDChangeStateAction extends GDAction {
       constructor(dictionary, project) {
           super(dictionary, project); 
@@ -5601,7 +5641,9 @@
   }
   GDModelObject.register(GDChangeStateAction);
 
-
+  /**
+   * hides its targetCells
+   */
   class GDHideAction extends GDAction {
       execute(e) {
           this.targetFigures.forEach( (figure) => {
@@ -5616,7 +5658,9 @@
   }
   GDModelObject.register(GDHideAction);
 
-
+  /**
+   * shows the targetCells
+   */
   class GDShowAction extends GDAction {
       execute(e) {
           this.targetFigures.forEach( (figure) => {
@@ -5631,7 +5675,9 @@
   }
   GDModelObject.register(GDShowAction);
 
-
+  /**
+   * go to the given screen. 
+   */
   class GDGotoScreenAction extends GDAction {
       constructor(dictionary, project) {
           super(dictionary, project);
@@ -6905,12 +6951,20 @@
 
   class GDRubberbandDragHandler extends GDDragHandler {
       possibleDragOperations(e) {
+
+          // for old WebView:
           for (let i=0; i<e.dataTransfer.types.length; i++) {
               const type = e.dataTransfer.types[i];
               if (type == GDRubberbandPassengerPBoardType) {
                   return GDDragHandler.NSDragOperationLink;
               }
           }
+
+          // for WKWebView:
+          if (e.dataTransfer.types.length == 1 && e.dataTransfer.types[0] == "text/uri-list") {
+              return GDDragHandler.NSDragOperationLink;
+          }
+
           return GDDragHandler.NSDragOperationNone;  
       }
 
@@ -8710,6 +8764,103 @@
               }
           }
       }
+
+      handleTab(e) {
+          const selection = this.at.selectedFigures;
+          if (selection.length == 0) {
+              return;
+          }
+
+          let selectedCell = selection[selection.length-1];
+          let container = selectedCell.container;
+
+          let visibleCells = container.orderedComponents.filter( c => c.getProperty("isDisplay") && c.getProperty("isVisible"));
+          if (visibleCells.length == 0) {
+              return;
+          }
+
+          e.preventDefault();
+
+          let index = visibleCells.indexOf(selectedCell);
+          if (index == -1) {
+              index = 0;
+          }
+
+          let nextCell = null;
+
+          if (e.shiftKey) {
+              if (index > 0 && index < visibleCells.length) {
+                  nextCell = visibleCells[index-1];
+              } 
+              if (nextCell == null) {
+                  nextCell = visibleCells[visibleCells.length-1];
+              }
+          } else {
+              if (index < visibleCells.length - 1) {
+                  nextCell = visibleCells[index+1];
+              }
+              if (nextCell == null) {
+                  nextCell = visibleCells[0];
+              }
+          }
+
+          this.at.selectFigures([nextCell]);
+          this.at.send("select/" + nextCell.objectID);    
+      }
+
+      handleArrowDown() {
+          const selection = this.at.selectedObjects;
+          if (selection.length == 0)
+              return;
+
+          const selectedCell = selection[selection.length-1];
+          let visibleCells = selectedCell.orderedComponents.filter( c => c.getProperty("isDisplay") && c.getProperty("isVisible"));
+          if (visibleCells.length == 0) {
+              return;
+          }
+
+          const nextCell = visibleCells[0];
+          this.at.selectFigures([nextCell]);
+          this.at.send("select/" + nextCell.objectID);    
+      }
+
+      handleArrowUp() {
+          const selection = this.at.selectedFigures;
+          if (selection.length == 0)
+              return;
+
+          const selectedCell = selection[selection.length-1];
+          const container = selectedCell.container;
+
+          if (!container) 
+              return;
+
+          this.at.selectFigures([container]);
+          this.at.send("select/" + container.objectID);    
+      }
+
+      keyDown(e) {
+          if (e.key == "Delete" || e.key == "Backspace") {
+              this.at.send("/deleteSelection");
+              e.preventDefault();
+          } else if (e.key == "Tab") {
+              this.handleTab(e);
+          } else if (e.key == "ArrowDown" && e.metaKey) {
+              this.handleArrowDown();
+              e.preventDefault();
+          } else if (e.key == "ArrowUp" && e.metaKey) {
+              this.handleArrowUp();
+              e.preventDefault();
+          } else if (e.key == "xEnter") { // later ...
+              if (this.at.selectedFigures.length > 0) {
+                  const cell = this.at.selectedFigures[0];
+                  const textContent = cell.getProperty("textString");
+                  if (textContent && textContent.length > 0) {
+                      this.at.editTextOfFigure(cell);
+                  }
+              }
+          }
+      }
   }
 
   class GDNativeHandleDragTool extends GDTool {
@@ -8720,7 +8871,7 @@
           this.guideCoordinator.prepareWithSelections(this.at.selectedObjects);
 
           this.handle = event.target.handle;
-          this.handle.startDragAtPoint(this, event.clientX, event.clientY);
+          this.handle.startDragAtPoint(this, scaleUsingZoomFactor(event.clientX), scaleUsingZoomFactor(event.clientY));
           this.originalBounds = this.boundsOfCell(this.handle.owner);
 
       }
@@ -8740,7 +8891,7 @@
       }
 
       mouseDragged(e) {
-          this.handle.dragged(this, e.clientX, e.clientY);
+          this.handle.dragged(this, scaleUsingZoomFactor(e.clientX), scaleUsingZoomFactor(e.clientY));
           this.constrained = e.shiftKey;
           this.centered = e.altKey;
           this.guideCoordinator.updateDisplayedSmartGuidesForView(this.at);
@@ -8762,6 +8913,14 @@
       }
   }
 
+  // Compensate for using the CSS-zoom-property if the drawing board is zoomed.
+  function scaleUsingZoomFactor(n) {
+      if (document.body.style.zoom) {
+          return n / document.body.style.zoom
+      }
+      return n;
+  }
+
   /**
    * Tool for dragging cells in free-layout. This is part of #1050 (using only native
    * JavaScript for event handling)
@@ -8777,8 +8936,8 @@
           this.oldX = draggedCell.valueForKeyInStateWithIdentifier("x", draggedCell.activeStateIdentifier);
           this.oldY = draggedCell.valueForKeyInStateWithIdentifier("y", draggedCell.activeStateIdentifier);
 
-          this.lastX = event.clientX;
-          this.lastY = event.clientY;
+          this.lastX = scaleUsingZoomFactor(event.clientX);
+          this.lastY = scaleUsingZoomFactor(event.clientY);
       }
 
       activate() {
@@ -8796,10 +8955,10 @@
 
           // not sure why, but Event.movementX/Y behaves strange in the WebView, looks like it is somehow scaled ....
           // therefor we calculate it here: 
-          let movementX = e.clientX - this.lastX;
-          let movementY = e.clientY - this.lastY;
-          this.lastX = e.clientX;
-          this.lastY = e.clientY;
+          let movementX = scaleUsingZoomFactor(e.clientX) - this.lastX;
+          let movementY = scaleUsingZoomFactor(e.clientY) - this.lastY;
+          this.lastX = scaleUsingZoomFactor(e.clientX);
+          this.lastY = scaleUsingZoomFactor(e.clientY);
 
           let [dx, dy] = this.guideCoordinator.snapDelta(movementX, movementY);
           this.at.selectedObjects.forEach(c => {
@@ -9415,6 +9574,7 @@
       }
 
       stopPresentationMode() {
+          this.at.disablePseudoStates();
           this._visitedScreens.forEach(s => this.at.deleteCachedScreenWithObjectID(s.objectID));
       }
 
@@ -9573,6 +9733,9 @@
           window.requestAnimationFrame(selectionUpdater);
       }
   }
+  /**
+   * @type {AntetypeWeb}
+   */
   let Antetype = null;
 
   /**
@@ -9696,6 +9859,12 @@
           }
           if (usesSelectionTool) {
               this.currentTool = this.selectionTool;
+          }
+      }
+
+      updateScreenBounds(bounds) {
+          if (window.parent && window.parent.updateScreenBounds) {
+              window.parent.updateScreenBounds(bounds);
           }
       }
 
@@ -10790,6 +10959,8 @@
       rebuildRenderObjects(screen) {
           this.dispatchEvent({type: 'unloadscreen', defaultPrevented: false});
           this.currentScreen.cleanupStyles();     // #606 remove old styles ... 
+         
+          this.updateScreenBounds({width:screen.getProperty("width"), height: screen.getProperty("height")});
           screen.createStyleSheets();
           const newScreenDOMElement = this.buildDOMForCell(screen);
           
@@ -11064,11 +11235,21 @@
   // using a compile-time-switch. Since the Cocoa <-> JavaScript-communication is quiet 
   // different we add here some fake-objects to mimique the old one: 
   if (window.navigator.userAgent.indexOf("Antetype") != -1 && window.webkit && window.serverDocument == undefined) {
-      window.serverDocument = {
-          handleCommandPath: (s) => {
-              window.webkit.messageHandlers.serverDocument.postMessage({"command": "handleCommandPath", "parameters": s});
-          }
-      };
+
+      if (window && window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.serverDocument) {
+          window.serverDocument = {
+              handleCommandPath: (s) => {
+                  window.webkit.messageHandlers.serverDocument.postMessage({"command": "handleCommandPath", "parameters": s});
+              }
+          };
+      } else if (window.parent && window.parent.webkit && window.parent.webkit.messageHandlers && window.parent.webkit.messageHandlers.serverDocument) {
+          window.serverDocument = {
+              handleCommandPath: (s) => {
+                  window.parent.webkit.messageHandlers.serverDocument.postMessage({"command": "handleCommandPath", "parameters": s});
+              }
+          };
+      }
+
 
   //    window.workingAreaView = { }
       //    window.webViewController = {}
@@ -12054,6 +12235,14 @@
               let screen = Antetype.project.orderedScreens[index];
               Antetype.gotoScreen(screen);
           }
+          break;  
+          case "gotoScreenWithID":  {
+              let identifier = e.data.parameters;
+              let screen = Antetype.project.orderedScreens.find( s => s.objectID == identifier);
+              if (screen) {
+                  Antetype.gotoScreen(screen);
+              }
+          }
           break;
           case "showInteractions":
               Antetype.currentTool.keyDown({key: "Alt"});
@@ -12118,7 +12307,7 @@
       // if the screen is changed make sure the parent-frame (or iOS-viewer) get the current screen index
       var screenChangeFunction = function() {
           gdPostViewerMessage("didChangeScreen", {"currentScreenIndex": antetype.currentScreenIndex});
-          sendToParentWindow({command: "selectScreenWithIndex", parameters: antetype.currentScreenIndex});
+          sendToParentWindow({command: "selectScreenWithIndex", parameters: {"index": antetype.currentScreenIndex, "objectID": antetype.currentScreen.objectID}});
           sendToParentWindow({command: "updateIFrame", parameters: extractScreenSizeInformation(antetype.currentScreen)});
       };
 

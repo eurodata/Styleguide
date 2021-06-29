@@ -1,7 +1,7 @@
 "use strict";
 
 import { GDProject, GDAlignmentLayoutPolicyCode, GDCenterAlignment, GDHorizontalBoxLayoutPolicyCode, GDTriangleCellType,
-    GDVerticalBoxLayoutPolicyCode,  GDFlexResizing, GDIntrinsicResizing, GDFixResizing } from '../modules/model.js';
+    GDVerticalBoxLayoutPolicyCode,  GDFlexResizing, GDIntrinsicResizing, GDFixResizing, GDFixedLayoutPolicyCode } from '../modules/model.js';
 import { GDCSSGenerator } from '../modules/styling.js';
 import { layoutPolicyCodeAndActiveLayoutCSS, layoutCSS, customCSS, borderRadiusCSS,displayCSS, displayProperties,  horizontalResizingCSS, verticalResizingCSS } from '../modules/styling.js';
 
@@ -237,4 +237,17 @@ QUnit.test("issue 825 no min/max for manual height", function(assert) {
     assert.equal(style.minHeight, `${cell.valueForKeyInStateWithIdentifier("minimumHeight", null)}px`);
     assert.equal(style.maxHeight, `${cell.valueForKeyInStateWithIdentifier("maximumHeight", null)}px`);
     assert.equal(style.height, `${cell.valueForKeyInStateWithIdentifier("height", null)}px`);
+});
+
+QUnit.test("issue 1121 make sure children are updated after container layoutPolicy-change", function(assert) {
+    let container = createTestCell({"layoutPolicyCode": GDFixedLayoutPolicyCode});
+    let cell = createTestCell({}, container);
+
+    let style = {transform: ""};
+    let cssGenerator = new GDCSSGenerator();
+    let usedStateIdentifer = null;
+    cssGenerator.updateLayoutCells = (_cells, stateIdentifier) => usedStateIdentifer = stateIdentifier;
+    cssGenerator.updateStyleProperty(style,container,"layoutPolicyCode", "stateIdentifier", null);
+
+    assert.equal(usedStateIdentifer, "stateIdentifier", "use the stateIdentifer of the container");
 });

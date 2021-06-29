@@ -1,5 +1,6 @@
 import { AlignmentLine } from './viewer.js';
 import { GDModelObject, GDState,  GDVectorCellType, GDMouseClickEventType, CPColor } from './model.js';
+import { sizeHighlightCell, globalBoundsOfElement } from './utils.js';
 
 
 export function addCommands(antetype) {
@@ -595,5 +596,51 @@ export function addCommands(antetype) {
         at.nativeMouseSelection = flag;
     });
 
+    antetype.registerCommand("updateScreenBounds", function(json, at) {
+        const bounds = json["bounds"];
+        at.updateScreenBounds(bounds);
+    });
+
+    let highlightDivs;
+    let highlightTimeoutID;
+    antetype.registerCommand("highlightCells", function(json, at) {
+        if (highlightDivs) {
+            highlightDivs.forEach( d => d.remove());
+        }
+        if (highlightTimeoutID) {
+            window.clearTimeout(highlightTimeoutID);
+        }
+
+        highlightDivs = [];
+
+        const cellIDs = json["cells"];
+    
+        cellIDs.forEach( cellID => {
+            const cellElement = at.getElementById(cellID);
+            if (cellElement && cellElement.figure) { 
+                const cell = cellElement.figure;
+                let element = document.createElement("div");
+                element.className = "rubberbandrect";
+                document.body.appendChild(element);
+                highlightDivs.push(element);
+                let b = globalBoundsOfElement(cell.DOMElement);
+                sizeHighlightCell(element, b);
+            }
+        });
+
+        highlightTimeoutID = window.setTimeout(() => highlightDivs.forEach( d => d.remove() ), 3000);
+    }); 
+
+    antetype.registerCommand("removeHighlightCells", function(json,at) {
+        if (highlightTimeoutID) {
+            window.clearTimeout(highlightTimeoutID);
+        }
+
+        if (highlightDivs) {
+            highlightDivs.forEach( d => d.remove());
+        }
+
+        highlightDivs = [];
+    });
 }
 

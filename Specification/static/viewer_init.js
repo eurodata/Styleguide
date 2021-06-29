@@ -24,6 +24,14 @@ window.addEventListener("message", function(e) {
             let screen = Antetype.project.orderedScreens[index];
             Antetype.gotoScreen(screen);
         }
+        break;  
+        case "gotoScreenWithID":  {
+            let identifier = e.data.parameters;
+            let screen = Antetype.project.orderedScreens.find( s => s.objectID == identifier);
+            if (screen) {
+                Antetype.gotoScreen(screen);
+            }
+        }
         break;
         case "showInteractions":
             Antetype.currentTool.keyDown({key: "Alt"});
@@ -88,7 +96,7 @@ window.addEventListener("load", function() {
     // if the screen is changed make sure the parent-frame (or iOS-viewer) get the current screen index
     var screenChangeFunction = function() {
         gdPostViewerMessage("didChangeScreen", {"currentScreenIndex": antetype.currentScreenIndex});
-        sendToParentWindow({command: "selectScreenWithIndex", parameters: antetype.currentScreenIndex});
+        sendToParentWindow({command: "selectScreenWithIndex", parameters: {"index": antetype.currentScreenIndex, "objectID": antetype.currentScreen.objectID}});
         sendToParentWindow({command: "updateIFrame", parameters: extractScreenSizeInformation(antetype.currentScreen)});
     };
 

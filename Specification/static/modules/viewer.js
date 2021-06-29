@@ -100,6 +100,9 @@ function selectionUpdater() {
         window.requestAnimationFrame(selectionUpdater);
     }
 }
+/**
+ * @type {AntetypeWeb}
+ */
 export let Antetype = null;
 
 /**
@@ -223,6 +226,12 @@ export class AntetypeWeb {
         }
         if (usesSelectionTool) {
             this.currentTool = this.selectionTool;
+        }
+    }
+
+    updateScreenBounds(bounds) {
+        if (window.parent && window.parent.updateScreenBounds) {
+            window.parent.updateScreenBounds(bounds);
         }
     }
 
@@ -1319,6 +1328,8 @@ export class AntetypeWeb {
     rebuildRenderObjects(screen) {
         this.dispatchEvent({type: 'unloadscreen', defaultPrevented: false});
         this.currentScreen.cleanupStyles();     // #606 remove old styles ... 
+       
+        this.updateScreenBounds({width:screen.getProperty("width"), height: screen.getProperty("height")});
         screen.createStyleSheets();
         const newScreenDOMElement = this.buildDOMForCell(screen);
         
@@ -1598,11 +1609,21 @@ export function initializeAntetypeViewer() {
 // using a compile-time-switch. Since the Cocoa <-> JavaScript-communication is quiet 
 // different we add here some fake-objects to mimique the old one: 
 if (window.navigator.userAgent.indexOf("Antetype") != -1 && window.webkit && window.serverDocument == undefined) {
-    window.serverDocument = {
-        handleCommandPath: (s) => {
-            window.webkit.messageHandlers.serverDocument.postMessage({"command": "handleCommandPath", "parameters": s});
+
+    if (window && window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.serverDocument) {
+        window.serverDocument = {
+            handleCommandPath: (s) => {
+                window.webkit.messageHandlers.serverDocument.postMessage({"command": "handleCommandPath", "parameters": s});
+            }
+        }
+    } else if (window.parent && window.parent.webkit && window.parent.webkit.messageHandlers && window.parent.webkit.messageHandlers.serverDocument) {
+        window.serverDocument = {
+            handleCommandPath: (s) => {
+                window.parent.webkit.messageHandlers.serverDocument.postMessage({"command": "handleCommandPath", "parameters": s});
+            }
         }
     }
+
 
 //    window.workingAreaView = { }
     //    window.webViewController = {}

@@ -106,12 +106,20 @@ export class GDCellDragHandler extends GDDragHandler {
 
 export class GDRubberbandDragHandler extends GDDragHandler {
     possibleDragOperations(e) {
+
+        // for old WebView:
         for (let i=0; i<e.dataTransfer.types.length; i++) {
             const type = e.dataTransfer.types[i];
             if (type == GDRubberbandPassengerPBoardType) {
                 return GDDragHandler.NSDragOperationLink;
             }
         }
+
+        // for WKWebView:
+        if (e.dataTransfer.types.length == 1 && e.dataTransfer.types[0] == "text/uri-list") {
+            return GDDragHandler.NSDragOperationLink;
+        }
+
         return GDDragHandler.NSDragOperationNone;  
     }
 

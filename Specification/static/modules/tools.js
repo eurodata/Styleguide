@@ -3,7 +3,7 @@ import { transferEvent, stringFromContentEditable, globalBoundsOfElement, sizeHi
 import { GDMouseClickEventType, GDMouseDownEventType, GDMouseUpEventType, GDDoubleClickEventType, 
     GDTouchStartEventType, GDTouchEndEventType, GDTouchEnterEventType, 
     GDTouchLeaveEventType, GDTouchMoveEventType, GDScrollEventType, GDRightMouseClickEventType,
-    GDKeyDownEventType, GDKeyUpEventType, GDUnloadEventType, GDLoadEventType, GDState } from './model.js';
+    GDKeyDownEventType, GDKeyUpEventType, GDUnloadEventType, GDLoadEventType, GDState, GDVisibilityVisible } from './model.js';
 
 import { PaperCanvas } from './paper-antetype.js';
 import { GDGuideCoordinator } from './GDGuideCoordinator.js';
@@ -301,6 +301,103 @@ export class GDNativeSelectionTool extends GDTool {
             }
         }
     }
+
+    handleTab(e) {
+        const selection = this.at.selectedFigures;
+        if (selection.length == 0) {
+            return;
+        }
+
+        let selectedCell = selection[selection.length-1];
+        let container = selectedCell.container;
+
+        let visibleCells = container.orderedComponents.filter( c => c.getProperty("isDisplay") && c.getProperty("isVisible"));
+        if (visibleCells.length == 0) {
+            return;
+        }
+
+        e.preventDefault();
+
+        let index = visibleCells.indexOf(selectedCell);
+        if (index == -1) {
+            index = 0;
+        }
+
+        let nextCell = null;
+
+        if (e.shiftKey) {
+            if (index > 0 && index < visibleCells.length) {
+                nextCell = visibleCells[index-1];
+            } 
+            if (nextCell == null) {
+                nextCell = visibleCells[visibleCells.length-1];
+            }
+        } else {
+            if (index < visibleCells.length - 1) {
+                nextCell = visibleCells[index+1];
+            }
+            if (nextCell == null) {
+                nextCell = visibleCells[0];
+            }
+        }
+
+        this.at.selectFigures([nextCell]);
+        this.at.send("select/" + nextCell.objectID);    
+    }
+
+    handleArrowDown() {
+        const selection = this.at.selectedObjects;
+        if (selection.length == 0)
+            return;
+
+        const selectedCell = selection[selection.length-1];
+        let visibleCells = selectedCell.orderedComponents.filter( c => c.getProperty("isDisplay") && c.getProperty("isVisible"));
+        if (visibleCells.length == 0) {
+            return;
+        }
+
+        const nextCell = visibleCells[0];
+        this.at.selectFigures([nextCell]);
+        this.at.send("select/" + nextCell.objectID);    
+    }
+
+    handleArrowUp() {
+        const selection = this.at.selectedFigures;
+        if (selection.length == 0)
+            return;
+
+        const selectedCell = selection[selection.length-1];
+        const container = selectedCell.container;
+
+        if (!container) 
+            return;
+
+        this.at.selectFigures([container]);
+        this.at.send("select/" + container.objectID);    
+    }
+
+    keyDown(e) {
+        if (e.key == "Delete" || e.key == "Backspace") {
+            this.at.send("/deleteSelection");
+            e.preventDefault();
+        } else if (e.key == "Tab") {
+            this.handleTab(e);
+        } else if (e.key == "ArrowDown" && e.metaKey) {
+            this.handleArrowDown();
+            e.preventDefault();
+        } else if (e.key == "ArrowUp" && e.metaKey) {
+            this.handleArrowUp();
+            e.preventDefault();
+        } else if (e.key == "xEnter") { // later ...
+            if (this.at.selectedFigures.length > 0) {
+                const cell = this.at.selectedFigures[0];
+                const textContent = cell.getProperty("textString");
+                if (textContent && textContent.length > 0) {
+                    this.at.editTextOfFigure(cell);
+                }
+            }
+        }
+    }
 }
 
 export class GDNativeHandleDragTool extends GDTool {
@@ -311,7 +408,7 @@ export class GDNativeHandleDragTool extends GDTool {
         this.guideCoordinator.prepareWithSelections(this.at.selectedObjects);
 
         this.handle = event.target.handle;
-        this.handle.startDragAtPoint(this, event.clientX, event.clientY);
+        this.handle.startDragAtPoint(this, scaleUsingZoomFactor(event.clientX), scaleUsingZoomFactor(event.clientY));
         this.originalBounds = this.boundsOfCell(this.handle.owner);
 
     }
@@ -331,7 +428,7 @@ export class GDNativeHandleDragTool extends GDTool {
     }
 
     mouseDragged(e) {
-        this.handle.dragged(this, e.clientX, e.clientY);
+        this.handle.dragged(this, scaleUsingZoomFactor(e.clientX), scaleUsingZoomFactor(e.clientY));
         this.constrained = e.shiftKey;
         this.centered = e.altKey;
         this.guideCoordinator.updateDisplayedSmartGuidesForView(this.at);
@@ -353,6 +450,14 @@ export class GDNativeHandleDragTool extends GDTool {
     }
 }
 
+// Compensate for using the CSS-zoom-property if the drawing board is zoomed.
+function scaleUsingZoomFactor(n) {
+    if (document.body.style.zoom) {
+        return n / document.body.style.zoom
+    }
+    return n;
+}
+
 /**
  * Tool for dragging cells in free-layout. This is part of #1050 (using only native
  * JavaScript for event handling)
@@ -368,8 +473,8 @@ export class GDNativeFigureDragTool extends GDTool {
         this.oldX = draggedCell.valueForKeyInStateWithIdentifier("x", draggedCell.activeStateIdentifier);
         this.oldY = draggedCell.valueForKeyInStateWithIdentifier("y", draggedCell.activeStateIdentifier);
 
-        this.lastX = event.clientX;
-        this.lastY = event.clientY;
+        this.lastX = scaleUsingZoomFactor(event.clientX);
+        this.lastY = scaleUsingZoomFactor(event.clientY);
     }
 
     activate() {
@@ -387,10 +492,10 @@ export class GDNativeFigureDragTool extends GDTool {
 
         // not sure why, but Event.movementX/Y behaves strange in the WebView, looks like it is somehow scaled ....
         // therefor we calculate it here: 
-        let movementX = e.clientX - this.lastX;
-        let movementY = e.clientY - this.lastY;
-        this.lastX = e.clientX;
-        this.lastY = e.clientY;
+        let movementX = scaleUsingZoomFactor(e.clientX) - this.lastX;
+        let movementY = scaleUsingZoomFactor(e.clientY) - this.lastY;
+        this.lastX = scaleUsingZoomFactor(e.clientX);
+        this.lastY = scaleUsingZoomFactor(e.clientY);
 
         let [dx, dy] = this.guideCoordinator.snapDelta(movementX, movementY);
         this.at.selectedObjects.forEach(c => {
@@ -1006,6 +1111,7 @@ export class GDInplaceRunTool extends GDRunTool {
     }
 
     stopPresentationMode() {
+        this.at.disablePseudoStates();
         this._visitedScreens.forEach(s => this.at.deleteCachedScreenWithObjectID(s.objectID));
     }
 

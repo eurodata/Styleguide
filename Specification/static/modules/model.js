@@ -1,7 +1,7 @@
 /* eslint-disable no-prototype-builtins */
 import { GDStyleSheet } from "./GDStyleSheet.js";
 import { cssSelectorInstance, GDCSSTransition, cssSelector, cssClassNameForCell } from "./styling.js";
-import { Antetype } from './viewer.js';
+import { Antetype, AntetypeWeb } from './viewer.js';
 import { globalBoundsOfElement } from "./utils.js";
 import { GDLayoutPolicy } from "./layout-policy.js";
 
@@ -747,7 +747,8 @@ export class GDWidgetInstanceCell extends GDCompositeFigure {
     }
 
     /**
-        the widget of this cell.  {@link GDWidget}
+        the widget of this cell.  
+        @returns {GDWidget}
     */
     get widget() {
         return this.rootInstanceCell.definition.widget;
@@ -1599,7 +1600,6 @@ export class GDState extends GDModelObject {
 
     /**
         @returns {string} the identifier of this state. 
-        
     */
     get identifier() {
          return this._identifier; 
@@ -1703,7 +1703,7 @@ export class GDState extends GDModelObject {
     /*
      * return this state in all breakpoints (including default one, where 
      * designBreakPointName is null. Ordered ascending (smallest breakpoint > default one).
-     * @returns {Array<GDState>}
+     * @returns {Array<GDState>}    this state in all breakpoints
      */
     breakPointStates() {
         var name = this._name;
@@ -2578,14 +2578,14 @@ export class GDWidget extends GDModelObject {
     }
 
     /**
-        hierarchy {@link GDWidgetCellDefinition} of the widget cells. 
+        @returns {GDWidgetRootCellDefinition} hierarchy  of the widget cells. 
     */
     get hierarchy() {
         return this._hierarchy;
     }
 
-    /**
-        the states {@link GDState} of this widget. 
+    /** 
+        @returns {GDState[]} the states of this widget. 
     */
     get states() {
         return this._states;
@@ -2614,12 +2614,20 @@ export class GDWidget extends GDModelObject {
     }
 
     /**
-        return all instances {@link GDWidgetInstanceRootCell} of this widget
+        @returns {GDWidgetInstanceRootCell[]} all instances of this widget
     */
     get instances() {
         return this.hierarchy.instances;
     }
 
+    /**
+     * For Actions using states, we often need states similar to a given one. 
+     * For example siblings of a cell might return widget instances of different
+     * widgets, to change all to a state named 'foo' you can ask the widget if 
+     * it contains such a state
+     * @param {GDState} state 
+     * @returns {GDState|undefined} the corresponding state
+     */
     stateMatchingState(state) {
         if (state.widget === this)
             return state;
@@ -2810,7 +2818,9 @@ export class GDScreenDefinition extends GDWidgetRootCellDefinition {
 }
 GDModelObject.register(GDScreenDefinition);
 
-
+/**
+ * handles an event of its eventType. Contains ActionSets for the actions. 
+ */
 export class GDEventHandler extends GDModelObject {
     constructor(dictionary, project) {
         super(dictionary, project);
@@ -2829,6 +2839,11 @@ export class GDEventHandler extends GDModelObject {
         this._runTool = null;
     }
 
+    /**
+     * starts the ActionSet at the given index
+     * @param {int} index 
+     * @param {Event} e 
+     */
     startExecutingActionSetAtIndex(index,e) {
         let lastActionSet = null;
         let startImmediately = [];
@@ -2918,6 +2933,14 @@ export class GDEventHandler extends GDModelObject {
         }
     }
 
+    /**
+     * adds an event-listener for the given type. Automatically calls the right
+     * event-handler
+     * 
+     * @param {AntetypeWeb} at antetype
+     * @param {HTMLElement} DOMElement 
+     * @param {String} type the event type
+     */
     addEventListener(at, DOMElement, type) {
         const fn = e => at.currentTool.executeEventHandler(this,e);
         DOMElement.addEventListener(type, fn);
@@ -2927,6 +2950,9 @@ export class GDEventHandler extends GDModelObject {
     /**
         events which are not bubbling up are handled here. see {@link AntetypeWeb#addEventListeners}
         for the other events
+
+        @param {AntetypeWeb} at 
+        @param {GDWidgetInstanceCell} cell
     */
     updateEventListeners(at, cell) {
         if (cell.DOMElement === undefined) {
@@ -3016,7 +3042,8 @@ GDModelObject.register(GDEventHandler);
 
 
 /**
-    an ActionSet (currently called Action group in the GUI). 
+    an ActionSet (currently called Action group in the GUI). Knows its targetCells
+    and its Actions
 */
 export class GDActionSet extends GDModelObject {
     constructor(dictionary, project) {
@@ -3190,6 +3217,9 @@ export class GDAction extends GDModelObject {
         this._nextActionTimeout = null;
     }
 
+    /**
+     * @returns {String} the CSS transition string for its duration, curve and delay
+     */
     cssTransition() {
         if (!this.animate)
             return "";
@@ -3227,7 +3257,7 @@ export class GDAction extends GDModelObject {
     /**
      * target-Figures for this action. Uses specifier and its ActionSet to compute. 
      *
-     * @return {Array} the target cells (Antetype-cells)
+     * @return {Array<GDWidgetInstanceCell>} the target cells (Antetype-cells)
      */
     get targetFigures() {
         function targetsForElements(code, elements) {
@@ -3462,7 +3492,9 @@ export class GDPropertyChangeAction extends GDAction {
 GDModelObject.register(GDPropertyChangeAction);
 
 
-
+/**
+ * Changes to another state
+ */
 export class GDChangeStateAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project); 
@@ -3486,7 +3518,9 @@ export class GDChangeStateAction extends GDAction {
 }
 GDModelObject.register(GDChangeStateAction);
 
-
+/**
+ * hides its targetCells
+ */
 export class GDHideAction extends GDAction {
     execute(e) {
         this.targetFigures.forEach( (figure) => {
@@ -3501,7 +3535,9 @@ export class GDHideAction extends GDAction {
 }
 GDModelObject.register(GDHideAction);
 
-
+/**
+ * shows the targetCells
+ */
 export class GDShowAction extends GDAction {
     execute(e) {
         this.targetFigures.forEach( (figure) => {
@@ -3516,7 +3552,9 @@ export class GDShowAction extends GDAction {
 }
 GDModelObject.register(GDShowAction);
 
-
+/**
+ * go to the given screen. 
+ */
 export class GDGotoScreenAction extends GDAction {
     constructor(dictionary, project) {
         super(dictionary, project);

@@ -290,8 +290,8 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) 
     const cellActiveLayout = cell.valueForKeyInStateWithIdentifier("activeLayout", state);
     const cellXPosition = cell.valueForKeyInStateWithIdentifier("x", state);
     const cellYPosition = cell.valueForKeyInStateWithIdentifier("y", state);
-    const cellActiveVerticalLayout = cell.valueForKeyInStateWithIdentifier("activeVerticalAlignment", state);
-    const cellActiveHorizontalLayout = cell.valueForKeyInStateWithIdentifier("activeHorizontalAlignment", state);
+    const cellActiveVerticalAlignment = cell.valueForKeyInStateWithIdentifier("activeVerticalAlignment", state);
+    const cellActiveHorizontalAlignment = cell.valueForKeyInStateWithIdentifier("activeHorizontalAlignment", state);
     const cellVerticalResizing = cell.valueForKeyInStateWithIdentifier("verticalResizing", state);
 
     // Necessary container cell properties
@@ -303,8 +303,8 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) 
     const containerPaddingBottom = hasContainer ? container.valueForKeyInStateWithIdentifier("paddingBottom", containerState) : "0";
     const containerPaddingLeft = hasContainer ? container.valueForKeyInStateWithIdentifier("paddingLeft", containerState) : "0";
     const containerPaddingRight = hasContainer ? container.valueForKeyInStateWithIdentifier("paddingRight", containerState) : "0";
-    const containerVerticalLayout = hasContainer ? container.valueForKeyInStateWithIdentifier("verticalAlignment", containerState) : undefined;
-    const containerHorizontalLayout = hasContainer ? container.valueForKeyInStateWithIdentifier("horizontalAlignment", containerState) : undefined;
+    const containerVerticalAlignment = hasContainer ? container.valueForKeyInStateWithIdentifier("verticalAlignment", containerState) : undefined;
+    const containerHorizontalAlignment = hasContainer ? container.valueForKeyInStateWithIdentifier("horizontalAlignment", containerState) : undefined;
 
     // Set layout policy code and active layout properties
     // Free Layout 
@@ -323,11 +323,11 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) 
         style.right = "unset";
         style.top = "unset";
         style.bottom = "unset";
-        const horizontalLayoutType = cellActiveLayout ? cellActiveHorizontalLayout : containerHorizontalLayout;
-        const verticalLayoutType = cellActiveLayout ? cellActiveVerticalLayout : containerVerticalLayout;
+        const horizontalAlignment = cellActiveLayout ? cellActiveHorizontalAlignment : containerHorizontalAlignment;
+        const verticalAlignment = cellActiveLayout ? cellActiveVerticalAlignment : containerVerticalAlignment;
 
         let justify = "";
-        switch(horizontalLayoutType) {
+        switch(horizontalAlignment) {
             case GDLeftAlignment: 
                 justify = "start";
                 break;
@@ -340,7 +340,7 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) 
         }
         
         let align = "";
-        switch(verticalLayoutType) {
+        switch(verticalAlignment) {
             case GDTopAlignment: 
                 align = "start";
                 break;
@@ -359,7 +359,7 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) 
         style.placeSelf = align + " " + justify;
         style.gridColumn = "1";
         style.gridRow = "1";
-        style.position = "relative"
+        style.position = "relative";
     
     } else if (cellActiveLayout && !containerUsesStacked) {
         const fixed = cell.valueForKeyInStateWithIdentifier("fixedLayout", state);
@@ -368,7 +368,7 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) 
 
         // Check if alignment layout or active layout
 
-        switch(cellActiveHorizontalLayout) {
+        switch(cellActiveHorizontalAlignment) {
             case GDLeftAlignment: 
                 style.left = "calc(0px + "+containerPaddingLeft+"px)";
                 style.right = "unset";
@@ -390,7 +390,7 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) 
                 break;
         }
         
-        switch(cellActiveVerticalLayout) {
+        switch(cellActiveVerticalAlignment) {
             case GDTopAlignment: 
                 style.top = "calc(0px + "+containerPaddingTop+"px)";
                 style.bottom = "unset";
@@ -1693,14 +1693,16 @@ export class GDCSSGenerator {
             dimensionProperties.updateFunction(style, figure, stateIdentifier, containerStateIdentifier);
         }
         
-        // Update direct children of container after layout policy change
-        if(key == "layoutPolicyCode") {
-            if(figure.orderedComponents) {
-                this.updateLayoutCells(figure.orderedComponents, containerStateIdentifier);
+        // for some special cases we have to adjust the children too:
+        if (figure.orderedComponents) {
+            const cellUsesStackedAlignment = figure.valueForKeyInStateWithIdentifier("layoutPolicyCode", stateIdentifier) == GDAlignmentLayoutPolicyCode;;
+            const stackedChildrenNeedUpdate = (key == "verticalAlignment" || key == "horizontalAlignment") && cellUsesStackedAlignment;
+            if (key == "layoutPolicyCode" || stackedChildrenNeedUpdate) {
+                this.updateLayoutCells(figure.orderedComponents, stateIdentifier);
             }
         }
         
-        this.updateLayoutCells(this.detectCellsThatNeedAnUpdate(key, figure, stateIdentifier), containerStateIdentifier);  
+        this.updateLayoutCells(this.detectCellsThatNeedAnUpdate(key, figure), stateIdentifier);  
 
         if (customProperties.shouldUse(key, figure, stateIdentifier)) {
             customProperties.updateFunction(style, figure, stateIdentifier);
@@ -1725,6 +1727,8 @@ export class GDCSSGenerator {
         return cellsNeedUpdate;
     }
     
+    // always the same: this and the executeFinalWidgetLayoutPass do more are similar 
+    // and both feel weired, not sure what to do about it. 
 
     updateLayoutCells(cells, containerStateIdentifier) {
         cells.forEach( figure => {

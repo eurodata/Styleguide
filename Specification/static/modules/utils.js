@@ -83,6 +83,11 @@ export function stringFromContentEditable(element) {
     return newText;
 }
 
+/**
+ * 
+ * @param {HTMLElement} DOMElement the element to measure
+ * @returns {Object} the bounds (top,left,with,height) 
+ */
 export function globalBoundsOfElement(DOMElement) {
     var r = DOMElement.getBoundingClientRect();
     var offsetX = window.scrollX;
