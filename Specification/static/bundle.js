@@ -385,24 +385,44 @@
        * @returns {string}
        */
       cssStringOfRule(rule) {
-          let cssString = "";
+          let ruleCSSText = rule.style.cssText;
           // Issue #313  the CSSStyleRule has background: none, but cssTExt not. Works on Chrome 
           // as expected. Looks like a Safari bug, as a workaround we add background:none manually:
-          if (rule.style.background == "none" && rule.cssText.indexOf("background: none") == -1) {
-              cssString += rule.selectorText + " { " + rule.style.cssText + " background: none}\n";
+          if (rule.style.background == "none" && ruleCSSText.indexOf("background: none") == -1) {
+              ruleCSSText += " background: none;";
 
               // Issue #668 a similar problem. For a pseudo state with color-background and gradient
               // for the normal-state only "background-color" in css-text leaving the background-image gradient
               // in place... 
-          } else if (rule.style.backgroundImage == "initial" && rule.cssText.indexOf("background-image") == -1) {
-              cssString += rule.selectorText + " { " + rule.style.cssText + " background-image: initial}\n";
+          } else if (rule.style.backgroundImage == "initial" && ruleCSSText.indexOf("background-image") == -1) {
+              ruleCSSText += " background: initial;";
           } else if (rule.style.backgroundImage.indexOf("-gradient") != -1) { // #923
-              cssString += rule.selectorText + " { " + rule.style.cssText + ` background: ${rule.style.backgroundImage}}\n`;
-          } else {
-             cssString += rule.cssText +"\n"; 
+              ruleCSSText +=  ` background: ${rule.style.backgroundImage};`;
+          } 
+          
+          if (ruleCSSText.indexOf("inset:") != -1) {
+              // issue 362 since macOS 11.3 WebKit writes inset instead of top/left/bottom/right but
+              // uses a syntax which is not supported in Firefox/Chrome. Here we remove the inset
+              // and add top/left/right/bottom-values:
+              ruleCSSText = ruleCSSText.replace(/inset:[^;]+;/,'');
+              if (rule.style.top != "") {
+                  ruleCSSText += ` top: ${rule.style.top};`;
+              }
+
+              if (rule.style.left != "") {
+                  ruleCSSText += ` left: ${rule.style.left};`;
+              }
+
+              if (rule.style.bottom != "") {
+                  ruleCSSText += ` bottom: ${rule.style.bottom};`;
+              }
+              if (rule.style.right != "") {
+                  ruleCSSText += ` right: ${rule.style.right};`;
+              }
+
           }
 
-          return cssString;
+          return rule.selectorText + " { " + ruleCSSText + "}\n";
       }
 
       cssTextOfRules(rules) {

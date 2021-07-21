@@ -52,8 +52,8 @@ function toggleInspector() {
 function updateIFrameProperties(screenSize) {
     const viewer = document.getElementById('ViewerFrame');
     viewer.style.width = screenSize.width + 'px';
-    viewer.style.minWidth = screenSize.minHeight + 'px';
-    viewer.style.maxWidth = screenSize.maxHeight + 'px';
+    viewer.style.minWidth = screenSize.minWidth + 'px';
+    viewer.style.maxWidth = screenSize.maxWidth + 'px';
     viewer.style.height = screenSize.height + 'px';
     viewer.style.minHeight = screenSize.minHeight + 'px';
     viewer.style.maxHeight = screenSize.maxHeight + 'px';
