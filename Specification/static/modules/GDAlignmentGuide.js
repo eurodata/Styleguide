@@ -61,7 +61,7 @@ export class GDHoriontalAlignmentGuide extends GDAlignmentGuide {
     alignmentLineTo(otherAlignmentGuide) {
         if (this.cell.container == otherAlignmentGuide.cell) {
             const containerBounds = this.guideCoordinator.cachedBoundsForCell(otherAlignmentGuide.cell);
-            return new GDAlignmentLine(containerBounds.left, containerBounds.top, containerBounds.left, containerBounds.top + containerBounds.height);
+            return new GDAlignmentLine(this.position, containerBounds.top, this.position, containerBounds.top + containerBounds.height);
         }
 
         let startCell = this.cell;
@@ -71,7 +71,7 @@ export class GDHoriontalAlignmentGuide extends GDAlignmentGuide {
         const endBounds = this.guideCoordinator.cachedBoundsForCell(endCell);
 
         if (startBounds.top > endBounds.top) {
-            return new GDAlignmentLine(otherAlignmentGuide.position, endBounds.top, otherAlignmentGuide.position, startBounds.top + startBounds.height );
+            return new GDAlignmentLine(otherAlignmentGuide.position, endBounds.top, otherAlignmentGuide.position, startBounds.top );
         } 
 
         return new GDAlignmentLine(this.position, startBounds.top, this.position, endBounds.top + endBounds.height );
@@ -88,7 +88,7 @@ export class GDVerticalAlignmentGuide extends GDAlignmentGuide {
     alignmentLineTo(otherAlignmentGuide) {
         if (this.cell.container == otherAlignmentGuide.cell) {
             const containerBounds = this.guideCoordinator.cachedBoundsForCell(otherAlignmentGuide.cell);
-            return new GDAlignmentLine(containerBounds.left, containerBounds.top, containerBounds.left, containerBounds.top + containerBounds.height);
+            return new GDAlignmentLine(containerBounds.left, this.position, containerBounds.left + containerBounds.width, this.position);
         }
 
         let startCell = this.cell;
@@ -98,7 +98,7 @@ export class GDVerticalAlignmentGuide extends GDAlignmentGuide {
         const endBounds = this.guideCoordinator.cachedBoundsForCell(endCell);
 
         if (startBounds.left > endBounds.left) {
-            return new GDAlignmentLine(endBounds.left, otherAlignmentGuide.position, startBounds.left + startBounds.width, otherAlignmentGuide.position );
+            return new GDAlignmentLine(endBounds.left, otherAlignmentGuide.position, startBounds.left, otherAlignmentGuide.position );
         } 
 
         return new GDAlignmentLine(startBounds.left, this.position,  endBounds.left + endBounds.width, this.position);
@@ -107,5 +107,33 @@ export class GDVerticalAlignmentGuide extends GDAlignmentGuide {
 }
 
 export class GDVerticalEdgeAlignmentGuide extends GDVerticalAlignmentGuide {
+
+}
+
+export class GDHorizontalEdgeAlignmentGuide extends GDHoriontalAlignmentGuide {
+
+}
+
+export class GDHorizontalMarginAlignmentGuide extends GDHoriontalAlignmentGuide {
+
+}
+
+export class GDVerticalMarginAlignmentGuide extends GDVerticalAlignmentGuide {
+
+}
+
+export class GDHorizontalPaddingAlignmentGuide extends GDHoriontalAlignmentGuide {
+
+}
+
+export class GDVerticalPaddingAlignmentGuide extends GDVerticalAlignmentGuide {
+
+}
+
+export class GDHorizontalCenterAlignmentGuide extends GDHoriontalAlignmentGuide {
+
+}
+
+export class GDVerticalCenterAlignmentGuide extends GDVerticalAlignmentGuide {
 
 }

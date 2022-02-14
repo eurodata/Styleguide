@@ -15,7 +15,7 @@ export class GDStyleSheet {
     }
 
     fillSelectorMap() {
-        for (let i=0; i<this._styleSheet.cssRules.length; i++) {
+        for (let i = 0; i < this._styleSheet.cssRules.length; i++) {
             const rule = this._styleSheet.cssRules[i];
             const selectorText = rule.selectorText;
             if (selectorText) {
@@ -55,7 +55,7 @@ export class GDStyleSheet {
         const rule = selector + " {} ";
 
         const insertedIndex = this._styleSheet.insertRule(rule, index);
-        for (var i=insertedIndex+1; i<this.rulesLength; i++) {
+        for (var i = insertedIndex + 1; i < this.rulesLength; i++) {
             let rule = this._styleSheet.cssRules[i];
             let selector = rule.selectorText;
             this._selectorMap.set(selector, i);
@@ -78,7 +78,7 @@ export class GDStyleSheet {
         if (rule != undefined) {
             let style = rule.style;
             if (style != undefined) {               // not need for @media rules
-                for (let i=style.length; i--;) {
+                for (let i = style.length; i--;) {
                     let name = style[i];
                     style.removeProperty(name);
                 }
@@ -96,7 +96,7 @@ export class GDStyleSheet {
                 return;
             for (let [s, index] of this._selectorMap.entries()) {
                 if (index >= i) {
-                    this._selectorMap.set(s, index-1);
+                    this._selectorMap.set(s, index - 1);
                 }
             }
 
@@ -105,7 +105,7 @@ export class GDStyleSheet {
                 console.log("wrong index: " + i + " rule: " + r.selectorText + " selector: " + selector);
             }
             this._styleSheet.deleteRule(i);
-            this._selectorMap.delete(selector); 
+            this._selectorMap.delete(selector);
         }
     }
 
@@ -141,13 +141,13 @@ export class GDStyleSheet {
 
     _recursiveCSSRules(styleSheet) {
         var result = [];
-        for (let i=0; i<styleSheet.cssRules.length; i++) {
-             let rule = styleSheet.cssRules[i];
-             if (rule.cssRules) {
+        for (let i = 0; i < styleSheet.cssRules.length; i++) {
+            let rule = styleSheet.cssRules[i];
+            if (rule.cssRules) {
                 result = result.concat(this._recursiveCSSRules(rule));
-             } else {
+            } else {
                 result.push(rule);
-             }
+            }
         }
         return result;
     }
@@ -165,7 +165,7 @@ export class GDStyleSheet {
      * disables all pseudo-states
      */
     disablePseudoStates() {
-        this.recursiveCSSRules.forEach( (rule) => {
+        this.recursiveCSSRules.forEach((rule) => {
             const selectorText = rule.selectorText;
 
             if (selectorText) {
@@ -183,7 +183,7 @@ export class GDStyleSheet {
      * enables all pseudo states
      */
     enablePseudoStates() {
-        this.recursiveCSSRules.forEach( (rule) => {
+        this.recursiveCSSRules.forEach((rule) => {
             const selectorText = rule.selectorText;
 
             if (selectorText) {
@@ -216,14 +216,19 @@ export class GDStyleSheet {
         } else if (rule.style.backgroundImage == "initial" && ruleCSSText.indexOf("background-image") == -1) {
             ruleCSSText += " background: initial;";
         } else if (rule.style.backgroundImage.indexOf("-gradient") != -1) { // #923
-            ruleCSSText +=  ` background: ${rule.style.backgroundImage};`;
-        } 
-        
+            ruleCSSText += ` background: ${rule.style.backgroundImage};`;
+        }
+
+        // add backdrop for chrome: 
+        if (rule.style.webkitBackdropFilter != "") {
+            ruleCSSText += ` backdrop-filter: ${rule.style.webkitBackdropFilter};`;
+        }
+
         if (ruleCSSText.indexOf("inset:") != -1) {
             // issue 362 since macOS 11.3 WebKit writes inset instead of top/left/bottom/right but
             // uses a syntax which is not supported in Firefox/Chrome. Here we remove the inset
             // and add top/left/right/bottom-values:
-            ruleCSSText = ruleCSSText.replace(/inset:[^;]+;/,'');
+            ruleCSSText = ruleCSSText.replace(/inset:[^;]+;/, '');
             if (rule.style.top != "") {
                 ruleCSSText += ` top: ${rule.style.top};`;
             }
@@ -246,15 +251,15 @@ export class GDStyleSheet {
 
     cssTextOfRules(rules) {
         let cssString = "";
-        for (let i=0; i<rules.length; i++) {
+        for (let i = 0; i < rules.length; i++) {
             const rule = rules[i];
-            
+
             // issue #365: 
             if (rule.style) {
                 cssString += this.cssStringOfRule(rule);
             } else if (rule.type == CSSRule.MEDIA_RULE) {
                 cssString += `@media ${rule.media.mediaText} {\n`;
-                cssString += this.cssTextOfRules(rule.cssRules); 
+                cssString += this.cssTextOfRules(rule.cssRules);
                 cssString += "\n}\n";
             }
         }

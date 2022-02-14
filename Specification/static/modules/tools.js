@@ -1,14 +1,25 @@
-import { transferEvent, stringFromContentEditable, globalBoundsOfElement, sizeHighlightCell,
-    targetIDFromEventTarget, intersectsBounds } from './utils.js';
-import { GDMouseClickEventType, GDMouseDownEventType, GDMouseUpEventType, GDDoubleClickEventType, 
-    GDTouchStartEventType, GDTouchEndEventType, GDTouchEnterEventType, 
+import {
+    transferEvent, stringFromContentEditable, globalBoundsOfElement, sizeHighlightCell,
+    targetIDFromEventTarget, intersectsBounds
+} from './utils.js';
+import {
+    GDMouseClickEventType, GDMouseDownEventType, GDMouseUpEventType, GDDoubleClickEventType,
+    GDTouchStartEventType, GDTouchEndEventType, GDTouchEnterEventType,
     GDTouchLeaveEventType, GDTouchMoveEventType, GDScrollEventType, GDRightMouseClickEventType,
-    GDKeyDownEventType, GDKeyUpEventType, GDUnloadEventType, GDLoadEventType, GDState, GDVisibilityVisible } from './model.js';
+    GDKeyDownEventType, GDKeyUpEventType, GDUnloadEventType, GDLoadEventType, GDState, GDVisibilityVisible, GDFixedLayoutPolicyCode
+} from './model.js';
 
 import { PaperCanvas } from './paper-antetype.js';
 import { GDGuideCoordinator } from './GDGuideCoordinator.js';
-import { GDEdgeGuideCreator } from './GDGuideCreator.js';
+import { GDEdgeGuideCreator, GDCenterGuideCreator, GDPaddingGuideCreator, GDMarginGuideCreator } from './GDGuideCreator.js';
+import { AntetypeWeb } from './viewer.js';
 
+const guideCreators = {
+    'GDEdgeGuideCreator': GDEdgeGuideCreator,
+    'GDCenterGuideCreator': GDCenterGuideCreator,
+    'GDPaddingGuideCreator': GDPaddingGuideCreator,
+    'GDMarginGuideCreator': GDMarginGuideCreator
+};
 
 /**
  * Wrapper around intersection observer-API, used for Visible/Invisible in 
@@ -18,7 +29,7 @@ export class GDCellIntersectionObserver {
     constructor() {
         this._observedCellCallbacks = new Map();
         let callback = (entries, observer) => {
-            entries.forEach( entry => {
+            entries.forEach(entry => {
                 this.executeCallBackForEntry(entry);
             });
         };
@@ -29,7 +40,7 @@ export class GDCellIntersectionObserver {
     executeCallBackForEntry(entry) {
         let callbacks = this._observedCellCallbacks.get(entry.target);
         if (callbacks != undefined) {
-            callbacks.forEach( item => item.callback(entry) );
+            callbacks.forEach(item => item.callback(entry));
         }
     }
 
@@ -41,9 +52,9 @@ export class GDCellIntersectionObserver {
      * @param {Function} fn
      */
     observeIntersection(domElement, eventHandler, fn) {
-        let existingCallbacks = this._observedCellCallbacks.get(domElement);  
-        const observeEntry = {callback: fn, eventHandler: eventHandler};
-        if (existingCallbacks == undefined) { 
+        let existingCallbacks = this._observedCellCallbacks.get(domElement);
+        const observeEntry = { callback: fn, eventHandler: eventHandler };
+        if (existingCallbacks == undefined) {
             this._intersectionObserver.observe(domElement);
             this._observedCellCallbacks.set(domElement, [observeEntry]);
         } else {
@@ -58,17 +69,17 @@ export class GDCellIntersectionObserver {
      * @param {GDEventHandler} eventHandler
      */
     unobserveIntersection(domElement, eventHandler) {
-        let existingCallbacks = this._observedCellCallbacks.get(domElement);  
+        let existingCallbacks = this._observedCellCallbacks.get(domElement);
         if (existingCallbacks == undefined) {
             return;
         }
 
-        const i = existingCallbacks.findIndex( e => e.eventHandler == eventHandler);
-        if (i == -1)  {
-            return; 
+        const i = existingCallbacks.findIndex(e => e.eventHandler == eventHandler);
+        if (i == -1) {
+            return;
         }
 
-        existingCallbacks.splice(i,1);
+        existingCallbacks.splice(i, 1);
         if (existingCallbacks.length == 0) {
             this._intersectionObserver.unobserve(domElement);
             this._observedCellCallbacks.delete(domElement);
@@ -82,20 +93,24 @@ export class GDCellIntersectionObserver {
     to the Antetype-classes. 
 */
 export class GDTool {
+    /**
+     * 
+     * @param {AntetypeWeb} at the AntetypeWeb object
+     */
     constructor(at) {
         this.at = at;
     }
 
     mouseDown(e) {
-        
-        if (window.workingAreaView)  {
+
+        if (window.workingAreaView) {
             var d = transferEvent(e);
             window.workingAreaView.currentTool().webMouseDown(d);
         }
     }
 
     mouseUp(e) {
-        if (window.workingAreaView)  {
+        if (window.workingAreaView) {
             var d = transferEvent(e);
             window.workingAreaView.currentTool().webMouseUp(d);
         }
@@ -113,46 +128,75 @@ export class GDTool {
         if (window.workingAreaView) {
             var d = transferEvent(e);
             window.workingAreaView.currentTool().webMouseDragged(d);
-        } 
+        }
     }
-    mouseMove(e) {}
-    mouseClick(e) {}
+    mouseMove(e) { }
+    mouseClick(e) { }
 
-    mouseEnter(e) {}
+    mouseEnter(e) { }
 
     contextMenu(e) {
     }
 
-    keyDown(e) {}
+    keyDown(e) { }
 
-    keyUp(e) { } 
-    keyPress(e) {} 
+    keyUp(e) { }
+    keyPress(e) { }
 
     scroll(e) { }
 
-    touchStart(e) {}
-    tochEnd(e) {}
-    touchEnter(e) {}
-    touchLeave(e) {}
-    touchMove(e) {}
+    touchStart(e) { }
+    touchEnd(e) { }
+    touchEnter(e) { }
+    touchLeave(e) { }
+    touchMove(e) { }
 
-    activate() {}
-    deactivate() {}
+    activate() { }
+    deactivate() { }
     isRunTool() {
         return false;
     }
 
-    screenWillChange() {}       // called before screen-change
-    screenDidChange(newScreen) {} // called after screen-change
-    executeEventHandler(eventHandler, event) {}
+    screenWillChange() { }       // called before screen-change
+    screenDidChange(newScreen) { } // called after screen-change
+    executeEventHandler(eventHandler, event) { }
+
+    /**
+     * sends the current selection to the Antetype-App.
+     */
+    sendSelectionToAntetypeApp() {
+        this.at.sendCommand("select", {
+            cellIdentifiers: this.at.selectedObjects.map(c => c.objectID)
+        });
+    }
+
+}
+
+/**
+ * No-operation tool, does nothing. Used to suppress the selection while a popover
+ * is open. 
+ */
+export class GDNOPTool extends GDTool {
+    mouseDown() {
+    }
+
+    mouseUp() {
+    }
+
+    mouseDoubleClick() {
+    }
+
+    mouseDragged() {
+    }
+
 }
 
 export class GDSelectionTool extends GDTool {
     transferKeyEvent(e) {
         var keyIdentifier = e.keyIdentifier;
-        if (keyIdentifier == "U+0009") 
+        if (keyIdentifier == "U+0009")
             keyIdentifier = "Tab";
-        if (keyIdentifier == "U+0008") 
+        if (keyIdentifier == "U+0008")
             keyIdentifier = "Backspace";
 
 
@@ -180,14 +224,14 @@ export class GDSelectionTool extends GDTool {
         var d = this.transferKeyEvent(e);
         if (window.workingAreaView) {
             window.workingAreaView.currentTool().webKeyDown(d);
-            
+
             // Antetype Shortcut Previous/Next Screen
             if (e.altKey && e.metaKey && (e.key == "ArrowLeft" || e.key == "ArrowRight")) {
                 return;
             }
             // for keys handled by Antetype don't use the browser behavior. See #133
             else if (e.key == "Enter" || e.key == "ArrowDown" || e.key == "ArrowLeft" || e.key == "ArrowRight" || e.key == "ArrowUp") {
-               e.preventDefault();
+                e.preventDefault();
             }
         }
     }
@@ -203,15 +247,18 @@ export class GDNativeSelectionTool extends GDTool {
     constructor(at) {
         super(at);
         this._selectOnMouseUp = false;
+        this._keyboardDelta = { x: 0, y: 0 };
     }
+
+
     figureToSelectForFigure(f) {
         let parents = f.parents;
-        let rootCellParents = parents.filter( p => p.isRootInstanceCell && !p.isScreen && !p.isBasicCell);
+        let rootCellParents = parents.filter(p => p.isRootInstanceCell && !p.isScreen && !p.isBasicCell);
 
         if (rootCellParents.length == 0) return f;
 
         let rootCellToSelect = rootCellParents[0];
-        const widgetIsAlreadySelected = this.at.selectedObjects.filter( c => rootCellToSelect.deepOrderedComponents.indexOf(c) != -1).length > 0;
+        const widgetIsAlreadySelected = this.at.selectedObjects.filter(c => rootCellToSelect.deepOrderedComponents.indexOf(c) != -1).length > 0;
 
         if (widgetIsAlreadySelected) return f;
 
@@ -238,35 +285,38 @@ export class GDNativeSelectionTool extends GDTool {
             const newSelection = this.at.selectedFigures.slice();
 
             if (cellIsSelected) {
-                newSelection.splice(index,1);
+                newSelection.splice(index, 1);
             } else {
                 newSelection.push(cell);
             }
             this.at.selectFigures(newSelection);
-
-            const idStrings = this.at.selectedFigures.map( c => c.objectID).join();
-            this.at.send("select/" + idStrings);
         } else {
             this.at.selectFigures([cell]);
-            this.at.send("select/" + cell.objectID);    
         }
+        this.sendSelectionToAntetypeApp();
     }
 
     mouseDragged(e) {
+        if (e.target == this.at.screenElement) {
+            let selectionRectTool = new GDNativeSelectionRectTool(this.at, e);
+            this.at.setCurrentTool(selectionRectTool);
+            selectionRectTool.mouseDragged(e);
+            return;
+        }
+
         // only for now:
         if (!targetIDFromEventTarget(e.target)) return;
 
         let dragTool = new GDNativeFigureDragTool(this.at, e);
         this.at.setCurrentTool(dragTool);
         dragTool.mouseDragged(e);
-        
+
     }
 
     mouseDown(e) {
         if (e.target && e.target.handle) {
-            let handleDragTool = new GDNativeHandleDragTool(this.at,e);
+            let handleDragTool = new GDNativeHandleDragTool(this.at, e);
             this.at.setCurrentTool(handleDragTool);
-            //handleDragTool.mouseDragged(e);
             return;
         }
 
@@ -283,22 +333,45 @@ export class GDNativeSelectionTool extends GDTool {
                 this.selectFigureForEvent(cell, e);
             }
         } else if (e.target == this.at.screenElement) {
-            this.at.send("select/" + document.body.id);
-            let selectionRectTool = new GDNativeSelectionRectTool(this.at, e);
-            this.at.setCurrentTool(selectionRectTool);
+            this.at.selectFigures([]);
+            this.sendSelectionToAntetypeApp();
         }
-     }
+    }
+
+
 
     mouseUp(e) {
         if (this._selectOnMouseUp) {
-            let targetId = targetIDFromEventTarget(e.target);
-            if (targetId) {
-                let element = document.getElementById(targetId);
-                let cell = element.figure;
-    
-                cell = this.figureToSelectForFigure(cell);
-                this.selectFigureForEvent(cell,e);
+            const cell = this.targetCellForEvent(e);
+            if (cell) {
+                this.selectFigureForEvent(cell, e);
             }
+        }
+    }
+
+    targetCellForEvent(e) {
+        const targetId = targetIDFromEventTarget(e.target);
+        if (!targetId) {
+            return null;
+        }
+
+        const element = document.getElementById(targetId);
+        const cell = element.figure;
+        return this.figureToSelectForFigure(cell);
+    }
+
+    mouseDoubleClick(e) {
+        const clickedCell = this.targetCellForEvent(e);
+        if (!clickedCell) {
+            return;
+        }
+        const currentText = clickedCell.getProperty("textString");
+        if (currentText && currentText.length > 0) {
+            if (this.at.selectedFigures != [clickedCell]) {
+                this.at.selectFigures([clickedCell]);
+                this.sendSelectionToAntetypeApp();
+            }
+            this.at.editTextOfFigure(clickedCell);
         }
     }
 
@@ -308,10 +381,10 @@ export class GDNativeSelectionTool extends GDTool {
             return;
         }
 
-        let selectedCell = selection[selection.length-1];
+        let selectedCell = selection[selection.length - 1];
         let container = selectedCell.container;
 
-        let visibleCells = container.orderedComponents.filter( c => c.getProperty("isDisplay") && c.getProperty("isVisible"));
+        let visibleCells = container.orderedComponents.filter(c => c.getProperty("isDisplay") && c.getProperty("isVisible"));
         if (visibleCells.length == 0) {
             return;
         }
@@ -327,14 +400,14 @@ export class GDNativeSelectionTool extends GDTool {
 
         if (e.shiftKey) {
             if (index > 0 && index < visibleCells.length) {
-                nextCell = visibleCells[index-1];
-            } 
+                nextCell = visibleCells[index - 1];
+            }
             if (nextCell == null) {
-                nextCell = visibleCells[visibleCells.length-1];
+                nextCell = visibleCells[visibleCells.length - 1];
             }
         } else {
             if (index < visibleCells.length - 1) {
-                nextCell = visibleCells[index+1];
+                nextCell = visibleCells[index + 1];
             }
             if (nextCell == null) {
                 nextCell = visibleCells[0];
@@ -342,61 +415,118 @@ export class GDNativeSelectionTool extends GDTool {
         }
 
         this.at.selectFigures([nextCell]);
-        this.at.send("select/" + nextCell.objectID);    
+        this.sendSelectionToAntetypeApp();
     }
 
-    handleArrowDown() {
+    handleArrowDownSelection() {
         const selection = this.at.selectedObjects;
         if (selection.length == 0)
             return;
 
-        const selectedCell = selection[selection.length-1];
-        let visibleCells = selectedCell.orderedComponents.filter( c => c.getProperty("isDisplay") && c.getProperty("isVisible"));
+        const selectedCell = selection[selection.length - 1];
+        let visibleCells = selectedCell.orderedComponents.filter(c => c.getProperty("isDisplay") && c.getProperty("isVisible"));
         if (visibleCells.length == 0) {
             return;
         }
 
         const nextCell = visibleCells[0];
         this.at.selectFigures([nextCell]);
-        this.at.send("select/" + nextCell.objectID);    
+        this.sendSelectionToAntetypeApp();
     }
 
-    handleArrowUp() {
+    handleArrowUpSelection() {
         const selection = this.at.selectedFigures;
         if (selection.length == 0)
             return;
 
-        const selectedCell = selection[selection.length-1];
+        const selectedCell = selection[selection.length - 1];
         const container = selectedCell.container;
 
-        if (!container) 
+        if (!container)
             return;
 
         this.at.selectFigures([container]);
-        this.at.send("select/" + container.objectID);    
+        this.sendSelectionToAntetypeApp();
     }
 
     keyDown(e) {
+        let delta = { x: 0, y: 0 };
+        const amount = e.shiftKey ? 10 : 1;
+
+
         if (e.key == "Delete" || e.key == "Backspace") {
-            this.at.send("/deleteSelection");
+            this.at.sendCommand("deleteSelection");
             e.preventDefault();
         } else if (e.key == "Tab") {
             this.handleTab(e);
         } else if (e.key == "ArrowDown" && e.metaKey) {
-            this.handleArrowDown();
+            this.handleArrowDownSelection();
+            e.preventDefault();
+        } else if (e.key == "ArrowDown") {
+            delta.y += amount;
             e.preventDefault();
         } else if (e.key == "ArrowUp" && e.metaKey) {
-            this.handleArrowUp();
+            this.handleArrowUpSelection();
             e.preventDefault();
-        } else if (e.key == "xEnter") { // later ...
+        } else if (e.key == "ArrowUp") {
+            delta.y -= amount;
+            e.preventDefault();
+        } else if (e.key == "ArrowLeft") {
+            delta.x -= amount;
+            e.preventDefault();
+        } else if (e.key == "ArrowRight") {
+            delta.x += amount;
+            e.preventDefault();
+        } else if (e.key == "Enter") {
             if (this.at.selectedFigures.length > 0) {
                 const cell = this.at.selectedFigures[0];
                 const textContent = cell.getProperty("textString");
                 if (textContent && textContent.length > 0) {
                     this.at.editTextOfFigure(cell);
                 }
+                e.preventDefault();
             }
         }
+
+        if (delta.y != 0 || delta.x != 0) {
+            if (this.isKeyboardMovable) {
+                this._keyboardDelta.x += delta.x;
+                this._keyboardDelta.y += delta.y;
+                this.at.selectedFigures.forEach(f => {
+                    const element = f.DOMElement;
+                    if (delta.x != 0) {
+                        element.style.left = parseInt(getComputedStyle(element).left) + delta.x + "px";
+                    }
+
+                    if (delta.y != 0) {
+                        element.style.top = parseInt(getComputedStyle(element).top) + delta.y + "px";
+                    }
+                });
+            }
+        }
+    }
+
+    get isKeyboardMovable() {
+        const selection = this.at.selectedFigures;
+        if (selection.length == 0) {
+            return false;
+        }
+        return selection.filter(f => f.getProperty("isMovable") && f.container.getProperty("layoutPolicyCode") == GDFixedLayoutPolicyCode).length == selection.length;
+    }
+
+    keyUp(e) {
+        // execute moveFigures on key-up
+        if (this._keyboardDelta.x != 0 || this._keyboardDelta.y != 0) {
+            this.at.sendCommand("moveFigures", { deltaX: this._keyboardDelta.x, deltaY: this._keyboardDelta.y });
+            this._keyboardDelta = { x: 0, y: 0 };
+
+            // remove our temporary styles (set in keyDown):
+            this.at.selectedFigures.forEach(f => {
+                f.DOMElement.style.removeProperty("top");
+                f.DOMElement.style.removeProperty("left")
+            });
+        }
+        e.preventDefault();
     }
 }
 
@@ -404,7 +534,9 @@ export class GDNativeHandleDragTool extends GDTool {
     constructor(at, event) {
         super(at);
         this.guideCoordinator = new GDGuideCoordinator();
-        this.guideCoordinator.addGuideCreator( new GDEdgeGuideCreator());
+        this.at.enabledSmartGuides.forEach((guideCreator) => {
+            this.guideCoordinator.addGuideCreator(new guideCreators[guideCreator]());
+        });
         this.guideCoordinator.prepareWithSelections(this.at.selectedObjects);
 
         this.handle = event.target.handle;
@@ -420,18 +552,26 @@ export class GDNativeHandleDragTool extends GDTool {
 
     boundsOfCell(cell) {
         return {
-            x:  cell.valueForKeyInStateWithIdentifier("x",cell.activeStateIdentifier),
-            y: cell.valueForKeyInStateWithIdentifier("y",cell.activeStateIdentifier),
-            width: cell.valueForKeyInStateWithIdentifier("width",cell.activeStateIdentifier),
-            height: cell.valueForKeyInStateWithIdentifier("height",cell.activeStateIdentifier)
+            x: cell.valueForKeyInStateWithIdentifier("x", cell.activeStateIdentifier),
+            y: cell.valueForKeyInStateWithIdentifier("y", cell.activeStateIdentifier),
+            width: cell.valueForKeyInStateWithIdentifier("width", cell.activeStateIdentifier),
+            height: cell.valueForKeyInStateWithIdentifier("height", cell.activeStateIdentifier)
         };
     }
 
     mouseDragged(e) {
-        this.handle.dragged(this, scaleUsingZoomFactor(e.clientX), scaleUsingZoomFactor(e.clientY));
         this.constrained = e.shiftKey;
         this.centered = e.altKey;
-        this.guideCoordinator.updateDisplayedSmartGuidesForView(this.at);
+        const disableSmartGuides = e.metaKey;
+        this.handle.dragged(this, scaleUsingZoomFactor(e.clientX), scaleUsingZoomFactor(e.clientY));
+
+        if (!disableSmartGuides) {
+            this.guideCoordinator.updateDisplayedSmartGuidesForView(this.at);
+        } else {
+            this.guideCoordinator.clearLinesForView(this.at);
+        }
+        this.at.selectionUpdater();
+
     }
 
     mouseUp(e) {
@@ -443,8 +583,7 @@ export class GDNativeHandleDragTool extends GDTool {
         if (newBounds.width != this.originalBounds.width) changes.width = newBounds.width;
         if (newBounds.height != this.originalBounds.height) changes.height = newBounds.height;
 
-        let changesString = JSON.stringify(changes);
-        this.at.send("setBounds/" + changesString);
+        this.at.sendCommand("setBounds", changes);
 
         this.at.restoreSelectionTool();
     }
@@ -466,7 +605,10 @@ export class GDNativeFigureDragTool extends GDTool {
     constructor(at, event) {
         super(at);
         this.guideCoordinator = new GDGuideCoordinator();
-        this.guideCoordinator.addGuideCreator( new GDEdgeGuideCreator());
+        this.at.enabledSmartGuides.forEach((guideCreator) => {
+            this.guideCoordinator.addGuideCreator(new guideCreators[guideCreator]());
+        });
+
         this.guideCoordinator.prepareWithSelections(this.at.selectedObjects);
 
         let draggedCell = this.at.selectedObjects[0];
@@ -488,7 +630,16 @@ export class GDNativeFigureDragTool extends GDTool {
 
 
     mouseDragged(e) {
-        this.guideCoordinator.updateDisplayedSmartGuidesForView(this.at);
+
+        const layoutPolicyCode = this.at.selectedObjects[0].container.getProperty("layoutPolicyCode");
+        const isFreeLayout = layoutPolicyCode == GDFixedLayoutPolicyCode;
+        const disableSmartGuides = e.metaKey || !isFreeLayout;
+
+        if (!disableSmartGuides) {
+            this.guideCoordinator.updateDisplayedSmartGuidesForView(this.at);
+        } else {
+            this.guideCoordinator.clearLinesForView(this.at);
+        }
 
         // not sure why, but Event.movementX/Y behaves strange in the WebView, looks like it is somehow scaled ....
         // therefor we calculate it here: 
@@ -497,7 +648,8 @@ export class GDNativeFigureDragTool extends GDTool {
         this.lastX = scaleUsingZoomFactor(e.clientX);
         this.lastY = scaleUsingZoomFactor(e.clientY);
 
-        let [dx, dy] = this.guideCoordinator.snapDelta(movementX, movementY);
+        let [dx, dy] = this.guideCoordinator.snapDelta(movementX, movementY, disableSmartGuides)
+
         this.at.selectedObjects.forEach(c => {
             let x = c.valueForKeyInStateWithIdentifier("x", c.activeStateIdentifier);
             let y = c.valueForKeyInStateWithIdentifier("y", c.activeStateIdentifier);
@@ -505,8 +657,8 @@ export class GDNativeFigureDragTool extends GDTool {
             x += dx;
             y += dy;
 
-            this.at.cellSetPropertyInState(c,"x",x, c.activeState);
-            this.at.cellSetPropertyInState(c,"y",y, c.activeState);
+            this.at.cellSetPropertyInState(c, "x", x, c.activeState);
+            this.at.cellSetPropertyInState(c, "y", y, c.activeState);
         });
     }
 
@@ -519,7 +671,7 @@ export class GDNativeFigureDragTool extends GDTool {
         let deltaX = currentX - this.oldX;
         let deltaY = currentY - this.oldY;
 
-        this.at.send(`moveFigures/{"x":${deltaX}, "y":${deltaY}}`);
+        this.at.sendCommand("moveFigures", { "deltaX": deltaX, "deltaY": deltaY });
 
         this.at.restoreSelectionTool();
     }
@@ -558,21 +710,21 @@ export class GDTextTool extends GDTool {
         editSpan.contentEditable = true;
         editSpan.style.webkitUserSelect = "text";
         editSpan.style.minWidth = "1px";    // to see the textcursor
-        editSpan.style.pointerEvents= "auto";
+        editSpan.style.pointerEvents = "auto";
         editSpan.focus();
         this.editSpan = editSpan;
         this.textFigure = f;
-        
+
         // Issue #120 plain text paste:
-        this.pasteHandler = function(e) {
-                // cancel paste
-                e.preventDefault();
-                
-                //  get text representation of clipboard
-                var text = e.clipboardData.getData("text/plain");
-                
-                // insert text manually
-                document.execCommand("insertHTML", false, text);
+        this.pasteHandler = function (e) {
+            // cancel paste
+            e.preventDefault();
+
+            //  get text representation of clipboard
+            var text = e.clipboardData.getData("text/plain");
+
+            // insert text manually
+            document.execCommand("insertHTML", false, text);
         };
 
         editSpan.addEventListener("paste", this.pasteHandler);
@@ -598,6 +750,12 @@ export class GDTextTool extends GDTool {
         }
     }
 
+    abortTextInAntetype() {
+        if (window.workingAreaView) {
+            window.workingAreaView.currentTool().webViewTextAbort();
+        }
+    }
+
     mouseDown(e) {
         if (e.target != this.editSpan) {
             super.mouseDown(e);
@@ -608,7 +766,7 @@ export class GDTextTool extends GDTool {
 
     keyDown(e) {
         // enter or cmd-return:
-        if (e.keyIdentifier == "Enter" && (e.metaKey  || e.keyLocation == KeyboardEvent.DOM_KEY_LOCATION_NUMPAD)) {
+        if (e.keyIdentifier == "Enter" && (e.metaKey || e.keyLocation == KeyboardEvent.DOM_KEY_LOCATION_NUMPAD)) {
             this.commitTextInAntetype();
             e.preventDefault();
         }
@@ -619,10 +777,8 @@ export class GDTextTool extends GDTool {
         }
 
         if (e.key == "Escape" || e.key == "Cancel") {
-            if (window.workingAreaView) {
-                window.workingAreaView.currentTool().webViewTextAbort();
-                e.preventDefault();
-            }
+            this.abortTextInAntetype();
+            e.preventDefault();
         }
 
         // Issue #526 undo while editing text (works on 10.14.2, but bypasses the Antetype-undo-stack)
@@ -669,6 +825,31 @@ export class GDTextTool extends GDTool {
 
 }
 
+export class GDNativeTextTool extends GDTextTool {
+    editTextOfFigure(f) {
+        super.editTextOfFigure(f);
+
+        this.editSpan.addEventListener("input", (e) =>
+            this.at.sendCommand("canvasTextUpdate", { text: stringFromContentEditable(this.editSpan) }));
+    }
+
+    commitTextInAntetype() {
+        this.at.sendCommand("commitText", { text: stringFromContentEditable(this.editSpan) });
+    }
+
+    abortTextInAntetype() {
+        this.at.sendCommand("abortText");
+    }
+
+    mouseDown(e) {
+        if (e.target != this.editSpan) {
+            this.commitTextInAntetype();
+            e.preventDefault();
+            return;
+        }
+    }
+
+}
 
 export class GDVectorTool extends GDTool {
 
@@ -745,10 +926,10 @@ export class GDVectorTool extends GDTool {
     set currentEditVector(s) { }
 
     abortEdit() {
-        if(this.atPaperCanvas != null) {
+        if (this.atPaperCanvas != null) {
             const svg = this.atPaperCanvas.modifySVG(this.atPaperCanvas._paperInstance.project.exportSVG());
             this.at.replaceCanvasOrSVGWithSVG(this.paperCanvasContainer, svg);
-            this.atPaperCanvas = null;   
+            this.atPaperCanvas = null;
         }
     }
 
@@ -765,13 +946,13 @@ export class GDVectorTool extends GDTool {
 export class GDRunTool extends GDTool {
     constructor(at) {
         super(at);
-        this._unloadEventHandlers= [];
+        this._unloadEventHandlers = [];
         this._highlightRects = [];
         this._intersectionObserver = null;
     }
 
     handleEvents(domElement, type, event) {
-        if (domElement == null)  {
+        if (domElement == null) {
             return false;
         }
 
@@ -803,48 +984,48 @@ export class GDRunTool extends GDTool {
     }
 
     mouseClick(e) {
-        this.handleEvents(e.target, GDMouseClickEventType,e);
+        this.handleEvents(e.target, GDMouseClickEventType, e);
     }
 
     mouseDown(e) {
-        this.handleEvents(e.target, GDMouseDownEventType,e);
+        this.handleEvents(e.target, GDMouseDownEventType, e);
     }
 
     mouseUp(e) {
-        this.handleEvents(e.target, GDMouseUpEventType,e);
+        this.handleEvents(e.target, GDMouseUpEventType, e);
     }
 
     mouseDoubleClick(e) {
-        this.handleEvents(e.target, GDDoubleClickEventType,e);
+        this.handleEvents(e.target, GDDoubleClickEventType, e);
     }
 
 
     touchStart(e) {
-        this.handleEvents(e.target, GDTouchStartEventType,e);
+        this.handleEvents(e.target, GDTouchStartEventType, e);
     }
-    
+
     touchEnd(e) {
-        this.handleEvents(e.target, GDTouchEndEventType,e);
+        this.handleEvents(e.target, GDTouchEndEventType, e);
     }
 
     touchEnter(e) {
-        this.handleEvents(e.target, GDTouchEnterEventType,e);
+        this.handleEvents(e.target, GDTouchEnterEventType, e);
     }
 
     touchLeave(e) {
-        this.handleEvents(e.target, GDTouchLeaveEventType,e);
+        this.handleEvents(e.target, GDTouchLeaveEventType, e);
     }
 
     touchMove(e) {
-        this.handleEvents(e.target, GDTouchMoveEventType,e);
+        this.handleEvents(e.target, GDTouchMoveEventType, e);
     }
 
     scroll(e) {
-        this.handleEvents(e.target, GDScrollEventType,e);
+        this.handleEvents(e.target, GDScrollEventType, e);
     }
 
     contextMenu(e) {
-        var handledClick = this.handleEvents(e.target, GDRightMouseClickEventType,e);
+        var handledClick = this.handleEvents(e.target, GDRightMouseClickEventType, e);
         if (handledClick) {
             e.preventDefault();
         }
@@ -855,7 +1036,7 @@ export class GDRunTool extends GDTool {
         if (style.visibility == "hidden") {
             return false;
         }
-        
+
         let parent = d.parentElement;
         while (parent) {
             const parentStyle = window.getComputedStyle(parent);
@@ -870,7 +1051,7 @@ export class GDRunTool extends GDTool {
     }
 
     addHighlightCell(domElement) {
-        var r = globalBoundsOfElement(domElement); 
+        var r = globalBoundsOfElement(domElement);
         var highlight = document.createElement("div");
         highlight.className = "GDClickable";
         sizeHighlightCell(highlight, r);
@@ -887,20 +1068,20 @@ export class GDRunTool extends GDTool {
                 }
             });
         }
-        this.handleKeyEventsOfType(GDKeyDownEventType,e);
+        this.handleKeyEventsOfType(GDKeyDownEventType, e);
     }
 
     keyUp(e) {
         if (e.key === "Alt") {
-            for (var i=0; i<this._highlightRects.length; i++) {
+            for (var i = 0; i < this._highlightRects.length; i++) {
                 var h = this._highlightRects[i];
-                if(h.parentElement != null) {
+                if (h.parentElement != null) {
                     h.parentElement.removeChild(h);
                 }
             }
             this._highlightRects = [];
         }
-        this.handleKeyEventsOfType(GDKeyUpEventType,e);
+        this.handleKeyEventsOfType(GDKeyUpEventType, e);
     }
 
     handleKeyEventsOfType(keyEventType, e) {
@@ -921,11 +1102,11 @@ export class GDRunTool extends GDTool {
 
     keyPress() {
     }
-   
+
     mouseDragged() { }
 
     domElementsWithEventHandler(eventType) {
-        const iterator = document.createNodeIterator(this.at.screenElement, NodeFilter.SHOW_ELEMENT, function(e) {
+        const iterator = document.createNodeIterator(this.at.screenElement, NodeFilter.SHOW_ELEMENT, function (e) {
             return e.figure && e.figure.hasActionsOfEventType(eventType) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
         });
 
@@ -939,7 +1120,7 @@ export class GDRunTool extends GDTool {
 
     activate() {
         var clickCells = this.domElementsWithEventHandler(GDMouseClickEventType);
-        for (var i=0; i<clickCells.length; i++) {
+        for (var i = 0; i < clickCells.length; i++) {
             var domElement = clickCells[i];
             domElement.style.cursor = "pointer";
         }
@@ -958,8 +1139,8 @@ export class GDRunTool extends GDTool {
     }
 
     removePointerCursors() {
-        const iterator = document.createNodeIterator(this.at.screenElement, NodeFilter.SHOW_ELEMENT, 
-                e => e.nodeName.toLowerCase() === "cell" && e.figure && Object.keys(e.figure.eventHandlers).length > 0);
+        const iterator = document.createNodeIterator(this.at.screenElement, NodeFilter.SHOW_ELEMENT,
+            e => e.nodeName.toLowerCase() === "cell" && e.figure && Object.keys(e.figure.eventHandlers).length > 0);
 
         let domElement = null;
         while ((domElement = iterator.nextNode()) != null) {
@@ -971,8 +1152,8 @@ export class GDRunTool extends GDTool {
     }
 
     cleanupActions() {
-        const iterator = document.createNodeIterator(this.at.screenElement, NodeFilter.SHOW_ELEMENT, 
-                e =>  e.figure && e.figure.eventHandlers && Object.keys(e.figure.eventHandlers).length > 0);
+        const iterator = document.createNodeIterator(this.at.screenElement, NodeFilter.SHOW_ELEMENT,
+            e => e.figure && e.figure.eventHandlers && Object.keys(e.figure.eventHandlers).length > 0);
 
         let domElement = null;
         while ((domElement = iterator.nextNode()) != null) {
@@ -990,7 +1171,7 @@ export class GDRunTool extends GDTool {
     isRunTool() {
         return true;
     }
-    
+
     unloadEventHandlers() {
         const domElements = this.domElementsWithEventHandler(GDUnloadEventType);
         let result = [];
@@ -1012,13 +1193,13 @@ export class GDRunTool extends GDTool {
         // #662 if a goto-screen action was executed make sure we let the actions finish
         // before we execute the load-actions. Not quiet sure if this is the right 
         // place for this. 
-        window.setTimeout( () => {
+        window.setTimeout(() => {
             this._unloadEventHandlers = this.unloadEventHandlers(newScreen);
             const domElementsWithLoadEventHandlers = this.domElementsWithEventHandler(GDLoadEventType);
             domElementsWithLoadEventHandlers.forEach((domElement) => {
                 this.handleEvents(domElement, GDLoadEventType);
             });
-        },0);
+        }, 0);
 
     }
 
@@ -1055,7 +1236,7 @@ export class GDRunTool extends GDTool {
     observeIntersection(domElement, eventHandler, fn) {
         if (this._intersectionObserver == null) {
             this._intersectionObserver = new GDCellIntersectionObserver();
-        } 
+        }
         this._intersectionObserver.observeIntersection(domElement, eventHandler, fn);
 
     }
@@ -1130,7 +1311,7 @@ export class GDSelectionRectTool extends GDTool {
 
     deactivate() {
         if (this.selectionRect.parentNode != null) {
-            if(document.body.contains(this.selectionRect)) {
+            if (document.body.contains(this.selectionRect)) {
                 document.body.removeChild(this.selectionRect);
             }
         }
@@ -1140,21 +1321,21 @@ export class GDSelectionRectTool extends GDTool {
         GDTool.prototype.mouseDragged.call(this, e);
         if (window.workingAreaView) {
             var r = window.workingAreaView.currentTool().currentBounds();
-            this.selectionRect.style.top  = r.y + "px";
-            this.selectionRect.style.left= r.x + "px";
+            this.selectionRect.style.top = r.y + "px";
+            this.selectionRect.style.left = r.x + "px";
             this.selectionRect.style.width = r.width + "px";
-            this.selectionRect.style.height= r.height + "px";
+            this.selectionRect.style.height = r.height + "px";
         }
     }
 }
 
+/**
+ * click and drag on the screen starts this tool. Displays a rectangle to while
+ * the mouse is dragged selecting all cells intersecting with the selection rect.
+ */
 export class GDNativeSelectionRectTool extends GDTool {
     constructor(at, event) {
         super(at);
-        var r = document.createElement("div");
-        r.className = "selectionRect";
-        this.selectionRect = r;
-        document.body.appendChild(this.selectionRect);
         this.startX = event.clientX;
         this.startY = event.clientY;
     }
@@ -1166,12 +1347,12 @@ export class GDNativeSelectionRectTool extends GDTool {
         document.body.appendChild(this.selectionRect);
 
         let container = this.at.currentScreen;
-        this.bounds = container.orderedComponents.map( cell => { return {'cell': cell, 'bounds': globalBoundsOfElement(cell.DOMElement)}});
+        this.bounds = container.orderedComponents.map(cell => { return { 'cell': cell, 'bounds': globalBoundsOfElement(cell.DOMElement) } });
     }
 
     deactivate() {
         if (this.selectionRect.parentNode != null) {
-            if(document.body.contains(this.selectionRect)) {
+            if (document.body.contains(this.selectionRect)) {
                 document.body.removeChild(this.selectionRect);
             }
         }
@@ -1188,20 +1369,19 @@ export class GDNativeSelectionRectTool extends GDTool {
         this.selectionRect.style.width = width + "px";
         this.selectionRect.style.height = height + "px";
 
-        const selectionBounds = {top: y, left: x, width: width, height: height};
+        const selectionBounds = { top: y, left: x, width: width, height: height };
         let intersection = [];
-        this.bounds.forEach( b => {
+        this.bounds.forEach(b => {
             let cell = b.cell;
             let bounds = b.bounds;
 
             if (intersectsBounds(bounds, selectionBounds)) {
-                intersection.push(cell.objectID);
+                intersection.push(cell);
             }
         });
 
-        this.at.send("select/" + intersection);
-
-        
+        this.at.selectFigures(intersection);
+        this.sendSelectionToAntetypeApp();
     }
 
     mouseUp(e) {

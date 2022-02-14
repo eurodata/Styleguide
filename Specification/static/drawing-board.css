@@ -1,36 +1,101 @@
 /* currently the :root rule needs to stay on top, see updateScreenBounds in drawing-board.js*/
 :root {
-    --handle-size: 5px;
-    --screenWidth: 1080px;
-    --screenHeight: 720px;
+    --handle-size: 10px;        /* size of screen handles */
+    --screenWidth: 1080px;      /* screen size, dynamically set by antetype according the current screen */
+    --screenHeight: 720px;      /* dto. */
+    --screenMargin: 30px;       /* see GDWKMainWindowController#zoomToFitWindow, adjust if changed here */
 }
 
 html {
     height: 100%;
-    background: lightgrey;
+    background: #CCCCCC;
+}
+
+@media (prefers-color-scheme: dark) { 
+
+    html {
+        background:#1E1E1E;
+    }
+
 }
 
 body {
-    height: 100%;
-    width: 100%;
     margin: 0px;
-    /*
-    background-color: grey;
     display: flex;
-    justify-content: center;
     align-items: center;
-    */
-    overflow: hidden;
-    position: absolute;
-    left:50%;
-    top: 50%;
-    margin-left: calc(-1 * var(--screenWidth)/2);
-    margin-top: calc(-1 * var(--screenHeight)/2);
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    min-width: calc(var(--screenWidth) + 2*var(--screenMargin));
+    min-height: calc(var(--screenHeight) + 2*var(--screenMargin));
+    -webkit-user-select: none; 
+    user-select: none; 
 }
 
 #screenframe{
     background: white; 
     width: var(--screenWidth); 
     height: var(--screenHeight);
-    transform: scale(1, 1);
+    flex-basis: var(--screenWidth);
+}
+
+/* resizable screen */
+#resizer-frame {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+#resizer-frame > div {
+    display: flex;
+}
+
+.corner-handle {
+    border: 0px;
+    width: var(--handle-size);
+    height: var(--handle-size);
+}
+
+.horizontal-handle {
+    border: 0px;
+    height: var(--handle-size);
+    flex: 1 1 calc(100% + 0px);
+}
+
+.vertical-handle {
+    border:0px;
+    width: var(--handle-size);
+}
+
+#bottom-right-handle {
+    cursor: nwse-resize;
+}
+
+#right-center-handle {
+    cursor: ew-resize;
+}
+
+#left-center-handle {
+    cursor: ew-resize;
+}
+
+#top-left-handle {
+    cursor: nwse-resize;
+}
+
+#bottom-center-handle {
+    cursor: ns-resize;
+}
+
+#bottom-left-handle {
+    cursor: nesw-resize;
+}
+
+#top-center-handle {
+    cursor: ns-resize;
+}
+
+#top-right-handle {
+    cursor:nesw-resize;
 }

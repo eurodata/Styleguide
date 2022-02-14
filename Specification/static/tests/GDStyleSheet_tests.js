@@ -149,8 +149,6 @@ QUnit.test("cssStringOfRule special cases", function(assert) {
     assert.ok(cssText.indexOf("background: none") != -1);
 
     rule.style.backgroundImage = "initial";
-    let cssText = this.styleSheet.cssStringOfRule(rule);
-    assert.ok(cssText.indexOf("backround-image: initial") != -1);
-    
-
+    cssText = this.styleSheet.cssStringOfRule(rule);
+    assert.ok(cssText.indexOf("backround-image: initial") != -1 || cssText.indexOf("background: initial") != -1);
 });

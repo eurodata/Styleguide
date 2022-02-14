@@ -217,6 +217,21 @@ QUnit.test("issue 733 vertical", function(assert) {
     assert.equal(cellStyle.alignSelf, "auto");
 });
 
+// make sure alignSelf = "auto" is if resizing is changed from fix to flex 
+QUnit.test("issue 248 vertical", function(assert) {
+    let container = createTestCell({"layoutPolicyCode": GDVerticalBoxLayoutPolicyCode, "verticalAlignment": GDCenterAlignment, "horizontalAlignment": GDCenterAlignment});
+    let cell = createTestCell({"verticalResizing": GDFlexResizing, "horizontalResizing": GDFixResizing}, container);
+
+    let cellStyle = document.createElement("div").style;
+    let containerStyle = document.createElement("div").style;
+    
+    let cssGenerator = new GDCSSGenerator();
+    cssGenerator.updateStyles(containerStyle, container, null);
+    cssGenerator.updateStyles(cellStyle, cell, null);
+
+    assert.equal(cellStyle.alignSelf, "auto");
+});
+
 QUnit.test("issue 825 no min/max for manual width", function(assert) {
     let cell = createTestCell({"width": 100, "horizontalResizing": GDFixResizing});
 
@@ -250,4 +265,18 @@ QUnit.test("issue 1121 make sure children are updated after container layoutPoli
     cssGenerator.updateStyleProperty(style,container,"layoutPolicyCode", "stateIdentifier", null);
 
     assert.equal(usedStateIdentifer, "stateIdentifier", "use the stateIdentifer of the container");
+});
+
+QUnit.test("issue 67 Stacked Layout Mouseover element wrongly placed", function(assert) {
+    let container = createTestCell({"layoutPolicyCode": GDAlignmentLayoutPolicyCode});
+    let cell = createTestCell({}, container);
+
+    let cellStyle = document.createElement("div").style;
+    let containerStyle = document.createElement("div").style;
+    
+    let cssGenerator = new GDCSSGenerator();
+    cssGenerator.updateStyles(containerStyle, container, null);
+    cssGenerator.updateStyles(cellStyle, cell, null);
+
+    assert.equal(cellStyle.transform, "unset");
 });

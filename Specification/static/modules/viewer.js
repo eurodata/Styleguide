@@ -1,12 +1,11 @@
-import { websocket } from './communication.js';
-import { GDCellDragHandler, GDDragHandler, GDRubberbandDragHandler } from './drag-handler.js';
+import { GDCellDragHandler, GDDragHandler, GDTransferDragHandler, GDRubberbandDragHandler, GDFileDragHandler } from './drag-handler.js';
 import { handlesForCell } from './handlesforcell.js';
-import { CPColor, GDScreen, GDLookAndFeel, GDModelObject, GDMouseClickEventType, GDProject, GDTriangleCellType, GDVectorCellType } from './model.js';
+import { CPColor, GDScreen, GDWidgetInstanceCell, GDLookAndFeel, GDModelObject, GDMouseClickEventType, GDProject, GDTriangleCellType, GDVectorCellType } from './model.js';
 import { GDEditModeScreenAnimator, GDScreenAnimator } from './screen-animator.js';
 import { cssClassName, cssClassNameForCell, GDCSSGenerator, removeTextSpan } from './styling.js';
-import { GDFigureDragTool, GDHandleDragTool, GDInplaceRunTool, GDNativeSelectionTool, GDRunTool, GDSelectionRectTool, GDSelectionTool, GDTextTool, GDVectorTool } from './tools.js';
+import { GDFigureDragTool, GDHandleDragTool, GDInplaceRunTool, GDNativeSelectionTool, GDNativeTextTool, GDRunTool, GDSelectionRectTool, GDSelectionTool, GDTextTool, GDVectorTool, GDNOPTool } from './tools.js';
 import { currentContainerStateIdentifier, globalBoundsOfElement, sizeHighlightCell } from './utils.js';
-
+import { GDCommunication } from './communication.js';
 
 
 
@@ -17,7 +16,7 @@ export function AlignmentLine(json) {
     this.color = new CPColor(json["color"]);
 }
 
-AlignmentLine.prototype.domElement = function() {
+AlignmentLine.prototype.domElement = function () {
     var e = document.createElement("div");
     var horizontal = this.start.y == this.end.y;
 
@@ -30,8 +29,8 @@ AlignmentLine.prototype.domElement = function() {
         e.style.width = this.end.x - this.start.x + "px";
         e.style.height = "2px";
     } else {
-        e.style.borderLeft= "1px dotted " + this.color.toString();
-        e.style.height= this.end.y - this.start.y + "px";
+        e.style.borderLeft = "1px dotted " + this.color.toString();
+        e.style.height = this.end.y - this.start.y + "px";
         e.style.width = "2px";
     }
     return e;
@@ -41,37 +40,39 @@ AlignmentLine.prototype.domElement = function() {
 
 function positionHandle(handle) {
     var ownerRect = globalBoundsOfElement(handle.owner); //handle.owner.getBoundingClientRect(); 
+    const ownerNotVisible = ownerRect.height <= 0 && ownerRect.width <= 0;
 
     var p = {};
-    
+
     var keyPath = handle.atHandle.keyPath();
-    var delta = 3; 
+    var delta = 3;
 
     switch (keyPath) {
-        case "topLeft": p = {x: ownerRect.left - delta, y: ownerRect.top - delta}; break;
-        case "topCenter": p = {x: ownerRect.left + ownerRect.width / 2 - delta, y: ownerRect.top - delta}; break;
-        case "topRight": p = {x: ownerRect.left + ownerRect.width - delta, y: ownerRect.top - delta}; break;
-        case "rightCenter": p = {x: ownerRect.left + ownerRect.width - delta, y: ownerRect.top + ownerRect.height / 2 - delta}; break;
-        case "bottomRight": p = {x: ownerRect.left + ownerRect.width - delta, y: ownerRect.top + ownerRect.height - delta}; break;
-        case "bottomCenter": p = {x: ownerRect.left + ownerRect.width / 2 - delta, y: ownerRect.top + ownerRect.height - delta} ; break;
-        case "bottomLeft": p = {x: ownerRect.left - delta, y: ownerRect.top + ownerRect.height - delta}; break;
-        case "leftCenter": p = {x: ownerRect.left - delta, y: ownerRect.top + ownerRect.height / 2 - delta}; break; 
+        case "topLeft": p = { x: ownerRect.left - delta, y: ownerRect.top - delta }; break;
+        case "topCenter": p = { x: ownerRect.left + ownerRect.width / 2 - delta, y: ownerRect.top - delta }; break;
+        case "topRight": p = { x: ownerRect.left + ownerRect.width - delta, y: ownerRect.top - delta }; break;
+        case "rightCenter": p = { x: ownerRect.left + ownerRect.width - delta, y: ownerRect.top + ownerRect.height / 2 - delta }; break;
+        case "bottomRight": p = { x: ownerRect.left + ownerRect.width - delta, y: ownerRect.top + ownerRect.height - delta }; break;
+        case "bottomCenter": p = { x: ownerRect.left + ownerRect.width / 2 - delta, y: ownerRect.top + ownerRect.height - delta }; break;
+        case "bottomLeft": p = { x: ownerRect.left - delta, y: ownerRect.top + ownerRect.height - delta }; break;
+        case "leftCenter": p = { x: ownerRect.left - delta, y: ownerRect.top + ownerRect.height / 2 - delta }; break;
     }
 
     handle.style.left = p.x + "px";
     handle.style.top = p.y + "px";
+    handle.style.display = ownerNotVisible ? "none" : "block";
 }
 
 function handleCursor(keyPath) {
     switch (keyPath) {
-        case "topLeft": 
-        case "bottomRight": return "nwse-resize"; 
-        case "topCenter": 
-        case "bottomCenter": return "ns-resize"; 
-        case "rightCenter": 
-        case "leftCenter": return "ew-resize"; 
+        case "topLeft":
+        case "bottomRight": return "nwse-resize";
+        case "topCenter":
+        case "bottomCenter": return "ns-resize";
+        case "rightCenter":
+        case "leftCenter": return "ew-resize";
         case "bottomLeft":
-        case "topRight": return "nesw-resize"; 
+        case "topRight": return "nesw-resize";
     }
 
     return "pointer";
@@ -79,27 +80,6 @@ function handleCursor(keyPath) {
 
 
 
-// mmmhm, this one updates the position of the highlight-divs, will have to see
-// if there is a better way (5% CPU for Antetype doing nothing o_O ) 
-function selectionUpdater() {
-    if (window.Antetype == undefined) 
-        return;
-    Antetype._highlightDivs.forEach(function(highlight) {
-        var rect = globalBoundsOfElement(highlight.figure.DOMElement);
-        sizeHighlightCell(highlight, rect);
-    });
-
-    if (Antetype.handles) {
-        Antetype.handles.forEach( h => h.positionElement() );
-    }
-    Antetype.handleElements.forEach(function(handle) {
-        positionHandle(handle);
-    });
-
-    if (Antetype._highlightDivs.length > 0) {
-        window.requestAnimationFrame(selectionUpdater);
-    }
-}
 /**
  * @type {AntetypeWeb}
  */
@@ -116,7 +96,7 @@ export class AntetypeWeb {
     constructor(screenElement) {
         this.commands = [];
         this.converters = {};
-        this.screenElement = screenElement; 
+        this.screenElement = screenElement;
         if (!this.screenElement) {
             this.screenElement = document.createElement("div");
             document.body.appendChild(this.screenElement);
@@ -125,7 +105,7 @@ export class AntetypeWeb {
 
         if (this.runsInAntetype)
             this.runTool = new GDInplaceRunTool(this);
-        else 
+        else
             this.runTool = new GDRunTool(this);
 
         this.textTool = new GDTextTool(this);
@@ -133,20 +113,24 @@ export class AntetypeWeb {
         this.figureDragTool = new GDFigureDragTool(this);
         this.handleDragTool = new GDHandleDragTool(this);
         this.selectionRectTool = new GDSelectionRectTool(this);
-        this.setCurrentTool(this.runsInAntetype ? this.selectionTool : this.runTool );
+        /**  @type {GDTool} */
+        this.currentTool = undefined;
+
+        this.setCurrentTool(this.runsInAntetype ? this.selectionTool : this.runTool);
         this._nativeMouseSelection = false;
         this._highlightDivs = [];
         this._selectedObjects = [];         // like GDSelectionController selectedObjects
-        this.handleElements = []; 
+        this.handleElements = [];
         this.handles = [];
         this.guides = [];
+        this.enabledSmartGuides = [];
 
         this._listeners = {};
         this.addEventListeners();
 
         this.addFundamentalCommands();
 
-        this._project = null; 
+        this._project = null;
         this._currentScreen = null;
 
         // called on screenchange: 
@@ -157,7 +141,7 @@ export class AntetypeWeb {
         this.recordCommands = false;
 
         this._currentDragHandler = null;
-        this._dragHandlers = [new GDRubberbandDragHandler(this), new GDDragHandler(this) ];
+        this._dragHandlers = [new GDRubberbandDragHandler(this), new GDTransferDragHandler(this)];
 
         this._showHandles = true;
         this.placeHolder = null;
@@ -178,6 +162,9 @@ export class AntetypeWeb {
 
         this._cachedScreens = new Map();
 
+        this._currentZoom = 1;
+
+        this._communication = new GDCommunication(window, this);
         Object.seal(this);
     }
 
@@ -220,7 +207,9 @@ export class AntetypeWeb {
         const usesSelectionTool = this.currentTool == this.selectionTool;
         if (useNative) {
             this.selectionTool = new GDNativeSelectionTool(this);
-            this._dragHandlers.unshift(new GDCellDragHandler(this));
+            this._dragHandlers = [new GDCellDragHandler(this), new GDRubberbandDragHandler(this), new GDFileDragHandler(this)];
+            this._currentDragHandler = null;
+            this.textTool = new GDNativeTextTool(this);
         } else {
             this.selectionTool = new GDSelectionTool(this);
         }
@@ -242,7 +231,15 @@ export class AntetypeWeb {
     loadProjectFromJSON(json) {
         this._project = new GDProject(json, null);
         this.project.at = this;
-        this.buildStyleSheet(); 
+        this.buildStyleSheet();
+        if (this.currentZoom > 1 && this.project.designBreakPoints.length) {
+            this.project.designBreakPoints.forEach(breakPoint => {
+                this.updateBreakpointsAccordingToCurrentZoom(breakPoint);
+
+            });
+
+        }
+
     }
 
     changeScreenFromJSON(json) {
@@ -270,11 +267,11 @@ export class AntetypeWeb {
     }
 
     updateTriangleCell(figure, stateIdentifier) {
-        if(figure.valueForKeyInStateWithIdentifier("cellType", stateIdentifier) == GDTriangleCellType) {
+        if (figure.valueForKeyInStateWithIdentifier("cellType", stateIdentifier) == GDTriangleCellType) {
             // trigger display properties method
             if (stateIdentifier != undefined) {
                 var state = this.project.stateWithIdentifier(stateIdentifier);
-               this.cellSetPropertyInState(figure, "rotationAngle", figure.valueForKeyInStateWithIdentifier("rotationAngle", stateIdentifier), state);
+                this.cellSetPropertyInState(figure, "rotationAngle", figure.valueForKeyInStateWithIdentifier("rotationAngle", stateIdentifier), state);
             } else {
                 this.cellSetProperty(figure, "rotationAngle", figure.valueForKeyInStateWithIdentifier("rotationAngle", stateIdentifier));
             }
@@ -282,60 +279,60 @@ export class AntetypeWeb {
     }
 
     updateVectorCell(cell) {
-        if(cell.firstChild.nodeName.toLowerCase() == 'svg') {
+        if (cell.firstChild.nodeName.toLowerCase() == 'svg') {
             const svg = cell.figure.svgInStateWithIdentifier(cell.figure.activeStateIdentifier);
             const xmlParser = new DOMParser();
             const svgObject = xmlParser.parseFromString(svg, "text/xml");
             this.replaceCanvasOrSVGWithSVG(cell, svgObject.rootElement);
         }
-        else if(cell.firstChild.nodeName.toLowerCase() == 'canvas') {
+        else if (cell.firstChild.nodeName.toLowerCase() == 'canvas') {
             this.vectorTool.updateVectorCellContent();
         }
     }
 
     addFundamentalCommands() {
-        this.registerCommand("macro", function(json, at) {
+        this.registerCommand("macro", function (json, at) {
             var commands = json["commands"];
-            for (var i=0; i<commands.length; i++) {
+            for (var i = 0; i < commands.length; i++) {
                 var c = commands[i];
                 at.runCommand(c);
             }
         });
 
         // for testing, synchronous variant of "loadProject"
-        this.registerCommand("loadProjectSynchronous", function(json, at) {
+        this.registerCommand("loadProjectSynchronous", function (json, at) {
             at.loadProjectFromJSON(json);
         });
 
 
-        
-        this.registerCommand("loadProject", function(json, at) {
+
+        this.registerCommand("loadProject", function (json, at) {
             let request = new XMLHttpRequest();
-            request.open("GET", "/proxy/object-with-id?document="+ at.serverDocumentName + "&id=" + json);
+            request.open("GET", "/proxy/object-with-id?document=" + at.serverDocumentName + "&id=" + json);
             request.onreadystatechange = function () {
-                  if(request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-                        let json = JSON.parse(request.response);
-                        at.loadProjectFromJSON(json);
-                        at.asyncCommandExecuting = false;
-                   }
+                if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+                    let json = JSON.parse(request.response);
+                    at.loadProjectFromJSON(json);
+                    at.asyncCommandExecuting = false;
+                }
             };
             at.asyncCommandExecuting = true;
             request.send();
         });
 
-        this.registerCommand("loadLibrary", function(json, at) {
+        this.registerCommand("loadLibrary", function (json, at) {
             at._currentLookAndFeel = new GDLookAndFeel(json["lookAndFeel"], at.project);
-            at.buildStyleSheet(); 
+            at.buildStyleSheet();
             var resourcesJSON = json["resources"];
             var resources = {};
-            for (var i=0; i<resourcesJSON.length; i++) {
+            for (var i = 0; i < resourcesJSON.length; i++) {
                 var resourceJSON = resourcesJSON[i];
                 var resource = GDModelObject.fromJSONObjectInProject(resourceJSON, at.project);
                 resources[resource.identifier] = resource;
             }
             at.project.resources = resources;
         });
-    }  
+    }
 
     buildStyleSheet() {
         const defaultStyleSheetElement = document.createElement("style");
@@ -360,7 +357,7 @@ export class AntetypeWeb {
             return;
 
         if (font.fontCSS != undefined && font.fontCSS != "") {
-            this._fontStyleSheet.insertRule(font.fontCSS,0);
+            this._fontStyleSheet.insertRule(font.fontCSS, 0);
         }
         this._usedFonts[font.fontName] = font;
     }
@@ -375,26 +372,26 @@ export class AntetypeWeb {
     */
     addEventListeners() {
         var at = this;
-        
-        at._mouseDown = false; 
+
+        at._mouseDown = false;
         var container = document;
-        container.addEventListener("click", function(e) {
+        container.addEventListener("click", function (e) {
             at.currentTool.mouseClick(e);
         }, false);
-        container.addEventListener("dblclick", function(e) {
+        container.addEventListener("dblclick", function (e) {
             at.currentTool.mouseDoubleClick(e);
         }, false);
-        container.addEventListener("mousedown", function(e) {
+        container.addEventListener("mousedown", function (e) {
             if (e.button == 0) { // right click to show web inspector in at, FIXME, we need to handle those too
                 at._mouseDown = true;
             }
             at.currentTool.mouseDown(e);
         }, false);
-        container.addEventListener("mouseup", function(e) {
+        container.addEventListener("mouseup", function (e) {
             at._mouseDown = false;
             at.currentTool.mouseUp(e);
         }, false);
-        container.addEventListener("mousemove", function(e) {
+        container.addEventListener("mousemove", function (e) {
             if (at._mouseDown) {
                 at.currentTool.mouseDragged(e);
             } else {
@@ -403,18 +400,18 @@ export class AntetypeWeb {
         }, false);
 
 
-        container.addEventListener("contextmenu", function(e) {
+        container.addEventListener("contextmenu", function (e) {
             at.currentTool.contextMenu(e);
         }, false);
-        window.addEventListener("keydown", function(e) {
+        window.addEventListener("keydown", function (e) {
             at.currentTool.keyDown(e);
             e.stopImmediatePropagation();
         }, false);
-        window.addEventListener("keypress", function(e) {
+        window.addEventListener("keypress", function (e) {
             at.currentTool.keyPress(e);
         }, false);
 
-        window.addEventListener("keyup", function(e) {
+        window.addEventListener("keyup", function (e) {
             at.currentTool.keyUp(e);
             e.stopImmediatePropagation();
         }, false);
@@ -422,53 +419,58 @@ export class AntetypeWeb {
 
         // drag-and-drop. Unfortunately the API looks similar to the AppKit-API, but as always
         // the devil is in the details. 
-        document.addEventListener("dragenter", function(e) {
+        document.addEventListener("dragenter", function (e) {
             if (!at._currentDragHandler) {
-                at._currentDragHandler = at._dragHandlers.find( d => d.possibleDragOperations(e) != GDDragHandler.NSDragOperationNone);
+                at._currentDragHandler = at._dragHandlers.find(d => d.possibleDragOperations(e) != GDDragHandler.NSDragOperationNone);
             }
             if (at._currentDragHandler) {
+                e.preventDefault();
                 at._currentDragHandler.dragEnter(e);
             }
             at.log("dragenter: " + JSON.stringify(e));
         }, false);
-        document.addEventListener("dragover", function(e) {
+        document.addEventListener("dragover", function (e) {
             if (at._currentDragHandler) {
-                at._currentDragHandler.dragOver(e); 
+                e.preventDefault();
+                at._currentDragHandler.dragOver(e);
             }
             at.log("dragover: " + JSON.stringify(e));
         }, false);
 
-        document.addEventListener("dragleave", function(e) {
+        document.addEventListener("dragleave", function (e) {
             if (at._currentDragHandler) {
-                at._currentDragHandler.dragLeave(e); 
+                e.preventDefault();
+                at._currentDragHandler.dragLeave(e);
             }
             at.log("dragleave: " + JSON.stringify(e));
         }, false);
 
 
-        document.addEventListener("dragexit", function(e) {
+        document.addEventListener("dragexit", function (e) {
             if (at._currentDragHandler) {
-                at._currentDragHandler.dragExit(e); 
+                e.preventDefault();
+                at._currentDragHandler.dragExit(e);
             }
             at.log("dragexit: " + JSON.stringify(e));
         }, false);
 
-        document.addEventListener("drop", function(e) {
+        document.addEventListener("drop", function (e) {
             if (at._currentDragHandler) {
+                e.preventDefault();
                 at._currentDragHandler.drop(e);
                 at._currentDragHandler = null;
             }
             at.log("drop: " + JSON.stringify(e));
         }, false);
 
-        container.addEventListener("touchstart", e => at.currentTool.touchStart(e)); 
-        container.addEventListener("touchend", e => at.currentTool.touchEnd(e)); 
-        container.addEventListener("touchenter", e => at.currentTool.touchEnter(e)); 
-        container.addEventListener("touchleave", e => at.currentTool.touchLeave(e)); 
-        container.addEventListener("touchmove", e => at.currentTool.touchMove(e)); 
+        container.addEventListener("touchstart", e => at.currentTool.touchStart(e));
+        container.addEventListener("touchend", e => at.currentTool.touchEnd(e));
+        container.addEventListener("touchenter", e => at.currentTool.touchEnter(e));
+        container.addEventListener("touchleave", e => at.currentTool.touchLeave(e));
+        container.addEventListener("touchmove", e => at.currentTool.touchMove(e));
 
-        this.addEventListener("loadscreen", () => this.currentTool.screenDidChange(this.currentScreen) );
-        this.addEventListener("unloadscreen", () => this.currentTool.screenWillChange() );
+        this.addEventListener("loadscreen", () => this.currentTool.screenDidChange(this.currentScreen));
+        this.addEventListener("unloadscreen", () => this.currentTool.screenWillChange());
     }
 
     /**
@@ -483,7 +485,7 @@ export class AntetypeWeb {
         let e = document.getElementById(webID);
         if (e) return e;
 
-        for (let [ , screen] of this._cachedScreens) {
+        for (let [, screen] of this._cachedScreens) {
             let e = screen.DOMElement.querySelector(`#${webID}`);
 
             if (e) return e;
@@ -525,7 +527,7 @@ export class AntetypeWeb {
         var index = this.project.orderedScreens.indexOf(this.currentScreen);
         index--;
         if (index < 0) {
-            index = this.project.orderedScreens.length-1;
+            index = this.project.orderedScreens.length - 1;
         }
 
         this.gotoScreen(this.project.orderedScreens[index]);
@@ -543,28 +545,34 @@ export class AntetypeWeb {
         Displays the given Screen 's'. 
         @param {GDScreen} s
     */
-    gotoScreen(s) {
-        this.dispatchEvent({type: 'unloadscreen', defaultPrevented: false});
-        if (s.DOMElement == undefined) {
-            s.createStyleSheets();
-            s.DOMElement = this.buildDOMForCell(s);
-        } 
+    gotoScreen(screen) {
+        this.dispatchEvent({ type: 'unloadscreen', defaultPrevented: false });
+        this.currentScreen.cleanupStyles();
+        if (screen.DOMElement == undefined) {
+
+            screen.createStyleSheets();
+            screen.DOMElement = this.buildDOMForCell(screen);
+        }
+        let htmlStyle = screen.htmlCSSStyle;
+        this._cssGenerator.populateScreenBackgroundPropertiesInState(htmlStyle, screen, screen.activeStateIdentifier);
+        //const newScreenDOMElement = this.buildDOMForCell(screen);
 
         // mmmhmm, sometimes the spinner is visible, before showing the screen
         // remove it:
-        const loaderContainer = s.DOMElement.querySelector("#loader-container");
+        const loaderContainer = screen.DOMElement.querySelector("#loader-container");
         if (loaderContainer) {
             loaderContainer.remove();
         }
 
         if (this.screenElement.parentNode) {
-            s.insertStyleSheets();
-            this.screenElement.parentNode.replaceChild(s.DOMElement, this.screenElement);
+            screen.insertStyleSheets();
+            this.screenElement.parentElement.replaceChild(screen.DOMElement, this.screenElement);
         }
-        this.screenElement = s.DOMElement;
-        this.currentScreen = s;
-        this.executeFinalWidgetLayoutPass(s);
-        this.dispatchEvent({type: 'loadscreen', defaultPrevented: false});
+        this.currentScreen = screen;
+        this.screenElement = screen.DOMElement;
+        // This step is necessary for the correct widget layout within a container 
+        this.executeFinalWidgetLayoutPass(screen);
+        this.dispatchEvent({ type: 'loadscreen', defaultPrevented: false });
     }
 
 
@@ -581,7 +589,7 @@ export class AntetypeWeb {
     }
 
     gotoScreenWithIDEditMode(i) {
-        this.send("gotoScreenWithID/" + i);
+        this.sendCommand("gotoScreenWithID", { 'screenID': i });
     }
 
     gotoScreenWithIDEditModeWithTransition(i, transition, duration) {
@@ -589,38 +597,43 @@ export class AntetypeWeb {
         animator.gotoScreenWithID(i);
     }
     get screenNames() {
-        return this.project.orderedScreens.map(function(s) { return s.name; });
+        return this.project.orderedScreens.map(function (s) { return s.name; });
     }
 
     get currentScreenIndex() {
         return this.project.orderedScreens.indexOf(this.currentScreen);
     }
 
+    /**
+     * Changes the currently active tool.
+     * 
+     * @param {GDTool} newTool 
+     */
     setCurrentTool(newTool) {
         // Start RunTool/SelectionTool Toggle
-        if(this.currentTool != undefined) {
-            if(this.handleElements == undefined) {
+        if (this.currentTool != undefined) {
+            if (this.handleElements == undefined) {
                 this.handleElements = [];
             }
 
-            if(this._highlightDivs == undefined) {
-                this._highlightDivs= [];
+            if (this._highlightDivs == undefined) {
+                this._highlightDivs = [];
             }
-        
+
             if (newTool.isRunTool()) {
                 this.hideHandles();
                 this.selectFigures([]);
-            } else if(this.currentTool.isRunTool() && !newTool.isRunTool()) {
+            } else if (this.currentTool.isRunTool() && !newTool.isRunTool()) {
                 this.showHandles();
             }
         }
         // End RunTool/SelectionTool Toggle
 
-        if (newTool == this.currentTool)  {
+        if (newTool == this.currentTool) {
             return;
         }
 
-        if (this.currentTool)  {
+        if (this.currentTool) {
             this.currentTool.deactivate();
         }
 
@@ -628,8 +641,38 @@ export class AntetypeWeb {
         newTool.activate();
     }
 
+    // called after opening a popover in Antetype. Makes sure we don't 
+    // change the selection, "enableTool" (below) will be called if 
+    // the popover did close
+    disableSelectionOnCanvas() {
+        if (this.currentTool.isRunTool()) {
+            return;         // does not change the selection no need to change it
+        }
+
+        const nopTool = new GDNOPTool(this);
+        this.setCurrentTool(nopTool);
+    }
+
+    enableSelectionOnCanvas() {
+        if (this.currentTool instanceof GDNOPTool) {
+            this.restoreSelectionTool();
+        }
+    }
+
+    /**
+     * function registered as a command
+     * @callback viewCommandFunction
+     * @param {Object} json the parameters
+     * @param {AntetypeWeb} at the Antetype instance
+     */
+
+    /**
+     * registers a new command (sent from the Antetype application). 
+     * @param {String} name of the command
+     * @param {viewCommandFunction} f the command function
+     */
     registerCommand(name, f) {
-       this.commands[name] = f;
+        this.commands[name] = f;
     }
 
     /**
@@ -647,7 +690,7 @@ export class AntetypeWeb {
         this._asyncCommandExecuting = asyncFlag;
         if (asyncFlag) {
             if (this._asyncTimoutID == null) {
-                this._asyncTimoutID = window.setTimeout(() => { 
+                this._asyncTimoutID = window.setTimeout(() => {
                     const loaderDiv = document.createElement("div");
                     loaderDiv.id = 'loader-container';
                     loaderDiv.className = 'loader-container';
@@ -664,11 +707,11 @@ export class AntetypeWeb {
                 loaderContainer.remove();
             }
             var count = 0;
-            for(var i = 0; i < this._asyncCommandQueue.length; i++) {
+            for (var i = 0; i < this._asyncCommandQueue.length; i++) {
                 const json = this._asyncCommandQueue[i];
                 this._runCommand(json);
                 count++;
-                if(this._asyncCommandExecuting) {
+                if (this._asyncCommandExecuting) {
                     break;
                 }
             }
@@ -679,7 +722,7 @@ export class AntetypeWeb {
                 window.clearTimeout(this._asyncTimoutID);
                 this._asyncTimoutID = null;
             }
-        }     
+        }
     }
 
     /**
@@ -693,11 +736,11 @@ export class AntetypeWeb {
 
         this._asyncCommandQueue.push(json);
     }
-    
+
     _runCommand(json) {
         var name = json["command"];
         var f = this.commands[name];
-        if (f === undefined)  {
+        if (f === undefined) {
             throw "no command '" + name + "' defined!";
         }
         var parameters = json["parameters"];
@@ -713,8 +756,14 @@ export class AntetypeWeb {
         if (f.isScreen) {
             return;
         }
+
+        if (this.currentTool instanceof GDTextTool) {
+            return;
+        }
+
         this.setCurrentTool(this.textTool);
         this.textTool.editTextOfFigure(f);
+        this.sendCommand("editTextOfFigure", { cellID: f.objectID });
     }
 
     editVectorOfFigure(f) {
@@ -735,31 +784,47 @@ export class AntetypeWeb {
     }
 
     hideHandlesTemporarily() {
-        this._highlightDivs.forEach(h => h.style.display = "none");
-        this.handleElements.forEach(h => h.style.display = "none");
+        if (this._showHandles) {
+            this._highlightDivs.forEach(h => h.style.display = "none");
+            this.handleElements.forEach(h => h.style.display = "none");
+            this.handles.forEach(h => h.DOMElement.style.display = "none");
+        }
     }
 
     showHandlesTemporarily() {
-        this._highlightDivs.forEach(h => h.style.display = "block");
-        this.handleElements.forEach(h => h.style.display = "block");
+        if (this._showHandles) {
+            this._highlightDivs.forEach(h => h.style.display = "block");
+            this.handleElements.forEach(h => h.style.display = "block");
+            this.handles.forEach(h => h.DOMElement.style.display = "block");
+        }
     }
 
 
     showHandles() {
         this._showHandles = true;
-        this.updateHandles();
+        this.appendHandlesToScreen();
         this.updateHighlightDivs();
+        this.updateHandles();
     }
 
     hideHandles() {
         this._showHandles = false;
-        for (var i=0; i<this.handleElements.length; i++) {
+        for (var i = 0; i < this.handleElements.length; i++) {
             var h = this.handleElements[i];
             h.parentElement.removeChild(h);
         }
+        this.hideWKWebViewhandles();
         this.handleElements = [];
 
-        this._highlightDivs.forEach(function(h) {h.style.display = "none"});
+        this._highlightDivs.forEach(function (h) { h.style.display = "none" });
+    }
+    hideWKWebViewhandles() {
+        this.handles.forEach(handle => {
+            const element = handle.DOMElement;
+            if (element && element.parentElement) {
+                element.parentElement.removeChild(element);
+            }
+        })
     }
 
     handleFromATHandle(atHandle) {
@@ -775,9 +840,9 @@ export class AntetypeWeb {
 
     updateHandles() {
         if (this.nativeMouseSelection) return;
-        for (let i=0; i<this.handleElements.length; i++) {
+        for (let i = 0; i < this.handleElements.length; i++) {
             var h = this.handleElements[i];
-            if(h.parentElement != null) {
+            if (h.parentElement != null) {
                 h.parentElement.removeChild(h);
             }
 
@@ -788,27 +853,51 @@ export class AntetypeWeb {
             return;
         }
         if (window.workingAreaView) {
-            if (this.selectedObjects.length > 1) 
+            if (this.selectedObjects.length > 1)
                 return;
 
             var atHandles = window.workingAreaView.screenChangeManager().handles();
-            for (let i=0; i<atHandles.length; i++) {
+            for (let i = 0; i < atHandles.length; i++) {
                 var atHandle = atHandles[i];
                 if (atHandle.isActive()) {
                     var handle = this.handleFromATHandle(atHandle);
                     document.body.appendChild(handle);
                     this.handleElements.push(handle);
-                     
+
                 }
             }
         }
     }
 
+    // mmmhm, this one updates the position of the highlight-divs, will have to see
+    // if there is a better way (5% CPU for Antetype doing nothing o_O ) 
+    selectionUpdater() {
+        if (!this._showHandles) {
+            return;
+        }
+
+        this._highlightDivs.forEach(highlight => {
+            const rect = globalBoundsOfElement(highlight.figure.DOMElement);
+            const notVisible = rect.height <= 0 && rect.width <= 0;
+            sizeHighlightCell(highlight, rect);
+            highlight.style.display = notVisible || !this._showHandles ? 'none' : 'block';
+        });
+
+        this.handles.forEach(h => h.positionElement());
+
+        this.handleElements.forEach(handle => positionHandle(handle))
+
+        if (this._highlightDivs.length > 0) {
+            window.requestAnimationFrame(() => this.selectionUpdater());
+        }
+    }
+
+
     updateHighlightDivs() {
-        if(this._highlightDivs != undefined) {
-            for (let i=0; i<this._highlightDivs.length; i++) {
+        if (this._highlightDivs != undefined) {
+            for (let i = 0; i < this._highlightDivs.length; i++) {
                 let h = this._highlightDivs[i];
-                if(h.parentElement != null) {
+                if (h.parentElement != null) {
                     h.parentElement.removeChild(h);
                 }
             }
@@ -820,21 +909,21 @@ export class AntetypeWeb {
             return;
         }
 
-        
+
         if (!this.runsInAntetype) {  // only in AT
             return;
         }
 
-        for (let i=0; i<this._selectedObjects.length; i++) {
+        for (let i = 0; i < this._selectedObjects.length; i++) {
             const figure = this._selectedObjects[i];
             if (figure.isScreen) {
                 return;
             }
 
-            const r = globalBoundsOfElement(figure.DOMElement); 
+            const r = globalBoundsOfElement(figure.DOMElement);
             const highlight = document.createElement("div");
             highlight.className = "highlightrect";
-            if(this.highlightColor !== null) { // Always null on High Sierra and earlier (uses css highlight color instead)
+            if (this.highlightColor !== null) { // Always null on High Sierra and earlier (uses css highlight color instead)
                 highlight.style.borderColor = this.highlightColor.toString();
             }
             sizeHighlightCell(highlight, r);
@@ -843,8 +932,8 @@ export class AntetypeWeb {
             this._highlightDivs.push(highlight);
         }
 
-        if (this._highlightDivs.length > 0) 
-            window.requestAnimationFrame(selectionUpdater);
+        if (this._highlightDivs.length > 0)
+            window.requestAnimationFrame(() => this.selectionUpdater());
     }
 
     handlesForSelectiion() {
@@ -857,66 +946,82 @@ export class AntetypeWeb {
         }
         const cell = this.selectedFigures[0];
 
-        return handlesForCell(cell);
+        return handlesForCell(cell, this);
     }
 
     selectFigures(figures) {
-        this.handles.forEach( h => h.remove() );
+        this.handles.forEach(h => h.remove());
         this._selectedObjects = figures;
         if (this.currentTool.isRunTool()) {
             return;
         }
         this.updateHighlightDivs();
-
         this.handles = this.handlesForSelectiion();
-        this.handles.forEach( h => {
+
+
+        if (!this._showHandles) {
+            return;
+        }
+        this.appendHandlesToScreen();
+    }
+
+    appendHandlesToScreen() {
+        const renderedHandles = this.screenElement.getElementsByClassName('handle');
+        if (renderedHandles && renderedHandles.length == this.handles.length) {
+            return;
+        }
+        this.handles.forEach(h => {
             let element = h.createElement();
             this.screenElement.appendChild(element);
-            //document.body.appendChild(element);
             h.positionElement();
-        }); 
+        });
     }
 
     updateGuideLines(lines) {
-        for (let i=0; i<this.guides.length; i++) {
+        for (let i = 0; i < this.guides.length; i++) {
             var h = this.guides[i];
             h.parentElement.removeChild(h);
         }
-        this.guides= [];
+        this.guides = [];
 
-        for (let i=0; i<lines.length; i++) {
+        for (let i = 0; i < lines.length; i++) {
             var line = lines[i];
             var element = line.domElement();
             document.body.appendChild(element);
             this.guides.push(element);
         }
-        
+
     }
 
     get selectedObjects() {
         return this._selectedObjects;
     }
 
+    /**
+     * @returns {Array<GDWidgetInstanceCell>} the selected cells on this screen
+     */
     get selectedFigures() {
-        return this.selectedObjects.filter( o => !o.isScreen);
+        return this.selectedObjects.filter(o => !o.isScreen);
     }
 
-    send(o) {
-        if (this.runsInAntetype && window.serverDocument != undefined) {
-            var path = "/handler/0/" + o;
-            window.serverDocument.handleCommandPath(path);
-        } else if (typeof websocket != "undefined" && websocket.readyState == WebSocket.OPEN) {
-            websocket.send(o);
-        }
+    /**
+     * Form like the command here (see runCommand/registerCommand):
+     * 
+     * {command: "command-name", parameters: {…paramters-object…}}
+     * @param {commandName} String  
+     * @param {parameters} the parameters for the command
+     */
+    sendCommand(commandName, parameters) {
+        this._communication.sendCommand(commandName, parameters);
+    }
+
+    sendFile(name, mimeType, content) {
+        this._communication.sendFile(name, mimeType, content);
     }
 
 
     log(message) {
         console.log(message);
-
-    /*    if (this.runsInAntetype && window.webViewController != undefined) {
-            window.webViewController.log(message);
-        }     */
     }
 
     // live-layout, placeholders:
@@ -925,12 +1030,12 @@ export class AntetypeWeb {
             var oldPlaceHolder = this.placeHolder;
             oldPlaceHolder.style.width = "0px";
             oldPlaceHolder.style.height = "0px";
-            oldPlaceHolder.addEventListener("transitionend", function() {
+            oldPlaceHolder.addEventListener("transitionend", function () {
                 if (oldPlaceHolder.parentElement) {
                     oldPlaceHolder.parentElement.removeChild(oldPlaceHolder);
                 }
             });
-       }
+        }
     }
 
 
@@ -940,28 +1045,28 @@ export class AntetypeWeb {
             var newContainer = document.getElementById(containerID);
             if (oldContainer == newContainer) {
                 if (this.placeHolder.index < index) {
-                    index = index +1;
+                    index = index + 1;
                 }
             }
         }
         this.removePlaceholder();
-        
+
 
         var container = this.getElementById(containerID);
 
         var p = document.createElement("div");
-        p.style.width = startSize.width + "px"; 
+        p.style.width = startSize.width + "px";
         p.style.height = startSize.height + "px";
-        p.style.display= "flex";
+        p.style.display = "flex";
         p.style.flex = "0 0 auto";
 
         if (index >= container.childNodes.length) {
             container.appendChild(p);
         } else {
-            container.insertBefore(p, container.childNodes[index]); 
+            container.insertBefore(p, container.childNodes[index]);
         }
         p.style.transition = "all 0.2s linear";
-        window.setTimeout(function() {
+        window.setTimeout(function () {
             p.style.width = endSize.width + "px";
             p.style.height = endSize.height + "px";
         }, 1);
@@ -970,16 +1075,16 @@ export class AntetypeWeb {
         this.placeHolder.index = index;
     }
 
-    setPossibleTargetRect(x,y,w,h) {
+    setPossibleTargetRect(x, y, w, h) {
         if (this._targetRectDiv == null) {
             this._targetRectDiv = document.createElement("div");
             this._targetRectDiv.className = "highlightrect";
             document.body.appendChild(this._targetRectDiv);
 
         }
-        var r = {"top": y, "left": x, "width": w, "height": h};
+        var r = { "top": y, "left": x, "width": w, "height": h };
         this._possibleTargetRect = r;
-        sizeHighlightCell(this._targetRectDiv,r)
+        sizeHighlightCell(this._targetRectDiv, r)
     }
 
     get possibleTargetRect() {
@@ -989,26 +1094,26 @@ export class AntetypeWeb {
     blinkPossibleTargetRect() {
         // TODO blink
     }
-    
+
 
     moveFigures(figures, container, index) {
-        figures.forEach( f => {
+        figures.forEach(f => {
             f.container.removeComponent(f);
             f.DOMElement.parentElement.removeChild(f.DOMElement);
 
             container.insertComponent(f, index);
-            const insertAtEnd = container.orderedComponents.length == 0 || index >= container.orderedComponents.length-1;
+            const insertAtEnd = container.orderedComponents.length == 0 || index >= container.orderedComponents.length - 1;
             if (insertAtEnd) {
                 container.DOMElement.appendChild(f.DOMElement);
             } else {
-                const nextSibling = container.orderedComponents[index+1];
+                const nextSibling = container.orderedComponents[index + 1];
                 const n = nextSibling.DOMElement;
                 container.DOMElement.insertBefore(f.DOMElement, n);
             }
 
             // #351 make sure styles are updated after move. Do we need more? 
             let figureStyle = f.cssStyleForStateIdentifier(f.activeStateIdentifier);
-            const containerState = currentContainerStateIdentifier(f,f.activeStateIdentifier);
+            const containerState = currentContainerStateIdentifier(f, f.activeStateIdentifier);
             this._cssGenerator.updateDimensionProperties(figureStyle, f, f.activeStateIdentifier, containerState);
 
         });
@@ -1048,7 +1153,7 @@ export class AntetypeWeb {
             removeTextSpan(cell);
             return;
         }
-        
+
         var span = this.assureTextSpan(cell);
         if (this.currentTool.isRunTool()) {
             span.contentSpan.contentEditable = isEditable ? true : false;
@@ -1057,7 +1162,7 @@ export class AntetypeWeb {
                 span.contentSpan.style.minWidth = "1px";
                 span.contentSpan.style.cursor = "text";
                 span.contentSpan.style.width = "100%";
-                span.contentSpan.style.pointerEvents= "auto";
+                span.contentSpan.style.pointerEvents = "auto";
             }
         }
         span.contentSpan.innerHTML = text;
@@ -1068,7 +1173,7 @@ export class AntetypeWeb {
         const html = cell.valueForKeyInStateWithIdentifier("embedHTML", cell.activeStateIdentifier);
         if (html != null) {
             if (cell.DOMElement.textSpan == undefined && cell.orderedComponents.length == 0) {
-                cell.DOMElement.innerHTML= html;
+                cell.DOMElement.innerHTML = html;
             }
         }
     }
@@ -1087,7 +1192,7 @@ export class AntetypeWeb {
     */
     cssClassNameForRootCellInState(cell, state) {
         let className = cssClassName(cell.definitionIdentifier, state.identifier, this.project);
-        className += " " + cell.objectID + state.cssSelector(); 
+        className += " " + cell.objectID + state.cssSelector();
         return className;
     }
 
@@ -1134,9 +1239,9 @@ export class AntetypeWeb {
         // This is slow, but currently I do not find a better way. (Only for documents
         // with breakpoints)
         if (this.project.designBreakPoints.length > 0) {
-            cell.deepOrderedComponents.forEach( c => this.cellProperties( c.DOMElement, c) );
+            cell.deepOrderedComponents.forEach(c => this.cellProperties(c.DOMElement, c));
         } else {
-            this.executeFinalWidgetLayoutPass(cell);  
+            this.executeFinalWidgetLayoutPass(cell);
         }
     }
 
@@ -1162,11 +1267,11 @@ export class AntetypeWeb {
      * @param cell {GDWidgetInstanceCell} the AT-cell 
      */
     cellProperties(domElement, cell) {
-        for (let i=0; i<cell.widget.states.length; i++) {
+        for (let i = 0; i < cell.widget.states.length; i++) {
             const state = cell.widget.states[i];
-            const stateId = state.identifier; 
+            const stateId = state.identifier;
             const style = cell.cssStyleForStateIdentifier(stateId);
-            this.populateCellPropertiesInState(style, cell, stateId); 
+            this.populateCellPropertiesInState(style, cell, stateId);
         }
 
         if (this.currentTool.isRunTool()) {
@@ -1206,10 +1311,10 @@ export class AntetypeWeb {
     */
     cellSetPropertyInState(figure, key, value, state) {
         const stateIdentifier = state.identifier;
-        figure.setValueForKeyInStateWithIdentifier(value, key,stateIdentifier );
+        figure.setValueForKeyInStateWithIdentifier(value, key, stateIdentifier);
         const style = figure.cssStyleForStateIdentifier(stateIdentifier);
-        
-        if (style != undefined) { 
+
+        if (style != undefined) {
             // mmhm, should we throw or should we go? 
             this.updateStyleProperty(style, figure, key, stateIdentifier);
         }
@@ -1221,7 +1326,7 @@ export class AntetypeWeb {
         }
     }
 
-    
+
     /**
      * Inserts the given cell in the container at position "index". Also handles the DOM/CSS-generation.
      * 
@@ -1238,11 +1343,11 @@ export class AntetypeWeb {
         if (insertAtEnd) {
             containerNode.appendChild(newCellNode);
         } else {
-            const nextSibling = container.orderedComponents[index+1];
+            const nextSibling = container.orderedComponents[index + 1];
             const n = nextSibling.DOMElement;
             containerNode.insertBefore(newCellNode, n);
         }
-    
+
         this.cellProperties(newCellNode, cell); // why do we need this the second time here?
         this.executeFinalWidgetLayoutPass(cell);
     }
@@ -1268,7 +1373,7 @@ export class AntetypeWeb {
     }
 
     createScreenElement() {
-        if (this.screenElement == document.body) 
+        if (this.screenElement == document.body)
             return document.createElement("body");
 
         return document.createElement("div");
@@ -1288,7 +1393,7 @@ export class AntetypeWeb {
 
         const cellType = cell.valueForKeyInStateWithIdentifier("cellType", cell.activeStateIdentifier);
 
-        if(cellType == GDVectorCellType) {
+        if (cellType == GDVectorCellType) {
             const svgContent = cell.svgInStateWithIdentifier(cell.activeStateIdentifier);
             newCellNode.innerHTML = svgContent;
         }
@@ -1301,10 +1406,10 @@ export class AntetypeWeb {
     buildDOMForCell(cell) {
         var domElement = this.domElementFromCell(cell);
         this.cellProperties(domElement, cell);
-        
+
         // Vector cells need an additional pass because properties like backgroundColor are set after the first path
         var cellType = cell.valueForKeyInStateWithIdentifier("cellType", cell.activeStateIdentifier);
-        if(cellType == GDVectorCellType) {
+        if (cellType == GDVectorCellType) {
             domElement = this.domElementFromCell(cell);
         }
 
@@ -1315,7 +1420,7 @@ export class AntetypeWeb {
             }
         }
 
-        for (var i=0; i<cell.orderedComponents.length; i++) {
+        for (var i = 0; i < cell.orderedComponents.length; i++) {
             var c = cell.orderedComponents[i];
             var childDom = this.buildDOMForCell(c);
             domElement.appendChild(childDom);
@@ -1326,13 +1431,17 @@ export class AntetypeWeb {
 
 
     rebuildRenderObjects(screen) {
-        this.dispatchEvent({type: 'unloadscreen', defaultPrevented: false});
+        // store the ids of the selected figures to restore them later. This method might
+        // replace the selectedFigures with new ones. 
+        const selectedFigureIds = this.selectedFigures.map(f => f.objectID);
+
+        this.dispatchEvent({ type: 'unloadscreen', defaultPrevented: false });
         this.currentScreen.cleanupStyles();     // #606 remove old styles ... 
-       
-        this.updateScreenBounds({width:screen.getProperty("width"), height: screen.getProperty("height")});
+
+        this.updateScreenBounds({ width: screen.getProperty("width"), height: screen.getProperty("height") });
         screen.createStyleSheets();
         const newScreenDOMElement = this.buildDOMForCell(screen);
-        
+
         if (this.screenElement.parentNode) {
             this.screenElement.parentElement.replaceChild(newScreenDOMElement, this.screenElement);
         }
@@ -1340,10 +1449,59 @@ export class AntetypeWeb {
         this.screenElement = newScreenDOMElement;
         // This step is necessary for the correct widget layout within a container 
         this.executeFinalWidgetLayoutPass(newScreenDOMElement.figure);
-        this.dispatchEvent({type: 'loadscreen', defaultPrevented: false});
+        this.dispatchEvent({ type: 'loadscreen', defaultPrevented: false });
 
         this._cachedScreens.set(screen.objectID, screen);
-        this.send("restoreSelectionAfterReload");   
+
+        // restore the selection with the new cells:
+        const newSelectedFigures = selectedFigureIds.filter(i => this.getElementById(i) != null).map(i => this.getElementById(i).figure);
+        this.selectFigures(newSelectedFigures);
+    }
+
+    /**
+     * 
+     * @param {[GDWidgetInstanceCell]} newFigures 
+     */
+    rebuildRenderObjectsForFigures(newFigures) {
+        // store the ids of the selected figures to restore them later. This method might
+        // replace the selectedFigures with new ones. 
+        const selectedFigureIds = this.selectedFigures.map(f => f.objectID);
+
+        // Issue #175 clean up all at once, before building new styles:
+        // if we do it in one loop (clean + build) we remove styles if we
+        // nest cells. 
+        newFigures.forEach(f => {
+            const figureId = f.objectID;
+            const oldDomElement = this.getElementById(figureId);
+
+            if (oldDomElement != null) {
+                const oldFigure = oldDomElement.figure;
+                oldFigure.cleanupStyles();
+            }
+        });
+
+        // build new DOM/CSS and replace the old ones: 
+        newFigures.forEach(newFigure => {
+            const figureId = newFigure.objectID;
+            const oldDomElement = this.getElementById(figureId);
+
+            if (oldDomElement != null) {
+                const oldFigure = oldDomElement.figure;
+
+                const container = oldFigure.container;
+                const index = container.orderedComponents.indexOf(oldFigure);
+                container.removeComponentAtIndex(index);
+                container.insertComponent(newFigure, index);
+                const newDomElement = this.buildDOMForCell(newFigure);
+
+                oldDomElement.parentNode.replaceChild(newDomElement, oldDomElement);
+                this.executeFinalWidgetLayoutPass(newFigure);
+            }
+        });
+
+        // restore the selection with the new cells:
+        const newSelectedFigures = selectedFigureIds.filter(i => this.getElementById(i) != null).map(i => this.getElementById(i).figure);
+        this.selectFigures(newSelectedFigures);
     }
 
     cachedScreenWithObjectID(objectID) {
@@ -1355,7 +1513,7 @@ export class AntetypeWeb {
     }
 
     replaceSVGWithCanvas(domElement) {
-        if(domElement.firstChild.nodeName.toLowerCase() == 'svg') {
+        if (domElement.firstChild.nodeName.toLowerCase() == 'svg') {
             var canvas = document.createElement('canvas');
             canvas.style.width = "100%";
             canvas.style.height = "100%";
@@ -1363,9 +1521,9 @@ export class AntetypeWeb {
             domElement.replaceChild(canvas, domElement.firstChild);
         }
     }
-    
+
     replaceCanvasOrSVGWithSVG(domElement, savedStateSVG) {
-        if(domElement.firstChild.nodeName.toLowerCase() == 'canvas' || domElement.firstChild.nodeName.toLowerCase() == 'svg') {
+        if (domElement.firstChild.nodeName.toLowerCase() == 'canvas' || domElement.firstChild.nodeName.toLowerCase() == 'svg') {
             domElement.replaceChild(savedStateSVG, domElement.firstChild);
         }
     }
@@ -1373,7 +1531,7 @@ export class AntetypeWeb {
     enablePseudoStates() {
         this.project.currentLookAndFeel.enablePseudoStates();
         this.currentScreen.enablePseudoStates();
-        for (let [ , screen] of this._cachedScreens) {
+        for (let [, screen] of this._cachedScreens) {
             screen.enablePseudoStates();
         }
     }
@@ -1381,13 +1539,13 @@ export class AntetypeWeb {
     disablePseudoStates() {
         this.currentScreen.disablePseudoStates();
         this.project.currentLookAndFeel.disablePseudoStates();
-        for (let [ , screen] of this._cachedScreens) {
+        for (let [, screen] of this._cachedScreens) {
             screen.disablePseudoStates();
         }
     }
 
     updateStateAnimation(states, animate, duration, curve) {
-        for (var i=0; i<states.length; i++) {
+        for (var i = 0; i < states.length; i++) {
             var state = states[i];
             state.setAutoAnimation(animate, duration, curve);
         }
@@ -1399,7 +1557,7 @@ export class AntetypeWeb {
         this.project.currentLookAndFeel.connectObjects();
         this.project.connectObjects();
 
-        this.currentScreen.deepOrderedComponents.forEach(cell =>  cell.connectObjects(this));
+        this.currentScreen.deepOrderedComponents.forEach(cell => cell.connectObjects(this));
         this.currentTool.activate(); // the generated elements don't se the cursor to pointer. Without cursor:pointer iOS Safari does not fire events... 
 
 
@@ -1416,13 +1574,13 @@ export class AntetypeWeb {
         let result = "";
         let changedElements = [];
 
-        const  iterator = document.createNodeIterator(this.screenElement, NodeFilter.SHOW_ELEMENT, function(e) { 
-                    if(e.className.includes === undefined) {
-                        return false
-                    } else {
-                        return e.figure !== undefined && e.className.includes("_") || e.className.includes("animated");
-                    }
-                });
+        const iterator = document.createNodeIterator(this.screenElement, NodeFilter.SHOW_ELEMENT, function (e) {
+            if (e.className.includes === undefined) {
+                return false
+            } else {
+                return e.figure !== undefined && e.className.includes("_") || e.className.includes("animated");
+            }
+        });
         let e = null;
         while ((e = iterator.nextNode()) != null) {
             let c = e.className;
@@ -1430,30 +1588,41 @@ export class AntetypeWeb {
             c = c.replace("_active", "");
             c = c.replace("_focus-within", "");
             if (c.includes("animated")) {       // if we used the IPP in Antetype an GDEffectAction might
-                                                // leave its animation className intact. If this is the 
-                                                // the case the animation will start immediately for the
-                                                // first screen. #557
+                // leave its animation className intact. If this is the 
+                // the case the animation will start immediately for the
+                // first screen. #557
                 c = cssClassNameForCell(e.figure, this.project);
             }
             e.className = c;
             changedElements.push(e);
         }
 
+        if (this.nativeMouseSelection) {
+            this.hideWKWebViewhandles();
+        } else {
 
-        // remove handles and selection rects: 
-        for (let i=0; i<this.handleElements.length; i++) {
-            const h = this.handleElements[i];
-            h.parentElement.removeChild(h);
+            for (let i = 0; i < this.handleElements.length; i++) {
+                const h = this.handleElements[i];
+                h.parentElement.removeChild(h);
+            }
+            this.handleElements = [];
         }
-        this.handleElements = [];
 
-        for (let i=0; i<this._highlightDivs.length; i++) {
+
+
+        for (let i = 0; i < this._highlightDivs.length; i++) {
             const h = this._highlightDivs[i];
             h.parentElement.removeChild(h);
         }
+
+        // if we are using the WKWebView and zooming, we don't want the zoom stored: 
+        let currentZoom = this.screenElement.style.zoom;
+        if (currentZoom != "") {
+            this.screenElement.style.removeProperty("zoom");
+        }
         result = this.screenElement.outerHTML;
 
-        for (let i=0; i<changedElements.length; i++) {
+        for (let i = 0; i < changedElements.length; i++) {
             const domElement = changedElements[i];
             const rootCell = domElement.figure.rootInstanceCell;
             this.changeStateOfCell(rootCell, rootCell.activeState, "");
@@ -1461,7 +1630,12 @@ export class AntetypeWeb {
 
         // show handles and selection rects again:
         this.updateHandles();
-        this._highlightDivs.forEach(function(s) { document.body.appendChild(s); });
+        this.appendHandlesToScreen();
+        this._highlightDivs.forEach(function (s) { document.body.appendChild(s); });
+
+        if (currentZoom != "") {
+            this.screenElement.style.zoom = currentZoom;
+        }
 
         return result;
 
@@ -1473,11 +1647,11 @@ export class AntetypeWeb {
         if (changeCSS) {
             this.enablePseudoStates();
         }
-        
-        result = this.project.currentLookAndFeel.cssStyleSheet.cssText 
-        + '\n\n' + this.currentScreen.cssStyleSheet.cssText 
-        + '\n\n' + this.project.currentLookAndFeel.breakPointStyleSheet.cssText
-        + '\n\n' + this.currentScreen.breakPointStyleSheet.cssText; 
+
+        result = this.project.currentLookAndFeel.cssStyleSheet.cssText
+            + '\n\n' + this.currentScreen.cssStyleSheet.cssText
+            + '\n\n' + this.project.currentLookAndFeel.breakPointStyleSheet.cssText
+            + '\n\n' + this.currentScreen.breakPointStyleSheet.cssText;
 
         if (changeCSS) {
             this.disablePseudoStates();
@@ -1491,7 +1665,7 @@ export class AntetypeWeb {
         if (changeCSS) {
             this.enablePseudoStates();
         }
-        
+
         result = styleSheet.cssText;
 
         if (changeCSS) {
@@ -1500,25 +1674,32 @@ export class AntetypeWeb {
         return result;
     }
 
-    updateDesignBreakPoint(breakPoint, name, width) {
+    updateDesignBreakPoint(breakPoint, name, width, preventUpdateRef) {
         this.project.updateDesignBreakPoint(breakPoint, name, width);
         this.currentScreen.updateDesignBreakPoint(breakPoint);
-        for (let [ , screen] of this._cachedScreens) {
+        for (let [, screen] of this._cachedScreens) {
             screen.updateDesignBreakPoint(breakPoint);
+        }
+
+        if (!preventUpdateRef) {
+            if (this._currentZoom > 1) {
+                this.updateBreakpointsAccordingToCurrentZoom(breakPoint);
+            }
         }
     }
 
     addDesignBreakPoint(breakPoint) {
         this.project.addDesignBreakPoint(breakPoint);
         this.currentScreen.insertBreakPoint(breakPoint);
-        for (let [ , screen] of this._cachedScreens) {
+        for (let [, screen] of this._cachedScreens) {
             screen.insertBreakPoint(breakPoint);
         }
+        this.updateBreakpointsAccordingToCurrentZoom(breakPoint);
     }
 
     deleteDesignBreakPoint(breakPoint) {
         this.currentScreen.deleteDesignBreakPoint(breakPoint);
-        for (let [ , screen] of this._cachedScreens) {
+        for (let [, screen] of this._cachedScreens) {
             screen.deleteDesignBreakPoint(breakPoint);
         }
         this.project.deleteDesignBreakPoint(breakPoint);
@@ -1562,7 +1743,7 @@ export class AntetypeWeb {
         }
         var stack = this._listeners[type];
         for (var i = 0, l = stack.length; i < l; i++) {
-            if (stack[i] === callback){
+            if (stack[i] === callback) {
                 stack.splice(i, 1);
                 return;
             }
@@ -1579,6 +1760,27 @@ export class AntetypeWeb {
             stack[i].call(this, event);
         }
         return !event.defaultPrevented;
+    }
+
+    /**
+     * @returns {Number} the current zoom (WKWebView only so far)
+     */
+    get currentZoom() {
+        return this._currentZoom;
+    }
+
+    /**
+     * sets the current zoom (1 = original)
+     * @param (Number) zoomValue
+     */
+    set currentZoom(zoomValue) {
+        this._currentZoom = zoomValue;
+        const rootStyle = this.project.currentLookAndFeel.cssRootRule.style;
+        rootStyle.setProperty("--current-zoom", zoomValue);
+    }
+    updateBreakpointsAccordingToCurrentZoom(brakePoint) {
+        let newValue = Math.ceil((brakePoint.originalBreakPointMaxWidth) * this._currentZoom);
+        this.updateDesignBreakPoint(brakePoint, brakePoint.breakPointName, newValue, true);
     }
 }
 
@@ -1603,28 +1805,3 @@ export function initializeAntetypeViewer() {
     window.Antetype = Antetype;
 }
 
-// WKWebView-fake-object
-// currently we use WebView but we want to switch to WKWebView, furthermore debugging
-// is broken in the WebView since 10.15.4. Therefor we make ist possible to use WKWebView
-// using a compile-time-switch. Since the Cocoa <-> JavaScript-communication is quiet 
-// different we add here some fake-objects to mimique the old one: 
-if (window.navigator.userAgent.indexOf("Antetype") != -1 && window.webkit && window.serverDocument == undefined) {
-
-    if (window && window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.serverDocument) {
-        window.serverDocument = {
-            handleCommandPath: (s) => {
-                window.webkit.messageHandlers.serverDocument.postMessage({"command": "handleCommandPath", "parameters": s});
-            }
-        }
-    } else if (window.parent && window.parent.webkit && window.parent.webkit.messageHandlers && window.parent.webkit.messageHandlers.serverDocument) {
-        window.serverDocument = {
-            handleCommandPath: (s) => {
-                window.parent.webkit.messageHandlers.serverDocument.postMessage({"command": "handleCommandPath", "parameters": s});
-            }
-        }
-    }
-
-
-//    window.workingAreaView = { }
-    //    window.webViewController = {}
-}

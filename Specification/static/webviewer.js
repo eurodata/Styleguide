@@ -101,7 +101,9 @@ window.addEventListener("message", (e) => {
                 selectElement.selectedIndex = index;
 
                 // to support the back-button (see onpopstate below)
-                history.pushState({screenID: e.data.parameters.objectID}, "");
+
+                // #376 remove browser-back inside prototype, did not work
+                //history.pushState({screenID: e.data.parameters.objectID}, "");
             }
             break;
 
@@ -213,11 +215,11 @@ window.addEventListener("load", function(e) {
             sendToViewerFrame({command: "gotoScreenWithID", parameters: hash.substr(1)})
         }
     }
-
-    window.onpopstate = e => {
-        if (e.state && e.state.screenID && e.state.screenID.length > 1) {
-            let screenID = e.state.screenID;
-            sendToViewerFrame({command: "gotoScreenWithID", parameters: screenID})
-        }
-    };
+    // #376 remove browser-back inside prototype, did not work
+    // window.onpopstate = e => {
+    //     if (e.state && e.state.screenID && e.state.screenID.length > 1) {
+    //         let screenID = e.state.screenID;
+    //         sendToViewerFrame({command: "gotoScreenWithID", parameters: screenID})
+    //     }
+    // };
 })

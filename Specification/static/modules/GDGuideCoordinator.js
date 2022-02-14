@@ -11,14 +11,17 @@ export class GDGuideCoordinator {
     }
 
     static get snappingTolerance() {
-        return 5;
+        return 1.5;
+    }
+    static get handleSnappingTolerance() {
+        return 2.5;
     }
 
     cachedBoundsForCell(cell) {
-        let b =  this._boundsCache.get(cell);
+        let b = this._boundsCache.get(cell);
         if (!b) {
             b = globalBoundsOfElement(cell.DOMElement);
-            this._boundsCache.set(cell, b);    
+            this._boundsCache.set(cell, b);
         }
         return b;
     }
@@ -37,12 +40,12 @@ export class GDGuideCoordinator {
 
         const f = selections[0];
         alignmentCandidates = alignmentCandidates.concat(f.siblings);
-        
-        this._guideCreators.forEach( creator => {
+
+        this._guideCreators.forEach(creator => {
             const containerGuides = creator.guidesForContainer(f.container);
             this._possibleAlignmentGuides = this._possibleAlignmentGuides.concat(containerGuides);
 
-            alignmentCandidates.forEach( candidate => {
+            alignmentCandidates.forEach(candidate => {
                 if (selections.indexOf(candidate) == -1)
                     this._possibleAlignmentGuides = this._possibleAlignmentGuides.concat(creator.guidesForCell(candidate));
             })
@@ -50,17 +53,17 @@ export class GDGuideCoordinator {
     }
 
     selectionGuides() {
-        if (this._selections.length == 0)  {
+        if (this._selections.length == 0) {
             return [];
         }
 
         let selectionGuides = [];
 
-        this._guideCreators.forEach( guideCreator => {
+        this._guideCreators.forEach(guideCreator => {
             if (this._selections.length == 1) {
-                selectionGuides = selectionGuides.concat( guideCreator.guidesForCell(this._selections[0]));
+                selectionGuides = selectionGuides.concat(guideCreator.guidesForCell(this._selections[0]));
             } else {
-                selectionGuides = selectionGuides.concat( guideCreator.guidesForSelections(this._selections));
+                selectionGuides = selectionGuides.concat(guideCreator.guidesForSelections(this._selections));
             }
         });
         return selectionGuides;
@@ -70,43 +73,46 @@ export class GDGuideCoordinator {
         this._activeAlignmentGuides = [];
         let selectionGuides = this.selectionGuides();
 
-        const selectionHorizontalGuides = selectionGuides.filter( g => g.isHorizontal );
-        const possibleHorizontalGuides = this._possibleAlignmentGuides.filter( g => g.isHorizontal );
+        const selectionHorizontalGuides = selectionGuides.filter(g => g.isHorizontal);
+        const possibleHorizontalGuides = this._possibleAlignmentGuides.filter(g => g.isHorizontal);
 
         let horizontalLines = [];
+
         let maximumHorizontalPriority = GDAlignmentGuideZeroPriority;
-        selectionHorizontalGuides.forEach( nextSelectionGuide => {
-            possibleHorizontalGuides.forEach( nextPossibleAlignmentGuide => {
+        selectionHorizontalGuides.forEach(nextSelectionGuide => {
+            possibleHorizontalGuides.forEach(nextPossibleAlignmentGuide => {
+               
                 if (nextPossibleAlignmentGuide.isAlignedTo(nextSelectionGuide)) {
                     let currentPriority = Math.max(nextPossibleAlignmentGuide.priority, nextSelectionGuide.priority);
                     if (currentPriority > maximumHorizontalPriority) {
                         horizontalLines = [];
-                        horizontalLines.push( nextSelectionGuide.alignmentLineTo(nextPossibleAlignmentGuide));
+                        horizontalLines.push(nextSelectionGuide.alignmentLineTo(nextPossibleAlignmentGuide));
                         maximumHorizontalPriority = currentPriority;
                     } else if (currentPriority == maximumHorizontalPriority) {
-                        horizontalLines.push( nextSelectionGuide.alignmentLineTo(nextPossibleAlignmentGuide));
+                        horizontalLines.push(nextSelectionGuide.alignmentLineTo(nextPossibleAlignmentGuide));
                     }
-                } 
-            })
+                }
+            });
         });
-         
-        const selectionVerticalGuides = selectionGuides.filter( g => g.isVertical );
-        const possibleVerticalGuides = this._possibleAlignmentGuides.filter( g => g.isVertical );
+
+        const selectionVerticalGuides = selectionGuides.filter(g => g.isVertical);
+        const possibleVerticalGuides = this._possibleAlignmentGuides.filter(g => g.isVertical);
+
 
         let verticalLines = [];
         let maximumVerticalPriority = GDAlignmentGuideZeroPriority;
-        selectionVerticalGuides.forEach( nextSelectionGuide => {
-            possibleVerticalGuides.forEach( nextPossibleAlignmentGuide => {
+        selectionVerticalGuides.forEach(nextSelectionGuide => {
+            possibleVerticalGuides.forEach(nextPossibleAlignmentGuide => {
                 if (nextPossibleAlignmentGuide.isAlignedTo(nextSelectionGuide)) {
                     let currentPriority = Math.max(nextPossibleAlignmentGuide.priority, nextSelectionGuide.priority);
                     if (currentPriority > maximumVerticalPriority) {
                         verticalLines = [];
-                        verticalLines.push( nextSelectionGuide.alignmentLineTo(nextPossibleAlignmentGuide));
+                        verticalLines.push(nextSelectionGuide.alignmentLineTo(nextPossibleAlignmentGuide));
                         maximumVerticalPriority = currentPriority;
                     } else if (currentPriority == maximumVerticalPriority) {
-                        verticalLines.push( nextSelectionGuide.alignmentLineTo(nextPossibleAlignmentGuide));
+                        verticalLines.push(nextSelectionGuide.alignmentLineTo(nextPossibleAlignmentGuide));
                     }
-                } 
+                }
             })
         });
 
@@ -126,11 +132,11 @@ export class GDGuideCoordinator {
 
     nearestDistance(selectionGuides, possibleGuides, delta) {
         let nearestDistance = Number.MAX_VALUE;
-        possibleGuides.forEach( possibleGuide => {
-            selectionGuides.forEach( selectionGuide => {
+        possibleGuides.forEach(possibleGuide => {
+            selectionGuides.forEach(selectionGuide => {
                 if (possibleGuide.canSnapTo(selectionGuide)) {
                     const distance = possibleGuide.distanceTo(selectionGuide);
-                    if (Math.abs( distance - delta) < Math.abs(nearestDistance)) {
+                    if (Math.abs(distance - delta) < Math.abs(nearestDistance)) {
                         nearestDistance = distance;
                     }
                 }
@@ -140,42 +146,46 @@ export class GDGuideCoordinator {
         return nearestDistance;
     }
 
-    snapDelta(dx, dy) {
+    snapDelta(dx, dy, disableSmartGuides = false) {
         const selectionGuides = this.selectionGuides();
-        const verticalSelectionGuides = selectionGuides.filter( g => g.isVertical );
-        const possibleVerticalGuides = this.possibleAlignmentGuides.filter( g => g.isVertical );
 
-        const nearestVerticalDistance = this.nearestDistance(verticalSelectionGuides, possibleVerticalGuides, dy);
-        if (Math.abs(nearestVerticalDistance - dy) < GDGuideCoordinator.snappingTolerance) {
-            dy = nearestVerticalDistance;
+        if (!disableSmartGuides) {
+            const verticalSelectionGuides = selectionGuides.filter(g => g.isVertical);
+            const possibleVerticalGuides = this.possibleAlignmentGuides.filter(g => g.isVertical);
+
+            const nearestVerticalDistance = this.nearestDistance(verticalSelectionGuides, possibleVerticalGuides, dy);
+            if (Math.abs(nearestVerticalDistance - dy) < GDGuideCoordinator.snappingTolerance) {
+                dy = nearestVerticalDistance;
+            }
+
+            const horizontalSelectionGuides = selectionGuides.filter(g => g.isHorizontal);
+            const possibleHorizontalGuides = this.possibleAlignmentGuides.filter(g => g.isHorizontal);
+
+            const nearestHorizontalDistance = this.nearestDistance(horizontalSelectionGuides, possibleHorizontalGuides, dx);
+            if (Math.abs(nearestHorizontalDistance - dx) < GDGuideCoordinator.snappingTolerance) {
+                dx = nearestHorizontalDistance;
+            }
         }
 
-        const horizontalSelectionGuides = selectionGuides.filter( g => g.isHorizontal );
-        const possibleHorizontalGuides = this.possibleAlignmentGuides.filter( g => g.isHorizontal );
 
-        const nearestHorizontalDistance = this.nearestDistance(horizontalSelectionGuides, possibleHorizontalGuides, dx);
-        if (Math.abs(nearestHorizontalDistance - dx) < GDGuideCoordinator.snappingTolerance) {
-            dx = nearestHorizontalDistance;
-        }
-
-        this._selections.forEach( c => {
+        this._selections.forEach(c => {
             const b = this._boundsCache.get(c);
             if (b) {
                 b.top += dy;
                 b.left += dx;
-                this._boundsCache.set(c,b);
+                this._boundsCache.set(c, b);
             }
         });
 
-        return [dx,dy];
+        return [dx, dy];
     }
 
     nearestAlignmentGuidePair(selectionGuides, possibleGuides) {
         let nearestDistance = Number.MAX_VALUE;
         let nearestGuide, selectionGuide;
 
-        possibleGuides.forEach( nextPossibleGuide => {
-            selectionGuides.forEach( nextSelectionGuide => {
+        possibleGuides.forEach(nextPossibleGuide => {
+            selectionGuides.forEach(nextSelectionGuide => {
                 if (nextPossibleGuide.canSnapTo(nextSelectionGuide)) {
                     const distance = nextPossibleGuide.distanceTo(nextSelectionGuide);
                     if (Math.abs(distance) < Math.abs(nearestDistance)) {
@@ -190,32 +200,32 @@ export class GDGuideCoordinator {
         return [nearestGuide, selectionGuide];
     }
 
-    snapVertical(pos,side) {
-        const selectionGuides = this.selectionGuides().filter( g => g.isVertical && g.side == side);
-        const possibleGuides = this.possibleAlignmentGuides.filter( g => g.isVertical );
+    snapVertical(pos, side) {
+        const selectionGuides = this.selectionGuides().filter(g => g.isVertical && g.side == side);
+        const possibleGuides = this.possibleAlignmentGuides.filter(g => g.isVertical);
 
         let [nearestGuide, selectionGuide] = this.nearestAlignmentGuidePair(selectionGuides, possibleGuides);
         if (!nearestGuide || !selectionGuide) {
             return pos;
         }
 
-        if (Math.abs(nearestGuide.position - pos) < GDGuideCoordinator.snappingTolerance)  {
+        if (Math.abs(nearestGuide.position - pos) < GDGuideCoordinator.handleSnappingTolerance) {
             return nearestGuide.position;
         }
 
         return pos;
     }
 
-    snapHorizontal(pos,side) {
-        const selectionGuides = this.selectionGuides().filter( g => g.isHoriztontal && g.side == side);
-        const possibleGuides = this.possibleAlignmentGuides.filter( g => g.isHoriztontal );
-
+    snapHorizontal(pos, side) {
+        const selectionGuides = this.selectionGuides().filter(g => g.isHorizontal && g.side == side);
+        const possibleGuides = this.possibleAlignmentGuides.filter(g => g.isHorizontal);
         let [nearestGuide, selectionGuide] = this.nearestAlignmentGuidePair(selectionGuides, possibleGuides);
+
         if (!nearestGuide || !selectionGuide) {
             return pos;
         }
 
-        if (Math.abs(nearestGuide.position - pos) < GDGuideCoordinator.snappingTolerance)  {
+        if (Math.abs(nearestGuide.position - pos) < GDGuideCoordinator.handleSnappingTolerance) {
             return nearestGuide.position;
         }
 

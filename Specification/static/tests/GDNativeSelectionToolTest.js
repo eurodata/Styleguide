@@ -1,184 +1,408 @@
-import { GDFixedLayoutPolicyCode, GDWidget, GDWidgetCellDefinition, GDWidgetRootCellDefinition } from '../modules/model.js';
-import { GDNativeFigureDragTool, GDNativeHandleDragTool, GDNativeSelectionTool, GDNativeSelectionRectTool } from '../modules/tools.js';
+import { GDFixedLayoutPolicyCode, GDHorizontalBoxLayoutPolicyCode, GDVerticalBoxLayoutPolicyCode, GDAlignmentLayoutPolicyCode, GDWidget, GDWidgetCellDefinition, GDWidgetRootCellDefinition } from '../modules/model.js';
+import { GDNativeFigureDragTool, GDNativeHandleDragTool, GDNativeSelectionTool, GDNativeSelectionRectTool, GDNativeTextTool, GDTextTool } from '../modules/tools.js';
 import { buildAntetypeWithScreen, cleanupAntetypeWithScreen } from './test-utils.js';
 
-QUnit.module("native selection tool", {
-    beforeEach: function() {
-        buildAntetypeWithScreen(this);
-        this.tool = new GDNativeSelectionTool(this.at);
-        this.project = this.at.project;
+const { test } = QUnit;
 
-        this.cell = this.at.project.createBasicCellWithBounds(10,10,10,10);
-        this.screen.addComponent(this.cell);
-        this.screen.setValueForKeyInStateWithIdentifier(GDFixedLayoutPolicyCode, "layoutPolicyCode", this.screen.activeStateIdentifier);
-        this.at.rebuildRenderObjects(this.screen);
+QUnit.module("native selection tool", hooks => {
+    let at, tool, project, cell, screen, widget, commands;
 
-        let rootDefinition = GDWidgetRootCellDefinition.createInstance(this.project);
-        let innerDefinition = GDWidgetCellDefinition.createInstance(this.project);
+    hooks.beforeEach(() => {
+        at = buildAntetypeWithScreen();
+
+        tool = new GDNativeSelectionTool(at);
+        project = at.project;
+
+        cell = at.project.createBasicCellWithBounds(10, 10, 10, 10);
+        screen = at.currentScreen;
+        screen.addComponent(cell);
+        screen.setValueForKeyInStateWithIdentifier(GDFixedLayoutPolicyCode, "layoutPolicyCode", screen.activeStateIdentifier);
+        at.rebuildRenderObjects(screen);
+
+        let rootDefinition = GDWidgetRootCellDefinition.createInstance(project);
+        let innerDefinition = GDWidgetCellDefinition.createInstance(project);
         rootDefinition.addComponent(innerDefinition);
-        this.widget = GDWidget.createInstance(this.project);
-        this.widget._hierarchy = rootDefinition;
-        rootDefinition._widget = this.widget;
-    
-        this.at.nativeMouseSelection = true;
+        widget = GDWidget.createInstance(project);
+        widget._hierarchy = rootDefinition;
+        rootDefinition._widget = widget;
 
-        this.at.setCurrentTool(this.tool);
-    }, 
-    afterEach: function() {
-        cleanupAntetypeWithScreen(this);
-    }
-});
+        at.nativeMouseSelection = true;
 
+        at.setCurrentTool(tool);
 
-QUnit.test("mosue drag on free layout starts drag-tool", function(assert) {
-    this.at.selectFigures([this.cell]);
+        // normally this is sent to the application, here we just store all commands 
+        // and can check if the right commands would be send.
+        commands = [];
+        at._communication = { sendCommand: (name, p) => commands.push({ 'command': name, 'parameters': p }) };
+    });
 
-    this.tool.mouseDown({target: this.cell.DOMElement});
-    this.tool.mouseDragged({target: this.cell.DOMElement});
-
-    assert.ok(this.at.currentTool instanceof GDNativeFigureDragTool);
-});
-
-QUnit.test("mouse drag on screen starts selection rect", function(assert) {
-    this.tool.mouseDown({target: this.screen.DOMElement});
-    this.tool.mouseDragged({target: this.screen.DOMElement});
-    
-    assert.ok(this.at.currentTool instanceof GDNativeSelectionRectTool);
-});
+    hooks.afterEach(() => {
+        cleanupAntetypeWithScreen(at);
+    });
 
 
-QUnit.test("test selection", function(assert) {
-    let command = null;
-    this.at.__proto__.send = s => command = s;
+    test("mosue drag on free layout starts drag-tool", assert => {
+        at.selectFigures([cell]);
+        tool.mouseDown({ target: cell.DOMElement });
+        tool.mouseDragged({ target: cell.DOMElement });
 
-    this.tool.mouseDown({target: this.cell.DOMElement});
-    this.tool.mouseUp({target: this.cell.DOMElement});
+        assert.ok(at.currentTool instanceof GDNativeFigureDragTool);
+    });
 
-    assert.equal(command, "select/" + this.cell.objectID);
-});
+    test("mouse drag on screen starts selection rect", assert => {
+        tool.mouseDown({ target: screen.DOMElement });
+        tool.mouseDragged({ target: screen.DOMElement });
 
-QUnit.test("figureToSelectForFigure", function(assert) {
-    assert.equal(this.tool.figureToSelectForFigure(this.cell), this.cell, "basic cell: select the cell");
-
-    let instance = this.widget.createInstance(this.project);
-    this.screen.addComponent(instance);
-    this.at.rebuildRenderObjects(this.screen);
-
-    let selectedCell = this.tool.figureToSelectForFigure(instance.orderedComponents[0]);
-    assert.equal(selectedCell, instance, "inner cell: select root cell");
-
-    this.at.selectFigures([instance]);
-
-    selectedCell = this.tool.figureToSelectForFigure(instance.orderedComponents[0]);
-    assert.equal(selectedCell, instance.orderedComponents[0], "if instance is already selected: select inner cell");
-});
-
-QUnit.test("selectOnMouseUp", function(assert) {
-    assert.notOk(this.tool.selectOnMouseUp(this.cell));
-
-    let instance = this.widget.createInstance(this.project);
-    this.screen.addComponent(instance);
-    this.at.rebuildRenderObjects(this.screen);
-    assert.notOk(this.tool.selectOnMouseUp(instance.orderedComponents[0]), "select directly");
-
-    this.at.selectFigures([instance]);
-    assert.ok(this.tool.selectOnMouseUp(instance.orderedComponents[0]), "select on mouse up since parent is already selected");
-});
-
-QUnit.test("handles", function(assert) {
-    this.tool.mouseDown({target: this.cell.DOMElement});
-    this.tool.mouseUp({target: this.cell.DOMElement});
-
-    assert.equal(this.at.handles.length, 3, "3 handles");
-    this.at.handles.forEach( h => {
-        assert.notOk( h.DOMElement == undefined, "handle has DOM element" );
-        assert.notOk( h.DOMElement.parentElement == undefined);    
-    } );
-});
-
-QUnit.test("handle drag tool", function(assert) {
-    this.at.selectFigures([this.cell]);
-    const handle = this.at.handles[0];
-
-    this.tool.mouseDown({target: handle.DOMElement});
-    assert.ok( this.at.currentTool instanceof GDNativeHandleDragTool );
-});
+        assert.ok(at.currentTool instanceof GDNativeSelectionRectTool);
+    });
 
 
-QUnit.test("testKeyDownDelete", function(assert) {
-    let command = null;
-    this.at.__proto__.send = s => command = s;
+    test("test selection", assert => {
+        tool.mouseDown({ target: cell.DOMElement });
+        tool.mouseUp({ target: cell.DOMElement });
 
-    let preventDefaultCalled = false;
-    let preventDefaultFun = () => preventDefaultCalled=true; 
+        assert.equal(commands[0].command, "select", "a select command");
+        assert.equal(commands[0].parameters.cellIdentifiers.length, 1, "one cell selected");
+        assert.equal(commands[0].parameters.cellIdentifiers[0], cell.objectID, "cell identifier is transferred");
+    });
 
-    this.at.selectFigures([this.cell]);
+    test("figureToSelectForFigure", assert => {
+        assert.equal(tool.figureToSelectForFigure(cell), cell, "basic cell: select the cell");
 
-    this.tool.keyDown( {key: "Delete", preventDefault: preventDefaultFun});
-    assert.equal(command, "/deleteSelection");
-    assert.ok(preventDefaultCalled);
-    preventDefaultCalled = false;
+        let instance = widget.createInstance(project);
+        screen.addComponent(instance);
+        at.rebuildRenderObjects(screen);
 
-    this.tool.keyDown( {key: "Backspace", preventDefault: preventDefaultFun});
-    assert.equal(command, "/deleteSelection");
-    assert.ok(preventDefaultCalled);
-});
+        let selectedCell = tool.figureToSelectForFigure(instance.orderedComponents[0]);
+        assert.equal(selectedCell, instance, "inner cell: select root cell");
 
-QUnit.test("tabKey", function(assert) {
-    let otherCell = this.at.project.createBasicCellWithBounds(10,10,10,10);
-    this.screen.addComponent(otherCell);
-    this.at.rebuildRenderObjects(this.screen);
+        at.selectFigures([instance]);
 
-    this.at.selectFigures([this.cell]);
+        selectedCell = tool.figureToSelectForFigure(instance.orderedComponents[0]);
+        assert.equal(selectedCell, instance.orderedComponents[0], "if instance is already selected: select inner cell");
+    });
 
-    let command = null;
-    this.at.__proto__.send = s => command = s;
+    test("selectOnMouseUp", assert => {
+        assert.notOk(tool.selectOnMouseUp(cell));
 
-    let preventDefaultCalled = false;
-    let preventDefaultFun = () => preventDefaultCalled=true; 
+        let instance = widget.createInstance(project);
+        screen.addComponent(instance);
+        at.rebuildRenderObjects(screen);
+        assert.notOk(tool.selectOnMouseUp(instance.orderedComponents[0]), "select directly");
 
-    this.tool.keyDown( {key: "Tab", 
+        at.selectFigures([instance]);
+        assert.ok(tool.selectOnMouseUp(instance.orderedComponents[0]), "select on mouse up since parent is already selected");
+    });
+
+    test("handles", assert => {
+        tool.mouseDown({ target: cell.DOMElement });
+        tool.mouseUp({ target: cell.DOMElement });
+
+        assert.equal(at.handles.length, 8, "8 handles");
+        at.handles.forEach(h => {
+            assert.notOk(h.DOMElement == undefined, "handle has DOM element");
+            assert.notOk(h.DOMElement.parentElement == undefined);
+        });
+    });
+
+    test("handle drag tool", assert => {
+        at.selectFigures([cell]);
+        const handle = at.handles[0];
+
+        tool.mouseDown({ target: handle.DOMElement });
+        assert.ok(at.currentTool instanceof GDNativeHandleDragTool);
+    });
+
+
+    test("testKeyDownDelete", assert => {
+        let preventDefaultCalled = false;
+        let preventDefaultFun = () => preventDefaultCalled = true;
+
+        at.selectFigures([cell]);
+
+        tool.keyDown({ key: "Delete", preventDefault: preventDefaultFun });
+        assert.equal(commands[0].command, "deleteSelection");
+        assert.ok(preventDefaultCalled);
+        preventDefaultCalled = false;
+
+        tool.keyDown({ key: "Backspace", preventDefault: preventDefaultFun });
+        assert.equal(commands[1].command, "deleteSelection");
+        assert.ok(preventDefaultCalled);
+    });
+
+    test("tabKey", assert => {
+        let otherCell = at.project.createBasicCellWithBounds(10, 10, 10, 10);
+        screen.addComponent(otherCell);
+        at.rebuildRenderObjects(screen);
+
+        at.selectFigures([cell]);
+
+        let preventDefaultCalled = false;
+        let preventDefaultFun = () => preventDefaultCalled = true;
+
+        tool.keyDown({
+            key: "Tab",
             preventDefault: preventDefaultFun,
-            shiftKey: false});
-    assert.equal( this.at.selectedFigures[0].objectID, otherCell.objectID);
-    assert.equal(command, "select/" + otherCell.objectID);
-    assert.ok(preventDefaultCalled);
+            shiftKey: false
+        });
+        assert.equal(at.selectedFigures[0].objectID, otherCell.objectID);
+        assert.equal(commands[0].command, "select", "select command");
+        assert.equal(commands[0].parameters.cellIdentifiers[0], otherCell.objectID);
+        assert.equal(commands[0].parameters.cellIdentifiers.length, 1);
 
-    this.tool.keyDown( {key: "Tab", 
+        assert.ok(preventDefaultCalled);
+
+        tool.keyDown({
+            key: "Tab",
             preventDefault: preventDefaultFun,
-            shiftKey: true});
-    assert.equal( this.at.selectedFigures[0].objectID, this.cell.objectID);
-    assert.equal(command, "select/" + this.cell.objectID);
-    assert.ok(preventDefaultCalled);
-});
+            shiftKey: true
+        });
+        assert.equal(at.selectedFigures[0].objectID, cell.objectID);
+        assert.equal(commands[1].command, "select", "select command");
+        assert.equal(commands[1].parameters.cellIdentifiers[0], cell.objectID);
+        assert.equal(commands[1].parameters.cellIdentifiers.length, 1);
+        assert.ok(preventDefaultCalled);
+    });
 
-QUnit.test("up/down arrow", function(assert) {
-    let otherCell = this.at.project.createBasicCellWithBounds(10,10,10,10);
-    this.cell.addComponent(otherCell);
-    this.at.rebuildRenderObjects(this.screen);
+    test("up/down arrow", assert => {
+        let otherCell = at.project.createBasicCellWithBounds(10, 10, 10, 10);
+        cell.addComponent(otherCell);
+        at.rebuildRenderObjects(screen);
 
-    this.at.selectFigures([this.cell]);
+        at.selectFigures([cell]);
 
-    let command = null;
-    this.at.__proto__.send = s => command = s;
+        let preventDefaultCalled = false;
+        let preventDefaultFun = () => preventDefaultCalled = true;
 
-    let preventDefaultCalled = false;
-    let preventDefaultFun = () => preventDefaultCalled=true; 
-
-    this.tool.keyDown( {key: "ArrowDown", 
+        tool.keyDown({
+            key: "ArrowDown",
             preventDefault: preventDefaultFun,
-            metaKey: true});
- 
-    assert.equal( this.at.selectedFigures[0].objectID, otherCell.objectID);
-    assert.equal(command, "select/" + otherCell.objectID);
-    assert.ok(preventDefaultCalled);
+            metaKey: true
+        });
 
-    preventDefaultCalled = false;
-    this.tool.keyDown( {key: "ArrowUp", 
+        assert.equal(at.selectedFigures[0].objectID, otherCell.objectID);
+        assert.equal(commands[0].command, "select", "select command");
+        assert.equal(commands[0].parameters.cellIdentifiers[0], otherCell.objectID);
+        assert.equal(commands[0].parameters.cellIdentifiers.length, 1);
+
+        assert.ok(preventDefaultCalled);
+
+        preventDefaultCalled = false;
+        tool.keyDown({
+            key: "ArrowUp",
             preventDefault: preventDefaultFun,
-            metaKey: true});
- 
-    assert.equal( this.at.selectedFigures[0].objectID, this.cell.objectID);
-    assert.equal(command, "select/" + this.cell.objectID);
-    assert.ok(preventDefaultCalled);
+            metaKey: true
+        });
+
+        assert.equal(at.selectedFigures[0].objectID, cell.objectID);
+        assert.equal(commands[1].command, "select", "select command");
+        assert.equal(commands[1].parameters.cellIdentifiers[0], cell.objectID);
+        assert.equal(commands[1].parameters.cellIdentifiers.length, 1);
+
+
+        assert.ok(preventDefaultCalled);
+    });
+
+    test("double click on non-text-cell", assert => {
+        tool.mouseDown({ target: cell.DOMElement });
+        tool.mouseUp({ target: cell.DOMElement });
+        tool.mouseDoubleClick({ target: cell.DOMElement });
+
+        assert.ok(at.currentTool instanceof GDNativeSelectionTool, "selection tool still active");
+        assert.equal(at.selectedObjects.length, 1);
+        assert.equal(at.selectedObjects[0], cell);
+    });
+
+    test("double click on text-cell", assert => {
+        cell.setProperty("textString", "foo");     // add a text content to the cell
+        tool.mouseDown({ target: cell.DOMElement });
+        tool.mouseUp({ target: cell.DOMElement });
+        tool.mouseDoubleClick({ target: cell.DOMElement });
+
+        assert.ok(at.currentTool instanceof GDNativeTextTool, "switched to text tool");
+        assert.equal(at.selectedObjects.length, 1);
+        assert.equal(at.selectedObjects[0], cell);
+    });
+
+    test("enter on text cell starts editing", assert => {
+        cell.setProperty("textString", "foo");     // add a text content to the cell
+        at.selectFigures([cell]);
+        let preventDefaultCalled = false;
+        let preventDefaultFun = () => preventDefaultCalled = true;
+
+        tool.keyDown({
+            key: "Enter",
+            preventDefault: preventDefaultFun,
+            metaKey: true
+        });
+
+        assert.ok(at.currentTool instanceof GDNativeTextTool, "switched to text tool");
+        assert.ok(preventDefaultCalled);
+        assert.equal(at.selectedObjects.length, 1);
+        assert.equal(at.selectedObjects[0], cell);
+    });
+
+
+    test("enter does nothing if cell does not contain text", assert => {
+        cell.setProperty("textString", "");     // cell without text
+        at.selectFigures([cell]);
+        let preventDefaultCalled = false;
+        let preventDefaultFun = () => preventDefaultCalled = true;
+
+        tool.keyDown({
+            key: "Enter",
+            preventDefault: preventDefaultFun,
+            metaKey: true
+        });
+
+        assert.ok(at.currentTool instanceof GDNativeSelectionTool, "selection tool still active");
+        assert.ok(preventDefaultCalled);
+        assert.equal(at.selectedObjects.length, 1);
+        assert.equal(at.selectedObjects[0], cell);
+    });
+
+
+    test("editTextOfFigure does nothing if text tool is active", assert => {
+        cell.setProperty("textString", "foo");
+
+        at.editTextOfFigure(cell);
+
+        assert.ok(at.currentTool instanceof GDTextTool, "text tool is active");
+        assert.equal(commands.length, 1, "one command sent");
+
+        at.editTextOfFigure(cell);
+
+        assert.ok(at.currentTool instanceof GDTextTool, "text tool is still active");
+        assert.equal(commands.length, 1, "still one command sent");
+    });
+
+    test("double click in non-selected text cell selects the cell", assert => {
+        cell.setProperty("textString", "foo");     // add a text content to the cell
+        tool.mouseDoubleClick({ target: cell.DOMElement });
+
+        assert.ok(at.currentTool instanceof GDNativeTextTool, "switched to text tool");
+        assert.equal(at.selectedObjects.length, 1);
+        assert.equal(at.selectedObjects[0], cell);
+        assert.equal(commands.length, 2);
+        assert.equal(commands[0].command, "select");
+        assert.equal(commands[0].parameters.cellIdentifiers[0], cell.objectID);
+        assert.equal(commands[1].command, "editTextOfFigure");
+        assert.equal(commands[1].parameters.cellID, cell.objectID);
+    });
+
+    test("selectionIsKeyboardMovable", assert => {
+        assert.notOk(tool.isKeyboardMovable, "empty selection");
+        at.selectFigures([cell]);
+        assert.ok(tool.isKeyboardMovable, "cell is selected");
+        cell.setProperty("isMovable", false);
+        assert.notOk(tool.isKeyboardMovable, "cell is not movable");
+
+        cell.setProperty("isMovable", true);
+        cell.container.setProperty("layoutPolicyCode", GDHorizontalBoxLayoutPolicyCode);
+        assert.notOk(tool.isKeyboardMovable, "only in fix layout");
+        cell.container.setProperty("layoutPolicyCode", GDVerticalBoxLayoutPolicyCode);
+        assert.notOk(tool.isKeyboardMovable, "only in fix layout");
+        cell.container.setProperty("layoutPolicyCode", GDAlignmentLayoutPolicyCode);
+        assert.notOk(tool.isKeyboardMovable, "only in fix layout");
+    })
+
+    test("keyboard movement in free layout ArrowDown", assert => {
+        at.selectFigures([cell]);
+        let preventDefaultCalled = false;
+        const element = cell.DOMElement;
+        const oldLocation = parseInt(getComputedStyle(element).top);
+        let preventDefaultFun = () => preventDefaultCalled = true;
+
+        tool.keyDown({ key: "ArrowDown", preventDefault: preventDefaultFun });
+        assert.equal(parseInt(getComputedStyle(element).top), oldLocation + 1);
+        tool.keyDown({ key: "ArrowDown", shiftKey: true, preventDefault: preventDefaultFun });
+        assert.equal(parseInt(getComputedStyle(element).top), oldLocation + 11);
+
+        assert.equal(commands.length, 0, "command only on mouseUp");
+
+        assert.ok(preventDefaultCalled);
+        tool.keyUp({ key: "ArrowDown", preventDefault: preventDefaultFun });
+        assert.equal(commands.length, 1, "command sent");
+        assert.equal(commands[0].command, "moveFigures");
+        assert.equal(commands[0].parameters.deltaX, 0);
+        assert.equal(commands[0].parameters.deltaY, 11);
+    });
+
+    test("keyboard movement in free layout ArrowUp", assert => {
+        at.selectFigures([cell]);
+        let preventDefaultCalled = false;
+        const element = cell.DOMElement;
+
+        const oldLocation = parseInt(getComputedStyle(element).top);
+        let preventDefaultFun = () => preventDefaultCalled = true;
+
+        tool.keyDown({ key: "ArrowUp", preventDefault: preventDefaultFun });
+        assert.equal(parseInt(getComputedStyle(element).top), oldLocation - 1);
+        tool.keyDown({ key: "ArrowUp", shiftKey: true, preventDefault: preventDefaultFun });
+        assert.equal(parseInt(getComputedStyle(element).top), oldLocation - 11);
+
+        assert.equal(commands.length, 0, "command only on mouseUp");
+
+        assert.ok(preventDefaultCalled);
+        tool.keyUp({ key: "ArrowUp", preventDefault: preventDefaultFun });
+        assert.equal(commands.length, 1, "command sent");
+        assert.equal(commands[0].command, "moveFigures");
+        assert.equal(commands[0].parameters.deltaX, 0);
+        assert.equal(commands[0].parameters.deltaY, -11);
+    });
+
+    test("keyboard movement in free layout ArrowLeft", assert => {
+        at.selectFigures([cell]);
+        let preventDefaultCalled = false;
+        const element = cell.DOMElement;
+
+        const oldLocation = parseInt(getComputedStyle(element).left);
+        let preventDefaultFun = () => preventDefaultCalled = true;
+
+        tool.keyDown({ key: "ArrowLeft", preventDefault: preventDefaultFun });
+        assert.equal(parseInt(getComputedStyle(element).left), oldLocation - 1);
+        tool.keyDown({ key: "ArrowLeft", shiftKey: true, preventDefault: preventDefaultFun });
+        assert.equal(parseInt(getComputedStyle(element).left), oldLocation - 11);
+
+        assert.equal(commands.length, 0, "command only on mouseUp");
+
+        assert.ok(preventDefaultCalled);
+        tool.keyUp({ key: "ArrowLeft", preventDefault: preventDefaultFun });
+        assert.equal(commands.length, 1, "command sent");
+        assert.equal(commands[0].command, "moveFigures");
+        assert.equal(commands[0].parameters.deltaX, -11);
+        assert.equal(commands[0].parameters.deltaY, 0);
+    });
+
+    test("keyboard movement in free layout ArrowRight", assert => {
+        at.selectFigures([cell]);
+        let preventDefaultCalled = false;
+        const element = cell.DOMElement;
+
+        const oldLocation = parseInt(getComputedStyle(element).left);
+        let preventDefaultFun = () => preventDefaultCalled = true;
+
+        tool.keyDown({ key: "ArrowRight", preventDefault: preventDefaultFun });
+        assert.equal(parseInt(getComputedStyle(element).left), oldLocation + 1);
+        tool.keyDown({ key: "ArrowRight", shiftKey: true, preventDefault: preventDefaultFun });
+        assert.equal(parseInt(getComputedStyle(element).left), oldLocation + 11);
+
+        assert.equal(commands.length, 0, "command only on mouseUp");
+
+        assert.ok(preventDefaultCalled);
+        tool.keyUp({ key: "ArrowRight", preventDefault: preventDefaultFun });
+        assert.equal(commands.length, 1, "command sent");
+        assert.equal(commands[0].command, "moveFigures");
+        assert.equal(commands[0].parameters.deltaX, 11);
+        assert.equal(commands[0].parameters.deltaY, 0);
+    });
+
+    test("selection tool on drag on screen", assert => {
+        at.currentTool.mouseDown({ target: screen.DOMElement });
+        assert.ok(at.currentTool instanceof GDNativeSelectionTool, "still selection tool");
+        at.currentTool.mouseDragged({ target: screen.DOMElement });
+        assert.ok(at.currentTool instanceof GDNativeSelectionRectTool, "selection rect tool on drag");
+        at.currentTool.mouseUp();
+        assert.ok(at.currentTool instanceof GDNativeSelectionTool, "back to selection tool on mouseup");
+    });
 });
