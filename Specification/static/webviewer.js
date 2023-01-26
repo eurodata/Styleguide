@@ -52,8 +52,8 @@ function toggleInspector() {
 function updateIFrameProperties(screenSize) {
     const viewer = document.getElementById('ViewerFrame');
     viewer.style.width = screenSize.width + 'px';
-    viewer.style.minWidth = screenSize.minWidth + 'px';
-    viewer.style.maxWidth = screenSize.maxWidth + 'px';
+    viewer.style.minWidth = screenSize.minHeight + 'px';
+    viewer.style.maxWidth = screenSize.maxHeight + 'px';
     viewer.style.height = screenSize.height + 'px';
     viewer.style.minHeight = screenSize.minHeight + 'px';
     viewer.style.maxHeight = screenSize.maxHeight + 'px';
@@ -101,9 +101,7 @@ window.addEventListener("message", (e) => {
                 selectElement.selectedIndex = index;
 
                 // to support the back-button (see onpopstate below)
-
-                // #376 remove browser-back inside prototype, did not work
-                //history.pushState({screenID: e.data.parameters.objectID}, "");
+                history.pushState({screenID: e.data.parameters.objectID}, "");
             }
             break;
 
@@ -215,11 +213,11 @@ window.addEventListener("load", function(e) {
             sendToViewerFrame({command: "gotoScreenWithID", parameters: hash.substr(1)})
         }
     }
-    // #376 remove browser-back inside prototype, did not work
-    // window.onpopstate = e => {
-    //     if (e.state && e.state.screenID && e.state.screenID.length > 1) {
-    //         let screenID = e.state.screenID;
-    //         sendToViewerFrame({command: "gotoScreenWithID", parameters: screenID})
-    //     }
-    // };
+
+    window.onpopstate = e => {
+        if (e.state.screenID && e.state.screenID.length > 1) {
+            let screenID = e.state.screenID;
+            sendToViewerFrame({command: "gotoScreenWithID", parameters: screenID})
+        }
+    };
 })
