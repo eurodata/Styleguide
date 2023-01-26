@@ -1,13 +1,13 @@
 
 @font-face {
-font-family: "Roboto-Medium";src:url("static/Roboto-Medium.woff") format("woff"),local("Roboto Medium")}
-@font-face {
 font-family: ".AppleSystemUIFont";src:url("static/.AppleSystemUIFont-Roboto-Regular-webfont.woff") format("woff"),local("System Font Regular")}
 @font-face {
-font-family: "Roboto-Bold";src:url("static/Roboto-Bold.woff") format("woff"),local("Roboto Bold")}
-@font-face {
 font-family: "Roboto-Regular";src:url("static/Roboto-Regular.woff") format("woff"),local("Roboto")}
+@font-face {
+font-family: "Roboto-Bold";src:url("static/Roboto-Bold.woff") format("woff"),local("Roboto Bold")}
 @font-face {
 font-family: "Roboto-Italic";src:url("static/Roboto-Italic.woff") format("woff"),local("Roboto Italic")}
 @font-face {
 font-family: "Sophis_Icons";src:url("static/Sophis_Icons.woff") format("woff"),local("Sophis_Icons")}
+@font-face {
+font-family: "Roboto-Medium";src:url("static/Roboto-Medium.woff") format("woff"),local("Roboto Medium")}
