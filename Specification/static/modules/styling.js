@@ -155,7 +155,7 @@ function verticalResizingCSS(style, cell, state, containerState) {
                         style.flex = "0 1 calc(" + cellFlexHeightPercentage + "% - (" + cellMarginTop + "px + " + cellMarginBottom + "px))" ;
                     }
                 } else {
-                    if (cellFlexHeightPercentage == 100 && cellMaximumHeight >= GDMaxSizeValue) {
+                    if (cellFlexHeightPercentage == 100) {
                         style.alignSelf= "stretch";
                     } else {
                         style.height = "calc(" + cellFlexHeightPercentage + "% - (" + cellMarginTop + "px + " + cellMarginBottom + "px))" ;
@@ -360,7 +360,6 @@ function layoutPolicyCodeAndActiveLayoutCSS(style, cell, state, containerState) 
         style.gridColumn = "1";
         style.gridRow = "1";
         style.position = "relative";
-        style.transform = "unset";
     
     } else if (cellActiveLayout && !containerUsesStacked) {
         const fixed = cell.valueForKeyInStateWithIdentifier("fixedLayout", state);
@@ -752,7 +751,7 @@ function backgroundCSS(style, cell, state) {
     }
 
     if (type == GDNoPainterType) {
-        style.background = cell.isScreen ? "" : "none";
+        style.background = "none";
         return;
     }
 
@@ -898,7 +897,7 @@ function fontCSS(style, cell, state) {
     } else {
         if (textLineHeight > 0) {
             style.lineHeight = textLineHeight + "px";
-        } 
+        }
     }
 }
 
@@ -1832,7 +1831,9 @@ export class GDCSSGenerator {
     }
 
     populateScreenBackgroundPropertiesInState(style, cell, stateIdentifier) {
+        if (backgroundProperties.hasProperty(cell,stateIdentifier)) {
             backgroundProperties.updateFunction(style, cell, stateIdentifier);
+        }
     }
 
     updateScreenBackgroundProperty(style, figure, key, stateIdentifier) {

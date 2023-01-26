@@ -14,22 +14,9 @@ function init() {
     
     addCommands(Antetype);
 
-    if (Antetype.runsInAntetype) {
-        Antetype.sendCommand("hello");
-        
-        if (window.parent != window) {
-            window.parent.Antetype = Antetype;     // for WKWebView: store the global Antetype object in the toplevel frame
-        }
-    } else if (window.parent.location.href.indexOf("drawing-board.html") != -1) {     // FIXME, quick hack to get the drawing-board.html to display in LivePreview
-        // remove before release :) 
     
-        websocket_init();
-        if (window.websocket)  {
-            Antetype.sendCommand("hello");
-            if (window.parent != window) {
-                window.parent.Antetype = Antetype;     // for WKWebView: store the global Antetype object in the toplevel frame
-            }
-        }
+    if (Antetype.runsInAntetype) {
+         Antetype.send("hello");
     } else {
         gdPostViewerMessage('startLoadProject');
         websocket_init();
@@ -45,7 +32,7 @@ function init() {
             loadProjectRequest.responseType = "json";
             loadProjectRequest.onreadystatechange = function () {
                   if(loadProjectRequest.readyState === XMLHttpRequest.DONE && loadProjectRequest.status === 200) {
-                        let json = loadProjectRequest.response; 
+                        let json = loadProjectRequest.response; // JSON.parse(loadProjectRequest.response);
                         Antetype.project = new GDProject(json, null);
                         Antetype.project.at = Antetype;
     
@@ -56,7 +43,7 @@ function init() {
                         loadScreenRequest.responseType = "json";
                         loadScreenRequest.onreadystatechange = function () {
                               if (loadScreenRequest.readyState === XMLHttpRequest.DONE && loadScreenRequest.status === 200) {
-                                    let json = loadScreenRequest.response;
+                                    let json = loadScreenRequest.response;// JSON.parse(loadScreenRequest.response);
                                     let screen = GDModelObject.fromJSONObjectInProject(json, Antetype.project);
                                     Antetype.currentScreen = screen;
                                     Antetype.connectObjects();

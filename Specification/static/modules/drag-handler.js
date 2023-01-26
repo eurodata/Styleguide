@@ -6,49 +6,9 @@ import { GDLiveLayouter } from './livelayouter.js';
 export class GDDragHandler {
     constructor(at) {
         this._at = at;
-    }
-
-
-
-    dragEnter(dragEvent) {
-    }
-
-    dragLeave(dragEvent) {
-    }
-
-    dragExit(dragEvent) {
-    }
-
-    dragOver(dragEvent) {
-    }
-
-    drop(dragEvent) {
-    }
-
-    /**
-     * Called on drag enter to find the drag-handler for the drag. The first handler which
-     * returns something different then GDDragHandler.NSDragOperationNone is choosen to handle the
-     * drag
-     * 
-     * @param {DragEvent} dragEvent 
-     * @returns drag-operation (GDDragHandler.NSDragOperation…)
-     */
-    possibleDragOperations(dragEvent) {
-        return GDDragHandler.NSDragOperationNone;    // for now ...
-    }
-}
-
-/**
- * This drag-handler is used in the old WebView. It simply forwards all methods
- * to the corresponding Cocoa-objects. Not used anymore in the WKWebView.
- * 
- * Remove it, once the transition is complete
- */
-export class GDTransferDragHandler extends GDDragHandler {
-    constructor(at) {
-        super(at);
         this._started = false;
     }
+
 
     cocoaOperationToWeb(o) {
         switch (o) {
@@ -96,18 +56,9 @@ export class GDTransferDragHandler extends GDDragHandler {
         }
     }
 
-    /**
-     * Called on drag enter to find the drag-handler for the drag. The first handler which
-     * returns something different then GDDragHandler.NSDragOperationNone is choosen to handle the
-     * drag
-     * 
-     * @param {DragEvent} e 
-     * @returns drag-operation (GDDragHandler.NSDragOperation…)
-     */
     possibleDragOperations(e) {
         return GDDragHandler.NSDragOperationEvery;    // for now ...
     }
-
 }
 
 GDDragHandler.NSDragOperationNone = 0;
@@ -117,7 +68,7 @@ GDDragHandler.NSDragOperationGeneric = 4;
 GDDragHandler.NSDragOperationPrivate = 8;
 GDDragHandler.NSDragOperationMove = 16;
 GDDragHandler.NSDragOperationDelete = 32;
-GDDragHandler.NSDragOperationEvery = -1; //NSUIntegerMax, 
+GDDragHandler.NSDragOperationEvery  = -1; //NSUIntegerMax, 
 
 
 export class GDCellDragHandler extends GDDragHandler {
@@ -126,7 +77,14 @@ export class GDCellDragHandler extends GDDragHandler {
         this._liveLayouter = new GDLiveLayouter(at);
     }
     possibleDragOperations(e) {
-        return e.dataTransfer.types.includes(GDCellDragType) ? GDDragHandler.NSDragOperationEvery : GDDragHandler.NSDragOperationNone;
+        for (let i=0; i<e.dataTransfer.types.length; i++) {
+            const type = e.dataTransfer.types[i];
+            if (type == GDCellDragType) {
+                return GDDragHandler.NSDragOperationEvery;
+            }
+
+        }
+        return GDDragHandler.NSDragOperationNone;    
     }
 
     dragEnter(e) {
@@ -146,17 +104,15 @@ export class GDCellDragHandler extends GDDragHandler {
     }
 }
 
-/**
- * The rubberband-feature is implemented as a Cocoa drag'n'drop. This handler is used
- * to highlight the cell under the cursor and send the id of the cell to antetype on "drop"
- * (the user releases the mouse-button)
- */
 export class GDRubberbandDragHandler extends GDDragHandler {
     possibleDragOperations(e) {
 
         // for old WebView:
-        if (e.dataTransfer.types.includes(GDRubberbandPassengerPBoardType)) {
-            return GDDragHandler.NSDragOperationLink;
+        for (let i=0; i<e.dataTransfer.types.length; i++) {
+            const type = e.dataTransfer.types[i];
+            if (type == GDRubberbandPassengerPBoardType) {
+                return GDDragHandler.NSDragOperationLink;
+            }
         }
 
         // for WKWebView:
@@ -164,7 +120,7 @@ export class GDRubberbandDragHandler extends GDDragHandler {
             return GDDragHandler.NSDragOperationLink;
         }
 
-        return GDDragHandler.NSDragOperationNone;
+        return GDDragHandler.NSDragOperationNone;  
     }
 
     showHilighter() {
@@ -194,9 +150,9 @@ export class GDRubberbandDragHandler extends GDDragHandler {
 
     }
 
-    elementsFromPoint(x, y) {
-        const allElements = document.elementsFromPoint(x, y);
-        let allFigures = allElements.filter(e => e.figure != undefined && !e.figure.isScreen);
+    elementsFromPoint(x,y) {
+        const allElements = document.elementsFromPoint(x,y);
+        let allFigures = allElements.filter( e => e.figure != undefined && !e.figure.isScreen );
         return allFigures;
     }
 
@@ -215,78 +171,14 @@ export class GDRubberbandDragHandler extends GDDragHandler {
     drop(e) {
         const allFigures = this.elementsFromPoint(e.pageX, e.pageY);
         if (allFigures.length > 0) {
-            const f = allFigures[0];
-            this._at.sendCommand("rubberBandSelectFigureWithID", { 'cellID': f.figure.objectID });
+           const f = allFigures[0];
+           this._at.send("/rubberBandSelectFigureWithID/" + f.figure.objectID);
         }
-        this.removeHighlighter();
-    }
-}
-
-/**
- * used for drops of image files from macOS. 
- */
-export class GDFileDragHandler extends GDDragHandler {
-    constructor(at) {
-        super(at);
-        this._highlightDiv = null;
-    }
-
-    possibleDragOperations(e) {
-        return e.dataTransfer.types.includes("Files") ? GDDragHandler.NSDragOperationCopy : GDDragHandler.NSDragOperationNone;
+        this.removeHighlighter(); 
     }
 
 
-    allowedType(type) {
-        return ["image/png", "image/gif", "image/jpeg", "image/svg+xml"].indexOf(type) != -1;
-    }
 
-    dragEnter(e) {
-        this.addHighlightDiv();
-    }
-
-    addHighlightDiv() {
-        this._highlightDiv = document.createElement("div");
-        this._highlightDiv.className = "highlightrect";
-        this._highlightDiv.style.top = "0px";
-        this._highlightDiv.style.left = "0px";
-        this._highlightDiv.style.width = this._at.currentScreen.getProperty("width") + "px";
-        this._highlightDiv.style.height = this._at.currentScreen.getProperty("height") + "px";
-
-        this._at.screenElement.appendChild(this._highlightDiv);
-    }
-
-    removeHighlightDiv() {
-        if (this._highlightDiv) {
-            this._highlightDiv.remove();
-            this._highlightDiv = null;
-        }
-    }
-
-    dragExit(e) {
-        this.removeHighlightDiv();
-    }
-
-    dragLeave(e) {
-        this.removeHighlightDiv();
-    }
-
-    drop(e) {
-        e.preventDefault();
-        this.removeHighlightDiv();
-        const files = e.dataTransfer.files;
-
-        for (let file of files) {
-            if (!this.allowedType(file.type)) {
-                continue;
-            }
-
-            this._at.sendCommand("setPositionOfDroppedElement", { x: e.pageX, y: e.pageY });
-
-            const reader = new FileReader();
-            reader.onload = () => this._at.sendFile(file.name, file.type, reader.result);
-            reader.readAsArrayBuffer(file);
-        }
-    }
 }
 
 export const GDCellDragType = "application/cellid";

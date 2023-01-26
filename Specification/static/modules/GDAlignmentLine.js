@@ -15,19 +15,13 @@ export class GDAlignmentLine {
         e.style.top = this.startY + "px";
         e.style.left = this.startX + "px";
         if (horizontal) {
-            e.style.borderTop = "1px solid #ed0c4f"; 
-            const width = (this.endX - this.startX);
-            e.style.width = `calc(${width}px*var(--current-zoom))`;
+            e.style.borderTop = "1px dotted red"; //this.color.toString();
+            e.style.width = this.endX - this.startX + "px";
             e.style.height = "2px";
-            e.style.transform = "scale(calc(1/var(--current-zoom)))";
-            e.style.transformOrigin = "left top";
         } else {
-            e.style.borderLeft= "1px solid #ed0c4f"; 
-            const height = (this.endY - this.startY);
-            e.style.height= `calc(${height}px*var(--current-zoom))`;
+            e.style.borderLeft= "1px dotted red"; // + this.color.toString();
+            e.style.height= this.endY - this.startY + "px";
             e.style.width = "2px";
-            e.style.transform = "scale(calc(1/var(--current-zoom)))"
-            e.style.transformOrigin = "left top";
         }
         return e;
     
